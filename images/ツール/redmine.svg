@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <rect id="アートボード1" x="0" y="0" width="512" height="512" style="fill:none;"/>
+    <g id="アートボード11" serif:id="アートボード1">
+        <g>
+            <g transform="matrix(0.826129,0,0,1,5.18286,7.09928)">
+                <g transform="matrix(0.971508,0,0,1,0.960249,0)">
+                    <g transform="matrix(112.024,0,0,112.024,270.222,454.202)">
+                    </g>
+                    <text x="33.703px" y="454.202px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:112.024px;fill:rgb(130,31,26);">RED</text>
+                </g>
+            </g>
+            <g transform="matrix(0.961402,0,0,1,194.007,7.09928)">
+                <g transform="matrix(0.971508,0,0,1,0.960249,0)">
+                    <g transform="matrix(112.024,0,0,112.024,313.763,454.202)">
+                    </g>
+                    <text x="33.703px" y="454.202px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:112.024px;fill:rgb(206,49,42);">MINE</text>
+                </g>
+            </g>
+            <g transform="matrix(-0.130732,1.07417,-1.34411,-0.163585,524.99,119.304)">
+                <path d="M260.162,333.456L168.5,334.3L174.974,269.771L249.843,266.207L260.162,333.456Z" style="fill:rgb(130,31,26);"/>
+            </g>
+            <g transform="matrix(0.130732,1.07417,1.34411,-0.163585,-13.2364,119.304)">
+                <path d="M260.162,333.456L168.5,334.3L174.974,269.771L249.843,266.207L260.162,333.456Z" style="fill:rgb(130,31,26);"/>
+            </g>
+            <g transform="matrix(-0.130732,1.07417,-1.34411,-0.163585,545.678,19.3445)">
+                <path d="M249.548,338.398L166.528,322.144L191.785,267.756L257.555,275.54L249.548,338.398Z" style="fill:rgb(158,38,32);"/>
+            </g>
+            <g transform="matrix(0.130732,1.07417,1.34411,-0.163585,-33.9246,19.3445)">
+                <path d="M249.548,338.398L166.528,322.144L191.785,267.756L257.555,275.54L249.548,338.398Z" style="fill:rgb(158,38,32);"/>
+            </g>
+            <g transform="matrix(-0.613152,0.891614,-1.11568,-0.767239,631.381,167.482)">
+                <path d="M250.821,338.665L173.046,320.823L189.135,267.438L245.444,283.669L250.821,338.665Z" style="fill:rgb(184,44,38);"/>
+            </g>
+            <g transform="matrix(0.613152,0.891614,1.11568,-0.767239,-119.628,167.482)">
+                <path d="M250.821,338.665L173.046,320.823L189.135,267.438L245.444,283.669L250.821,338.665Z" style="fill:rgb(184,44,38);"/>
+            </g>
+            <g transform="matrix(1,0,0,1,-0.024346,-0.182782)">
+                <path d="M188.032,65.861L234.883,53.184L279.726,53.184L324.017,65.861L279.726,125.855L234.883,125.855L188.032,65.861Z" style="fill:rgb(206,49,42);"/>
+            </g>
+        </g>
+    </g>
+</svg>

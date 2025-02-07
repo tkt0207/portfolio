@@ -1,0 +1,359 @@
+<!DOCTYPE html> <!-- 一番上に絶対書く -->
+<html lang="ja"> <!-- 全てを<html>でで囲うこと -->
+    <head> <!-- Webページを存在させえるうえで重要な情報を記す -->
+        <meta charset="utf-8"> <!-- 文字コード -->
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- それぞれのデバイスの大きさに応じて表示させる -->
+        <title>HP Scraping</title> <!-- タブのとこに出る -->
+        <meta name="description" content="sample text text"> <!-- 検索時の下の説明見たいなところ -->
+        <link rel="stylesheet" href="../../style.css" /> <!-- cssの適応 -->
+        <link rel="stylesheet" href="../apps.css" /> <!-- cssの適応 -->
+    </head>
+
+    <body> <!-- 見える部分 -->
+        <!-- ヘッダー -->
+        <header>
+            <div id="header-icon"></div>
+            <span id="header-contents">
+                <span class="header-content">
+                    <a href="#title_block" class="no-child-content">TOP</a>
+                    <!-- <span class="menu-expand">
+                        <div class="expand-line"></div>
+                    </span>
+                    <div class="content-menu"></div> -->
+                </span>
+                <span class="header-content">
+                    <a href="#app_block" class="no-child-content">アプリ紹介</a>
+                    <!-- <span class="menu-expand">
+                        <div class="expand-line"></div>
+                    </span>
+                    <div class="content-menu"></div> -->
+                </span>
+                <span class="header-content">
+                    <a href="#how_to_use_block">使い方</a>
+                    <span class="menu-expand">
+                        <div class="expand-line"></div>
+                    </span>
+                    <div class="content-menu">
+                        <div class="menu-item">
+                            <a href="#use1">年月の選択</a>
+                        </div>
+                        <div class="menu-item">
+                            <a href="#use2">Excelの出力先を設定</a>
+                        </div>
+                        <div class="menu-item">
+                            <a href="#use3">出力するHPを選択</a>
+                        </div>
+                        <div class="menu-item">
+                            <a href="#use4">実行</a>
+                        </div>
+                    </div>
+                </span>
+                <span class="header-content">
+                    <a href="#development_block">開発環境</a>
+                    <span class="menu-expand">
+                        <div class="expand-line"></div>
+                    </span>
+                    <div class="content-menu">
+                        <div class="menu-item">
+                            <a href="#content1">使用ツール</a>
+                        </div>
+                        <div class="menu-item">
+                            <a href="#content2">使用言語</a>
+                        </div>
+                        <div class="menu-item">
+                            <a href="#content3">制作期間</a>
+                        </div>
+                    </div>
+                </span>
+            </span>
+            <div id="header-selecter">
+                <div class="selecter-line" id="top-line"></div>
+                <div class="selecter-line" id="center-line"></div>
+                <div class="selecter-line" id="bottom-line"></div>
+            </div>
+
+                
+        </header>
+
+        <!-- メイン部 -->
+        <div class="main">
+            <div class="title_img" id="title_block">
+                <img src="../../images/HPApp/HP.png" alt="">
+            </div>
+            <div class="block2" id="app_block">
+                <h2>アプリ紹介</h2>
+                <div class="explain">
+                    <p>複数のHPから情報を収集し、結果をExcelに出力するWindowsデスクトップアプリケーションです。</p>
+                    <p>指定したHP、指定した年月の情報のみを収集します。</p>
+                    <p>結果はAIにより分類され、種別に応じて自動で色付けされます。</p>
+                </div>
+                <div class="slide_view">
+                    <div class="slide_view_content">
+                        <video src="../../images/HPApp/hp.mp4" controls="true" controlslist="nodownload"></video>
+                    </div>
+                    <div class="slide_view_content">
+                        <img src="../../images/HPApp/image1.png" alt="">
+                    </div>
+                    <div class="slide_view_content">
+                        <img src="../../images/HPApp/image2.png" alt="">
+                    </div>
+                    <div class="slide_view_content">
+                        <img src="../../images/HPApp/image3.png" alt="">
+                    </div>
+                    <div class="slide_view_content">
+                        <img src="../../images/HPApp/image4.png" alt="">
+                    </div>
+                    <div class="slide_view_content">
+                        <img src="../../images/HPApp/image5.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="block2" id="how_to_use_block">
+                <h2>使い方</h2>
+                <div class="change_col_block">
+                    <div id="dummy">
+                        <div class="use_block" id="use1">
+                            <div class="close_use_block"></div>
+                            <div class="use_title">
+                                <h4>1. 年月の選択</h4>
+                            </div>
+                            <div class="use_explain_block">
+                                <div class="get_height">
+                                    <div>
+                                        <h5>1. 年選択リスト</h5>
+                                        <div class="left_img">
+                                            <img src="../../images/HPApp/use/use1-1.png" alt="">
+                                            <span>
+                                                <p>年選択リストをクリックします。</p>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <h5>2. 年の選択</h5>
+                                        <div class="left_img">
+                                            <img src="../../images/HPApp/use/use1-2.png" alt="">
+                                            <span>
+                                                <p>年を選択します。</p>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <h5>3. 月選択リスト</h5>
+                                        <div class="left_img">
+                                            <img src="../../images/HPApp/use/use1-3.png" alt="">
+                                            <span>
+                                                <p>月選択リストをクリックします。</p>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <h5>4. 月の選択</h5>
+                                        <div class="left_img">
+                                            <img src="../../images/HPApp/use/use1-4.png" alt="">
+                                            <span>
+                                                <p>月を選択します。</p>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="use_block"  id="use2">
+                            <div class="close_use_block"></div>
+                            <div class="use_title">
+                                <h4>2. Excelの出力先を設定</h4>
+                            </div>
+                            <div class="use_explain_block">
+                                <div class="get_height">
+                                    <div>
+                                        <h5>1. 出力先選択</h5>
+                                        <div class="left_img">
+                                            <img src="../../images/HPApp/use/use2-1.png" alt="">
+                                            <span>
+                                                <p>選択ボタンをクリックします。</p>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <h5>2. フォルダ選択</h5>
+                                        <div class="left_img">
+                                            <img src="../../images/HPApp/use/use2-2.png" alt="">
+                                            <span>
+                                                <p>フォルダ選択ダイアログが表示されるので、出力先のフォルダを選択し、フォルダの選択ボタンをクリックします。</p>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <h5>3. Excel名の入力</h5>
+                                        <div class="left_img">
+                                            <img src="../../images/HPApp/use/use2-3.png" alt="">
+                                            <span>
+                                                <p>Excel名入力欄に出力するExcelのファイル名を入力します。</p>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="use_block" id="use3">
+                            <div class="close_use_block"></div>
+                            <div class="use_title">
+                                <h4>3. 出力するHPを選択</h4>
+                            </div>
+                            <div class="use_explain_block">
+                                <div class="get_height">
+                                    <div>
+                                        <h5>1. HPの選択</h5>
+                                        <div class="left_img">
+                                            <img src="../../images/HPApp/use/use3-1.png" alt="">
+                                            <span>
+                                                <p>赤枠内のチェックリストをクリックすることで、出力するHPを選択できます。</p>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <h5>2. 出力されるHP</h5>
+                                        <div class="left_img">
+                                            <img src="../../images/HPApp/use/use3-2.png" alt="">
+                                            <span>
+                                                <p>チェックが入っているHPが結果に出力されます。</p>
+                                                <p>チェックされていないHPは出力されません。</p>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="use_block" id="use4">
+                            <div class="close_use_block"></div>
+                            <div class="use_title">
+                                <h4>4.実行</h4>
+                            </div>
+                            <div class="use_explain_block">
+                                <div class="get_height">
+                                    <div>
+                                        <h5>1. 実行</h5>
+                                        <div class="left_img">
+                                            <img src="../../images/HPApp/use/use4-1.png" alt="">
+                                            <span>
+                                                <p>実行ボタンをクリックします。</p>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <h5>2. 待機</h5>
+                                        <div class="left_img">
+                                            <img src="../../images/HPApp/use/use4-2.png" alt="">
+                                            <span>
+                                                <p>処理が終わるまでしばらく待ちます。</p>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <h5>3. 処理完了</h5>
+                                        <div class="left_img">
+                                            <img src="../../images/HPApp/use/use4-3.png" alt="">
+                                            <span>
+                                                <p>処理が完了すると左図のようになります。</p>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <h5>4. 結果の確認</h5>
+                                        <div class="top_img">
+                                            <img src="../../images/HPApp/use/use4-4.png" alt="">
+                                            <span>
+                                                <p>結果は指定した出力パスにExcelデータとして保存されます。</p>
+                                                <p>出力されたExcelの結果列はAIにより自動で分類され、分類に応じた文字色が付けられています。</p>
+                                                <p>背景色が黄色になっている行はHPの構成変更やネットワーク不良の可能性があることを示しています。</p>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            
+            <div class="block2" id="development_block">
+                <h2>開発環境</h2>
+
+                <div class="tag_block">
+                    <div class="tags">
+                        <div class="tag" id="tag1">
+                            使用ツール
+                        </div>
+                        <div class="tag" id="tag2">
+                            使用言語
+                        </div>
+                        <div class="tag" id="tag3">
+                            制作期間
+                        </div>
+                    </div>
+                    <div class="content_area">
+                        <div class="tag_content"  id="content1">
+                            <p>Visual Studio Code</p>
+                            <p>Excel</p>
+                        </div>
+        
+                        <div class="tag_content"  id="content2">
+                            <p>Python</p>
+                            <p>VBA</p>
+                        </div>
+        
+                        <div class="tag_content"  id="content3">
+                            <div class="item_content">
+                                <p>UI UX考案</p>
+                                <p>UI UX実装</p>
+                                <p>処理実装</p>
+                                <p>その他</p>
+                            </div>
+                            <div class="graph" id="hp_graph">
+                                <div>
+                                    1週間
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- フッター -->
+            <footer>
+                <div class="end">
+                    <p>Copyright: 2025/02/07 tkt</p>
+
+                </div>
+            </footer>
+
+        </div> <!-- End:class="main" -->
+
+        <div id="big_img">
+            <img src="../../images/AIChat/image1.png" alt="">
+        </div>
+        
+    </body>
+    <script src="../apps.js"></script>
+</html>
