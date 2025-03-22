@@ -5,115 +5,148 @@
         <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- それぞれのデバイスの大きさに応じて表示させる -->
         <title>Smoking Control</title> <!-- タブのとこに出る -->
         <meta name="description" content="sample text text"> <!-- 検索時の下の説明見たいなところ -->
-        <link rel="stylesheet" href="../../style.css" /> <!-- cssの適応 -->
         <link rel="stylesheet" href="../apps.css" /> <!-- cssの適応 -->
     </head>
 
     <body> <!-- 見える部分 -->
+        
+        <!-- 携帯用アイコン -->
+        <div id=phone_icon>
+            <div id="phone_icon_outline">
+                <div id="phone_icon_content"></div>
+            </div>
+        </div>
+
         <!-- ヘッダー -->
         <header>
-            <div id="header-icon"></div>
-            <span id="header-contents">
-                <span class="header-content">
-                    <a href="#title_block" class="no-child-content">TOP</a>
-                    <!-- <span class="menu-expand">
-                        <div class="expand-line"></div>
-                    </span>
-                    <div class="content-menu"></div> -->
-                </span>
-                <span class="header-content">
-                    <a href="#app_block" class="no-child-content">アプリ紹介</a>
-                    <!-- <span class="menu-expand">
-                        <div class="expand-line"></div>
-                    </span>
-                    <div class="content-menu"></div> -->
-                </span>
-                <span class="header-content">
-                    <a href="#how_to_use_block">使い方</a>
-                    <span class="menu-expand">
-                        <div class="expand-line"></div>
-                    </span>
-                    <div class="content-menu">
-                        <div class="menu-item">
-                            <a href="#use1">基本操作</a>
-                        </div>
-                        <div class="menu-item">
-                            <a href="#use2">データ変更</a>
-                        </div>
-                        <div class="menu-item">
-                            <a href="#use3">データ削除</a>
-                        </div>
-                        <div class="menu-item">
-                            <a href="#use4">グラフ表示</a>
-                        </div>
+            <!-- ヘッダアイコン -->
+            <a id="header_icon" href="../../index.html">
+                <div id="header_icon_outline">
+                    <div id="header_icon_content"></div>
+                </div>
+            </a>
 
-                    </div>
-                </span>
-                <span class="header-content">
-                    <a href="#development_block">開発環境</a>
-                    <span class="menu-expand">
-                        <div class="expand-line"></div>
-                    </span>
-                    <div class="content-menu">
-                        <div class="menu-item">
-                            <a href="#content1">使用ツール</a>
-                        </div>
-                        <div class="menu-item">
-                            <a href="#content2">使用言語</a>
-                        </div>
-                        <div class="menu-item">
-                            <a href="#content3">制作期間</a>
-                        </div>
-                    </div>
-                </span>
-            </span>
-            <div id="header-selecter">
-                <div class="selecter-line" id="top-line"></div>
-                <div class="selecter-line" id="center-line"></div>
-                <div class="selecter-line" id="bottom-line"></div>
+            <!-- TOPヘッダ -->
+            <a href="#title_block" class="header_content header_content_a" style="--bottom-color: #a8e6cf; --br: 20px 0px 0px 0px;">
+                <p>TOP</p>
+            </a>
+
+            <!-- プレビューヘッダ -->
+            <a href="#preview_block" class="header_content header_content_a" style="--bottom-color: #f9c00c; --br: 0px 20px 0px 0px;">
+                <p>プレビュー</p>
+            </a>
+
+            <!-- ダミー(アイコン配置用) -->
+            <div id="header_dummy_icon"></div>
+
+            <!-- 使い方 -->
+            <div class="header_content" style="--bottom-color: #84b1ed; --br: 0px 0px 0px 20px;">
+                <p>使い方</p>
+                <div class="header_in_content">
+                    <a class="return_head">戻る</a>
+                    <a style="--a-order: 0" href="#use1" class="header_a">基本操作</a>
+                    <a style="--a-order: 1" href="#use2" class="header_a">データ変更</a>
+                    <a style="--a-order: 2" href="#use3" class="header_a">データ削除</a>
+                    <a style="--a-order: 3" href="#use4" class="header_a">グラフ表示</a>
+                </div>
             </div>
 
-                
+            <!-- 開発環境ヘッダ -->
+            <div class="header_content" style="--bottom-color: #ff677d; --br: 0px 0px 20px 0px;">
+                <p>開発環境</p>
+                <div class="header_in_content">
+                    <a class="return_head">戻る</a>
+                    <a style="--a-order: 0" href="#tag1" class="header_a">使用ツール</a>
+                    <a style="--a-order: 1" href="#tag2" class="header_a">使用言語</a>
+                    <a style="--a-order: 2" href="#tag3" class="header_a">制作期間</a>
+                </div>
+            </div>
         </header>
 
+
         <!-- メイン部 -->
-        <div class="main">
-            <div class="title_img" id="title_block">
-                <img src="../../images/SmokeApp/Smoke.png" alt="">
-            </div>
-            <div class="block2" id="app_block">
-                <h2>アプリ紹介</h2>
-                <div class="explain">
-                    <p>喫煙情報を管理するIOSアプリケーションです。</p>
-                    <p>その日に何本のタバコを吸ったかが一目でわかります。</p>
-                    <p>グラフ表示により、年、月、週単位での喫煙の推移を可視化できます。</p>
+        <div id="main">
+            <div id="dummy_block"></div>
+
+            <!-- タイトル -->
+            <div id="title_block">
+                <div id="phone_block">
+                    <div id="title_img">
+                        <img src="../../img/SmokeApp/Smoke.png" alt="">
+                        <img class="shadow_img" src="../../img/SmokeApp/Smoke.png" alt="">
+                    </div>
+                    <h2 class="title" id="phone_title">喫煙管理アプリ</h2>
+                    <div id="smooth_circle">
+                        <div></div>
+                    </div>
                 </div>
-                <div class="slide_view">
+
+                <div id="title_explain">
+                    <div id="explain_block">
+                        <h2 class="title" id="pc_title">喫煙管理アプリ</h2>
+                        <div class="explain">
+                            <p>喫煙情報を管理するIOSアプリケーションです。</p>
+                            <p>その日に何本のタバコを吸ったかが一目でわかります。</p>
+                            <p>グラフ表示により、年、月、週単位での喫煙の推移を可視化できます。</p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <!-- プレビュー -->
+            <div class="content_block" id="preview_block">
+                <h2 class="title">プレビュー</h2>
+                <div id="slide_view">
                     <div class="slide_view_content slide_view_content_phone">
-                        <video src="../../images/SmokeApp/Smoke.mp4" controls="true" controlslist="nodownload"></video>
+                        <video src="../../img/SmokeApp/Smoke.mp4" controls="true" controlslist="nodownload"></video>
                     </div>
                     <div class="slide_view_content slide_view_content_phone">
-                        <img src="../../images/SmokeApp/image1.png" alt="">
+                        <img src="../../img/SmokeApp/image1.png" alt="">
                     </div>
                     <div class="slide_view_content slide_view_content_phone">
-                        <img src="../../images/SmokeApp/image2.png" alt="">
+                        <img src="../../img/SmokeApp/image2.png" alt="">
                     </div>
                     <div class="slide_view_content slide_view_content_phone">
-                        <img src="../../images/SmokeApp/image3.png" alt="">
+                        <img src="../../img/SmokeApp/image3.png" alt="">
                     </div>
                     <div class="slide_view_content slide_view_content_phone">
-                        <img src="../../images/SmokeApp/image4.png" alt="">
+                        <img src="../../img/SmokeApp/image4.png" alt="">
                     </div>
                     <div class="slide_view_content slide_view_content_phone">
-                        <img src="../../images/SmokeApp/image5.png" alt="">
+                        <img src="../../img/SmokeApp/image5.png" alt="">
                     </div>
                 </div>
             </div>
 
-            <div class="block2" id="how_to_use_block">
-                <h2>使い方</h2>
-                <div class="change_col_block">
-                    <div id="dummy">
+            <!-- ビッグプレビュー -->
+            <div id="preview_big">
+                <div id="preview_big_return_button"></div>
+                <div id="preview_big_view_area">
+                    <div>
+                        <img src="../../img/SmokeApp/image1.png" alt="">
+                    </div>
+                    <div>
+                        <img src="../../img/SmokeApp/image2.png" alt="">
+                    </div>
+                    <div>
+                        <img src="../../img/SmokeApp/image3.png" alt="">
+                    </div>
+                    <div>
+                        <img src="../../img/SmokeApp/image4.png" alt="">
+                    </div>
+                    <div>
+                        <img src="../../img/SmokeApp/image5.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 使い方 -->
+            <div class="content_block" id="how_to_use_block">
+                <h2 class="title">使い方</h2>
+                <div id="use_block_area">
+
+                    <div class="columns">
                         <div class="use_block" id="use1">
                             <div class="close_use_block"></div>
                             <div class="use_title">
@@ -121,70 +154,70 @@
                             </div>
                             <div class="use_explain_block">
                                 <div class="get_height">
-                                    <div>
-                                        <h5>1. 紙タバコを吸ったとき</h5>
-                                        <div class="left_img">
-                                            <img src="../../images/SmokeApp/use/use1-1.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">1. 紙タバコを吸ったとき</h5>
+                                        <div class="img_text_block left_img">
+                                            <img src="../../img/SmokeApp/use/use1-1.png" alt="">
                                             <span>
                                                 <p>紙タバコボタンをタップします。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>2. 確認</h5>
-                                        <div class="left_img">
-                                            <img src="../../images/SmokeApp/use/use1-2.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">2. 確認</h5>
+                                        <div class="img_text_block left_img">
+                                            <img src="../../img/SmokeApp/use/use1-2.png" alt="">
                                             <span>
                                                 <p>確認ダイアログが表示されるので、[はい]をタップします。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>3. 喫煙情報の反映</h5>
-                                        <div class="left_img">
-                                            <img src="../../images/SmokeApp/use/use1-3.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">3. 喫煙情報の反映</h5>
+                                        <div class="img_text_block left_img">
+                                            <img src="../../img/SmokeApp/use/use1-3.png" alt="">
                                             <span>
                                                 <p>喫煙情報が記録されます。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>4. IQosを吸ったとき</h5>
-                                        <div class="left_img">
-                                            <img src="../../images/SmokeApp/use/use1-4.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">4. IQosを吸ったとき</h5>
+                                        <div class="img_text_block left_img">
+                                            <img src="../../img/SmokeApp/use/use1-4.png" alt="">
                                             <span>
                                                 <p>IQosボタンをタップします。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>5. 確認</h5>
-                                        <div class="left_img">
-                                            <img src="../../images/SmokeApp/use/use1-5.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">5. 確認</h5>
+                                        <div class="img_text_block left_img">
+                                            <img src="../../img/SmokeApp/use/use1-5.png" alt="">
                                             <span>
                                                 <p>確認ダイアログが表示されるので、[はい]をタップします。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>6. 喫煙情報の反映</h5>
-                                        <div class="left_img">
-                                            <img src="../../images/SmokeApp/use/use1-6.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">6. 喫煙情報の反映</h5>
+                                        <div class="img_text_block left_img">
+                                            <img src="../../img/SmokeApp/use/use1-6.png" alt="">
                                             <span>
                                                 <p>喫煙情報が記録されます。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>7. 喫煙本数による変化</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/SmokeApp/use/use1-7.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">7. 喫煙本数による変化</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/SmokeApp/use/use1-7.png" alt="">
                                             <span>
                                                 <p>喫煙本数が増えるほど、画面内の煙の量が増えていきます。</p>
                                                 <p>また、10本毎にその日の本数を示す丸枠の色が変化します。</p>
@@ -203,60 +236,60 @@
                             </div>
                             <div class="use_explain_block">
                                 <div class="get_height">
-                                    <div>
-                                        <h5>1. データ選択</h5>
-                                        <div class="left_img">
-                                            <img src="../../images/SmokeApp/use/use2-1.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">1. データ選択</h5>
+                                        <div class="img_text_block left_img">
+                                            <img src="../../img/SmokeApp/use/use2-1.png" alt="">
                                             <span>
                                                 <p>変更したいデータをタップします。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>2. 編集画面</h5>
-                                        <div class="left_img">
-                                            <img src="../../images/SmokeApp/use/use2-2.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">2. 編集画面</h5>
+                                        <div class="img_text_block left_img">
+                                            <img src="../../img/SmokeApp/use/use2-2.png" alt="">
                                             <span>
                                                 <p>編集画面に切り替わります。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>3. 種別の変更</h5>
-                                        <div class="left_img">
-                                            <img src="../../images/SmokeApp/use/use2-3.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">3. 種別の変更</h5>
+                                        <div class="img_text_block left_img">
+                                            <img src="../../img/SmokeApp/use/use2-3.png" alt="">
                                             <span>
                                                 <p>紙タバコ or IQosの文字をタップすると、種別を変更できます。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>4. 日付の変更</h5>
-                                        <div class="left_img">
-                                            <img src="../../images/SmokeApp/use/use2-4.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">4. 日付の変更</h5>
+                                        <div class="img_text_block left_img">
+                                            <img src="../../img/SmokeApp/use/use2-4.png" alt="">
                                             <span>
                                                 <p>カレンダーの日付をタップすることで、日付を変更できます。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>5. 時間の変更</h5>
-                                        <div class="left_img">
-                                            <img src="../../images/SmokeApp/use/use2-5.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">5. 時間の変更</h5>
+                                        <div class="img_text_block left_img">
+                                            <img src="../../img/SmokeApp/use/use2-5.png" alt="">
                                             <span>
                                                 <p>時刻をタップすることで、時間を変更できます。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>6. 変更確定</h5>
-                                        <div class="left_img">
-                                            <img src="../../images/SmokeApp/use/use2-6.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">6. 変更確定</h5>
+                                        <div class="img_text_block left_img">
+                                            <img src="../../img/SmokeApp/use/use2-6.png" alt="">
                                             <span>
                                                 <p>下部の保存ボタンをタップすることで、変更したデータが反映されます。</p>
                                             </span>
@@ -274,80 +307,80 @@
                             </div>
                             <div class="use_explain_block">
                                 <div class="get_height">
-                                    <div>
-                                        <h5>1. データ選択</h5>
-                                        <div class="left_img">
-                                            <img src="../../images/SmokeApp/use/use3-1.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">1. データ選択</h5>
+                                        <div class="img_text_block left_img">
+                                            <img src="../../img/SmokeApp/use/use3-1.png" alt="">
                                             <span>
                                                 <p>削除したいデータを左側にスワイプします。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>2. データ削除</h5>
-                                        <div class="left_img">
-                                            <img src="../../images/SmokeApp/use/use3-2.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">2. データ削除</h5>
+                                        <div class="img_text_block left_img">
+                                            <img src="../../img/SmokeApp/use/use3-2.png" alt="">
                                             <span>
                                                 <p>削除ボタンをタップします。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>3. データ削除完了</h5>
-                                        <div class="left_img">
-                                            <img src="../../images/SmokeApp/use/use3-3.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">3. データ削除完了</h5>
+                                        <div class="img_text_block left_img">
+                                            <img src="../../img/SmokeApp/use/use3-3.png" alt="">
                                             <span>
                                                 <p>データが削除されます。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>4. データの複数削除</h5>
-                                        <div class="left_img">
-                                            <img src="../../images/SmokeApp/use/use3-4.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">4. データの複数削除</h5>
+                                        <div class="img_text_block left_img">
+                                            <img src="../../img/SmokeApp/use/use3-4.png" alt="">
                                             <span>
                                                 <p>選択ボタンをタップします。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>5. データの複数選択</h5>
-                                        <div class="left_img">
-                                            <img src="../../images/SmokeApp/use/use3-5.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">5. データの複数選択</h5>
+                                        <div class="img_text_block left_img">
+                                            <img src="../../img/SmokeApp/use/use3-5.png" alt="">
                                             <span>
                                                 <p>削除したいデータを複数個タップします</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>6. 削除ボタン</h5>
-                                        <div class="left_img">
-                                            <img src="../../images/SmokeApp/use/use3-6.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">6. 削除ボタン</h5>
+                                        <div class="img_text_block left_img">
+                                            <img src="../../img/SmokeApp/use/use3-6.png" alt="">
                                             <span>
                                                 <p>削除ボタンをタップします。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>7. 削除前確認</h5>
-                                        <div class="left_img">
-                                            <img src="../../images/SmokeApp/use/use3-7.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">7. 削除前確認</h5>
+                                        <div class="img_text_block left_img">
+                                            <img src="../../img/SmokeApp/use/use3-7.png" alt="">
                                             <span>
                                                 <p>確認ダイアログが表示されるので、[削除]をタップします。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>8. データの複数削除完了</h5>
-                                        <div class="left_img">
-                                            <img src="../../images/SmokeApp/use/use3-8.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">8. データの複数削除完了</h5>
+                                        <div class="img_text_block left_img">
+                                            <img src="../../img/SmokeApp/use/use3-8.png" alt="">
                                             <span>
                                                 <p>選択したデータが削除されます。</p>
                                             </span>
@@ -365,30 +398,30 @@
                             </div>
                             <div class="use_explain_block">
                                 <div class="get_height">
-                                    <div>
-                                        <h5>1. 表示切り替え</h5>
-                                        <div class="left_img">
-                                            <img src="../../images/SmokeApp/use/use4-1.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">1. 表示切り替え</h5>
+                                        <div class="img_text_block left_img">
+                                            <img src="../../img/SmokeApp/use/use4-1.png" alt="">
                                             <span>
                                                 <p>右上のボタンをタップします。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>2. 表示方法の選択</h5>
-                                        <div class="left_img">
-                                            <img src="../../images/SmokeApp/use/use4-2.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">2. 表示方法の選択</h5>
+                                        <div class="img_text_block left_img">
+                                            <img src="../../img/SmokeApp/use/use4-2.png" alt="">
                                             <span>
                                                 <p>表示方法を選択することで、表示を切り替えできます。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>3. 表示の種類</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/SmokeApp/use/use4-3.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">3. 表示の種類</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/SmokeApp/use/use4-3.png" alt="">
                                             <span>
                                                 <p>グラフの表示には[日、週、月、年]の4種類があります。</p>
                                             </span>
@@ -398,67 +431,57 @@
                                 </div>
                             </div>
                         </div>
-
+                        
                     </div>
+
+                    <div class="columns"></div>
+                    <div class="columns"></div>
                 </div>
             </div>
             
-            <div class="block2" id="development_block">
-                <h2>開発環境</h2>
 
-                <div class="tag_block">
-                    <div class="tags">
-                        <div class="tag" id="tag1">
-                            使用ツール
-                        </div>
-                        <div class="tag" id="tag2">
-                            使用言語
-                        </div>
-                        <div class="tag" id="tag3">
-                            制作期間
-                        </div>
+            <!-- 開発環境 -->
+            <div class="content_block" id="development_block">
+                <h2 class="title">開発環境</h2>
+                <div id="tag_block">
+                    <div id="tag_header">
+                        <div class="tag tag_selected" id="tag1" style="--main-color: rgb(148, 178, 233);">使用ツール</div>
+                        <div class="tag" id="tag2" style="--main-color: rgb(120, 207, 157);">使用言語</div>
+                        <div class="tag" id="tag3" style="--main-color: rgb(178, 138, 229);">制作期間</div>
                     </div>
-                    <div class="content_area">
+                    <div id="tag_main">
+
                         <div class="tag_content"  id="content1">
                             <p>Playgrounds</p>
                         </div>
         
-                        <div class="tag_content"  id="content2">
+                        <div class="tag_content tag_content_hidden"  id="content2">
                             <p>Swift</p>
                         </div>
         
-                        <div class="tag_content"  id="content3">
+                        <div class="tag_content tag_content_hidden"  id="content3">
                             <div class="item_content">
-                                <p>UI UX考案</p>
-                                <p>UI UX実装</p>
-                                <p>処理実装</p>
-                                <p>その他</p>
+                                <p style="--circle-color: #84B1ED;">UI UX考案</p>
+                                <p style="--circle-color: #C89EC4;">UI UX実装</p>
+                                <p style="--circle-color: #EE7785;">処理実装</p>
+                                <p style="--circle-color: #67D5B5;">その他</p>
                             </div>
-                            <div class="graph" id="smoke_graph">
+                            <div class="graph" style="--per1: 5%; --per2: 40%; --per3:90%;">
                                 <div>
                                     2週間
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
-            </div>
-
-
-            <!-- フッター -->
-            <footer>
-                <div class="end">
-                    <p>Copyright: 2025/02/07 tkt</p>
-
-                </div>
-            </footer>
-
         </div> <!-- End:class="main" -->
 
-        <div id="big_img">
-            <img src="../../images/AIChat/image1.png" alt="">
-        </div>
-        
+        <!-- フッター -->
+        <footer>
+            <p>©2025/03/20 tkt</p>
+        </footer>
+
     </body>
     <script src="../apps.js"></script>
 </html>

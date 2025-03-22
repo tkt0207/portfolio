@@ -9,351 +9,546 @@
     </head>
 
     <body> <!-- 見える部分 -->
+
+        <!-- 携帯用アイコン -->
+        <div id=phone_icon>
+            <div id="phone_icon_outline">
+                <div id="phone_icon_content"></div>
+            </div>
+        </div>
+
         <!-- ヘッダー -->
         <header>
-            <div id="header-icon"></div>
-            <span id="header-contents">
-                <span class="header-content">
-                    <a href="#sliks_block">保有スキル</a>
-                    <span class="menu-expand">
-                        <div class="expand-line"></div>
-                    </span>
-                    <div class="content-menu">
-                        <div class="menu-item">
-                            <a href="#windows_skil">Windowsアプリ開発</a>
-                        </div>
-                        <div class="menu-item">
-                            <a href="#web_skil">Webデザイン</a>
-                        </div>
-                        <div class="menu-item">
-                            <a href="#iphone_skil">IPhoneアプリ開発</a>
-                        </div>
-                        <div class="menu-item">
-                            <a href="#vba_skil">VBA</a>
-                        </div>
-                        <div class="menu-item">
-                            <a href="#micro_skil">組み込み開発</a>
-                        </div>
-                    </div>
-                </span>
-                <span class="header-content">
-                    <a href="#qual_block">資格</a>
-                    <span class="menu-expand">
-                        <div class="expand-line"></div>
-                    </span>
-                    <div class="content-menu">
-                        <div class="menu-item">
-                            <a href="#fe_qual">基本情報技術者試験</a>
-                        </div>
-                        <div class="menu-item">
-                            <a href="#ap_qual">応用情報技術者試験</a>
-                        </div>
-                        <div class="menu-item">
-                            <a href="#mos_qual">MOS Excel</a>
-                        </div>
-                        <div class="menu-item">
-                            <a href="#vba_qual">VBAエクスパート</a>
-                        </div>
-                        <!-- <div class="menu-item">
-                            <a href="">ネットワークスペシャリスト</a>
-                        </div> -->
-                    </div>
-                </span>
-                <span class="header-content">
-                    <a href="#slider-block">制作物</a>
-                    <span class="menu-expand">
-                        <div class="expand-line"></div>
-                    </span>
-                    <div class="content-menu">
-                        <div class="menu-item">
-                            <a href="#slide1">AI対話アプリ</a>
-                        </div>
-                        <div class="menu-item">
-                            <a href="#slide2">喫煙管理アプリ</a>
-                        </div>
-                        <div class="menu-item">
-                            <a href="#slide3">HPスクレイピングアプリ</a>
-                        </div>
-                        <div class="menu-item">
-                            <a href="#slide4">金銭管理アプリ</a>
-                        </div>
-                    </div>
-                </span>
-                <span class="header-content">
-                    <a href="#tool_table_block" class="no-child-content">ツール使用経験</a>
-                </span>
-            </span>
-            <div id="header-selecter">
-                <div class="selecter-line" id="top-line"></div>
-                <div class="selecter-line" id="center-line"></div>
-                <div class="selecter-line" id="bottom-line"></div>
+
+            <!-- ヘッダアイコン -->
+            <a id="header_icon" href="./">
+                <div id="header_icon_outline">
+                    <div id="header_icon_content"></div>
+                </div>
+            </a>
+
+            <!-- スキルヘッダ -->
+            <div class="header_content" style="--bottom-color: #a8e6cf; --br: 20px 0px 0px 0px;">
+                <p>スキル</p>
+                <div class="header_in_content">
+                    <a class="return_head">戻る</a>
+                    <a style="--a-order: 0" href="#windows_skill" class="header_a">Windowsアプリ開発</a>
+                    <a style="--a-order: 1" href="#web_skill" class="header_a">Webデザイン</a>
+                    <a style="--a-order: 2" href="#iphone_skill" class="header_a">IPhoneアプリ開発</a>
+                    <a style="--a-order: 3" href="#vba_skill" class="header_a">VBA</a>
+                    <a style="--a-order: 4" href="#cpu_skill" class="header_a">組み込み開発</a>
+                </div>
             </div>
 
-                
+            <!-- 資格ヘッダ -->
+            <div class="header_content" style="--bottom-color: #f9c00c; --br: 0px 20px 0px 0px;">
+                <p>資格</p>
+                <div class="header_in_content">
+                    <a class="return_head">戻る</a>
+                    <a style="--a-order: 0" href="#fe_qual" class="header_a">基本情報技術者試験</a>
+                    <a style="--a-order: 1" href="#ap_qual" class="header_a">応用情報技術者試験</a>
+                    <a style="--a-order: 2" href="#mos_qual" class="header_a">MOS Excel</a>
+                    <a style="--a-order: 3" href="#vba_qual" class="header_a">VBA エキスパート</a>
+                </div>
+            </div>
+
+            <!-- ダミー(アイコン配置用) -->
+            <div id="header_dummy_icon"></div>
+
+            <!-- 制作物ヘッダ -->
+            <div class="header_content" style="--bottom-color: #84b1ed; --br: 0px 0px 0px 20px;">
+                <p>制作物</p>
+                <div class="header_in_content">
+                    <a class="return_head">戻る</a>
+                    <a style="--a-order: 0" href="#ai_work" class="header_a">AI対話アプリ</a>
+                    <a style="--a-order: 1" href="#money_work" class="header_a">金銭管理アプリ</a>
+                    <a style="--a-order: 2" href="#hp_work" class="header_a">HPスクレイピングアプリ</a>
+                    <a style="--a-order: 3" href="#smoke_work" class="header_a">喫煙管理アプリ</a>
+                    <a style="--a-order: 4" href="#read_work" class="header_a">読書アプリ</a>
+                    <a style="--a-order: 5" href="#file_work" class="header_a">ファイル変換アプリ</a>
+                </div>
+            </div>
+
+            <!-- ツール使用経験ヘッダ -->
+            <div class="header_content" style="--bottom-color: #ff677d; --br: 0px 0px 20px 0px;">
+                <p>ツール使用経験</p>
+                <div class="header_in_content">
+                    <a class="return_head">戻る</a>
+                    <a style="--a-order: 0" href="#microsoft_tool" class="header_a">Microsoft</a>
+                    <a style="--a-order: 1" href="#management_tool" class="header_a">管理系</a>
+                    <a style="--a-order: 2" href="#design_tool" class="header_a">デザイン系</a>
+                    <a style="--a-order: 3" href="#other_tool" class="header_a">その他</a>
+                </div>
+            </div>
+
         </header>
 
         <!-- メイン部 -->
-        <div class="main">
+        <div id="main">
 
-            <!-- 画像&テキストコンテンツ -->
-            <div class="block" id="sliks_block">
-                <h2>保有スキル</h2>
-                <p>Skills</p>
-                <div class="image-text" id="windows_skil">
-                    <img src="./images/スキル/windows.jpg" alt="no img" class="inner-img">
-                    <span class="inner-text">
-                        <h2>Windowsアプリ開発</h2>
-                        <p>PythonやElectronを用いて、Windowsアプリの開発を行っています。</p>
-                        <p>WPFも勉強中であり、高度なアプリケーション開発を目標にしています。</p>
-                        <p>下記のリンクから制作したアプリの紹介ページに移動できます。</p>
-                        <div class="link_block">
-                            <a href="./App_introductions/AIChat/" class="normal_a">AI対話アプリ</a>
-                        </div>
-                        <div class="link_block">
-                            <a href="./App_introductions/HPScraping/" class="normal_a">HPスクレイピングアプリ</a>
-                        </div>
-                    </span>
+            <!-- スキルブロック -->
+            <div id="skill_block" class="content_block">
+
+                <!-- タイトル -->
+                <h1 id="skill_title">スキル</h1>
+
+                <!-- スライド位置表示エリア -->
+                <div id="slide_location">
+                    <a href="#windows_skill" class="a_selected"></a>
+                    <a href="#web_skill"></a>
+                    <a href="#iphone_skill"></a>
+                    <a href="#vba_skill"></a>
+                    <a href="#cpu_skill"></a>
                 </div>
-                <div class="image-text" id="web_skil">
-                    <span class="inner-text" id="inner-text2">
-                        <h2>Webデザイン</h2>
-                        <p>独学でWebデザインを勉強しています。</p>
-                        <p>ホームページや簡単なWebアプリの制作を行っています。</p>
-                        <p>下記のリンクから作成したWebアプリの紹介ページに移動できます。</p>
-                        <div class="link_block">
-                            <a href="./App_introductions/MoneyManagement/" class="normal_a">金銭管理アプリ</a>
+
+                <!-- スキルカード配置エリア -->
+                <div id="skill_cards">
+
+                    <!-- Windowsアプリ開発 -->
+                    <div class="skill_card" id="windows_skill">
+                        <img src="./img/スキル/windows.jpg" alt="">
+                        <div class="skill_explain" style="--top: 50%; --left: 5%; --bottom: auto; --right: auto;">
+                            <h2>Windowsアプリ開発</h2>
+                            <p>PythonやElectronを用いて、Windowsアプリの開発を行っています。</p>
+                            <p>WPFも勉強中であり、高度なアプリケーション開発を目標にしています。</p>
+                            <p>下記のリンクから制作したアプリの紹介ページに移動できます。</p>
+                            <div class="link_block">
+                                <a href="./App_introductions/AIChat/"">AI対話アプリ</a>
+                                <a href="./App_introductions/HPScraping/">HPスクレイピング</a>
+                                <a href="./App_introductions/ReadApp/">読書アプリ</a>
+                            </div>
                         </div>
-                        
-                    </span>
-                    <img src="./images/スキル/web_design.jpg" alt="no img" class="inner-img" id="inner-img2">
-                </div>
-                <div class="image-text" id="iphone_skil">
-                    <img src="./images/スキル/iphone.jpeg" alt="no img" class="inner-img" id="inner-img3">
-                    <span class="inner-text" id="inner-text3">
-                        <h2>IPhoneアプリ開発</h2>
-                        <p>Swiftを用いてIPhoneのアプリ開発をしています。</p>
-                        <p>React NativeやFlutterでのクロスプラットフォームアプリ開発を目標にしています。</p>
-                        <p>下記のリンクから作成したIPhoneアプリの紹介ページに移動できます。</p>
-                        <div class="link_block">
-                            <a href="./App_introductions/SmokingControl/" class="normal_a">喫煙管理アプリ</a>
+                    </div>
+    
+                    <!-- Webデザイン -->
+                    <div class="skill_card"  id="web_skill">
+                        <img src="./img/スキル/web_design.jpg" alt="">
+                        <div class="skill_explain" style="--top: 20%; --left: auto; --bottom: auto; --right: 5%;">
+                            <h2>Webデザイン</h2>
+                            <p>独学でWebデザインを勉強しています。</p>
+                            <p>ホームページや簡単なWebアプリの制作を行っています。</p>
+                            <p>下記のリンクから作成したWebアプリの紹介ページに移動できます。</p>
+                            <div class="link_block">
+                                <a href="./App_introductions/MoneyManagement/">金銭管理アプリ</a>
+                                <a href="./App_introductions/FileConversion/">ファイル変換アプリ</a>
+                            </div>
                         </div>
-                    </span>
-                </div>
-                <div class="image-text" id="vba_skil">
-                    <span class="inner-text" id="inner-text4">
-                        <h2>VBA</h2>
-                        <p>VBAで業務効率化マクロを制作できます。</p>
-                        <p>お客様からの要望に応じたマクロを提供してきました。</p>
-                        <p>誰でも簡単に使えるということを重視して制作しています。</p>
-                    </span>
-                    <img src="./images/スキル/VBA.jpeg" alt="no img" class="inner-img" id="inner-img4">
-                </div>
-                <div class="image-text" id="micro_skil">
-                    <img src="./images/スキル/cpu.jpg" alt="no img" class="inner-img" id="inner-img5">
-                    <span class="inner-text" id="inner-text5">
-                        <h2>組み込み開発</h2>
-                        <p>2年ほど組み込み開発の業務に携わっていました。</p>
-                        <p>特に、AD変換とPWM制御に関しては多くの知識を有しています。</p>
-                        <p>回路図の解析やオシロスコープの扱いにも長けています。</p>
-                    </span>
+                    </div>
+    
+                    <!-- IPhoneアプリ開発 -->
+                    <div class="skill_card" id="iphone_skill">
+                        <img src="./img/スキル/iphone.jpeg" alt="">
+                        <div class="skill_explain" style="--top: 45%; --left: auto; --bottom: auto; --right: 1%;">
+                            <h2>IPhoneアプリ開発</h2>
+                            <p>Swiftを用いてIPhoneのアプリ開発をしています。</p>
+                            <p>React NativeやFlutterでのクロスプラットフォームアプリ開発を目標にしています。</p>
+                            <p>下記のリンクから作成したIPhoneアプリの紹介ページに移動できます。</p>
+                            <div class="link_block">
+                                <a href="./App_introductions/SmokingControl/">喫煙管理アプリ</a>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- VBA -->
+                    <div class="skill_card"  id="vba_skill">
+                        <img src="./img/スキル/VBA.jpeg" alt="">
+                        <div class="skill_explain" style="--top: auto; --left: 30%; --bottom: 10%; --right: auto;">
+                            <h2>VBA</h2>
+                            <p>VBAで業務効率化マクロを制作できます。</p>
+                            <p>お客様からの要望に応じたマクロを提供してきました。</p>
+                            <p>誰でも簡単に使えるということを重視して制作しています。</p>
+                        </div>
+                    </div>
+    
+                    <!-- 組み込み開発 -->
+                    <div class="skill_card"  id="cpu_skill">
+                        <img src="./img/スキル/cpu.jpg" alt="">
+                        <div class="skill_explain" style="--top: 45%; --left: auto; --bottom: auto; --right: 20%;">
+                            <h2>組み込み開発</h2>
+                            <p>C言語を用いた組み込み開発の業務に2年ほど携わっていました。</p>
+                            <p>特に、AD変換とPWM制御に関しては多くの知識を有しています。</p>
+                            <p>回路図の解析やオシロスコープの扱いにも長けています。</p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
-            <!-- フレックスコンテンツ -->
-            <div class="block" id="qual_block">
-                <h2>資格</h2>
-                <p>Qualifications</p>
-                <div class="flex-block">
-                    <div class="contents" id="fe_qual">
-                        <p>基本情報技術者試験</p>
+            <!-- 資格ブロック -->
+            <div id="qual_block" class="content_block">
+
+                <!-- タイトル -->
+                <h1 id="qual_title">資格</h1>
+
+                <!-- 資格カード配置エリア -->
+                <div id="qual_place_area">
+
+                    <!-- 基本情報 -->
+                    <div class="qual_card" style="--num: 0;" id="fe_qual">
+                        <img src="./img/資格デザイン/基本情報.png" alt="">
+                        <div class="qual_explain">
+                            <p>基本情報技術者試験</p>
+                        </div>
+                        <div class="edit_name">基本情報技術者試験</div>
+                        <div class="edit_time">2023/11/15</div>
                     </div>
-                    <div class="contents" id="ap_qual">
-                        <p>応用情報技術者試験</p>
+
+                    <!-- 応用情報 -->
+                    <div class="qual_card" style="--num: 1;"  id="ap_qual">
+                        <img src="./img/資格デザイン/応用情報.png" alt="">
+                        <div class="qual_explain">
+                            <p>応用情報技術者試験</p>
+                        </div>
+                        <div class="edit_name">応用情報技術者試験</div>
+                        <div class="edit_time">2024/12/26</div>
                     </div>
-                    <div class="contents" id="mos_qual">
-                        <p>MOS Excel</p>
+
+                    <!-- MOS -->
+                    <div class="qual_card" style="--num: 2;" id="mos_qual">
+                        <img src="./img/資格デザイン/MOS.png" alt="">
+                        <div class="qual_explain">
+                            <p>MOS Excel</p>
+                        </div>
+                        <div class="edit_name">MOS Excel</div>
+                        <div class="edit_time">2024/12/17</div>
                     </div>
-                    <div class="contents" id="vba_qual">
-                        <p>VBA エキスパート</p>
+
+                    <!-- VBA -->
+                    <div class="qual_card" style="--num: 3;" id="vba_qual">
+                        <img src="./img/資格デザイン/VBA.png" alt="">
+                        <div class="qual_explain">
+                            <p>VBA エキスパート</p>
+                        </div>
+                        <div class="edit_name">VBA エキスパート</div>
+                        <div class="edit_time">2025/02/07</div>
                     </div>
-                    <!-- <div class="contents"></div>
-                    <div class="contents"></div> -->
+
                 </div>
             </div>
 
-            <!-- スライドショー -->
-            <div class="block" id="slider-block">
-                <h2>制作物</h2>
-                <p>Works</p>
-                <div id="slider-container">
-                    <div class="slide" id="slide1">
-                        <img src="./images/アプリデザイン/AIChatApp.png" alt="">
-                        <a href="./App_introductions/AIChat/"></a>
-                    </div>
-                    <div class="slide" id="slide2">
-                        <img src="./images/アプリデザイン/SmokingApp.png" alt="">
-                        <a href="./App_introductions/SmokingControl/"></a>
-                    </div>
-                    <div class="slide" id="slide3">
-                        <img src="./images/アプリデザイン/Hpscraping.png" alt="">
-                        <a href="./App_introductions/HPScraping/"></a>
-                    </div>
-                    <div class="slide" id="slide4">
-                        <img src="./images/アプリデザイン/Moneymanagement.png" alt="">
-                        <a href="./App_introductions/MoneyManagement/"></a>
-                    </div>
-                    <!-- <div class="slide">
-                        <img src="./images/slide5.jpg" alt="">
-                    </div>
-                    <div class="slide">
-                        <img src="./images/slide6.jpeg" alt="">
-                    </div>
-                    <div class="slide">
-                        <img src="./images/slide7.jpg" alt="">
-                    </div> -->
+            <!-- 資格詳細ボックス -->
+            <div id="qual_content">
+
+                <!-- 資格詳細ヘッダ -->
+                <div id="qual_header">
+                    <h2>資格詳細</h2>
                 </div>
 
-                <div class="grid-layout">
-                    <button id="slider-play">
-                        <div id="play-start"></div>
-                        <div id="play-stop"></div>
-                    </button>
-
-                    <div id="slider-selecters">
-                        <span class="slider-selecter"></span>
-                        <span class="slider-selecter"></span>
-                        <span class="slider-selecter"></span>
-                        <span class="slider-selecter"></span>
-                        <!-- <span class="slider-selecter"></span>
-                        <span class="slider-selecter"></span>
-                        <span class="slider-selecter"></span> -->
+                <!-- 資格詳細メイン -->
+                <div id="qual_main">
+                    <div class="qual_edit_block">
+                        <span>資格名称：</span>
+                        <p id="qual_name">基本情報技術者試験</p>
                     </div>
+                    <div class="qual_edit_block">
+                        <span>取得日時：</span>
+                        <p id="qual_time">2024/12/24</p>
+                    </div>
+                </div>
+
+                <!-- 資格詳細フッタ -->
+                <div id="qual_footer">
+                    <div id="qual_content_close_button"></div>
                 </div>
             </div>
 
-            <!-- 表 -->
-            <div class="block" id="tool_table_block">
-                <h2>ツール使用経験</h2>
-                <img src="./images/ツール/git.svg" alt="" class="random_icons">
-                <img src="./images/ツール/excel.svg" alt="" class="random_icons">
-                <img src="./images/ツール/word.svg" alt="" class="random_icons">
-                <img src="./images/ツール/powerpoint.svg" alt="" class="random_icons">
-                <img src="./images/ツール/redmine.svg" alt="" class="random_icons">
-                <img src="./images/ツール/vsc.svg" alt="" class="random_icons">
-                <img src="./images/ツール/outlook.svg" alt="" class="random_icons">
-                <img src="./images/ツール/teams.svg" alt="" class="random_icons">
-                <img src="./images/ツール/winmerge.svg" alt="" class="random_icons">
-                <img src="./images/ツール/acrobatreader.svg" alt="" class="random_icons">
-                <img src="./images/ツール/notion.svg" alt="" class="random_icons">
-                <img src="./images/ツール/zoom.svg" alt="" class="random_icons">
-                <p>Tools usage experience</p>
-                <div class="table_block">
-                    <table class="table_design">
-                        <tr>
-                            <th>ツール名称</th>
-                            <th>経験(期間)</th>
-                        </tr>
-                        <tr>
-                            <td>Git</td>
-                            <td>業務(2年)</td>
-                        </tr>
-                        <tr>
-                            <td>SVN</td>
-                            <td>業務(2年)</td>
-                        </tr>
-                        <tr>
-                            <td>Microsoft Excel</td>
-                            <td>在学(4年)+業務(2年)</td>
-                        </tr>
-                        <tr>
-                            <td>Microsoft Word</td>
-                            <td>在学(4年)</td>
-                        </tr>
-                        <tr>
-                            <td>Microsoft PowerPoint</td>
-                            <td>在学(4年)</td>
-                        </tr>
-                        <tr>
-                            <td>Redmine</td>
-                            <td>業務(2年)</td>
-                        </tr>
-                        <tr>
-                            <td>Visual Studio Code</td>
-                            <td>個人(4年)</td>
-                        </tr>
-                        <tr>
-                            <td>illustrator</td>
-                            <td>個人(1ヵ月)</td>
-                        </tr>
-                        <tr>
-                            <td>Affinity Designer</td>
-                            <td>個人(1年)</td>
-                        </tr>
-                        <tr>
-                            <td>winMerge</td>
-                            <td>業務(2年)</td>
-                        </tr>
-                        <tr>
-                            <td>Notion</td>
-                            <td>個人(半年)</td>
-                        </tr>
-                        <tr>
-                            <td>Acrobat Reader</td>
-                            <td>業務(2年)</td>
-                        </tr>
-                        <tr>
-                            <td>Microsoft Teams</td>
-                            <td>業務(2年)</td>
-                        </tr>
-                        <tr>
-                            <td>Microsoft Outlook</td>
-                            <td>業務(2年)</td>
-                        </tr>
-                        <tr>
-                            <td>ZOOM</td>
-                            <td>業務(2年半)</td>
-                        </tr>
-                        <tr>
-                            <td>XYZmaker</td>
-                            <td>在学(2年)</td>
-                        </tr>
-                        <tr>
-                            <td>Jenkins</td>
-                            <td>業務(2年)</td>
-                        </tr>
-                        <tr>
-                            <td>Apache</td>
-                            <td>個人(半年)</td>
-                        </tr>
-                        <tr>
-                            <td>MariaDB</td>
-                            <td>個人(半年)</td>
-                        </tr>                            
-                    </table>
+            <!-- 制作物ブロック -->
+            <div id="work_block" class="content_block">
+
+                <!-- タイトル -->
+                <h1 id="work_title">制作物</h1>
+
+                <!-- 制作物配置エリア -->
+                <div id="work_place_area">
+
+                    <!-- メイン配置 -->
+                    <div id="main_work">
+
+                        <!-- 制作物カード -->
+                        <div class="work_card_block">
+                            <div class="work_card">
+                                <img src="./img/アプリデザイン/AIChatApp.png" alt="">
+                                <a href="./App_introductions/AIChat/"></a>
+                            </div>
+                            <div class="work_card_expalin">AI対話アプリ</div>
+                        </div>
+
+                    </div>
+
+                    <!-- サブ配置 -->
+                    <div id="sub_works">
+
+                        <!-- AI対話アプリ -->
+                        <div class="sub_work">
+                            <div class="work_card_block">
+                                <div class="work_card work_card_selected" id="ai_work">
+                                    <img src="./img/アプリデザイン/AIChatApp.png" alt="">
+                                    <a href="./App_introductions/AIChat/"></a>
+                                </div>
+                                <div class="work_card_expalin">AI対話アプリ</div>
+                            </div>
+                        </div>
+
+                        <!-- 金銭管理アプリ -->
+                        <div class="sub_work">
+                            <div class="work_card_block">
+                                <div class="work_card" id="money_work">
+                                    <img src="./img/アプリデザイン/Moneymanagement.png" alt="">
+                                    <a href="./App_introductions/MoneyManagement/"></a>
+                                </div>
+                                <div class="work_card_expalin">金銭管理アプリ</div>
+                            </div>
+                        </div>
+
+                        <!-- HPスクレイピングアプリ -->
+                        <div class="sub_work">
+                            <div class="work_card_block">
+                                <div class="work_card"  id="hp_work">
+                                    <img src="./img/アプリデザイン/Hpscraping.png" alt="">
+                                    <a href="./App_introductions/HPScraping/"></a>
+                                </div>
+                                <div class="work_card_expalin">HPスクレイピングアプリ</div>
+                            </div>
+                        </div>
+
+                        <!-- 喫煙管理アプリ -->
+                        <div class="sub_work">
+                            <div class="work_card_block">
+                                <div class="work_card"  id="smoke_work">
+                                    <img src="./img/アプリデザイン/SmokingApp.png" alt="">
+                                    <a href="./App_introductions/SmokingControl/"></a>
+                                </div>
+                                <div class="work_card_expalin">喫煙管理アプリ</div>
+                            </div>
+                        </div>
+
+                        <!-- 読書アプリ -->
+                        <div class="sub_work">
+                            <div class="work_card_block">
+                                <div class="work_card"  id="read_work">
+                                    <img src="./img/アプリデザイン/ReadApp.png" alt="">
+                                    <a href="./App_introductions/ReadApp/"></a>
+                                </div>
+                                <div class="work_card_expalin">読書アプリ</div>
+                            </div>
+                        </div>
+
+                        <!-- ファイル変換アプリ -->
+                        <div class="sub_work">
+                            <div class="work_card_block">
+                                <div class="work_card"  id="file_work">
+                                    <img src="./img/アプリデザイン/FileConvert.png" alt="">
+                                    <a href="./App_introductions/FileConversion/"></a>
+                                </div>
+                                <div class="work_card_expalin">ファイル変換アプリ</div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
+
+                <!-- 制作物ブロックのフッタ -->
+                <div id="work_footer">
+                    <div id="work_to_tool_img"></div>
+                    <div id="cat"></div>
+                    <div id="test"></div>
+                </div>
+
             </div>
+
+
+            <!-- 猫の爪(遊び要素) -->
+            <div id="crow"></div>
+
             
-            <!-- フッター -->
-            <footer>
-                <div class="end">
-                    <p>Copyright: 2025/02/07 tkt</p>
+            <!-- ツール使用経験ブロック -->
+            <div id="tool_block" class="content_block">
+
+                <!-- タイトル -->
+                <h1 id="tool_title">ツール使用経験</h1>
+
+                <!-- ツール背景 -->
+                <div id="tool_icon_area">
+
+                    <!-- アイコン(左向き) -->
+                    <div class="tool_icons">
+                        <img class="tool_icon" src="./img/ツール/excel.svg" alt="" style="--num:0;">
+                        <img class="tool_icon" src="./img/ツール/outlook.svg" alt="" style="--num:1;">
+                        <img class="tool_icon" src="./img/ツール/powerpoint.svg" alt="" style="--num:2;">
+                        <img class="tool_icon" src="./img/ツール/word.svg" alt="" style="--num:3;">
+                        <img class="tool_icon" src="./img/ツール/vsc.svg" alt="" style="--num:4;">
+                        <img class="tool_icon" src="./img/ツール/teams.svg" alt="" style="--num:5;">
+                    </div>
+
+                    <!-- アイコン(右向き) -->
+                    <div class="tool_icons">
+                        <img class="tool_icon" src="./img/ツール/git.svg" alt="" style="--num:0;">
+                        <img class="tool_icon" src="./img/ツール/redmine.svg" alt="" style="--num:1;">
+                        <img class="tool_icon" src="./img/ツール/notion.svg" alt="" style="--num:2;">
+                        <img class="tool_icon" src="./img/ツール/winmerge.svg" alt="" style="--num:3;">
+                        <img class="tool_icon" src="./img/ツール/zoom.svg" alt="" style="--num:4;">
+                        <img class="tool_icon" src="./img/ツール/acrobatreader.svg" alt="" style="--num:5;">
+                    </div>
+                </div>
+
+                <!-- ツール配置エリア -->
+                <div id="tool_place_area">
+
+                    <!-- ツールヘッダ -->
+                    <div id="tool_header">
+                        <div class="tool_header_content tool_header_content_selected" style="--main-color: #84B1ED" id="microsoft_tool">Microsoft</div>
+                        <div class="tool_header_content" style="--main-color: #C89EC4" id="management_tool">管理系</div>
+                        <div class="tool_header_content" style="--main-color: #EE7785" id="design_tool">デザイン系</div>
+                        <div class="tool_header_content" style="--main-color: #67D5B5" id="other_tool">その他</div>
+                    </div>
+
+                    <!-- ツールメイン -->
+                    <div id="tool_main">
+
+                        <!-- Microsoft -->
+                        <div class="tool_main_content">
+                            <table class="table_design">
+                                <tr>
+                                    <th>ツール名称</th>
+                                    <th>経験(期間)</th>
+                                </tr>
+                                <tr>
+                                    <td>Microsoft Excel</td>
+                                    <td>在学(4年)+業務(2年)</td>
+                                </tr>
+                                <tr>
+                                    <td>Microsoft Word</td>
+                                    <td>在学(4年)</td>
+                                </tr>
+                                <tr>
+                                    <td>Microsoft PowerPoint</td>
+                                    <td>在学(4年)</td>
+                                </tr>
+                                <tr>
+                                    <td>Visual Studio Code</td>
+                                    <td>個人(4年)</td>
+                                </tr>
+                                <tr>
+                                    <td>Microsoft Teams</td>
+                                    <td>業務(2年)</td>
+                                </tr>
+                                <tr>
+                                    <td>Microsoft Outlook</td>
+                                    <td>業務(2年)</td>
+                                </tr>
+                                <tr>
+                                    <td>Power Automate</td>
+                                    <td>個人(半年)</td>
+                                </tr>                            
+                            </table>
+                        </div>
+
+                        <!-- 管理系 -->
+                        <div class="tool_main_content">
+                            <table class="table_design">
+                                <tr>
+                                    <th>ツール名称</th>
+                                    <th>経験(期間)</th>
+                                </tr>
+                                <tr>
+                                    <td>Git</td>
+                                    <td>業務(2年)</td>
+                                </tr>
+                                <tr>
+                                    <td>SVN</td>
+                                    <td>業務(2年)</td>
+                                </tr>
+                                <tr>
+                                    <td>Redmine</td>
+                                    <td>業務(2年)</td>
+                                </tr>
+                                <tr>
+                                    <td>Notion</td>
+                                    <td>個人(半年)</td>
+                                </tr>
+                                <tr>
+                                    <td>Jenkins</td>
+                                    <td>業務(2年)</td>
+                                </tr>                           
+                            </table>
+                        </div>
+
+                        <!-- デザイン系 -->
+                        <div class="tool_main_content">
+                            <table class="table_design">
+                                <tr>
+                                    <th>ツール名称</th>
+                                    <th>経験(期間)</th>
+                                </tr>
+                                <tr>
+                                    <td>illustrator</td>
+                                    <td>個人(1ヵ月)</td>
+                                </tr>
+                                <tr>
+                                    <td>Affinity Designer</td>
+                                    <td>個人(1年)</td>
+                                </tr>
+                                <tr>
+                                    <td>XYZmaker</td>
+                                    <td>在学(2年)</td>
+                                </tr>                         
+                            </table>
+                        </div>
+
+                        <!-- その他 -->
+                        <div class="tool_main_content">
+                            <table class="table_design">
+                                <tr>
+                                    <th>ツール名称</th>
+                                    <th>経験(期間)</th>
+                                </tr>
+                                <tr>
+                                    <td>winMerge</td>
+                                    <td>業務(2年)</td>
+                                </tr>
+                                <tr>
+                                    <td>Acrobat Reader</td>
+                                    <td>業務(2年)</td>
+                                </tr>
+                                <tr>
+                                    <td>ZOOM</td>
+                                    <td>業務(2年半)</td>
+                                </tr>
+                                <tr>
+                                    <td>Apache</td>
+                                    <td>個人(半年)</td>
+                                </tr>
+                                <tr>
+                                    <td>MariaDB</td>
+                                    <td>個人(半年)</td>
+                                </tr>                            
+                            </table>
+                        </div>
+                    </div>
 
                 </div>
-            </footer>
 
+            </div>
         </div> <!-- End:class="main" -->
 
-        <div id="qualification_block">
-            <div class="infomations">
-                <p>資格名称</p>
-                <p id="qualification_name">基本情報技術者試験</p>
-            </div>
-            <div class="infomations">
-                <p>取得日時</p>
-                <p id="qualification_date">2024/12/08</p>
-            </div>
+        <!-- フッター -->
+        <footer>
+            <p>©2025/03/20 tkt</p>
+        </footer>
+
+        <!-- アブソリュートブロック -->
+         <div id="screan_lock"></div>
+
+         <div class="flower">
+            <div style="--num: 0"></div>
+            <div style="--num: 1"></div>
+            <div style="--num: 2"></div>
+            <div style="--num: 3"></div>
+            <div style="--num: 4"></div>
+            <div style="--num: 5"></div>
+            <div style="--num: 6"></div>
+            <div style="--num: 7"></div>
         </div>
-        <div id="screan_lock"></div>
         
     </body>
     <script src="code.js"></script>

@@ -5,150 +5,160 @@
         <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- それぞれのデバイスの大きさに応じて表示させる -->
         <title>Money Management</title> <!-- タブのとこに出る -->
         <meta name="description" content="sample text text"> <!-- 検索時の下の説明見たいなところ -->
-        <link rel="stylesheet" href="../../style.css" /> <!-- cssの適応 -->
         <link rel="stylesheet" href="../apps.css" /> <!-- cssの適応 -->
     </head>
 
     <body> <!-- 見える部分 -->
+        
+        <!-- 携帯用アイコン -->
+        <div id=phone_icon>
+            <div id="phone_icon_outline">
+                <div id="phone_icon_content"></div>
+            </div>
+        </div>
+
         <!-- ヘッダー -->
         <header>
-            <div id="header-icon"></div>
-            <span id="header-contents">
-                <span class="header-content">
-                    <a href="#title_block" class="no-child-content">TOP</a>
-                    <!-- <span class="menu-expand">
-                        <div class="expand-line"></div>
-                    </span>
-                    <div class="content-menu"></div> -->
-                </span>
-                <span class="header-content">
-                    <a href="#app_block" class="no-child-content">アプリ紹介</a>
-                    <!-- <span class="menu-expand">
-                        <div class="expand-line"></div>
-                    </span>
-                    <div class="content-menu"></div> -->
-                </span>
-                <span class="header-content">
-                    <a href="#how_to_use_block">使い方</a>
-                    <span class="menu-expand">
-                        <div class="expand-line"></div>
-                    </span>
-                    <div class="content-menu">
-                        <div class="menu-item">
-                            <a href="#use1">新規登録</a>
-                        </div>
-                        <div class="menu-item">
-                            <a href="#use2">ログイン</a>
-                        </div>
-                        <div class="menu-item">
-                            <a href="#use3">ユーザ名変更</a>
-                        </div>
-                        <div class="menu-item">
-                            <a href="#use4">パスワード変更</a>
-                        </div>
-                        <div class="menu-item">
-                            <a href="#use5">プロジェクト追加</a>
-                        </div>
-                        <div class="menu-item">
-                            <a href="#use6">プロジェクト並び替え</a>
-                        </div>
-                        <div class="menu-item">
-                            <a href="#use7">プロジェクト削除</a>
-                        </div>
-                        <div class="menu-item">
-                            <a href="#use8">プロジェクトを開く</a>
-                        </div>
-                        <div class="menu-item">
-                            <a href="#use9">基本操作</a>
-                        </div>
-                        <div class="menu-item">
-                            <a href="#use10">行/列の追加</a>
-                        </div>
-                        <div class="menu-item">
-                            <a href="#use11">行/列の並び替え</a>
-                        </div>
-                        <div class="menu-item">
-                            <a href="#use12">行/列の削除</a>
-                        </div>
-                        <div class="menu-item">
-                            <a href="#use13">ヘッダ編集</a>
-                        </div>
-                        <div class="menu-item">
-                            <a href="#use14">印刷表示</a>
-                        </div>
-                        <div class="menu-item">
-                            <a href="#use15">プロジェクト保存</a>
-                        </div>
-                        <div class="menu-item">
-                            <a href="#use16">ログアウト</a>
-                        </div>
-                    </div>
-                </span>
-                <span class="header-content">
-                    <a href="#development_block">開発環境</a>
-                    <span class="menu-expand">
-                        <div class="expand-line"></div>
-                    </span>
-                    <div class="content-menu">
-                        <div class="menu-item">
-                            <a href="#content1">使用ツール</a>
-                        </div>
-                        <div class="menu-item">
-                            <a href="#content2">使用言語</a>
-                        </div>
-                        <div class="menu-item">
-                            <a href="#content3">制作期間</a>
-                        </div>
-                    </div>
-                </span>
-            </span>
-            <div id="header-selecter">
-                <div class="selecter-line" id="top-line"></div>
-                <div class="selecter-line" id="center-line"></div>
-                <div class="selecter-line" id="bottom-line"></div>
+            <!-- ヘッダアイコン -->
+            <a id="header_icon" href="../../index.html">
+                <div id="header_icon_outline">
+                    <div id="header_icon_content"></div>
+                </div>
+            </a>
+
+            <!-- TOPヘッダ -->
+            <a href="#title_block" class="header_content header_content_a" style="--bottom-color: #a8e6cf; --br: 20px 0px 0px 0px;">
+                <p>TOP</p>
+            </a>
+
+            <!-- プレビューヘッダ -->
+            <a href="#preview_block" class="header_content header_content_a" style="--bottom-color: #f9c00c; --br: 0px 20px 0px 0px;">
+                <p>プレビュー</p>
+            </a>
+
+            <!-- ダミー(アイコン配置用) -->
+            <div id="header_dummy_icon"></div>
+
+            <!-- 使い方 -->
+            <div class="header_content" style="--bottom-color: #84b1ed; --br: 0px 0px 0px 20px;">
+                <p>使い方</p>
+                <div class="header_in_content">
+                    <a class="return_head">戻る</a>
+                    <a style="--a-order: 0" href="#use1" class="header_a">新規登録</a>
+                    <a style="--a-order: 1" href="#use2" class="header_a">ログイン</a>
+                    <a style="--a-order: 2" href="#use3" class="header_a">ユーザ名変更</a>
+                    <a style="--a-order: 3" href="#use4" class="header_a">パスワード変更</a>
+                    <a style="--a-order: 4" href="#use5" class="header_a">プロジェクト追加</a>
+                    <a style="--a-order: 5" href="#use6" class="header_a">プロジェクト並び替え</a>
+                    <a style="--a-order: 6" href="#use7" class="header_a">プロジェクト削除</a>
+                    <a style="--a-order: 7" href="#use8" class="header_a">プロジェクトを開く</a>
+                    <a style="--a-order: 8" href="#use9" class="header_a">基本操作</a>
+                    <a style="--a-order: 9" href="#use10" class="header_a">行/列の追加</a>
+                    <a style="--a-order: 10" href="#use11" class="header_a">行/列の並び替え</a>
+                    <a style="--a-order: 11" href="#use12" class="header_a">行/列の削除</a>
+                    <a style="--a-order: 12" href="#use13" class="header_a">ヘッダ編集</a>
+                    <a style="--a-order: 13" href="#use14" class="header_a">印刷表示</a>
+                    <a style="--a-order: 14" href="#use15" class="header_a">プロジェクト保存</a>
+                    <a style="--a-order: 15" href="#use16" class="header_a">ログアウト</a>
+                </div>
             </div>
 
-                
+            <!-- 開発環境ヘッダ -->
+            <div class="header_content" style="--bottom-color: #ff677d; --br: 0px 0px 20px 0px;">
+                <p>開発環境</p>
+                <div class="header_in_content">
+                    <a class="return_head">戻る</a>
+                    <a style="--a-order: 0" href="#tag1" class="header_a">使用ツール</a>
+                    <a style="--a-order: 1" href="#tag2" class="header_a">使用言語</a>
+                    <a style="--a-order: 2" href="#tag3" class="header_a">制作期間</a>
+                </div>
+            </div>
         </header>
 
+
         <!-- メイン部 -->
-        <div class="main">
-            <div class="title_img" id="title_block">
-                <img src="../../images/MoneyApp/Money.png" alt="">
-            </div>
-            <div class="block2" id="app_block">
-                <h2>アプリ紹介</h2>
-                <div class="explain">
-                    <p>お金の貸し借りを管理できるWebアプリケーションです。</p>
-                    <p>ログイン機能を搭載しているため、PCでもスマホでもデータを共有して使用できます。</p>
-                    <p>金額や仮払いした人などの情報を入力することで、自動でお金のやり取りを計算してくれます。</p>
+        <div id="main">
+            <div id="dummy_block"></div>
+
+            <!-- タイトル -->
+            <div id="title_block">
+                <div id="phone_block">
+                    <div id="title_img">
+                        <img src="../../img/MoneyApp/Money.png" alt="">
+                        <img class="shadow_img" src="../../img/MoneyApp/Money.png" alt="">
+                    </div>
+                    <h2 class="title" id="phone_title">金銭管理アプリ</h2>
+                    <div id="smooth_circle">
+                        <div></div>
+                    </div>
                 </div>
-                <div class="slide_view">
+
+                <div id="title_explain">
+                    <div id="explain_block">
+                        <h2 class="title" id="pc_title">金銭管理アプリ</h2>
+                        <div class="explain">
+                            <p>お金の貸し借りを管理できるWebアプリケーションです。</p>
+                          <p>ログイン機能を搭載しているため、PCでもスマホでもデータを共有して使用できます。</p>
+                           <p>金額や仮払いした人などの情報を入力することで、自動でお金のやり取りを計算してくれます。</p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <!-- プレビュー -->
+            <div class="content_block" id="preview_block">
+                <h2 class="title">プレビュー</h2>
+                <div id="slide_view">
                     <div class="slide_view_content">
-                        <video src="../../images/MoneyApp/Money.mp4" controls="true" controlslist="nodownload"></video>
+                        <video src="../../img/MoneyApp/Money.mp4" controls="true" controlslist="nodownload"></video>
                     </div>
                     <div class="slide_view_content">
-                        <img src="../../images/MoneyApp/image1.png" alt="">
+                        <img src="../../img/MoneyApp/image1.png" alt="">
                     </div>
                     <div class="slide_view_content">
-                        <img src="../../images/MoneyApp/image2.png" alt="">
+                        <img src="../../img/MoneyApp/image2.png" alt="">
                     </div>
                     <div class="slide_view_content">
-                        <img src="../../images/MoneyApp/image3.png" alt="">
+                        <img src="../../img/MoneyApp/image3.png" alt="">
                     </div>
                     <div class="slide_view_content">
-                        <img src="../../images/MoneyApp/image4.png" alt="">
+                        <img src="../../img/MoneyApp/image4.png" alt="">
                     </div>
                     <div class="slide_view_content">
-                        <img src="../../images/MoneyApp/image5.png" alt="">
+                        <img src="../../img/MoneyApp/image5.png" alt="">
                     </div>
                 </div>
             </div>
 
-            <div class="block2" id="how_to_use_block">
-                <h2>使い方</h2>
-                <div class="change_col_block">
-                    <div id="dummy">
+            <!-- ビッグプレビュー -->
+            <div id="preview_big">
+                <div id="preview_big_return_button"></div>
+                <div id="preview_big_view_area">
+                    <div>
+                        <img src="../../img/MoneyApp/image1.png" alt="">
+                    </div>
+                    <div>
+                        <img src="../../img/MoneyApp/image2.png" alt="">
+                    </div>
+                    <div>
+                        <img src="../../img/MoneyApp/image3.png" alt="">
+                    </div>
+                    <div>
+                        <img src="../../img/MoneyApp/image4.png" alt="">
+                    </div>
+                    <div>
+                        <img src="../../img/MoneyApp/image5.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 使い方 -->
+            <div class="content_block" id="how_to_use_block">
+                <h2 class="title">使い方</h2>
+                <div id="use_block_area">
+
+                    <div class="columns">
                         <div class="use_block" id="use1">
                             <div class="close_use_block"></div>
                             <div class="use_title">
@@ -156,30 +166,30 @@
                             </div>
                             <div class="use_explain_block">
                                 <div class="get_height">
-                                    <div>
-                                        <h5>1. ユーザ名とパスワードの入力</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use1-1.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">1. ユーザ名とパスワードの入力</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use1-1.png" alt="">
                                             <span>
                                                 <p>ユーザ名とパスワードを入力します。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>2. 新規登録</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use1-2.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">2. 新規登録</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use1-2.png" alt="">
                                             <span>
                                                 <p>Registerボタンをクリックします。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>3. ログインページへ</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use1-3.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">3. ログインページへ</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use1-3.png" alt="">
                                             <span>
                                                 <p>新規登録に成功すると5秒後に自動でログインページに移ります。</p>
                                             </span>
@@ -197,30 +207,30 @@
                             </div>
                             <div class="use_explain_block">
                                 <div class="get_height">
-                                    <div>
-                                        <h5>1. ユーザ名とパスワードの入力</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use2-1.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">1. ユーザ名とパスワードの入力</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use2-1.png" alt="">
                                             <span>
                                                 <p>ユーザ名とパスワードを入力します。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>2. ログイン</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use2-2.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">2. ログイン</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use2-2.png" alt="">
                                             <span>
                                                 <p>Loginボタンをクリックします。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>3. ログイン成功</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use2-3.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">3. ログイン成功</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use2-3.png" alt="">
                                             <span>
                                                 <p>ログインに成功するとホーム画面に移ります。</p>
                                             </span>
@@ -238,30 +248,30 @@
                             </div>
                             <div class="use_explain_block">
                                 <div class="get_height">
-                                    <div>
-                                        <h5>1. メニューを開く</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use3-1.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">1. メニューを開く</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use3-1.png" alt="">
                                             <span>
                                                 <p>右上のメニューボタンをクリックします。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>2. メニューの選択</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use3-2.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">2. メニューの選択</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use3-2.png" alt="">
                                             <span>
                                                 <p>メニューリストから[ユーザ名変更]をクリックします。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>3. ユーザ名変更ダイアログ</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use3-3.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">3. ユーザ名変更ダイアログ</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use3-3.png" alt="">
                                             <span>
                                                 <p>ユーザ名変更ダイアログが表示されるので、変更後のユーザ名を入力します。</p>
                                                 <p>※ユーザ名変更ダイアログが表示されたときに入力欄に入力されているのは現在のユーザ名です。</p>
@@ -269,20 +279,20 @@
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>4. ユーザ名変更</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use3-4.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">4. ユーザ名変更</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use3-4.png" alt="">
                                             <span>
                                                 <p>変更ボタンをクリックします。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>5. ユーザ名変更完了</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use3-5.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">5. ユーザ名変更完了</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use3-5.png" alt="">
                                             <span>
                                                 <p>ユーザ名の変更は完了です。</p>
                                             </span>
@@ -300,50 +310,50 @@
                             </div>
                             <div class="use_explain_block">
                                 <div class="get_height">
-                                    <div>
-                                        <h5>1. メニュー</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use4-1.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">1. メニュー</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use4-1.png" alt="">
                                             <span>
                                                 <p>右上のメニューボタンをクリックします。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>2. メニューの選択</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use4-2.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">2. メニューの選択</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use4-2.png" alt="">
                                             <span>
                                                 <p>メニューリストから[パスワード変更]をクリックします。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>3. パスワード変更ダイアログ</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use4-3.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">3. パスワード変更ダイアログ</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use4-3.png" alt="">
                                             <span>
                                                 <p>パスワード変更ダイアログが表示されるので、変更後のパスワードを入力します。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>4. パスワード変更</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use4-4.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">4. パスワード変更</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use4-4.png" alt="">
                                             <span>
                                                 <p>変更ボタンをクリックします。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>5. パスワード変更完了</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use4-5.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">5. パスワード変更完了</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use4-5.png" alt="">
                                             <span>
                                                 <p>パスワードの変更は完了です。</p>
                                             </span>
@@ -361,20 +371,20 @@
                             </div>
                             <div class="use_explain_block">
                                 <div class="get_height">
-                                    <div>
-                                        <h5>1. プロジェクトの追加</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use5-1.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">1. プロジェクトの追加</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use5-1.png" alt="">
                                             <span>
                                                 <p>画面下中央の＋ボタンをクリックします。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>2. プロジェクトの追加完了</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use5-2.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">2. プロジェクトの追加完了</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use5-2.png" alt="">
                                             <span>
                                                 <p>新規プロジェクトが追加されます。</p>
                                             </span>
@@ -392,60 +402,60 @@
                             </div>
                             <div class="use_explain_block">
                                 <div class="get_height">
-                                    <div>
-                                        <h5>1. 編集ボタン</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use6-1.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">1. 編集ボタン</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use6-1.png" alt="">
                                             <span>
                                                 <p>画面右下の編集ボタンをクリックします。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>2. 編集可能状態</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use6-2.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">2. 編集可能状態</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use6-2.png" alt="">
                                             <span>
                                                 <p>編集可能状態になります。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>3. 並び替え</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use6-3.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">3. 並び替え</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use6-3.png" alt="">
                                             <span>
                                                 <p>並び替えたいプロンプトをドラッグ&ドロップで移動させます。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>4. 並び替え後</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use6-4.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">4. 並び替え後</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use6-4.png" alt="">
                                             <span>
                                                 <p>ドロップした位置にプロジェクトが移動します。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>5. 通常状態</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use6-5.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">5. 通常状態</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use6-5.png" alt="">
                                             <span>
                                                 <p>並び替えが終わったら画面右下の編集ボタンをクリックして通常状態に戻します。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>6. 並び替え完了</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use6-6.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">6. 並び替え完了</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use6-6.png" alt="">
                                             <span>
                                                 <p>プロジェクトの並び替えは完了です。</p>
                                             </span>
@@ -463,50 +473,50 @@
                             </div>
                             <div class="use_explain_block">
                                 <div class="get_height">
-                                    <div>
-                                        <h5>1. 編集ボタン</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use7-1.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">1. 編集ボタン</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use7-1.png" alt="">
                                             <span>
                                                 <p>画面右下の編集ボタンをクリックします。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>2. 編集可能状態</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use7-2.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">2. 編集可能状態</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use7-2.png" alt="">
                                             <span>
                                                 <p>編集可能状態になります。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>3. プロジェクトの削除</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use7-3.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">3. プロジェクトの削除</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use7-3.png" alt="">
                                             <span>
                                                 <p>削除したいプロジェクトの右上にある×ボタンをクリックします。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>4. 削除前確認</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use7-4.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">4. 削除前確認</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use7-4.png" alt="">
                                             <span>
                                                 <p>確認ダイアログが表示されるので、削除ボタンをクリックします。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>5. プロジェクト削除完了</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use7-5.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">5. プロジェクト削除完了</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use7-5.png" alt="">
                                             <span>
                                                 <p>プロジェクトの削除は完了です。</p>
                                             </span>
@@ -524,20 +534,20 @@
                             </div>
                             <div class="use_explain_block">
                                 <div class="get_height">
-                                    <div>
-                                        <h5>1. プロジェクトを開く</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use8-1.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">1. プロジェクトを開く</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use8-1.png" alt="">
                                             <span>
                                                 <p>開きたいプロジェクトをクリックします。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>2. 完了</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use8-2.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">2. 完了</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use8-2.png" alt="">
                                             <span>
                                                 <p>プロジェクトが開きます。</p>
                                             </span>
@@ -555,50 +565,50 @@
                             </div>
                             <div class="use_explain_block">
                                 <div class="get_height">
-                                    <div>
-                                        <h5>1. アイコン変更</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use9-1.gif" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">1. アイコン変更</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use9-1.gif" alt="">
                                             <span>
                                                 <p>アイコンをクリックすることで、アイコンを変更できます。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>2. 内容変更</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use9-2.gif" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">2. 内容変更</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use9-2.gif" alt="">
                                             <span>
                                                 <p>内容セルをクリックし、文字を入力することで内容を変更できます。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>3. 金額変更</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use9-3.gif" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">3. 金額変更</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use9-3.gif" alt="">
                                             <span>
                                                 <p>金額セルをクリックし、文字を入力することで金額を変更できます。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>4. 支払者変更</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use9-4.gif" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">4. 支払者変更</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use9-4.gif" alt="">
                                             <span>
                                                 <p>支払者セルをクリックすることで、支払者を変更できます。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>5. 支払対象の変更</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use9-5.gif" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">5. 支払対象の変更</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use9-5.gif" alt="">
                                             <span>
                                                 <p>支払者列より右の列は支払い対象選択列になります。</p>
                                                 <p>[○]が支払い対象であることを示し、[-]は支払対象でないことを示します。</p>
@@ -618,40 +628,40 @@
                             </div>
                             <div class="use_explain_block">
                                 <div class="get_height">
-                                    <div>
-                                        <h5>1. 列の追加</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use10-1.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">1. 列の追加</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use10-1.png" alt="">
                                             <span>
                                                 <p>列追加ボタンをクリックします。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>2. 列の追加完了</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use10-2.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">2. 列の追加完了</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use10-2.png" alt="">
                                             <span>
                                                 <p>列が追加されます。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>3. 行の追加</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use10-3.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">3. 行の追加</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use10-3.png" alt="">
                                             <span>
                                                 <p>行追加ボタンをクリックします。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>4. 行の追加完了</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use10-4.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">4. 行の追加完了</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use10-4.png" alt="">
                                             <span>
                                                 <p>行が追加されます。</p>
                                             </span>
@@ -669,10 +679,10 @@
                             </div>
                             <div class="use_explain_block">
                                 <div class="get_height">
-                                    <div>
-                                        <h5>1. 列の並び替え①</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use11-1.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">1. 列の並び替え①</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use11-1.png" alt="">
                                             <span>
                                                 <p>移動したい列のヘッダを右クリックします。</p>
                                                 <p>※スマホの場合は1秒以上長押しします。</p>
@@ -680,40 +690,40 @@
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>2. 列の並び替え②</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use11-2.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">2. 列の並び替え②</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use11-2.png" alt="">
                                             <span>
                                                 <p>操作リストが表示されるので、[移動]ボタンをクリックします。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>3. 列の並び替え③</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use11-3.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">3. 列の並び替え③</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use11-3.png" alt="">
                                             <span>
                                                 <p>列セレクタが表示されるので、移動したい場所のセレクタをクリックします。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>4. 列の並び替え完了</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use11-4.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">4. 列の並び替え完了</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use11-4.png" alt="">
                                             <span>
                                                 <p>列の並び替えは完了です。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>5. 行の並び替え①</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use11-5.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">5. 行の並び替え①</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use11-5.png" alt="">
                                             <span>
                                                 <p>移動したい行のアイコンを右クリックします。</p>
                                                 <p>※スマホの場合は1秒以上長押しします。</p>
@@ -721,30 +731,30 @@
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>6. 行の並び替え②</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use11-6.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">6. 行の並び替え②</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use11-6.png" alt="">
                                             <span>
                                                 <p>操作リストが表示されるので、[移動]ボタンをクリックします。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>7. 行の並び替え③</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use11-7.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">7. 行の並び替え③</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use11-7.png" alt="">
                                             <span>
                                                 <p>行セレクタが表示されるので、移動したい場所のセレクタをクリックします。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>8. チャット送信</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use11-8.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">8. チャット送信</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use11-8.png" alt="">
                                             <span>
                                                 <p>行の並び替えは完了です。</p>
                                             </span>
@@ -762,10 +772,10 @@
                             </div>
                             <div class="use_explain_block">
                                 <div class="get_height">
-                                    <div>
-                                        <h5>1. 列の削除①</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use12-1.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">1. 列の削除①</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use12-1.png" alt="">
                                             <span>
                                                 <p>移動したい列のヘッダを右クリックします。</p>
                                                 <p>※スマホの場合は1秒以上長押しします。</p>
@@ -773,30 +783,30 @@
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>2. 列の削除②</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use12-2.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">2. 列の削除②</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use12-2.png" alt="">
                                             <span>
                                                 <p>操作リストが表示されるので、[削除]ボタンをクリックします。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>3. 列の削除完了</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use12-3.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">3. 列の削除完了</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use12-3.png" alt="">
                                             <span>
                                                 <p>列の削除は完了です。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>4. 行の削除①</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use12-4.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">4. 行の削除①</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use12-4.png" alt="">
                                             <span>
                                                 <p>移動したい行のアイコンを右クリックします。</p>
                                                 <p>※スマホの場合は1秒以上長押しします。</p>
@@ -804,20 +814,20 @@
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>5. 行の削除②</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use12-5.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">5. 行の削除②</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use12-5.png" alt="">
                                             <span>
                                                 <p>操作リストが表示されるので、[削除]ボタンをクリックします。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>6. 行の削除完了</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use12-6.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">6. 行の削除完了</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use12-6.png" alt="">
                                             <span>
                                                 <p>行の削除は完了です。</p>
                                             </span>
@@ -835,30 +845,30 @@
                             </div>
                             <div class="use_explain_block">
                                 <div class="get_height">
-                                    <div>
-                                        <h5>1. メニューを開く</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use13-1.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">1. メニューを開く</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use13-1.png" alt="">
                                             <span>
                                                 <p>右上のメニューボタンをクリックします。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>2. メニューの選択</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use13-2.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">2. メニューの選択</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use13-2.png" alt="">
                                             <span>
                                                 <p>メニューリストから[ヘッダ編集]をクリックします。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>3. ヘッダ編集モード</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use13-3.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">3. ヘッダ編集モード</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use13-3.png" alt="">
                                             <span>
                                                 <p>ヘッダ編集モードになります。</p>
                                                 <p>※このモードではヘッダ以外の操作はできません。</p>
@@ -866,100 +876,100 @@
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>4. アイコン変更①</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use13-4.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">4. アイコン変更①</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use13-4.png" alt="">
                                             <span>
                                                 <p>左上のアイコンをクリックします。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>5. アイコン変更②</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use13-5.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">5. アイコン変更②</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use13-5.png" alt="">
                                             <span>
                                                 <p>アイコン選択リストが表示されるので、好きなアイコンをクリックします。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>6. アイコンの変更完了</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use13-6.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">6. アイコンの変更完了</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use13-6.png" alt="">
                                             <span>
                                                 <p>アイコンが変更されます。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>7. プロジェクト名変更</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use13-7.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">7. プロジェクト名変更</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use13-7.png" alt="">
                                             <span>
                                                 <p>プロジェクト名をクリックすると入力できる状態になるので、変更後のプロジェクト名を入力します。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>8. プロジェクト名の変更完了</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use13-8.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">8. プロジェクト名の変更完了</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use13-8.png" alt="">
                                             <span>
                                                 <p>プロジェクト名が変更されます。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>9. 色の変更①①</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use13-9.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">9. 色の変更①①</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use13-9.png" alt="">
                                             <span>
                                                 <p>ヘッダの右側をクリックします。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>10. 色の変更②</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use13-10.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">10. 色の変更②</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use13-10.png" alt="">
                                             <span>
                                                 <p>カラーセレクタが表示されるので好きな色を選択します。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>11. 色の変更完了</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use13-11.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">11. 色の変更完了</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use13-11.png" alt="">
                                             <span>
                                                 <p>ヘッダの色が変更されます。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>12. ヘッダ編集の終了</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use13-12.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">12. ヘッダ編集の終了</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use13-12.png" alt="">
                                             <span>
                                                 <p>ヘッダの編集を終了するのは、右上のチェックボタンをクリックします。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>13. 通常状態</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use13-13.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">13. 通常状態</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use13-13.png" alt="">
                                             <span>
                                                 <p>以上でヘッダの編集は終了です。</p>
                                             </span>
@@ -977,30 +987,30 @@
                             </div>
                             <div class="use_explain_block">
                                 <div class="get_height">
-                                    <div>
-                                        <h5>1. メニューを開く</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use14-1.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">1. メニューを開く</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use14-1.png" alt="">
                                             <span>
                                                 <p>右上のメニューボタンをクリックします。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>2. メニューの選択</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use14-2.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">2. メニューの選択</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use14-2.png" alt="">
                                             <span>
                                                 <p>メニューリストから[印刷表示]をクリックします。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>3. 印刷表示</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use14-3.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">3. 印刷表示</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use14-3.png" alt="">
                                             <span>
                                                 <p>印刷に適した表示に変更されます。</p>
                                                 <p>この状態では、印刷する際に表のデータが欠損することなく全て表示されます。</p>
@@ -1009,10 +1019,10 @@
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>4. 編集表示</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use14-4.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">4. 編集表示</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use14-4.png" alt="">
                                             <span>
                                                 <p>メニューを開き、[編集表示]ボタンをクリックすることで、通常の状態に戻ります。</p>
                                             </span>
@@ -1030,30 +1040,30 @@
                             </div>
                             <div class="use_explain_block">
                                 <div class="get_height">
-                                    <div>
-                                        <h5>1. メニューを開く</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use15-1.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">1. メニューを開く</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use15-1.png" alt="">
                                             <span>
                                                 <p>右上のメニューボタンをクリックします。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>2. メニューの選択</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use15-2.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">2. メニューの選択</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use15-2.png" alt="">
                                             <span>
                                                 <p>メニューリストから[保存]をクリックします。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>3. プロジェクトの保存完了</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use15-3.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">3. プロジェクトの保存完了</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use15-3.png" alt="">
                                             <span>
                                                 <p>プロジェクトが保存されます。</p>
                                             </span>
@@ -1071,30 +1081,30 @@
                             </div>
                             <div class="use_explain_block">
                                 <div class="get_height">
-                                    <div>
-                                        <h5>1. メニューを開く</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use16-1.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">1. メニューを開く</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use16-1.png" alt="">
                                             <span>
                                                 <p>右上のメニューボタンをクリックします。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>2. メニューの選択</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use16-2.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">2. メニューの選択</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use16-2.png" alt="">
                                             <span>
                                                 <p>メニューリストから[ログアウト]をクリックします。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>3. ログアウト完了</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/MoneyApp/use/use16-3.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">3. ログアウト完了</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/MoneyApp/use/use16-3.png" alt="">
                                             <span>
                                                 <p>ログアウトするとログインページに飛ばされます。</p>
                                             </span>
@@ -1106,71 +1116,60 @@
                         </div>
 
                     </div>
+
+                    <div class="columns"></div>
+                    <div class="columns"></div>
                 </div>
             </div>
             
-            <div class="block2" id="development_block">
-                <h2>開発環境</h2>
 
-                <div class="tag_block">
-                    <div class="tags">
-                        <div class="tag" id="tag1">
-                            使用ツール
-                        </div>
-                        <div class="tag" id="tag2">
-                            使用言語
-                        </div>
-                        <div class="tag" id="tag3">
-                            制作期間
-                        </div>
+            <!-- 開発環境 -->
+            <div class="content_block" id="development_block">
+                <h2 class="title">開発環境</h2>
+                <div id="tag_block">
+                    <div id="tag_header">
+                        <div class="tag tag_selected" id="tag1" style="--main-color: rgb(148, 178, 233);">使用ツール</div>
+                        <div class="tag" id="tag2" style="--main-color: rgb(120, 207, 157);">使用言語</div>
+                        <div class="tag" id="tag3" style="--main-color: rgb(178, 138, 229);">制作期間</div>
                     </div>
-                    <div class="content_area">
+                    <div id="tag_main">
+
                         <div class="tag_content"  id="content1">
                             <p>Visual Studio Code</p>
                             <p>Apache</p>
                             <p>MariaDB</p>
                         </div>
         
-                        <div class="tag_content"  id="content2">
+                        <div class="tag_content tag_content_hidden"  id="content2">
                             <p>HTML</p>
                             <p>CSS</p>
                             <p>Java Script</p>
                             <p>PHP</p>
                         </div>
         
-                        <div class="tag_content"  id="content3">
+                        <div class="tag_content tag_content_hidden"  id="content3">
                             <div class="item_content">
-                                <p>UI UX考案</p>
-                                <p>UI UX実装</p>
-                                <p>処理実装</p>
-                                <p>その他</p>
+                                <p style="--circle-color: #84B1ED;">UI UX考案</p>
+                                <p style="--circle-color: #C89EC4;">UI UX実装</p>
+                                <p style="--circle-color: #EE7785;">処理実装</p>
+                                <p style="--circle-color: #67D5B5;">その他</p>
                             </div>
-                            <div class="graph" id="money_graph">
+                            <div class="graph" style="--per1: 30%; --per2: 60%; --per3:85%;">
                                 <div>
                                     約1ヵ月
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
-
-            </div>
-
-
-            <!-- フッター -->
-            <footer>
-                <div class="end">
-                    <p>Copyright: 2025/02/07 tkt</p>
-
-                </div>
-            </footer>
-
         </div> <!-- End:class="main" -->
 
-        <div id="big_img">
-            <img src="../../images/AIChat/image1.png" alt="">
-        </div>
-        
+        <!-- フッター -->
+        <footer>
+            <p>©2025/03/20 tkt</p>
+        </footer>
+
     </body>
     <script src="../apps.js"></script>
 </html>

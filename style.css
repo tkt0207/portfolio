@@ -1,6 +1,11 @@
 /*==========================================================*/
 /* 共通設定 */
 /*==========================================================*/
+:root{
+    --bg_color: rgb(240, 240, 240);
+    --ft_color: rgb(120, 120, 120);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -8,21 +13,322 @@
 }
 
 body {
-    background-color: rgb(243, 243, 243);
+    background-color: var(--bg_color);
+    color: var(--ft_color);
+    overflow-x: hidden;
 }
 
-.block {
-    width: calc(100% - 20px);
-    max-width: 1400px;
-    margin: 5px auto 20px auto;  /* 上 右 下 左 */
-    padding: 10px;
-    background-color: white;
-    border-radius: 30px;
-    text-align: center;
-    position: relative;
-    color: rgb(50, 50, 50);
-    box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.2), -3px -3px 3px rgb(255, 225, 225);
+
+/*==========================================================*/
+/* アニメーション */
+/*==========================================================*/
+/* 背景移動アニメーション */
+@keyframes background_move{
+    from{
+        background-position: 0%;
+    }
+    to{
+        background-position: -300%;
+    }
 }
+
+/* 周囲を回るアニメーション */
+@keyframes move_around{
+    0%{
+        offset-distance: 0%;
+    }
+    20%, 60%{
+        offset-distance: 5%;
+    }
+    40%, 80%{
+        offset-distance: 0%;
+    }
+    100%{
+        offset-distance: 100%;
+    }
+}
+
+/* 下線アニメーション */
+@keyframes width_up{
+    from{
+        width: 0px;
+    }
+    to{
+        width: 3rem;
+    }
+}
+
+/* フェードインアニメーション */
+@keyframes fade_and_scale_in{
+    from{
+        opacity: 0;
+        scale: 0;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+/* 上下アニメーション */
+@keyframes up_down{
+    0%, 100%{
+        translate: 0px 0px;
+    }
+    50%{
+        translate: 0px 10px;
+    }
+}
+
+/* フェードイン */
+@keyframes fade_in{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+/* フェードアウトアニメーション */
+@keyframes fade_out {
+    from{
+        opacity: 1;
+        /* scale: 1; */
+    }
+    to{
+        opacity: 0;
+        /* scale: 0; */
+    }
+}
+
+/* スケールアップアニメーション(z-indexを含む) */
+@keyframes scale_up_in_z {
+    0%{
+        scale: 0.25;
+        border-radius: 99px;
+        z-index: 7;
+    }
+    99%{
+        z-index: 7;
+    }
+    100%{
+        scale: 1;
+        border-radius: 20px;
+        z-index: 9;
+    }
+}
+
+/* スケールアップアニメーション(角丸を添えて) */
+@keyframes scale_up {
+    from{
+        border-radius: 99px;
+        scale: 0;
+    }
+    to{
+        border-radius: 20px;
+        scale: 1;
+    }
+}
+
+/* アップダウンアニメーション(抑揚あり) */
+@keyframes up_down_happy{
+    0%, 100%{
+        transform: translateY(0px);
+    }
+    15%, 85%{
+        transform: translateY(1px);
+    }
+    50%{
+        transform: translateY(10px);
+    }
+}
+
+/* 左から右へアニメーション */
+@keyframes left_to_right{
+    from{
+        left: -100%;
+    }
+    to{
+        left: 100%;
+    }
+}
+
+/* 色相回転アニメーション */
+@keyframes rotate_color{
+    from{
+        filter: hue-rotate(0deg);
+    }
+    to{
+        filter: hue-rotate(360deg);
+    }
+}
+
+/*==========================================================*/
+/* ヘッダーアイコン(携帯用アイコン) */
+/*==========================================================*/
+#header_icon,
+#phone_icon{
+    position: fixed;
+    height: 60px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0px 8px 8px rgb(0,0,0,0.2);
+    cursor: pointer;
+    z-index: 10;
+
+    /* 変数の設定 */
+    --font-color: var(--ft_color); /* ヘッダの文字色 */
+    --outline-color: white;      /* アウトラインの色 */
+    --blur-opacity: 0;             /* 光彩の透明度 */
+
+    /* ホバー時の設定 */
+    &:hover{
+        --font-color: linear-gradient(70deg, rgb(200, 160, 240) 0% 10%, rgb(220, 200, 240) 50%, rgb(200, 160, 240) 90% 100%);
+        --outline-color: linear-gradient(70deg, rgb(200, 160, 240) 0% 10%, rgb(220, 200, 240) 50%, rgb(200, 160, 240) 90% 100%);
+        --blur-opacity: 1;
+    }
+    /* アクティブ時の設定は不要 */
+}
+
+/* ヘッダアイコン固有スタイル */
+#header_icon{
+    top: 4px;
+    left: 50%;
+    translate: -50% 0%;
+}
+
+/* 携帯用アイコン固有スタイル */
+#phone_icon{
+    display: none;
+    top: 40px;
+    right: -20px;
+    translate: -50% -50%;
+    z-index: 8;
+    opacity: 0.3;
+
+    /* ホバー時の設定 */
+    &:hover{
+        opacity: 1;
+    }
+
+    /* アクティブ時の設定 */
+    /* &:active{
+        opacity: 1;
+        scale: 0.9;
+        --font-color: linear-gradient(70deg, rgb(200, 160, 240) 0% 10%, rgb(220, 200, 240) 50%, rgb(200, 160, 240) 90% 100%);
+        --outline-color: linear-gradient(70deg, rgb(200, 160, 240) 0% 10%, rgb(220, 200, 240) 50%, rgb(200, 160, 240) 90% 100%);
+    } */
+}
+
+
+    /*==========================================================*/
+    /* ヘッダーアイコンのアウトライン */
+    /*==========================================================*/
+    #header_icon_outline,
+    #phone_icon_outline{
+        position: absolute;
+        width: calc(100% + 8px);
+        aspect-ratio: 1/1;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        border-radius: 50%;
+        background: var(--outline-color);
+        background-size: 300%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: background_move 10s linear infinite;
+    }
+
+    /* 周囲の光彩 */
+    #header_icon_outline::before,
+    #phone_icon_outline::before{
+        content: "";
+        position: absolute;
+        width: 100%;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        background: linear-gradient(70deg, rgb(200, 160, 240) 0% 10%, rgb(220, 200, 240) 50%, rgb(200, 160, 240) 90% 100%);
+        background-size: 300%;
+        background-repeat: no-repeat;
+        opacity: var(--blur-opacity);
+        filter: blur(5px);
+        -webkit-filter: blur(5px);
+        will-change: transform;
+    }
+
+    /* 周囲を回る光彩 */
+    #header_icon_outline::after,
+    #phone_icon_outline::after{
+        content: "";
+        position: absolute;
+        width: 6px;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        background-color: white;
+        offset-path: circle(calc(50% - 2px));
+        opacity: var(--blur-opacity);
+        filter: blur(4px);
+        -webkit-filter: blur(4px);
+        z-index: 11;
+        animation: move_around ease-in-out 10s infinite;
+        rotate: -45deg;
+    }
+
+    
+        /*==========================================================*/
+        /* ヘッダーアイコンの中身(本体) */
+        /*==========================================================*/
+        #header_icon_content,
+        #phone_icon_content{
+            position: relative;
+            width: 60px;
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+            background-color: white;
+        }
+
+        /* 左上のP文字 */
+        #header_icon_content::before,
+        #phone_icon_content::before{
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            translate: -50% -50%;
+            width: 70%;
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+            mask: url(./img/port.png);
+            mask-size: contain;
+            mask-repeat: no-repeat;
+            background: var(--font-color);
+        }
+
+        /* 右下のp文字 */
+        #header_icon_content::after,
+        #phone_icon_content::after{
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            translate: -50% -50%;
+            width: 70%;
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+            mask: url(./img/port.png);
+            mask-size: contain;
+            mask-repeat: no-repeat;
+            background: var(--font-color);
+            rotate: 180deg;
+        }
+
 
 /*==========================================================*/
 /* ヘッダー */
@@ -30,765 +336,1490 @@ body {
 header {
     width: 100%;
     height: 40px;
-    background-color: rgba(230, 230, 230, 0.8);
+    background-color: white;
+    box-shadow: 0px 2px 10px rgb(0,0,0,0.2);
+    border-radius: 0px 0px 20px 20px;
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 99;
+    z-index: 9;
     display: flex;
-    transition-duration: 0.5s;
-    backdrop-filter: blur(5px);
-}
-
-#header-icon {
-    display: inline-block;
-    height: 80%;
-    aspect-ratio: 1;
-    margin: auto;
-    margin-left: 20px;
-
-    -webkit-mask-size: contain;
-	-webkit-mask-repeat: no-repeat;
-	-webkit-mask-position: center;
-	mask-size: contain;
-	mask-repeat: no-repeat;
-	mask-position: center;
-
-    -webkit-mask-image: url(./images/header_icon.png);
-    mask-image: url(./images/header_icon.png);
-
-    background-color: rgb(129, 100, 136);
-}
-
-#header-contents {
-    flex-grow: 1;
-    display: flex;
-    text-align: center;
-    max-width: 1000px;
-    margin-right: auto;
-}
-
-/* スクロールバーが通る箇所 */
-#header-contents::-webkit-scrollbar, .content-menu::-webkit-scrollbar {
-    /* 幅 */
-    width: 8px;
-    height: 8px;
-    background-color: rgb(0, 0, 0, 0.05);
-}
-
-/* スクロールバー */
-#header-contents::-webkit-scrollbar-thumb, .content-menu::-webkit-scrollbar-thumb {
-    /* 幅 */
-    width: 8px;
-    height: 8px;
-    /* 角丸 */
-    border-radius: 5px;
-    /* 背景色 */
-    background-color: rgb(0, 0, 0, 0.1);
-}
-
-/* スクロールバーの角 */
-#header-contents::-webkit-scrollbar-corner .content-menu::-webkit-scrollbar-corner{
-    background-color: none;
-}
-
-
-.header-content {
-    position: relative;
-    flex-grow: 1;
-    font-size: 16px;
-    font-weight: 500;
-    color: rgb(39, 39, 39);
-    width: auto; /* 横幅を統一したいときはこれを固定値にする */
-    height: 100%;
-    line-height: 40px; /* ヘッダーの文字は2行にすることないからこれでいい */
-}
-
-.header-content > a {
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    color: rgb(39, 39, 39);
-    text-decoration: none;
-}
-
-.no-child-content:hover {
-    background-color: rgb(213, 213, 213);
-}
-
-.menu-expand {
-    display: none;
-}
-
-#header-selecter {
-    height: 80%;
-    margin: auto 20px auto auto;
-    width: 32px;
-    position: relative;
-    justify-content: center;
     align-items: center;
-    display: none;
-}
-
-.selecter-line {
-    width: 26px;
-    height: 3px;
-    border-radius: 3px;
-    background-color: rgb(39, 39, 39);
-    position: absolute;
-    transition-duration: 0.5s;
-}
-
-#center-line {
-    top: calc(50% -1.5px);
-}
-
-#top-line {
-    top: calc(25% - 1.5px);
-    /* top: 50%;
-    transform: rotate(45deg); */
-}
-
-#bottom-line {
-    top: calc(75% - 1.5px);
-    /* top: 50%;
-    transform: rotate(-45deg); */
-}
-
-.cross > #center-line {
-    opacity: 0;
-}
-
-.cross > #top-line {
-    top: calc(50% - 1.5px);
-    rotate: 45deg;
-}
-
-.cross > #bottom-line {
-    top: calc(50% - 1.5px);
-    rotate: -45deg;
-}
-
-.content-menu {
-    position: absolute;
-    width: 100%;
-    background-color: rgb(235, 235, 235);
-    display: none;
-    font-size: 0.8rem;
-    box-shadow: 4px 4px 4px rgb(0,0,0,0.2);
-    max-height: 50vh;
-    overflow-y: auto;
-}
-
-.overflowY {
-    animation: set_overflow 0.5s forwards;
-}
-
-@keyframes set_overflow {
-    0%{
-        overflow-y: hidden;
-    }
-    99%{
-        overflow-y: hidden;
-    }
-    100%{
-        overflow-y: auto;
-    }
-}
-
-.menu-item {
-    height: 40px;
-    line-height: 40px;
-    animation: down-appear 0.5s;
-}
-
-.menu-item > a {
-    display: inline-block;
-    color: rgb(39, 39, 39);
-    text-decoration: none;
-    height: 100%;
-    width: 100%;
-}
-
-.menu-item:hover {
-    background-color: rgb(213, 213, 213);
-}
-
-/* ウィンドウ幅が狭まったとき */
-@media only screen and (max-width: 960px){
-    #header-selecter {
-        display: flex;
-        cursor: pointer;
-    }
-
-    #header-contents {
-        position: absolute;
-        width: 240px;
-        background-color: rgb(235, 235, 235);
-        top: 40px;
-        right: 0;
-        max-height: 500px;
-        overflow-y: auto;
-        overflow-x: hidden;
-        animation: left-appear 0.5s;
-        box-shadow: -4px 4px 4px rgb(0, 0, 0, 0.2);
-    }
-
-    .header-content {
-        display: block;
-        text-align: left;
-    }
-
-    .header-content > a {
-        padding-left: 20px;
-    }
-
-    .header-content > a:hover {
-        background-color: rgb(213, 213, 213);
-    }
-
-    .menu-expand {
-        display: inline-block;
-        color: rgb(39, 39, 39);
-        height: 40px;
-        width: 40px;
-        border-radius: 20px;
-        text-align: center;
-        position: absolute;
-        right: 0;
-        transition-duration: 0.5s;
-    }
-
-    .expand-line {
-        display: inline-block;
-        position: relative;
-        width: 10px;
-        height: 10px;
-        border-style: solid;
-        border-width: 2px 2px 0 0;
-        border-color: black;
-        transform: rotate(45deg);
-        left: -2.5px;
-    }
-
-    .menu-expand:hover {
-        background-color: rgb(213, 213, 213);
-    }
-
-    .content-menu {
-        position: relative;
-        box-shadow: none;
-    }
-
-    .menu-item > a {
-        padding-left: 40px;
-    }
-
-
-    .random_icons {
-        display: none;
-    }
-}
-
-.content-menu.-hidden {
-    animation: disappear 0.5s;
-}
-
-.content-menu.-hidden > .menu-item {
-    animation: up-disappear 0.5s;
-}
-
-
-
-@keyframes down-appear {
-    0%{
-        height: 0;
-        opacity: 0;
-        pointer-events: none;
-    }
-
-    50%{
-        opacity: 0.2;
-        pointer-events: none;
-    }
-
-    100% {
-        height: 40px;
-        opacity: 1;
-    }
-}
-
-@keyframes left-appear {
-    0%{
-        transform: translateX(200px);
-        opacity: 0;
-        pointer-events: none;
-    }
-
-    50%{
-        opacity: 0.2;
-        pointer-events: none;
-    }
-
-    100% {
-        transform: none;
-        opacity: 1;
-    }
-}
-
-@keyframes up-disappear {
-    0%{
-        opacity: 1;
-        pointer-events: none;
-    }
-
-    50%{
-        opacity: 0.8;
-        pointer-events: none;
-    }
-
-    100% {
-        height: 0;
-        opacity: 0;
-    }
-}
-
-@keyframes disappear {
-    0%{
-        display: block;
-        opacity: 1;
-        pointer-events: none;
-    }
-
-    99%{
-        display: block;
-        pointer-events: none;
-    }
-
-    100% {
-        display: none;
-        opacity: 0;
-    }
-}
-
-.main {
-    margin-top: 40px;
-    padding-top: 10px;
-    /* max-width: 1600px;
-    margin-right: auto;
-    margin-left: auto; */
-}
-
-/*==========================================================*/
-/* フレックスボックス */
-/*==========================================================*/
-.flex-block {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.contents {
-    width: calc(100%/2 - 20px);
-    min-width: 300px;
-    height: 300px;
-    background-color: black;
-    border-radius: 20px;
-    margin: 5px;
-    flex-grow: 1;
-    background-image: url(./images/資格デザイン/基本情報.png);
-    background-position: center;
-    background-size: cover;
-    position: relative;
-    cursor: pointer;
-    
-    /* &:hover {
-        filter: brightness(0.5);
-    } */
-
-    &:hover > p {
-        display: inline-block;
-    }
-}
-
-.contents:nth-child(1){
-    background-image: url(./images/資格デザイン/基本情報.png);
-    &:hover {
-        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(./images/資格デザイン/基本情報.png);
-    }
-}
-.contents:nth-child(2){
-    background-image: url(./images/資格デザイン/応用情報.png);
-    &:hover {
-        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(./images/資格デザイン/応用情報.png);
-    }
-}
-.contents:nth-child(3){
-    background-image: url(./images/資格デザイン/MOS.png);
-    &:hover {
-        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(./images/資格デザイン/MOS.png);
-    }
-}
-.contents:nth-child(4){
-    background-image: url(./images/資格デザイン/VBA.png);
-    &:hover {
-        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(./images/資格デザイン/VBA.png);
-    }
-}
-/* .contents:nth-child(5){
-    background-image: url(./images/slide12.jpg);
-}
-.contents:nth-child(6){
-    background-image: url(./images/slide13.png);
-} */
-
-
-
-.contents > p {
     font-weight: bold;
-    color: white;
-    position: absolute;
-    right: 20px;
-    bottom: 10px;
-    display: none;
 }
 
-/*==========================================================*/
-/* スライダー */
-/*==========================================================*/
-#slider-block {
-    padding: 20px;
-    margin-bottom: 20px;
+/* アイコン配置用の空き領域 */
+#header_dummy_icon{
+    width: 60px;
 }
 
-#slider-container {
+
+    /*==========================================================*/
+    /* ヘッダーの中身 */
+    /*==========================================================*/
+    .header_content{
+        position: relative;
+        width: calc(25% - 15px);
+        text-align: center;
+        cursor: pointer;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        user-select: none;
+
+        /* 変数の設定 */
+        --in-display: none;  /* ヘッダの中身の中身の表示設定 */
+
+        /* ホバー時の設定 */
+        &:hover{
+            --in-display: flex;
+            color: var(--bottom-color);
+        }
+
+        /* アクティブ時の設定は不要 */
+    }
+
+
+        /*==========================================================*/
+        /* ヘッダーの識別文字 */
+        /*==========================================================*/
+        .header_content > p{
+            padding: 0px 10px;
+            position: relative;
+        }
+
+        /* ホバー時に下に出てくるライン */
+        .header_content > p::after{
+            content: "";
+            position: absolute;
+            bottom: 0px;
+            left: 50%;
+            translate: -50% 50%;
+            /* width: 100%; */
+            width: 3rem;
+            height: 4px;
+            border-radius: 99px;
+            background-color: var(--bottom-color);
+            display: var(--in-display);
+            animation: width_up 0.2s linear;
+        }
+
+
+        /*==========================================================*/
+        /* ヘッダーの中身の中身 */
+        /*==========================================================*/
+        .header_in_content{
+            position: fixed;
+            top: 40px;
+            left: 50%;
+            translate: -50% 0%;
+            width: 100vw;
+            height: 120px;
+            border-radius: 0px 0px 20px 20px;
+            display: var(--in-display);
+            align-items: flex-end;
+            padding: 20px;
+            padding-top: 0px;
+            justify-content: space-evenly;
+            font-size: 0.8rem;
+            color: rgb(120, 120, 120);
+            overflow-y: hidden;
+            overflow-x: auto;
+            cursor: auto;
+        }
+
+        /* スクロールバーが通る箇所 */
+        .header_in_content::-webkit-scrollbar {
+            appearance: none;
+            width: 10px;
+            height: 10px;
+            background-color: rgb(128, 128, 128, 0);
+        }
+
+        /* スクロールバー */
+        .header_in_content::-webkit-scrollbar-thumb {
+            appearance: none;
+            width: 10px;
+            height: 10px;
+            border-radius: 20px;
+            background-color: var(--bottom-color);
+        }
+
+
+            /*==========================================================*/
+            /* リンク要素 */
+            /*==========================================================*/
+            .header_in_content > a{
+                text-decoration: none;
+                color: var(--ft_color);
+                flex-shrink: 0;
+                margin: 10px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                padding: 0px 10px;
+                border-radius: 10px;
+                background-color: white;
+                box-shadow: 0px 0px 10px 2px var(--bottom-color);
+                opacity: 0;
+                animation: fade_and_scale_in ease-in-out 1s forwards, up_down 2s ease-in-out infinite;
+                animation-delay: calc(var(--a-order) * 0.1s);
+                cursor: pointer;
+                user-select: none;
+                -webkit-user-drag: none;
+
+                /* ホバー時の設定 */
+                &:hover{
+                    color: var(--bottom-color);
+                    transform: scale(1.1);
+                    animation-play-state: paused;
+                }
+
+                /* アクティブ時の設定 */
+                /* &:active{
+                    color: var(--bottom-color);
+                    transform: scale(0.95);
+                    animation-play-state: paused;                
+                } */
+            }
+
+            /* 携帯用戻るボタン */
+            .header_in_content > .return_head{
+                display: none;
+            }
+
+
+
+/*==========================================================*/
+/* メイン */
+/*==========================================================*/
+#main{
     position: relative;
     width: 100%;
-    /* height: 400px; */
-    max-height: 400px;
-    overflow: hidden;
+    margin-top: 20px;
 }
 
-.slide {
-    position: absolute;
+/* コンテントブロック共通設定 */
+.content_block {
     width: 100%;
-    max-width: 800px;
-    height: 100%;
-    background-color: aqua;
-    top: 0;
-    display: flex;
-    align-items: center;
-    transition-duration: 0.5s;
-    cursor: pointer;
+    position: relative;
+}
 
-    &:hover {
-        filter: brightness(0.6);
+
+/*==========================================================*/
+/* スキルブロック */
+/*==========================================================*/
+#skill_block{
+    height: calc(100dvh - 20px);
+    min-height: 500px;
+    box-shadow: 0px 20px 20px rgb(0,0,0, 0.5);
+}
+
+    /*==========================================================*/
+    /* スキルブロックのタイトル */
+    /*==========================================================*/
+    #skill_title{
+        position: absolute;
+        top: 50px;
+        left: 5%;
+        color: white;
+        font-size: clamp(2rem, 4vmax, 4rem);
+        text-shadow: 2px 2px 10px rgb(0,0,0,0.8);
+        z-index: 2;
     }
-}
 
-.slide > img{
-    /* object-fit: contain; */
-    /* max-width: 100%; */
-    /* max-height: 100%; */
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    user-select: none;
-}
+    /*==========================================================*/
+    /* スライダーセレクタ */
+    /*==========================================================*/
+    #slide_location{
+        position: absolute;
+        height: 30px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        bottom: 4px;
+        left: 50%;
+        translate: -50% 0%;
+        z-index: 2;
+        gap: 20px;
+        padding: 0px 20px;
+    }
 
-.slide > a {
-    display: none;
-}
 
-#slider-selecters {
-    width: 200px;
-    height: 30px;
-    margin-right: auto;
-    margin-left: auto;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
+        /*==========================================================*/
+        /* スライダーセレクタ内の選択ボタン */
+        /*==========================================================*/
+        #slide_location > a{
+            height: 50%;
+            aspect-ratio: 1/1;
+            background-color: rgb(160, 160, 160);
+            border-radius: 50%;
+            -webkit-user-drag: none;
 
-.slider-selecter {
-    width: 10px;
-    height: 10px;
-    background-color: gray;
-    border-radius: 5px;
-    cursor: pointer;
-}
+            &:hover{
+                background-color: rgb(60, 136, 60);
+            }
 
-#slider-play {
-    width: 30px;
-    height: 30px;
-    background-color: rgb(243, 243, 243);
-    border-radius: 15px;
-    border: solid rgb(39, 39, 39) 2px;
-    margin: auto;
-    cursor: pointer;
-}
+            /* &:active{
+                background-color: rgb(59, 116, 59);
+            } */
+        }
 
-#play-start {
-    width: 12px;
-    height: 12px;
-    background-color: rgb(243, 243, 243);
-    border: solid 6px rgb(243, 243, 243);
-    border-right: none;
-    border-left: solid 10px rgb(39, 39, 39);
-    margin-left: 9px;
-    display: none;
-}
+        /* 選択中のスタイル */
+        .a_selected{
+            background-color: lightgreen !important;
+        }
 
-#play-stop {
-    width: 12px;
-    height: 12px;
-    border-right: solid 4px rgb(39, 39, 39);
-    border-left: solid 4px rgb(39, 39, 39);
-    margin-left: auto;
-    margin-right: auto;
-}
 
-.grid-layout {
-    margin-top: 10px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-}
+    /*==========================================================*/
+    /* スキルカードエリア */
+    /*==========================================================*/
+    #skill_cards {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        overflow-y: hidden;
+        overflow-x: auto;
+        scroll-snap-type: X mandatory;
+    }
+
+    /* スクロールバーが通る箇所(PC時のみ) */
+    #skill_cards::-webkit-scrollbar {
+        appearance: none;
+        width: 0px;
+        height: 0px;
+        background-color: rgb(255, 255, 255, 0.05);
+    }
+
+
+        /*==========================================================*/
+        /* スキルカード */
+        /*==========================================================*/
+        .skill_card {
+            flex-shrink: 0;
+            width: 100%;
+            height: 100%;
+            scroll-snap-align: start;
+            position: relative;
+        }
+
+
+            /*==========================================================*/
+            /* スキルカードの背景画像 */
+            /*==========================================================*/
+            .skill_card > img {
+                display: flex;
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+            }
+
+
+            /*==========================================================*/
+            /* スキルカードの説明文ブロック */
+            /*==========================================================*/
+            .skill_explain{
+                position: absolute;
+                z-index: 1;
+                top: var(--top);
+                left: var(--left);
+                bottom: var(--bottom);
+                right: var(--right);
+                padding: 10px;
+                border-radius: 20px;
+                color: white;
+                background-color: rgb(0,0,0,0.5);
+                backdrop-filter: blur(5px);
+                -webkit-backdrop-filter: blur(5px);
+                box-shadow: 0px 0px 20px 20px rgb(0,0,0, 0.5);
+            }
+
+
+                /*==========================================================*/
+                /* スキルカードの説明タイトル */
+                /*==========================================================*/
+                .skill_explain > h2{
+                    margin-bottom: 10px;
+                    font-size: clamp(1rem, 3vmax, 3rem);
+                }
+
+                /*==========================================================*/
+                /* スキルカードの説明文 */
+                /*==========================================================*/
+                .skill_explain > p{
+                    margin-left: 0.5rem;
+                    font-size: clamp(0.6rem, 2vmax, 1rem);
+                }
+
+                /*==========================================================*/
+                /* スキルカードのリンク配置エリア */
+                /*==========================================================*/
+                .link_block{
+                    margin-left: 0.5rem;
+                    padding: 10px 0px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 20px;
+                }
+
+
+                    /*==========================================================*/
+                    /* スキルカードのリンク */
+                    /*==========================================================*/
+                    .link_block > a{
+                        text-decoration: none;
+                        font-size: clamp(0.6rem, 2vmax, 1rem);
+                        padding: 4px 10px;
+                        border-radius: 10px;
+                        background-color: rgb(200, 200, 200, 0.5);
+                        color: white;
+                        position: relative;
+                        font-weight: bold;
+                        -webkit-user-drag: none;
+
+                        /* ホバー時の設定 */
+                        &:hover{
+                            scale: 1.1;
+                            background-color: rgb(150, 150, 255, 0.8);
+                            box-shadow: 0px 0px 10px rgb(150, 150, 255, 0.8);
+                        }
+
+                        /* &:active{
+                            scale: 0.95;
+                            background-color: rgb(150, 150, 255, 0.8);
+                            box-shadow: 0px 0px 10px rgb(150, 150, 255, 0.8);
+                        } */
+                    }
 
 
 /*==========================================================*/
-/* 画像とテキストのコンテンツ */
-/*==========================================================*/
-.image-text {
-    display: flex;
-    /* flex-wrap: wrap; */
-    justify-content: center;
-    align-items: center;
-    padding: 0px 20px 40px 20px;
-    margin: auto;
-}
-
-.inner-img {
-    /* width: 35%; */
-    /* max-width: 500px;
-    max-height: 500px; */
-    /* width: 40%; */
-    min-width: 300px;
-    margin: 10px;
-    border-radius: 30px;
-    flex-grow: 1;
-    /* order: 1; */
-}
-
-.inner-text {
-    display: inline-block;
-    min-width: 300px;
-    /* max-width: 400px; */
-    /* max-width: 50%; */
-    /* width: 50%; */
-    /* flex-grow: 1; */
-    font-size: 1rem;
-    margin: 20px;
-    flex-shrink: 0;
-}
-
-.inner-text > h2 {
-    margin-bottom: 10px;
+/* 資格ブロック */
+/*==========================================================*/        
+#qual_block{
+    position: relative;
+    margin-top: 60px;
+    padding-bottom: 20px;
+    background-color: var(--bg_color);
+    z-index: 3;
+    border-radius: 0px 0px 20px 20px;
 }
 
 
-@media only screen and (max-width: 1100px){
-    .image-text {
+    /*==========================================================*/
+    /* 資格ブロックのタイトル */
+    /*==========================================================*/
+    #qual_title{
+        width: 100%;
+        text-align: center;
+        font-size: clamp(2rem, 4vmax, 4rem);
+    }
+
+
+    /*==========================================================*/
+    /* 資格カードの配置エリア */
+    /*==========================================================*/
+    #qual_place_area{
+        width: 100%;
+        display: flex;
+        padding: 10px 20px;
+        gap: 20px;
         flex-wrap: wrap;
     }
 
-    .inner-img {
-        width: 100%;
-    }
-    
-    .inner-text {
-        order: 1;
-        flex-shrink: 1;
-    }
-}
+
+        /*==========================================================*/
+        /* 資格カード */
+        /*==========================================================*/
+        .qual_card{
+            width: calc(50% - 10px);
+            min-width: 150px;
+            min-height: 150px;
+            aspect-ratio: 2/1;
+            flex-grow: 1;
+            border-radius: 20px;
+            box-shadow: 10px 10px 10px rgb(0,0,0, 0.2);
+            animation: up_down_happy 5s linear infinite;
+            animation-delay: calc(var(--num) * -1s);
+            cursor: pointer;
+            position: relative;
+            user-select: none;
+
+            /* 変数の設定 */
+            --explain-opacity: 0;  /* 説明文の透明度 */
+
+            /* ホバー時の設定 */
+            &:hover{
+                animation-play-state: paused;
+                --explain-opacity: 1;
+            }
+
+            /* &:active{
+                animation-play-state: paused;
+                --explain-opacity: 1;
+                opacity: 0.9;
+                scale: 0.95;
+            } */
+        }
+
+            /*==========================================================*/
+            /* 資格カードの背景 */
+            /*==========================================================*/
+            .qual_card > img{
+                display: flex;
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+                border-radius: 20px;
+            }
+  
+
+            /*==========================================================*/
+            /* 資格カード内の説明文 */
+            /*==========================================================*/
+            .qual_explain {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                border-radius: 20px;
+                top: 0px;
+                left: 0px;
+                background-color: rgb(0,0,0,0.5);
+                display: flex;
+                justify-content: flex-end;
+                align-items: flex-end;
+                padding: 10px;
+                opacity: var(--explain-opacity);
+            }
 
 
-.link_block {
-    display: inline-block;
-    margin: 10px;
-    border-radius: 50px;
-    
-    &:hover > a{
-        scale: 0.95;
-        filter: brightness(0.8);
-    }
-}
+                /*==========================================================*/
+                /* 資格カード内の説明文の文字 */
+                /*==========================================================*/
+                .qual_explain > p {
+                    color: white;
+                    font-weight: bold;
+                    font-size: clamp(0.8rem, 2vw, 1rem);
+                    user-select: none;
+                }
 
 
-.link_block > a {
-    padding: 4px 15px;
-    background-color: rgb(33, 110, 224);
-    border-radius: 50px;
-    text-decoration: none;
-    color: white;
-    display: inline-block;
-}
-
-/*==========================================================*/
-/* テーブルブロック */
-/*==========================================================*/
-.table_block {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-.table_design {
-    border-collapse:collapse;
-    z-index: 1;
-    background-color: white;
-    box-shadow: 0px 0px 8px 0px rgb(0,0,0,0.2);
-}
-
-.table_design th{
-    padding: 4px;
-    padding-left: 10px;
-    /* border-bottom: 1px solid black; */
-    text-align: left;
-    background-color: rgb(96, 112, 184);
-    color: white;
-}
-
-.table_design th:nth-child(1){
-    border-right: 2px white solid;
-}
-
-.table_design td{
-    padding: 4px 6px;
-    padding-left: 10px;
-    text-align: left;
-    border-bottom: 2px solid rgb(196, 196, 196);
-}
-
-/* .table_design tr:nth-child(2n){
-    background-color: rgb(184, 184, 224, 0.4);
-} */
-
-.random_icons {
-    width: 60px;
-    aspect-ratio: 1/1;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0;
-    translate: -50% -50%;
-}
-
-
-
-/*==========================================================*/
-/* フッター */
-/*==========================================================*/
-footer {
-    width: 100%;
-    background-color: rgb(253, 221, 252);
-}
-
-
-.end {
-    width: 100%;
-    background-color: rgb(231, 198, 229);
-    margin-top: 20px;
-    padding: 10px;
-    padding-top: 20px;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.end > p {
-    color: rgb(82, 82, 82);
-    font-weight: bold;
-}
+            /*==========================================================*/
+            /* 資格詳細用の文字列 */
+            /*==========================================================*/
+            .edit_name, .edit_time{
+                display: none;
+            }
 
 
 /*==========================================================*/
-/* アブソリュートブロック */
-/*==========================================================*/
-#qualification_block{
+/* 資格詳細ブロック */
+/*==========================================================*/  
+#qual_content {
     position: fixed;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-width: 300px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 4px 4px 4px rgb(0,0,0,0.2), 2px 2px 2px rgb(255, 255, 255, 0.2) inset;
     top: 50%;
     left: 50%;
     translate: -50% -50%;
-    z-index: 100;
-    padding: 20px;
-    gap: 10px;
+    width: 300px;
+    height: 200px;
+    background-color: var(--bg_color);
+    box-shadow: 0px 0px 20px rgb(0, 0, 0, 0.25);
+    border-radius: 20px;
+    display: none;
+    z-index: 102;
+}
+
+
+    /*==========================================================*/
+    /* 資格詳細ブロックのヘッダ */
+    /*==========================================================*/ 
+    #qual_header{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
+    }
+
+
+    /*==========================================================*/
+    /* 資格詳細ブロックのメインブロック */
+    /*==========================================================*/ 
+    #qual_main{
+        box-shadow: inset 0px 0px 10px rgb(0, 0, 0, 0.25);
+        padding: 8px 20px;
+        height: calc(100% - 100px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+        /*==========================================================*/
+        /* 資格詳細ブロック内の表示エリア */
+        /*==========================================================*/
+        .qual_edit_block{
+            display: flex;
+            width: 100%;
+        }
+
+
+            /*==========================================================*/
+            /* 表示エリア内のタイトル */
+            /*==========================================================*/
+            .qual_edit_block > span{
+                font-weight: bold;
+            }
+
+
+    /*==========================================================*/
+    /* 資格詳細ブロックのフッター */
+    /*==========================================================*/ 
+    #qual_footer{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60px;
+    }
+
+
+        /*==========================================================*/
+        /* 資格詳細ブロック閉じるボタン */
+        /*==========================================================*/ 
+        #qual_content_close_button{
+            height: 60%;
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+            box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.25);
+            position: relative;
+            background-color: var(--bg_color);
+            cursor: pointer;
+
+            /* 変数の設定 */
+            --color: rgb(100, 100, 100); /* アイコンの色 */
+
+            /* ホバー時の設定 */
+            &:hover{
+                background-color: rgb(100, 100, 100);
+                --color: white;
+            }
+
+            /* &:active{
+                background-color: rgb(100, 100, 100);
+                --color: white;
+                scale: 0.9;
+            } */
+            
+        }
+
+        /* 閉じるボタンのアイコン */
+        #qual_content_close_button::after{
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            translate: -50% -50%;
+            height: 80%;
+            aspect-ratio: 1/1;
+            mask: url(./img/plus_bold.png);
+            mask-size: contain;
+            mask-repeat: no-repeat;
+            rotate: 45deg;
+            background-color: var(--color);
+        }
+
+
+/*==========================================================*/
+/* 制作物ブロック */
+/*==========================================================*/
+#work_block{
+    position: relative;
+    padding-top: 80px;
+    background-color: rgb(60, 60, 60);
+    z-index: 2;
+
+    /* TODO:テスト */
+    padding-top: calc(8vw + 20px);
+}
+
+/* 制作物ブロックの上部の円下 */
+#work_block::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    top: 0px;
+    left: 50%;
+    translate: -50% 0%;
+    border-radius: 0px 0px 100% 100% ;
+    background-color: var(--bg_color);
+
+    /* TODO:テスト */
+    height: auto;
+    aspect-ratio: 8/1;
+    mask: url(./img/bottom_circle.png);
+    mask-size: cover;
+    mask-repeat: no-repeat;
+    border-radius: 0px;
+    top: -6vw;
+    left: 0px;
+    translate: 0% 0%;
+}
+
+/* 制作物ブロックの背景(雪降り) */
+#work_block::before{
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    translate: -50% 0%;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg_color);
+    mask: url(./img/falling.gif);
+    z-index: -1;
+}
+
+
+    /*==========================================================*/
+    /* 制作物ブロックのタイトル */
+    /*==========================================================*/
+    #work_title{
+        width: 100%;
+        text-align: center;
+        font-size: clamp(2rem, 4vmax, 4rem);
+        color: white;
+    }
+
+    /*==========================================================*/
+    /* 制作物カードの配置エリア */
+    /*==========================================================*/
+    #work_place_area{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 10px 0px;
+        gap: 20px;
+    }
+
+    /*==========================================================*/
+    /* メイン */
+    /*==========================================================*/
+    #main_work{
+        position: relative;
+        width: clamp(50%, calc(200vh - 400px), calc(100% - 40px));
+        margin: 0px auto;
+    }
+
+
+        /*==========================================================*/
+        /* 制作物カードブロック */
+        /*==========================================================*/
+        .work_card_block{
+            width: 100%;
+            user-select: none;
+        }
+
+
+            /*==========================================================*/
+            /* 制作物カード */
+            /*==========================================================*/
+            .work_card{
+                width: 100%;
+                aspect-ratio: 2/1;
+                border-radius: 2vw;
+                box-shadow: 0px 0px 10px rgb(255, 255, 255, 0.2);
+                cursor: pointer;
+                position: relative;
+                animation: fade_in 1s ease-in-out;
+
+                /* 変数を定義 */
+                --outline-after: none;
+                --box-shadow-after: none;
+
+                /* ホバー時の設定 */
+                &:hover{
+                    --outline-after: 4px solid rgb(148, 76, 190);
+                    --box-shadow-after: 0px 0px 20px 10px rgba(148, 76, 190, 0.2);
+                }
+
+                /* &:active{
+                    --outline-after: 4px solid rgb(148, 76, 190);
+                    --box-shadow-after: 0px 0px 20px 10px rgba(148, 76, 190, 0.2);
+                    scale: 0.95;
+                } */
+            }
+
+            /* 制作物カードのアウトライン */
+            .work_card::before{
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 50%;
+                left: 50%;
+                translate: -50% -50%;
+                z-index: -1;
+                border-radius: 2vw;
+                outline: var(--outline-after);
+                box-shadow: var(--box-shadow-after);
+                animation: rotate_color 10s linear infinite;
+            }
+
+
+                /*==========================================================*/
+                /* 制作物カードの背景画像 */
+                /*==========================================================*/
+                .work_card > img {
+                    display: flex;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 2vw;
+                    -webkit-user-drag: none;
+                }
+
+
+                /*==========================================================*/
+                /* 制作物カードのリンク */
+                /*==========================================================*/
+                .work_card > a{
+                    display: none;
+                }
+
+
+            /*==========================================================*/
+            /* 制作物カードの説明文 */
+            /*==========================================================*/
+            .work_card_expalin{
+                color: white;
+                font-size: clamp(0.8rem, 1vw, 1.2rem);
+                padding-top: 8px;
+                padding-left: 10px;
+                overflow: hidden;
+                white-space: pre;
+                text-overflow: ellipsis;
+                font-weight: bold;
+            }
+
+            /* メイン部の制作物カードブロックの説明文 */
+            #main_work .work_card_expalin {
+                font-size: clamp(1rem, 3vw, 1.8rem);
+            }
+        
+
+    /*==========================================================*/
+    /* サブグループ */
+    /*==========================================================*/
+    #sub_works{
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-around;
+        gap: 20px;
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+
+    /* スクロールバーが通る箇所 */
+    #sub_works::-webkit-scrollbar {
+        appearance: none;
+        width: 4px;
+        height: 4px;
+        background-color: rgb(128, 128, 128, 0);
+    }
+    
+    /* スクロールバー */
+    #sub_works::-webkit-scrollbar-thumb {
+        appearance: none;
+        width: 4px;
+        height: 4px;
+        border-radius: 5px;
+        background-color: rgb(128, 128, 128, 0.5);
+    }
+
+
+        /*==========================================================*/
+        /* サブ */
+        /*==========================================================*/
+        .sub_work{
+            flex-shrink: 0;
+            width: 25%;
+            min-width: 140px;
+        }
+
+
+            /*==========================================================*/
+            /* サブ内の制作物カード選択中のスタイル */
+            /*==========================================================*/
+            #sub_works .work_card_selected{
+                cursor: auto;
+                pointer-events: none;
+            }
+
+            /* 選択中の文字と黒背景 */
+            #sub_works .work_card_selected::after{
+                content: "選択中";
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+                border-radius: 2vw;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: clamp(0.8rem, 2vw, 1.2rem);
+                font-weight: bold;
+                background-color: rgb(0,0,0,0.5);
+                backdrop-filter: blur(5px);
+                -webkit-backdrop-filter: blur(5px);
+            }
+
+
+/*==========================================================*/
+/* 制作物ブロックのフッタ(ツールブロックときれいに繋ぐ用) */
+/*==========================================================*/
+#work_footer{
+    position: relative;
+    width: 100%;
+}
+
+
+    /*==========================================================*/
+    /* 制作物ブロックのフッタの背景画像 */
+    /*==========================================================*/
+    #work_to_tool_img{
+        width: 100%;
+        aspect-ratio: 8/1;
+        background-color: var(--bg_color);
+        mask: url(./img/Back.png);
+        mask-size: cover;
+        mask-repeat: no-repeat;
+        bottom: 0px;
+    }
+
+
+    /*==========================================================*/
+    /* 猫 */
+    /*==========================================================*/
+    #cat{
+        position: absolute;
+        width: 6.25vw;
+        aspect-ratio: 1/1;
+        background-color: black;
+        mask: url(./img/cat_wark.gif);
+        mask-size: contain;
+        mask-repeat: no-repeat;
+        top: 0px;
+        left: 0px;
+        z-index: 10;
+        offset-path: polygon(-20% 100%, 0% 100%, 0.5% 100%, 6% 86%, 12% 78%, 18% 76%, 28% 84%, 36% 74%, 42% 68%, 46% 68%, 55% 76%, 60% 79%, 64% 78%, 74% 71%, 80% 65%, 88% 62%, 94% 66%, 100% 75%, 120% 80%,
+        100% 75%, 94% 66%, 88% 62%, 80% 65%, 74% 71%, 64% 78%, 60% 79%, 55% 76%, 46% 68%, 42% 68%, 36% 74%, 28% 84%, 18% 76%, 12% 78%, 6% 86%, 0.5% 100%);
+        animation: offset_move 40s linear infinite;
+        offset-rotate: 0deg;
+        offset-anchor: bottom;
+        cursor: pointer;
+    }
+
+
+    /* 猫の歩きアニメーション */
+    @keyframes offset_move{
+        0%{
+            offset-distance: 0%;
+            transform: rotateY(180deg);
+        }
+        50%{
+            transform: rotateY(180deg);
+        }
+        51%{
+            transform: rotateY(0deg);
+        }
+        100%{
+            offset-distance: 100%;
+            transform: rotateY(0deg);
+        }
+    }
+
+
+/*==========================================================*/
+/* 遊び要素 */
+/*==========================================================*/
+/* 猫の爪 */
+#crow{
+    position: fixed;
+    width: 2vw;
+    aspect-ratio: 1/1;
+    background-image: url(./img/crow_red.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: 20;
+    animation: crow_up 0.5s linear 2s forwards;
+    opacity: 0;
+
     display: none;
 }
 
-.infomations {
-    display: flex;
-    font-size: 1rem;
-    height: fit-content;
-    min-height: 30px;
+/* 爪飛ばしアニメーション */
+@keyframes crow_up{
+    to{
+        opacity: 1;
+        /* scale: 80; */
+        width: 120vw;
+        top: 50%;
+        left: 50%;   
+    }
 }
 
-.infomations > p{
+/* 爪がぶつかったときのボディースタイル */
+.body_animation{
+    animation: body_scale 1s ease-in-out;
+}
+
+/* 爪がぶつかったときのアニメーション */
+@keyframes body_scale{
+    0%, 100%{
+        scale: 1;
+    }
+    50%{
+        scale: 1.1;
+    }
+}
+
+
+/*==========================================================*/
+/* ツールブロック */
+/*==========================================================*/
+#tool_block{
+    top: -1px;
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    background-color: var(--bg_color);
+    z-index: 2;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-.infomations > p:first-child{
-    background-color: rgb(117, 117, 212);
-    border: rgb(117, 117, 212) solid 2px;
-    border-radius: 15px 0px 0px 15px;
-    color: white;
-    font-weight: bold;
-    min-width: 90px;
-    justify-content: center;
-}
-
-.infomations > p:last-child{
-    border: rgb(117, 117, 212) solid 2px;
-    border-left: none;
-    border-radius: 0px 15px 15px 0px;
-    flex-grow: 1;
 }
 
 
-.infomations:last-child > p:first-child{
-    background-color: rgb(76, 173, 152);
-    border: rgb(76, 173, 152) 2px solid;
+    /*==========================================================*/
+    /* ツール背景 */
+    /*==========================================================*/
+    #tool_icon_area{
+        position: absolute;
+        width: 100%;
+        height: calc(100% - 50px);
+        margin-top: 40px;
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        z-index: -1;
+    }
+
+        /*==========================================================*/
+        /* ツールアイコンブロック */
+        /*==========================================================*/
+        .tool_icons{
+            width: 100%;
+            height: 50%;
+            display: flex;
+            position: relative;
+            overflow: hidden;
+        }
+
+            /*==========================================================*/
+            /* ツールアイコン */
+            /*==========================================================*/
+            .tool_icons > img{
+                position: absolute;
+                width: calc(100 / 6%);
+                height: 90%;
+                aspect-ratio: 1/1;
+                object-fit: contain;
+                animation: left_to_right 10s linear infinite;
+                animation-delay: calc((10/6 * (var(--num))) * -1s);
+                opacity: 0.3;
+                user-select: none;
+                -webkit-user-drag: none;
+                cursor: crosshair;
+            }
+
+            /* ツールアイコン2個目 */
+            .tool_icons:nth-child(2n + 1) > img{
+                animation-direction: reverse;
+                animation-delay: calc((10/6 * (var(--num))) * -1s - 1.25s);
+            }
+
+    
+    /*==========================================================*/
+    /* ツールタイトル */
+    /*==========================================================*/
+    #tool_title{
+        width: 100%;
+        text-align: center;
+        font-size: clamp(2rem, 4vmax, 4rem);
+    }
+
+
+    /*==========================================================*/
+    /* ツール配置エリア */
+    /*==========================================================*/
+    #tool_place_area{
+        margin: 10px 20px;
+        border-radius: 10px;
+        width: fit-content;
+
+        /* 変数の設定 */
+        --select-color: #84B1ED;  /* 表の色 */
+    }
+
+
+        /*==========================================================*/
+        /* ツールヘッダ */
+        /*==========================================================*/
+        #tool_header{
+            display: flex;
+            height: 40px;
+            align-items: flex-end;
+            overflow-x: auto;
+            overflow-y: hidden;
+            user-select: none;
+        }
+
+
+        /* スクロールバーが通る箇所 */
+        #tool_header::-webkit-scrollbar {
+            appearance: none;
+            display: none;
+            width: 0px;
+            height: 0px;
+            background-color: rgb(128, 128, 128, 0);
+        }
+
+
+            /*==========================================================*/
+            /* ツールヘッダ内の要素 */
+            /*==========================================================*/
+            .tool_header_content{
+                flex-shrink: 0;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0px 20px;
+                border-radius: 0px;
+                border-radius: 10px 10px 0px 0px;
+                background-color: var(--bg_color);
+                background-color: rgb(255, 255, 255, 0);
+                backdrop-filter: blur(2px);
+                -webkit-backdrop-filter: blur(2px);
+                cursor: pointer;
+                font-weight: bold;
+
+                /* ホバー時の設定 */
+                &:hover{
+                    background-color: var(--main-color);
+                    color: white;
+                    border-radius: 10px 10px 0px 0px;
+                    border-bottom: white 2px solid;
+                }
+
+                /* アクティブ時の設定は不要 */
+            }
+
+            /* ツールヘッダ内の要素選択時のスタイル */
+            .tool_header_content_selected{
+                background-color: var(--main-color);
+                color: white;
+                border-radius: 10px 10px 0px 0px;
+                border-bottom: white 2px solid;
+            }
+
+
+        /*==========================================================*/
+        /* ツールメインブロック */
+        /*==========================================================*/  
+        #tool_main{
+            border: var(--select-color) 4px solid;
+            background-color: rgb(250, 250, 250);
+            transition-duration: 0.5s;
+            overflow-y: hidden;
+        }
+
+
+            /*==========================================================*/
+            /* ツールメインコンテンツ */
+            /*==========================================================*/
+            .tool_main_content{
+                width: 100%;
+                display: none;
+            }
+
+            /* ツールメインコンテンツの初期設定 */
+            .tool_main_content:first-child{
+                display: block;
+            }
+
+
+                /*==========================================================*/
+                /* テーブルデザイン */
+                /*==========================================================*/
+                .table_design{
+                    width: 100%;
+                    border-collapse:collapse;
+                }
+
+
+                    /*==========================================================*/
+                    /* テーブルのヘッダ */
+                    /*==========================================================*/
+                    .table_design th{
+                        padding: 4px;
+                        text-align: center;
+                        background-color: var(--select-color);
+                        transition-duration: 0.5s;
+                        transition-property: background-color;
+                        color: white;
+                        width: 50%;
+                    }
+
+                    /* ヘッダの中央にライン */
+                    .table_design th:nth-child(1){
+                        border-right: 2px white solid;
+                    }
+
+                    /*==========================================================*/
+                    /* テーブルのセル */
+                    /*==========================================================*/
+                    .table_design td{
+                        text-align: center;
+                        padding: 6px 6px;
+                        padding-left: 10px;
+                        box-shadow: 0px 0px 1px rgb(0,0,0, 0.2);
+                    }
+
+
+/*==========================================================*/
+/* フッタ */
+/*==========================================================*/                  
+footer{
+    background-color: rgb(220, 200, 240);
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 10px;
 }
 
-.infomations:last-child > p:last-child{
-    border: rgb(76, 173, 152) 2px solid;
-    border-left: none;
-}
 
-
+/*==========================================================*/
+/* スクリーンロック */
+/*==========================================================*/
 #screan_lock{
     position: fixed;
-    width: 100vw;
-    height: 100vh;
-    z-index: 99;
-    background-color: rgb(0, 0, 0, 0.5);
-    backdrop-filter: blur(5px);
-    top: 0;
-    left: 0;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100dvh;
+    background-color: rgb(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 12;
     display: none;
 }
 
+
+/*==========================================================*/
+/* 遊び用 */
+/*==========================================================*/
+.flower {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    height: 40px;
+    aspect-ratio: 1/1;
+    animation: scale_up_play 0.8s ease-out forwards;
+    z-index: 30;
+}
+
+.flower > div {
+    height: 100%;
+    width: 4px;
+    border-radius: 2px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    rotate: calc( var(--num) * 45deg );
+
+    &::after{
+        content: "";
+        position: absolute;
+        top: 0px;
+        width: 100%;
+        height: 10px;
+        border-radius: 50%;
+        background-color: rgb(233, 38, 38);
+        animation: scale_down_play 0.8s ease-out forwards;
+    }
+}
+
+
+/* 遊び用アニメーション */
+@keyframes nock_down{
+    10%{
+        opacity: 1;
+        scale: 0.5;
+        transform: translateY(0px) rotateX(0deg);
+    }
+    100%{
+        scale: 0.5;
+        transform: translateY(50%) rotateX(90deg);
+    }
+}
+
+@keyframes scale_down_play{
+    from {
+        height: 10px;
+        width: 100%;
+    }
+    to {
+        height: 0px;
+        width: 0px;
+    }
+}
+
+@keyframes scale_up_play{
+    from {
+        height: 40px;
+    }
+    to {
+        height: 120px;
+    }
+}
+
+
+#tool_title{
+    --display-before: none;
+    position: relative;
+    width: fit-content;
+}
+
+#tool_title::before{
+    content: "";
+    display: var(--display-before);
+    height: 100%;
+    aspect-ratio: 1/1;
+    position: absolute;
+    top: 3px;
+    left: calc(100% + 10px);
+    mask: url(./img/crown.png);
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    background-color: var(--ft_color);
+    animation: fade_in 2s ease-in-out;
+}
+
+
+/*==========================================================*/
+/* スマホ時の設定(横幅750pxを基準とする) */
+/*==========================================================*/                  
+@media only screen and (max-width: 750px){
+
+    /*==========================================================*/
+    /* ヘッダ関連 */
+    /*==========================================================*/
+    /* 携帯用アイコン → 表示する */
+    #phone_icon{
+        display: block;
+    }
+
+    /* 携帯用アイコン選択時のスタイル */
+    .phone_icon_selected{
+        --font-color: linear-gradient(70deg, rgb(200, 160, 240) 0% 10%, rgb(220, 200, 240) 50%, rgb(200, 160, 240) 90% 100%) !important;
+        --outline-color: linear-gradient(70deg, rgb(200, 160, 240) 0% 10%, rgb(220, 200, 240) 50%, rgb(200, 160, 240) 90% 100%) !important;
+        --blur-opacity: 1 !important;
+        animation: fade_out 0.5s linear;
+        animation-fill-mode: forwards;
+        animation-delay: 0.2s;
+    }
+
+
+    /* ヘッダ → 表示をなくす、形を角丸四角形に変更 */
+    header{
+        display: none;
+        width: 220px;
+        height: 220px;
+        border-radius: 20px;
+        flex-wrap: wrap;
+        top: 120px;
+        left: 50%;
+        translate: -50% -50%;
+        animation: scale_up_in_z 0.5s ease-in-out;
+    }
+
+    /* アイコン配置用の空き領域 → 消す */
+    #header_dummy_icon{
+        display: none;
+    }
+
+    /* ヘッダアイコン → ポジションをヘッダ内の相対配置に変更、影を中心に変更 */
+    #header_icon{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        box-shadow: 0px 0px 6px 4px rgb(0,0,0,0.2);
+    }
+
+    /* ヘッダの中身 → 大きさを高さ低さともに1/2に設定、1辺だけが角丸の四角形になる */
+    .header_content{
+        width: calc(50%);
+        height: calc(50%);
+        border-radius: var(--br);
+        box-shadow: 0px 0px 2px rgb(0,0,0,0.2);
+        position: static;
+        
+        /* ホバー時の設定 */
+        &:hover{
+            background-color: var(--bottom-color);
+            color: white;
+            --in-display: none;
+        }
+
+        /* &:active{
+            background-color: var(--bottom-color);
+            color: white;
+        } */
+    }
+
+    /* ヘッダの中身の中身 → 縦にスライド出来るリスト形式に変更 */
+    .header_in_content{
+        display: none;
+        padding: 0px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        z-index: 11;
+        width: 220px;
+        height: 220px;
+        border-radius: 10px;
+        background-color: white;
+        overflow-y: auto;
+        overflow-x: hidden;
+        flex-direction: column;
+        font-size: 1rem;
+        justify-content: flex-start;
+        animation: scale_up 0.5s ease-in-out;
+    }
+
+    /* リンク要素 → リストに沿ったスタイルに変更 */
+    .header_in_content > a{
+        width: 100%;
+        height: auto;
+        padding: 8px 10px;
+        animation: none;
+        opacity: 1;
+        margin: 0px;
+        justify-content: center;
+        box-shadow: none;
+        flex-grow: 1;
+
+        /* ホバー時の設定 */
+        &:hover{
+            color: white;
+            transform: none;
+            background-color: var(--bottom-color);
+        }
+
+        /* &:active{
+            color: white;
+            background-color: var(--bottom-color);
+            transform: none;
+            filter: brightness(0.8);
+        } */
+        
+    }
+
+    /* 携帯用戻るボタン → 表示する */
+    .header_in_content > .return_head{
+        display: flex;
+
+        /* ホバー時の設定 */
+        &:hover{
+            background-color: rgb(200, 200, 200);
+        }
+
+        /* &:active{
+            background-color: rgb(200, 200, 200);
+        } */
+    }
+
+
+    /*==========================================================*/
+    /* スキルブロック関連 */
+    /*==========================================================*/
+    /* メイン → 上のマージンを無くす */
+    #main{
+        margin-top: 0px;
+    }
+
+    /* スキルブロック →　高さを低くする */
+    #skill_block{
+        height: 70vh;
+        min-height: 300px;
+    }
+
+    /* スキルブロック内の説明文ブロック → 固定配置にする */
+    .skill_explain{
+        top: auto;
+        right: auto;
+        /* bottom: calc(40px + 2%); */
+        /* left: 5%;
+        width: 95%; */
+        left: 0%;
+        width: 100%;
+        padding: 10px 20px;
+        padding-bottom: 38px;
+        border-radius: 20px 20px 0px 0px;
+        bottom: 0px;
+
+    }
+
+    /* スキルブロックのタイトル → 配置を少し上にずらす */
+    #skill_title{
+        top: 30px;
+    }
+
+    
+    /*==========================================================*/
+    /* ツールブロック関連 */
+    /*==========================================================*/
+    /* ツール背景 → 消す */
+    #tool_icon_area{
+        display: none;
+    }
+
+
+    /*==========================================================*/
+    /* その他 */
+    /*==========================================================*/
+    /* 携帯用処理に必要なスタイル */
+    .display_flex{
+        display: flex;
+    }
+}

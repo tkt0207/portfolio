@@ -5,130 +5,155 @@
         <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- それぞれのデバイスの大きさに応じて表示させる -->
         <title>AI Chat</title> <!-- タブのとこに出る -->
         <meta name="description" content="sample text text"> <!-- 検索時の下の説明見たいなところ -->
-        <link rel="stylesheet" href="../../style.css" /> <!-- cssの適応 -->
         <link rel="stylesheet" href="../apps.css" /> <!-- cssの適応 -->
     </head>
 
     <body> <!-- 見える部分 -->
+        
+        <!-- 携帯用アイコン -->
+        <div id=phone_icon>
+            <div id="phone_icon_outline">
+                <div id="phone_icon_content"></div>
+            </div>
+        </div>
+
         <!-- ヘッダー -->
         <header>
-            <div id="header-icon"></div>
-            <span id="header-contents">
-                <span class="header-content">
-                    <a href="#title_block" class="no-child-content">TOP</a>
-                    <!-- <span class="menu-expand">
-                        <div class="expand-line"></div>
-                    </span>
-                    <div class="content-menu"></div> -->
-                </span>
-                <span class="header-content">
-                    <a href="#app_block" class="no-child-content">アプリ紹介</a>
-                    <!-- <span class="menu-expand">
-                        <div class="expand-line"></div>
-                    </span>
-                    <div class="content-menu"></div> -->
-                </span>
-                <span class="header-content">
-                    <a href="#how_to_use_block">使い方</a>
-                    <span class="menu-expand">
-                        <div class="expand-line"></div>
-                    </span>
-                    <div class="content-menu">
-                        <div class="menu-item">
-                            <a href="#use1">基本操作</a>
-                        </div>
-                        <div class="menu-item">
-                            <a href="#use2">ユーザ追加</a>
-                        </div>
-                        <div class="menu-item">
-                            <a href="#use3">ユーザ情報変更</a>
-                        </div>
-                        <div class="menu-item">
-                            <a href="#use4">ユーザ削除</a>
-                        </div>
-                        <div class="menu-item">
-                            <a href="#use5">デザイン設定</a>
-                        </div>
-                        <div class="menu-item">
-                            <a href="#use6">フォント設定</a>
-                        </div>
-                        <div class="menu-item">
-                            <a href="#use7">ファイル送信</a>
-                        </div>
-                        <div class="menu-item">
-                            <a href="#use8">メディア再生</a>
-                        </div>
-                        <div class="menu-item">
-                            <a href="#use9">その他</a>
-                        </div>
-                    </div>
-                </span>
-                <span class="header-content">
-                    <a href="#development_block">開発環境</a>
-                    <span class="menu-expand">
-                        <div class="expand-line"></div>
-                    </span>
-                    <div class="content-menu">
-                        <div class="menu-item">
-                            <a href="#content1">使用ツール</a>
-                        </div>
-                        <div class="menu-item">
-                            <a href="#content2">使用言語</a>
-                        </div>
-                        <div class="menu-item">
-                            <a href="#content3">制作期間</a>
-                        </div>
-                    </div>
-                </span>
-            </span>
-            <div id="header-selecter">
-                <div class="selecter-line" id="top-line"></div>
-                <div class="selecter-line" id="center-line"></div>
-                <div class="selecter-line" id="bottom-line"></div>
+            <!-- ヘッダアイコン -->
+            <a id="header_icon" href="../../index.html">
+                <div id="header_icon_outline">
+                    <div id="header_icon_content"></div>
+                </div>
+            </a>
+
+            <!-- TOPヘッダ -->
+            <a href="#title_block" class="header_content header_content_a" style="--bottom-color: #a8e6cf; --br: 20px 0px 0px 0px;">
+                <p>TOP</p>
+            </a>
+
+            <!-- プレビューヘッダ -->
+            <a href="#preview_block" class="header_content header_content_a" style="--bottom-color: #f9c00c; --br: 0px 20px 0px 0px;">
+                <p>プレビュー</p>
+            </a>
+
+            <!-- ダミー(アイコン配置用) -->
+            <div id="header_dummy_icon"></div>
+
+            <!-- 使い方 -->
+            <div class="header_content" style="--bottom-color: #84b1ed; --br: 0px 0px 0px 20px;">
+                <p>使い方</p>
+                <div class="header_in_content">
+                    <a class="return_head">戻る</a>
+                    <a style="--a-order: 0" href="#use1" class="header_a">基本操作</a>
+                    <a style="--a-order: 1" href="#use2" class="header_a">ユーザ追加</a>
+                    <a style="--a-order: 2" href="#use3" class="header_a">ユーザ情報変更</a>
+                    <a style="--a-order: 3" href="#use4" class="header_a">ユーザ削除</a>
+                    <a style="--a-order: 4" href="#use5" class="header_a">デザイン設定</a>
+                    <a style="--a-order: 5" href="#use6" class="header_a">フォント設定</a>
+                    <a style="--a-order: 6" href="#use7" class="header_a">ファイル送信</a>
+                    <a style="--a-order: 7" href="#use8" class="header_a">メディア再生</a>
+                    <a style="--a-order: 8" href="#use9" class="header_a">その他</a>
+                </div>
             </div>
 
-                
+            <!-- 開発環境ヘッダ -->
+            <div class="header_content" style="--bottom-color: #ff677d; --br: 0px 0px 20px 0px;">
+                <p>開発環境</p>
+                <div class="header_in_content">
+                    <a class="return_head">戻る</a>
+                    <a style="--a-order: 0" href="#tag1" class="header_a">使用ツール</a>
+                    <a style="--a-order: 1" href="#tag2" class="header_a">使用言語</a>
+                    <a style="--a-order: 2" href="#tag3" class="header_a">制作期間</a>
+                </div>
+            </div>
         </header>
 
+
         <!-- メイン部 -->
-        <div class="main">
-            <div class="title_img" id="title_block">
-                <img src="../../images/AIChat/AI.png" alt="">
-            </div>
-            <div class="block2" id="app_block">
-                <h2>アプリ紹介</h2>
-                <div class="explain">
-                    <p>AIと会話ができるWindowsデスクトップアプリケーションです。</p>
-                    <p>オフラインで動作するため、外部に情報が漏れることはありません。</p>
-                    <p>また、AIはプロンプトを入力することで自分好みにカスタマイズが可能です。</p>
-                    <p>ファイルの送信も可能なため、メモ帳のように利用することもできます。</p>
+        <div id="main">
+            <div id="dummy_block"></div>
+
+            <!-- タイトル -->
+            <div id="title_block">
+                <div id="phone_block">
+                    <div id="title_img">
+                        <img src="../../img/AIChat/Ai.png" alt="">
+                        <img class="shadow_img" src="../../img/AIChat/Ai.png" alt="">
+                    </div>
+                    <h2 class="title" id="phone_title">AI対話アプリ</h2>
+                    <div id="smooth_circle">
+                        <div></div>
+                    </div>
                 </div>
-                <div class="slide_view">
+
+                <div id="title_explain">
+                    <div id="explain_block">
+                        <h2 class="title" id="pc_title">AI対話アプリ</h2>
+                        <div class="explain">
+                            <p>AIと会話ができるWindowsデスクトップアプリケーションです。</p>
+                            <p>オフラインで動作するため、外部に情報が漏れることはありません。</p>
+                            <p>また、AIはプロンプトを入力することで自分好みにカスタマイズが可能です。</p>
+                            <p>ファイルの送信も可能なため、メモ帳のように利用することもできます。</p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <!-- プレビュー -->
+            <div class="content_block" id="preview_block">
+                <h2 class="title">プレビュー</h2>
+                <div id="slide_view">
                     <div class="slide_view_content">
-                        <video src="../../images/AIChat/AI.mp4" controls="true" controlslist="nodownload"></video>
+                        <video src="../../img/AIChat/AI.mp4" controls="true" controlslist="nodownload"></video>
                     </div>
                     <div class="slide_view_content">
-                        <img src="../../images/AIChat/image1.png" alt="">
+                        <img src="../../img/AIChat/image1.png" alt="">
                     </div>
                     <div class="slide_view_content">
-                        <img src="../../images/AIChat/image2.png" alt="">
+                        <img src="../../img/AIChat/image2.png" alt="">
                     </div>
                     <div class="slide_view_content">
-                        <img src="../../images/AIChat/image3.png" alt="">
+                        <img src="../../img/AIChat/image3.png" alt="">
                     </div>
                     <div class="slide_view_content">
-                        <img src="../../images/AIChat/image4.png" alt="">
+                        <img src="../../img/AIChat/image4.png" alt="">
                     </div>
                     <div class="slide_view_content">
-                        <img src="../../images/AIChat/image5.png" alt="">
+                        <img src="../../img/AIChat/image5.png" alt="">
                     </div>
                 </div>
             </div>
 
-            <div class="block2" id="how_to_use_block">
-                <h2>使い方</h2>
-                <div class="change_col_block">
-                    <div id="dummy">
+            <!-- ビッグプレビュー -->
+            <div id="preview_big">
+                <div id="preview_big_return_button"></div>
+                <div id="preview_big_view_area">
+                    <div>
+                        <img src="../../img/AIChat/image1.png" alt="">
+                    </div>
+                    <div>
+                        <img src="../../img/AIChat/image2.png" alt="">
+                    </div>
+                    <div>
+                        <img src="../../img/AIChat/image3.png" alt="">
+                    </div>
+                    <div>
+                        <img src="../../img/AIChat/image4.png" alt="">
+                    </div>
+                    <div>
+                        <img src="../../img/AIChat/image5.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 使い方 -->
+            <div class="content_block" id="how_to_use_block">
+                <h2 class="title">使い方</h2>
+                <div id="use_block_area">
+
+                    <div class="columns">
+
                         <div class="use_block" id="use1">
                             <div class="close_use_block"></div>
                             <div class="use_title">
@@ -136,20 +161,20 @@
                             </div>
                             <div class="use_explain_block">
                                 <div class="get_height">
-                                    <div>
-                                        <h5>1. チャット送信</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/AIChat/use/use1-1.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">1. チャット送信</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/AIChat/use/use1-1.png" alt="">
                                             <span>
                                                 <p>入力部に文字を入力し、送信ボタンを押すことでチャットを送信できます。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>2. AIからの返答</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/AIChat/use/use1-2.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">2. AIからの返答</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/AIChat/use/use1-2.png" alt="">
                                             <span>
                                                 <p>少し待つとAIからの返答が返ってきます。</p>
                                             </span>
@@ -160,77 +185,77 @@
                             </div>
                         </div>
 
-                        <div class="use_block"  id="use2">
+                        <div class="use_block" id="use2">
                             <div class="close_use_block"></div>
                             <div class="use_title">
                                 <h4>ユーザ追加</h4>
                             </div>
                             <div class="use_explain_block">
                                 <div class="get_height">
-                                    <div>
-                                        <h5>1. ユーザ追加ボタン</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/AIChat/use/use2-1.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">1. ユーザ追加ボタン</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/AIChat/use/use2-1.png" alt="">
                                             <span>
                                                 <p>メニューバーの[ユーザ]をクリックし、ユーザ追加ボタンをクリックします。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>2. ユーザ追加ウィンドウ</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/AIChat/use/use2-2.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">2. ユーザ追加ウィンドウ</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/AIChat/use/use2-2.png" alt="">
                                             <span>
                                                 <p>ユーザ追加ウィンドウが表示されます。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>3. アイコン設定</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/AIChat/use/use2-3.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">3. アイコン設定</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/AIChat/use/use2-3.png" alt="">
                                             <span>
                                                 <p>アイコン選択部をクリックし、アイコン画像を選択します。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>4. ユーザ名設定</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/AIChat/use/use2-4.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">4. ユーザ名設定</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/AIChat/use/use2-4.png" alt="">
                                             <span>
                                                 <p>ユーザ名入力部にユーザ名を入力します。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>5. プロンプト設定</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/AIChat/use/use2-5.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">5. プロンプト設定</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/AIChat/use/use2-5.png" alt="">
                                             <span>
                                                 <p>プロンプト入力部にAIへの指示を入力します。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>6. ユーザ追加</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/AIChat/use/use2-6.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">6. ユーザ追加</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/AIChat/use/use2-6.png" alt="">
                                             <span>
                                                 <p>追加ボタンをクリックします。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>7. ユーザ追加完了</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/AIChat/use/use2-7.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">7. ユーザ追加完了</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/AIChat/use/use2-7.png" alt="">
                                             <span>
                                                 <p>ユーザ追加されます。</p>
                                             </span>
@@ -248,40 +273,40 @@
                             </div>
                             <div class="use_explain_block">
                                 <div class="get_height">
-                                    <div>
-                                        <h5>1. ユーザ変更ボタン</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/AIChat/use/use3-1.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">1. ユーザ変更ボタン</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/AIChat/use/use3-1.png" alt="">
                                             <span>
                                                 <p>変更したいユーザを右クリックして、ユーザ変更ボタンをクリックします。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>2. ユーザ変更ウィンドウ</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/AIChat/use/use3-2.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">2. ユーザ変更ウィンドウ</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/AIChat/use/use3-2.png" alt="">
                                             <span>
                                                 <p>ユーザ変更ウィンドウが表示されます。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>3. ユーザ情報変更</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/AIChat/use/use3-3.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">3. ユーザ情報変更</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/AIChat/use/use3-3.png" alt="">
                                             <span>
                                                 <p>変更したい箇所を変更し、変更ボタンをクリックします。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>4. ユーザ情報変更完了</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/AIChat/use/use3-4.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">4. ユーザ情報変更完了</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/AIChat/use/use3-4.png" alt="">
                                             <span>
                                                 <p>ユーザ情報が変更されます。</p>
                                             </span>
@@ -299,30 +324,30 @@
                             </div>
                             <div class="use_explain_block">
                                 <div class="get_height">
-                                    <div>
-                                        <h5>1. ユーザ削除ボタン</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/AIChat/use/use4-1.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">1. ユーザ削除ボタン</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/AIChat/use/use4-1.png" alt="">
                                             <span>
-                                                <p>変更したいユーザを右クリックして、ユーザ削除ボタンをクリックします。</p>
+                                                <p>>変更したいユーザを右クリックして、ユーザ削除ボタンをクリックします。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>2. ユーザ削除ウィンドウ</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/AIChat/use/use4-2.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">2. ユーザ削除ウィンドウ</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/AIChat/use/use4-2.png" alt="">
                                             <span>
                                                 <p>ユーザ削除ウィンドウが表示されます。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>3. ユーザ削除</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/AIChat/use/use4-3.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">3. ユーザ削除</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/AIChat/use/use4-3.png" alt="">
                                             <span>
                                                 <p>OKボタンをクリックすると、ユーザが削除されます。</p>
                                             </span>
@@ -340,65 +365,66 @@
                             </div>
                             <div class="use_explain_block">
                                 <div class="get_height">
-                                    <div>
-                                        <h5>1. ユーザリストのデザイン変更</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/AIChat/use/use5-1.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">1. ユーザリストのデザイン変更</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/AIChat/use/use5-1.png" alt="">
                                             <span>
                                                 <p>メニューバーの[デザイン]をクリックし、ユーザリストボタンにカーソルを合わせます。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>2. ユーザリストのデザイン選択</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/AIChat/use/use5-2.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">2. ユーザリストのデザイン選択</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/AIChat/use/use5-2.png" alt="">
                                             <span>
                                                 <p>デザインリストから好きなデザインを選択し、クリックします。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>3. ユーザリストのデザイン変更完了</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/AIChat/use/use5-3.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">3. ユーザリストのデザイン変更完了</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/AIChat/use/use5-3.png" alt="">
                                             <span>
                                                 <p>ユーザリストのデザインが変更されます。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>4. チャット画面のデザイン変更</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/AIChat/use/use5-4.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">4. チャット画面のデザイン変更</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/AIChat/use/use5-4.png" alt="">
                                             <span>
                                                 <p>メニューバーの[デザイン]をクリックし、チャット画面ボタンにカーソルを合わせます。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>5. チャット画面のデザイン選択</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/AIChat/use/use5-5.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">5. チャット画面のデザイン選択</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/AIChat/use/use5-5.png" alt="">
                                             <span>
                                                 <p>デザインリストから好きなデザインを選択し、クリックします。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>6. チャット画面のデザイン変更完了</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/AIChat/use/use5-6.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">6. チャット画面のデザイン変更完了</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/AIChat/use/use5-6.png" alt="">
                                             <span>
                                                 <p>チャット画面のデザインが変更されます。</p>
                                             </span>
                                         </div>
                                     </div>
+
                                 </div>
                             </div>
                         </div>
@@ -410,30 +436,30 @@
                             </div>
                             <div class="use_explain_block">
                                 <div class="get_height">
-                                    <div>
-                                        <h5>1. フォントボタン</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/AIChat/use/use6-1.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">1. フォントボタン</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/AIChat/use/use6-1.png" alt="">
                                             <span>
                                                 <p>メニューバーの[デザイン]をクリックし、フォントボタンにカーソルを合わせます。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>2. フォント選択</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/AIChat/use/use6-2.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">2. フォント選択</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/AIChat/use/use6-2.png" alt="">
                                             <span>
                                                 <p>フォントリストから好きなフォントを選択します。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>3. フォント変更完了</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/AIChat/use/use6-3.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">3. フォント変更完了</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/AIChat/use/use6-3.png" alt="">
                                             <span>
                                                 <p>文字フォントが変更されます。</p>
                                             </span>
@@ -451,30 +477,30 @@
                             </div>
                             <div class="use_explain_block">
                                 <div class="get_height">
-                                    <div>
-                                        <h5>1. ファイル送信ボタン</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/AIChat/use/use7-1.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">1. ファイル送信ボタン</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/AIChat/use/use7-1.png" alt="">
                                             <span>
                                                 <p>ファイル送信ボタンをクリックします。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>2. ファイル選択</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/AIChat/use/use7-2.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">2. ファイル選択</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/AIChat/use/use7-2.png" alt="">
                                             <span>
                                                 <p>好きなファイルを選択し、送信ボタンをクリックします。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>3. ファイル送信完了</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/AIChat/use/use7-3.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">3. ファイル送信完了</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/AIChat/use/use7-3.png" alt="">
                                             <span>
                                                 <p>ファイルが送信されます。</p>
                                                 <p>※ファイルの送信ではAIからの返答はありません。</p>
@@ -493,50 +519,50 @@
                             </div>
                             <div class="use_explain_block">
                                 <div class="get_height">
-                                    <div>
-                                        <h5>1. 音楽再生</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/AIChat/use/use8-1.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">1. 音楽再生</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/AIChat/use/use8-1.png" alt="">
                                             <span>
                                                 <p>再生ボタンをクリックすることで、音楽を再生できます。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>2. 音楽の再生位置変更</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/AIChat/use/use8-2.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">2. 音楽の再生位置変更</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/AIChat/use/use8-2.png" alt="">
                                             <span>
                                                 <p>スライダーバーをクリックまたは、スライドすることで再生位置を変更できます。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>3. 動画再生</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/AIChat/use/use8-3.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">3. 動画再生</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/AIChat/use/use8-3.png" alt="">
                                             <span>
                                                 <p>再生ボタンをクリックすることで、動画を再生できます。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>4. 動画のフルスクリーン化</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/AIChat/use/use8-4.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">4. 動画のフルスクリーン化</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/AIChat/use/use8-4.png" alt="">
                                             <span>
                                                 <p>フルスクリーンボタンをクリックすることで、動画をフルスクリーンで視聴できます。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>5. その他</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/AIChat/use/use8-5.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">5. その他</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/AIChat/use/use8-5.png" alt="">
                                             <span>
                                                 <p>再生速度の変更やピクチャーインピクチャモードにすることもできます。</p>
                                             </span>
@@ -554,40 +580,40 @@
                             </div>
                             <div class="use_explain_block">
                                 <div class="get_height">
-                                    <div>
-                                        <h5>1. ユーザリストの開閉</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/AIChat/use/use9-1.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">1. ユーザリストの開閉</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/AIChat/use/use9-1.png" alt="">
                                             <span>
                                                 <p>ユーザリスト開閉ボタンをクリックすることで、ユーザリストを閉じることができます。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>2. ユーザリストが閉じた状態</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/AIChat/use/use9-2.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">2. ユーザリストが閉じた状態</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/AIChat/use/use9-2.png" alt="">
                                             <span>
                                                 <p>ユーザリストを閉じることでチャット画面を大きく表示できます。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>3. 表示の切り替え</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/AIChat/use/use9-3.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">3. 表示の切り替え</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/AIChat/use/use9-3.png" alt="">
                                             <span>
                                                 <p>メニューバーの[表示]をクリックすることで、表示の切り替えが可能です。</p>
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h5>4. ファイルの保存</h5>
-                                        <div class="top_img">
-                                            <img src="../../images/AIChat/use/use9-4.png" alt="">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">4. ファイルの保存</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/AIChat/use/use9-4.png" alt="">
                                             <span>
                                                 <p>送信されたファイルを右クリックするとで、ファイルを保存することができます。</p>
                                             </span>
@@ -599,71 +625,60 @@
                         </div>
 
                     </div>
+
+                    <div class="columns"></div>
+                    <div class="columns"></div>
                 </div>
             </div>
             
-            <div class="block2" id="development_block">
-                <h2>開発環境</h2>
 
-                <div class="tag_block">
-                    <div class="tags">
-                        <div class="tag" id="tag1">
-                            使用ツール
-                        </div>
-                        <div class="tag" id="tag2">
-                            使用言語
-                        </div>
-                        <div class="tag" id="tag3">
-                            制作期間
-                        </div>
+            <!-- 開発環境 -->
+            <div class="content_block" id="development_block">
+                <h2 class="title">開発環境</h2>
+                <div id="tag_block">
+                    <div id="tag_header">
+                        <div class="tag tag_selected" id="tag1" style="--main-color: rgb(148, 178, 233);">使用ツール</div>
+                        <div class="tag" id="tag2" style="--main-color: rgb(120, 207, 157);">使用言語</div>
+                        <div class="tag" id="tag3" style="--main-color: rgb(178, 138, 229);">制作期間</div>
                     </div>
-                    <div class="content_area">
+                    <div id="tag_main">
+
                         <div class="tag_content"  id="content1">
                             <p>Visual Studio Code</p>
                             <p>Electron</p>
                             <p>llama2</p>
                         </div>
         
-                        <div class="tag_content"  id="content2">
+                        <div class="tag_content tag_content_hidden"  id="content2">
                             <p>HTML</p>
                             <p>CSS</p>
                             <p>Java Script</p>
                             <p>Python</p>
                         </div>
         
-                        <div class="tag_content"  id="content3">
+                        <div class="tag_content tag_content_hidden"  id="content3">
                             <div class="item_content">
-                                <p>UI UX考案</p>
-                                <p>UI UX実装</p>
-                                <p>処理実装</p>
-                                <p>その他</p>
+                                <p style="--circle-color: #84B1ED;">UI UX考案</p>
+                                <p style="--circle-color: #C89EC4;">UI UX実装</p>
+                                <p style="--circle-color: #EE7785;">処理実装</p>
+                                <p style="--circle-color: #67D5B5;">その他</p>
                             </div>
-                            <div class="graph" id="ai_graph">
+                            <div class="graph" style="--per1: 20%; --per2: 40%; --per3:70%;">
                                 <div>
                                     約1ヵ月
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
-
-            </div>
-
-
-            <!-- フッター -->
-            <footer>
-                <div class="end">
-                    <p>Copyright: 2025/02/07 tkt</p>
-
-                </div>
-            </footer>
-
         </div> <!-- End:class="main" -->
 
-        <div id="big_img">
-            <img src="../../images/AIChat/image1.png" alt="">
-        </div>
-        
+        <!-- フッター -->
+        <footer>
+            <p>©2025/03/20 tkt</p>
+        </footer>
+
     </body>
     <script src="../apps.js"></script>
 </html>

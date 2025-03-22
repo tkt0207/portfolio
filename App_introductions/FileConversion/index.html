@@ -1,0 +1,676 @@
+<!DOCTYPE html> <!-- 一番上に絶対書く -->
+<html lang="ja"> <!-- 全てを<html>でで囲うこと -->
+    <head> <!-- Webページを存在させえるうえで重要な情報を記す -->
+        <meta charset="utf-8"> <!-- 文字コード -->
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- それぞれのデバイスの大きさに応じて表示させる -->
+        <title>File Conversion</title> <!-- タブのとこに出る -->
+        <meta name="description" content="sample text text"> <!-- 検索時の下の説明見たいなところ -->
+        <link rel="stylesheet" href="../apps.css" /> <!-- cssの適応 -->
+    </head>
+
+    <body> <!-- 見える部分 -->
+        
+        <!-- 携帯用アイコン -->
+        <div id=phone_icon>
+            <div id="phone_icon_outline">
+                <div id="phone_icon_content"></div>
+            </div>
+        </div>
+
+        <!-- ヘッダー -->
+        <header>
+            <!-- ヘッダアイコン -->
+            <a id="header_icon" href="../../index.html">
+                <div id="header_icon_outline">
+                    <div id="header_icon_content"></div>
+                </div>
+            </a>
+
+            <!-- TOPヘッダ -->
+            <a href="#title_block" class="header_content header_content_a" style="--bottom-color: #a8e6cf; --br: 20px 0px 0px 0px;">
+                <p>TOP</p>
+            </a>
+
+            <!-- プレビューヘッダ -->
+            <a href="#preview_block" class="header_content header_content_a" style="--bottom-color: #f9c00c; --br: 0px 20px 0px 0px;">
+                <p>プレビュー</p>
+            </a>
+
+            <!-- ダミー(アイコン配置用) -->
+            <div id="header_dummy_icon"></div>
+
+            <!-- 使い方 -->
+            <div class="header_content" style="--bottom-color: #84b1ed; --br: 0px 0px 0px 20px;">
+                <p>使い方</p>
+                <div class="header_in_content">
+                    <a class="return_head">戻る</a>
+                    <a style="--a-order: 0" href="#use1" class="header_a">ファイルの読み込み</a>
+                    <a style="--a-order: 1" href="#use2" class="header_a">画像ファイルの変換</a>
+                    <a style="--a-order: 2" href="#use3" class="header_a">音声ファイルの変換</a>
+                    <a style="--a-order: 3" href="#use4" class="header_a">動画ファイルの変換</a>
+                    <a style="--a-order: 4" href="#use5" class="header_a">変換とダウンロード</a>
+                    <a style="--a-order: 5" href="#use6" class="header_a">スマホでの操作</a>
+                </div>
+            </div>
+
+            <!-- 開発環境ヘッダ -->
+            <div class="header_content" style="--bottom-color: #ff677d; --br: 0px 0px 20px 0px;">
+                <p>開発環境</p>
+                <div class="header_in_content">
+                    <a class="return_head">戻る</a>
+                    <a style="--a-order: 0" href="#tag1" class="header_a">使用ツール</a>
+                    <a style="--a-order: 1" href="#tag2" class="header_a">使用言語</a>
+                    <a style="--a-order: 2" href="#tag3" class="header_a">制作期間</a>
+                </div>
+            </div>
+        </header>
+
+
+        <!-- メイン部 -->
+        <div id="main">
+            <div id="dummy_block"></div>
+
+            <!-- タイトル -->
+            <div id="title_block">
+                <div id="phone_block">
+                    <div id="title_img">
+                        <img src="../../img/FileConvert/File.png" alt="">
+                        <img class="shadow_img" src="../../img/FileConvert/File.png" alt="">
+                    </div>
+                    <h2 class="title" id="phone_title">ファイル変換アプリ</h2>
+                    <div id="smooth_circle">
+                        <div></div>
+                    </div>
+                </div>
+
+                <div id="title_explain">
+                    <div id="explain_block">
+                        <h2 class="title" id="pc_title">ファイル変換アプリ</h2>
+                        <div class="explain">
+                            <p>ファイルの拡張子を変換できるWebアプリケーションです。</p>
+                            <p>画像や音声、動画ファイルを変換できます。</p>
+                            <p>拡張子の他にも、サイズや再生時間、音量の変更などが可能です。</p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <!-- プレビュー -->
+            <div class="content_block" id="preview_block">
+                <h2 class="title">プレビュー</h2>
+                <div id="slide_view">
+                    <div class="slide_view_content">
+                        <video src="../../img/FileConvert/File.mp4" controls="true" controlslist="nodownload"></video>
+                    </div>
+                    <div class="slide_view_content">
+                        <img src="../../img/FileConvert/image1.png" alt="">
+                    </div>
+                    <div class="slide_view_content">
+                        <img src="../../img/FileConvert/image2.png" alt="">
+                    </div>
+                    <div class="slide_view_content">
+                        <img src="../../img/FileConvert/image3.png" alt="">
+                    </div>
+                    <div class="slide_view_content">
+                        <img src="../../img/FileConvert/image4.png" alt="">
+                    </div>
+                    <div class="slide_view_content">
+                        <img src="../../img/FileConvert/image5.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <!-- ビッグプレビュー -->
+            <div id="preview_big">
+                <div id="preview_big_return_button"></div>
+                <div id="preview_big_view_area">
+                    <div>
+                        <img src="../../img/FileConvert/image1.png" alt="">
+                    </div>
+                    <div>
+                        <img src="../../img/FileConvert/image2.png" alt="">
+                    </div>
+                    <div>
+                        <img src="../../img/FileConvert/image3.png" alt="">
+                    </div>
+                    <div>
+                        <img src="../../img/FileConvert/image4.png" alt="">
+                    </div>
+                    <div>
+                        <img src="../../img/FileConvert/image5.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 使い方 -->
+            <div class="content_block" id="how_to_use_block">
+                <h2 class="title">使い方</h2>
+                <div id="use_block_area">
+
+                    <div class="columns">
+
+                        <div class="use_block" id="use1">
+                            <div class="close_use_block"></div>
+                            <div class="use_title">
+                                <h4>ファイルの読み込み</h4>
+                            </div>
+                            <div class="use_explain_block">
+                                <div class="get_height">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">1. ファイルの読み込み</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/FileConvert/use/use1-1.png" alt="">
+                                            <span>
+                                                <p>画面中央の読み込みボタンをクリックします。</p>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">2. ファイル選択</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/FileConvert/use/use1-2.png" alt="">
+                                            <span>
+                                                <p>ファイル選択ウィンドウが表示されるので、変換したいファイルを選択します。</p>
+                                            </span>
+                                        </div>
+                                    </div>
+ 
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">3. 読み込めるファイルの形式</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/FileConvert/use/use1-3.png" alt="">
+                                            <span>
+                                                <p>読み込めるファイルの形式は下記の通りです。</p>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="use_block" id="use2">
+                            <div class="close_use_block"></div>
+                            <div class="use_title">
+                                <h4>画像ファイルの変換</h4>
+                            </div>
+                            <div class="use_explain_block">
+                                <div class="get_height">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">1. ファイル形式の変更</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/FileConvert/use/use2-1.webp" alt="">
+                                            <!-- <video src="../../img/FileConvert/use/use2-1.mp4" autoplay loop muted loading="lazy" playsinline></video> -->
+                                            <span>
+                                                <p>拡張子をクリックし、変換したい拡張子を選択します。</p>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">2. サイズの変更1</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/FileConvert/use/use2-2.webp" alt="">
+                                            <!-- <video src="../../img/FileConvert/use/use2-2.mp4" autoplay loop muted loading="lazy" playsinline></video> -->
+                                            
+                                            <span>
+                                                <p>右側のスライダーで画像のサイズを変更できます。</p>
+                                                <p>スライダーをダブルクリックすることで数値の入力ができます。</p>
+                                            </span>
+                                        </div>
+                                    </div>
+   
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">3. サイズの変更2</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/FileConvert/use/use2-3.webp" alt="">
+                                            <!-- <video src="../../img/FileConvert/use/use2-3.mp4" autoplay loop muted loading="lazy" playsinline></video> -->
+                                            <span>
+                                                <p>左側のプレビュー画面でもサイズを変更できます。</p>
+                                                <p>白枠の上下左右をドラッグすることでサイズが変更されます。</p>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">4. 切り取り位置の変更1</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/FileConvert/use/use2-4.webp" alt="">
+                                            <!-- <video src="../../img/FileConvert/use/use2-4.mp4" autoplay loop muted loading="lazy" playsinline></video> -->
+                                            <span>
+                                                <p>右側のインプットで切り取り位置を変更できます。</p>
+                                                <p>+ボタン、-ボタンを押すと数値が上下します。</p>
+                                                <p>数値をクリックすることで数値の入力ができます。</p>
+                                            </span>
+                                        </div>
+                                    </div>
+   
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">5. 切り取り位置の変更2</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/FileConvert/use/use2-5.webp" alt="">
+                                            <!-- <video src="../../img/FileConvert/use/use2-5.mp4" autoplay loop muted loading="lazy" playsinline></video> -->
+                                            <span>
+                                                <p>左側のプレビュー画面でも切り取り位置を変更できます。</p>
+                                                <p>白枠の左上をドラッグすることで切り取り位置が変更されます。</p>
+                                                <p>また、白枠で囲われたエリアをドラッグすることでも切り取り位置を変更できます。</p>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="use_block" id="use3">
+                            <div class="close_use_block"></div>
+                            <div class="use_title">
+                                <h4>音声ファイルの変換</h4>
+                            </div>
+                            <div class="use_explain_block">
+                                <div class="get_height">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">1. ファイル形式の変更</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/FileConvert/use/use3-1.webp" alt="">
+                                            <!-- <video src="../../img/FileConvert/use/use3-1.mp4" autoplay loop muted loading="lazy" playsinline></video> -->
+                                            <span>
+                                                <p>拡張子をクリックし、変換したい拡張子を選択します。</p>
+                                            </span>
+                                        </div>
+                                    </div>
+    
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">2. 再生時間の変更1</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/FileConvert/use/use3-2.webp" alt="">
+                                            <!-- <video src="../../img/FileConvert/use/use3-2.mp4" autoplay loop muted loading="lazy" playsinline></video> -->
+                                            
+                                            <span>
+                                                <p>右側のインプットで再生時間を変更できます。</p>
+                                                <p>数値をクリックすることで、数値の入力ができます。</p>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">3. 再生時間の変更2</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/FileConvert/use/use3-3.webp" alt="">
+                                            <!-- <video src="../../img/FileConvert/use/use3-3.mp4" autoplay loop muted loading="lazy" playsinline></video> -->
+                                            <span>
+                                                <p>左側のプレビュー画面でも再生時間を変更できます。</p>
+                                                <p>左右の半円をドラッグすることで再生時間が変更されます。</p>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">4. 音量の変更</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/FileConvert/use/use3-4.webp" alt="">
+                                            <!-- <video src="../../img/FileConvert/use/use3-4.mp4" autoplay loop muted loading="lazy" playsinline></video> -->
+                                            <span>
+                                                <p>右側のスライダーで音量を変更できます。</p>
+                                                <p>スライダーをダブルクリックすることで数値の入力ができます。</p>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">5. ノイズ除去</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/FileConvert/use/use3-5.webp" alt="">
+                                            <!-- <video src="../../img/FileConvert/use/use3-5.mp4" autoplay loop muted loading="lazy" playsinline></video> -->
+                                            <span>
+                                                <p>右側のボタンを長押しすることでノイズ除去のON/OFFを切り替えできます。</p>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">6. 音声の再生</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/FileConvert/use/use3-6.webp" alt="">
+                                            <!-- <video src="../../img/FileConvert/use/use3-6.mp4" autoplay loop muted loading="lazy" playsinline></video> -->
+                                            <span>
+                                                <p>再生ボタンをクリックすると音声が再生されます。</p>
+                                                <p>もう一度押すと音声が一時停止されます。</p>
+                                                <p>スライダーバーで再生位置を変更することもできます。</p>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="use_block" id="use4">
+                            <div class="close_use_block"></div>
+                            <div class="use_title">
+                                <h4>動画ファイルの変換</h4>
+                            </div>
+                            <div class="use_explain_block">
+                                <div class="get_height">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">1. ファイル形式の変更</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/FileConvert/use/use4-1.webp" alt="">
+                                            <!-- <video src="../../img/FileConvert/use/use4-1.mp4" autoplay loop muted loading="lazy" playsinline></video> -->
+                                            <span>
+                                                <p>拡張子をクリックし、変換したい拡張子を選択します。</p>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">2. サイズの変更1</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/FileConvert/use/use4-2.webp" alt="">
+                                            <!-- <video src="../../img/FileConvert/use/use4-2.mp4" autoplay loop muted loading="lazy" playsinline></video> -->
+                                            <span>
+                                                <p>右側のスライダーで画像のサイズを変更できます。</p>
+                                                <p>スライダーをダブルクリックすることで数値の入力ができます。</p>
+                                            </span>
+                                        </div>
+                                    </div>
+   
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">3. サイズの変更2</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/FileConvert/use/use4-3.webp" alt="">
+                                            <!-- <video src="../../img/FileConvert/use/use4-3.mp4" autoplay loop muted loading="lazy" playsinline></video> -->
+                                            <span>
+                                                <p>左側のプレビュー画面でもサイズを変更できます。</p>
+                                                <p>白枠の上下左右をドラッグすることでサイズが変更されます。</p>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">4. 切り取り位置の変更1</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/FileConvert/use/use4-4.webp" alt="">
+                                            <!-- <video src="../../img/FileConvert/use/use4-4.mp4" autoplay loop muted loading="lazy" playsinline></video> -->
+                                            <span>
+                                                <p>右側のインプットで切り取り位置を変更できます。</p>
+                                                <p>+ボタン、-ボタンを押すと数値が上下します。</p>
+                                                <p>数値をクリックすることで数値の入力ができます。</p>
+                                            </span>
+                                        </div>
+                                    </div>
+   
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">5. 切り取り位置の変更2</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/FileConvert/use/use4-5.webp" alt="">
+                                            <!-- <video src="../../img/FileConvert/use/use4-5.mp4" autoplay loop muted loading="lazy" playsinline></video> -->
+                                            <span>
+                                                <p>左側のプレビュー画面でも切り取り位置を変更できます。</p>
+                                                <p>白枠の左上をドラッグすることで切り取り位置が変更されます。</p>
+                                                <p>また、白枠で囲われたエリアをドラッグすることでも切り取り位置を変更できます。</p>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">6. 再生時間の変更1</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/FileConvert/use/use4-6.webp" alt="">
+                                            <!-- <video src="../../img/FileConvert/use/use4-6.mp4" autoplay loop muted loading="lazy" playsinline></video> -->
+                                            <span>
+                                                <p>右側のインプットで再生時間を変更できます。</p>
+                                                <p>数値をクリックすることで、数値の入力ができます。</p>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">7. 再生時間の変更2</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/FileConvert/use/use4-7.webp" alt="">
+                                            <!-- <video src="../../img/FileConvert/use/use4-7.mp4" autoplay loop muted loading="lazy" playsinline></video> -->
+                                            <span>
+                                                <p>左側のプレビュー画面でも再生時間を変更できます。</p>
+                                                <p>左右の半円をドラッグすることで再生時間が変更されます。</p>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">8. 音量の変更</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/FileConvert/use/use4-8.webp" alt="">
+                                            <!-- <video src="../../img/FileConvert/use/use4-8.mp4" autoplay loop muted loading="lazy" playsinline></video> -->
+                                            <span>
+                                                <p>右側のスライダーで音量を変更できます。</p>
+                                                <p>スライダーをダブルクリックすることで数値の入力ができます。</p>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">9. ノイズ除去</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/FileConvert/use/use4-9.webp" alt="">
+                                            <!-- <video src="../../img/FileConvert/use/use4-9.mp4" autoplay loop muted loading="lazy" playsinline></video> -->
+                                            <span>
+                                                <p>右側のボタンを長押しすることでノイズ除去のON/OFFを切り替えできます。</p>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">10. 音声の再生</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/FileConvert/use/use4-10.webp" alt="">
+                                            <!-- <video src="../../img/FileConvert/use/use4-10.mp4" autoplay loop muted loading="lazy" playsinline></video> -->
+                                            <span>
+                                                <p>再生ボタンをクリックすると音声が再生されます。</p>
+                                                <p>もう一度押すと音声が一時停止されます。</p>
+                                                <p>スライダーバーで再生位置を変更することもできます。</p>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="use_block" id="use5">
+                            <div class="close_use_block"></div>
+                            <div class="use_title">
+                                <h4>変換とダウンロード</h4>
+                            </div>
+                            <div class="use_explain_block">
+                                <div class="get_height">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">1. 変換</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/FileConvert/use/use5-1.png" alt="">
+                                            <span>
+                                                <p>変換ボタンをクリックするとファイルの変換が開始されます。</p>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">2. 待機</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/FileConvert/use/use5-2.webp" alt="">
+                                            <!-- <video src="../../img/FileConvert/use/use5-2.mp4" autoplay loop muted loading="lazy" playsinline></video> -->
+                                            <span>
+                                                <p>変換が完了するまで待機します。</p>
+                                            </span>
+                                        </div>
+                                    </div>
+ 
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">3. ダウンロード</h5>
+                                        <div class="img_text_block top_img">
+                                            <img src="../../img/FileConvert/use/use5-3-1.png" alt="">
+                                            <img src="../../img/FileConvert/use/use5-3-2.png" alt="">
+                                            <span>
+                                                <p>変換が完了するとダウンロードボタンが表示されます。</p>
+                                                <p>ダウンロードボタンをクリックすることで変換後のファイルをダウンロードできます。</p>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="use_block" id="use6">
+                            <div class="close_use_block"></div>
+                            <div class="use_title">
+                                <h4>スマホでの操作</h4>
+                            </div>
+                            <div class="use_explain_block">
+                                <div class="get_height">
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">1. ファイルの読み込み</h5>
+                                        <div class="img_text_block left_img">
+                                            <img src="../../img/FileConvert/use/use6-1.png" alt="">
+                                            <span>
+                                                <p>画面中央の読み込みボタンをクリックすることでファイルを読み込めます。</p>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">2. ファイル形式の変更</h5>
+                                        <div class="img_text_block double_img">
+                                            <img src="../../img/FileConvert/use/use6-2-1.png" alt="">
+                                            <img src="../../img/FileConvert/use/use6-2-2.png" alt="">
+                                            <span>
+                                                <p>ファイルアイコンをクリックし、変換したい拡張子を選択できます。</p>
+                                            </span>
+                                        </div>
+                                    </div>
+ 
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">3. サイズの変更</h5>
+                                        <div class="img_text_block double_img">
+                                            <img src="../../img/FileConvert/use/use6-3-1.png" alt="">
+                                            <img src="../../img/FileConvert/use/use6-3-2.png" alt="">
+                                            <span>
+                                                <p>サイズ変更アイコンをクリックし、画像や動画のサイズを変更できます。</p>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">4. 切り取り位置の変更</h5>
+                                        <div class="img_text_block double_img">
+                                            <img src="../../img/FileConvert/use/use6-4-1.png" alt="">
+                                            <img src="../../img/FileConvert/use/use6-4-2.png" alt="">
+                                            <span>
+                                                <p>切り取り位置アイコンをクリックし、画像や動画の切り取り位置を変更できます。</p>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">5. 再生時間の変更</h5>
+                                        <div class="img_text_block double_img">
+                                            <img src="../../img/FileConvert/use/use6-5-1.png" alt="">
+                                            <img src="../../img/FileConvert/use/use6-5-2.png" alt="">
+                                            <span>
+                                                <p>再生時間アイコンをクリックし、音声や動画の再生時間を変更できます。</p>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">6. 音量の変更</h5>
+                                        <div class="img_text_block double_img">
+                                            <img src="../../img/FileConvert/use/use6-6-1.png" alt="">
+                                            <img src="../../img/FileConvert/use/use6-6-2.png" alt="">
+                                            <span>
+                                                <p>音量アイコンをクリックし、音声や動画の音量を変更できます。</p>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="use-explain">
+                                        <h5 class="explain_title">7. ノイズ除去</h5>
+                                        <div class="img_text_block double_img">
+                                            <img src="../../img/FileConvert/use/use6-7-1.png" alt="">
+                                            <img src="../../img/FileConvert/use/use6-7-2.png" alt="">
+                                            <span>
+                                                <p>ノイズ除去アイコンをクリックし、ノイズ除去のON/OFFを切り替えできます。</p>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="columns"></div>
+                    <div class="columns"></div>
+                </div>
+            </div>
+            
+
+            <!-- 開発環境 -->
+            <div class="content_block" id="development_block">
+                <h2 class="title">開発環境</h2>
+                <div id="tag_block">
+                    <div id="tag_header">
+                        <div class="tag tag_selected" id="tag1" style="--main-color: rgb(148, 178, 233);">使用ツール</div>
+                        <div class="tag" id="tag2" style="--main-color: rgb(120, 207, 157);">使用言語</div>
+                        <div class="tag" id="tag3" style="--main-color: rgb(178, 138, 229);">制作期間</div>
+                    </div>
+                    <div id="tag_main">
+
+                        <div class="tag_content"  id="content1">
+                            <p>Visual Studio Code</p>
+                            <p>Apache</p>
+                        </div>
+        
+                        <div class="tag_content tag_content_hidden"  id="content2">
+                            <p>HTML</p>
+                            <p>CSS</p>
+                            <p>Java Script</p>
+                            <p>Python</p>
+                        </div>
+        
+                        <div class="tag_content tag_content_hidden"  id="content3">
+                            <div class="item_content">
+                                <p style="--circle-color: #84B1ED;">UI UX考案</p>
+                                <p style="--circle-color: #C89EC4;">UI UX実装</p>
+                                <p style="--circle-color: #EE7785;">処理実装</p>
+                                <p style="--circle-color: #67D5B5;">その他</p>
+                            </div>
+                            <div class="graph" style="--per1: 50%; --per2: 70%; --per3: 90%;">
+                                <div>
+                                    2週間
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+        </div> <!-- End:class="main" -->
+
+        <!-- フッター -->
+        <footer>
+            <p>©2025/03/20 tkt</p>
+        </footer>
+
+    </body>
+    <script src="../apps.js"></script>
+</html>
