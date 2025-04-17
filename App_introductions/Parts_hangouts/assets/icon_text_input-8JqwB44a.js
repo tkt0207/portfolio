@@ -1,1 +1,0 @@
-import{n as s,j as n}from"./index-D6opaHwd.js";function c(t){const i=t.id?t.id:s();function e(){}return n.jsxs("div",{className:"icon_text_input_block",children:[n.jsx("div",{className:"input_icon"}),n.jsx("input",{type:"text",className:"icon_text_input",id:i,onChange:e})]})}export{c as default};

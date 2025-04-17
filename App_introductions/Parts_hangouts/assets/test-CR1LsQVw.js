@@ -1,0 +1,1 @@
+import{n as t,j as s}from"./index-C1CkTsyn.js";/* empty css                   *//* empty css                  *//* empty css                        *//* empty css                   */function a(o){return t(),s.jsx("div",{className:"test_test"})}export{a as default};
