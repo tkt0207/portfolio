@@ -1,0 +1,161 @@
+/* スライダー */
+.handle2_slider_block{
+    width: 140px;
+    height: 30px;
+    background-color: rgb(127, 127, 127, 0.2);
+    position: relative;
+
+    --value-percent1: 50%;
+    --value-percent2: 50%;
+    --bar-color1: rgb(100, 230, 255);
+    --bar-color2: rgb(255, 230, 100);
+
+    --crash-percent: 50%;
+
+    --bar-in-color1: color-mix(in srgb, var(--bar-color1) var(--crash-percent), var(--bar-color2));
+    --bar-in-color2: color-mix(in srgb, var(--bar-color2) var(--crash-percent), var(--bar-color1));
+
+    border-radius: 
+        min(calc(var(--value-percent1) * 2), 5px) 
+        min(calc( ( 100% - var(--value-percent2) ) * 2), 5px) 
+        min(calc( ( 100% - var(--value-percent2) ) * 2), 5px) 
+        min(calc(var(--value-percent1) * 2), 5px);
+}
+
+/* 開始スライダー */
+.handle2_slider_block > .handle2_slider_first{
+    appearance: none;
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    background-color: transparent;
+    border-radius: 999px;
+
+    &:focus-visible{
+        outline: none;
+    }
+
+    &:focus-visible ~ .start_block > .start_handle{
+        background-color: var(--bar-color1);
+        z-index: 2;
+    }
+}
+
+/* 開始スライダーのつまみ */
+.handle2_slider_block > .handle2_slider_first::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    display: none;
+}
+
+/* 終了スライダー */
+.handle2_slider_block > .handle2_slider_end{
+    appearance: none;
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    background-color: transparent;
+    border-radius: 999px;
+
+    &:focus-visible{
+        outline: none;
+    }
+
+    &:focus-visible ~ .end_block > .end_handle{
+        background-color: var(--bar-color2);
+        z-index: 2;
+    }
+}
+
+/* 終了スライダーのつまみ */
+.handle2_slider_block > .handle2_slider_end::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    display: none;
+}
+
+/* 開始ブロック */
+.handle2_slider_block > .start_block {
+    height: 100%;
+    background-color: var(--bar-color1);
+    width: var(--value-percent1);
+    border-radius: 5px 0px 0px 5px;
+    position: absolute;
+    left: 0%;
+    cursor: pointer;
+}
+
+/* 開始ブロックのつまみ */
+.handle2_slider_block > .start_block > .start_handle{
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    height: 100%;
+    aspect-ratio: 1/2;
+    border-radius: 5px 0px 0px 5px;
+    background-color: white;
+    border-right: none;
+    cursor: pointer;
+    transform-origin: right;
+
+    &:hover{
+        z-index: 2;
+    }
+
+    &::after{
+        content: "";
+        width: 70%;
+        aspect-ratio: 1/2;
+        border-radius: 5px 0px 0px 5px;
+        position: absolute;
+        top: 50%;
+        right: 0%;
+        translate: 0% -50%;
+        transition-duration: 0.5s;
+        transition-property: background-color;
+        background-color: var(--bar-in-color1);
+    }
+}
+
+/* 終了ブロック */
+.handle2_slider_block > .end_block {
+    height: 100%;
+    background-color: var(--bar-color2);
+    width: calc(100% - var(--value-percent2));
+    border-radius:0px 5px 5px 0px;
+    position: absolute;
+    right: 0%;
+    cursor: pointer;
+}
+
+/* 終了ブロックのつまみ */
+.handle2_slider_block > .end_block > .end_handle{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    aspect-ratio: 1/2;
+    border-radius: 0px 5px 5px 0px;
+    background-color: white;
+    border-left: none;
+    cursor: pointer;
+    transform-origin: left;
+
+    &:hover{
+        z-index: 2;
+    }
+
+    &::after{
+        content: "";
+        width: 70%;
+        aspect-ratio: 1/2;
+        border-radius: 0px 5px 5px 0px;
+        position: absolute;
+        top: 50%;
+        left: 0%;
+        translate: 0% -50%;
+        transition-duration: 0.5s;
+        transition-property: background-color;
+        background-color: var(--bar-in-color2);
+    }
+}

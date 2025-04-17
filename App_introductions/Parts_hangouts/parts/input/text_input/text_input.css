@@ -1,0 +1,17 @@
+/* インプット */
+.text_input{
+    width: 160px;
+    height: 36px;
+    border: none;
+    outline: 2px solid rgb(127, 127, 127);
+    border-radius: 10px;
+    font-size: 1rem;
+    padding: 0px 10px;
+    color: rgb(127, 127, 127);
+    background-color: transparent;
+
+    &:hover,
+    &:focus-visible{
+        outline: 4px solid rgb(127, 127, 255);
+    }
+}

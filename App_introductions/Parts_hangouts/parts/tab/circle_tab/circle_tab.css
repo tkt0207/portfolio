@@ -1,0 +1,114 @@
+/* タブブロック */
+.circle_tab_block{
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    position: relative;
+    overflow: hidden;
+}
+
+/* タブバー */
+.circle_tab_block > .circle_tab_bar{
+    position: absolute;
+    bottom: -100px;
+    right: -100px;
+    width: 200px;
+    height: 200px;
+    overflow: auto;
+    border-radius: 50%;
+    transition-duration: 0.3s, 0.3s;
+    transition-property: bottom, right;
+    transform: rotate(-135deg);
+    --rotate-angle: 0deg;
+}
+
+.circle_tab_block > .circle_tab_bar_view{
+    bottom: -50px;
+    right: -50px;
+}
+
+/* タブバーのスクロールバー */
+.circle_tab_block > .circle_tab_bar::-webkit-scrollbar{
+    appearance: none;
+    display: none;
+}
+
+/* スクロール出来る用のダミー */
+.circle_tab_block > .circle_tab_bar > .scroll_dummy {
+    width: 20000px;
+    height: 20000px;
+}
+
+/* サークルスライダー */
+.circle_tab_block > .circle_tab_bar > .circle_scroll{
+    width: 100%;
+    height: 100%;
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    transform: rotate(var(--rotate-angle));
+    transition-duration: calc(var(--td) * 1s);
+    transition-property: transform;
+    
+}
+
+/* タブ */
+.circle_tab_block > .circle_tab_bar > .circle_scroll > .circle_tab{
+    text-decoration: none;
+    color: rgb(127, 127, 127);
+    box-shadow: 2px 2px 5px rgb(127, 127, 127, 0.5);
+    width: 40px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    position: absolute;
+    top: calc( sin( var(--num) * 360 / var(--tab-num) * 1deg) * 37% + 50% - 20px);
+    left: calc( cos( var(--num) * 360 / var(--tab-num) * 1deg) * 37% + 50% - 20px);
+    transform: rotate(calc(var(--rotate-angle) * -1 + 135deg));
+    font-size: 0.8rem;
+    transition-duration: calc(var(--td) * 1s);
+    transition-property: transform;
+    cursor: pointer;
+
+    &:hover,
+    &:focus-visible{
+        outline: 3px solid rgb(160, 160, 255);
+        outline-offset: unset;
+
+    }
+}
+
+/* 選択中のタブ */
+.circle_tab_block > .circle_tab_bar > .circle_scroll > .circle_tab_selected{
+    background-color: rgb(160, 160, 255) !important;
+    color: white;
+    scale: 1.1;
+}
+
+/* タブメインブロック */
+.circle_tab_block > .circle_tab_main_block{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+/* タブメイン */
+.circle_tab_block > .circle_tab_main_block > .circle_tab_main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* タブメインの中身 */
+.circle_tab_block > .circle_tab_main_block > .circle_tab_main > .normal_tab_main{
+    text-align: center;
+    padding: 10px;
+    color: rgb(127, 127, 127);
+    font-weight: bold;
+    font-size: 1.4rem;
+}

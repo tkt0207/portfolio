@@ -1,0 +1,48 @@
+/* ラジオボタンブロック */
+.color_radio_block{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    max-width: 100%;
+    padding: 10px;
+}
+
+
+/* ラジオボタンの本体 */
+.color_radio_block > input[type='radio']{
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+    flex-shrink: 0;
+    background-color: transparent;
+    box-shadow: 0px 0px 10px rgb(127, 127, 127, 0.3);
+    width: 30px;
+    height: 30px;
+    border-radius: 999px;
+    position: relative;
+    
+
+    &:hover,
+    &:focus-visible{
+        scale: 1.2;
+        outline-offset: unset;
+    }
+
+    &:checked{
+        outline: 2px solid var(--radio-color);
+    }
+
+    &::after{
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        width: 70%;
+        height: 70%;
+        background-color: var(--radio-color);
+        border-radius: 999px;
+        box-sizing: border-box;
+    }
+}
+

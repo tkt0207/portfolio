@@ -1,0 +1,43 @@
+/* ボタン */
+.push_button {
+    width: fit-content;
+    height: fit-content;
+    border: none;
+    border-radius: 999px;
+    background-color: transparent;
+    color: rgb(127, 127, 127);
+    cursor: pointer;
+    user-select: none;
+    --after-shawdow: 2px 2px 5px rgb(127, 127, 127, 0.5), 2px 2px 0px rgb(127, 127, 127, 0) inset;
+
+    &:hover,
+    &:focus-visible{
+        outline: none;
+        color: rgb(127, 127, 255);
+    }
+
+    &:focus-visible:active{
+        --after-shawdow: 2px 2px 0px rgb(127, 127, 127, 0), 2px 2px 5px rgb(127, 127, 127, 0.5) inset;
+        color: color-mix(in srgb, rgb(127, 127, 255) 60%, transparent) !important;
+    }
+}
+
+/* 押されている状態時のスタイル */
+.push_button_pressing{
+    --after-shawdow: 2px 2px 0px rgb(127, 127, 127, 0), 2px 2px 5px rgb(127, 127, 127, 0.5) inset;
+    color: color-mix(in srgb, rgb(127, 127, 255) 60%, transparent) !important;
+}
+
+/* ボタン内部の要素 */
+.push_button > div{
+    padding: 8px 16px;
+    background-color: transparent;
+    border: none;
+    border-radius: 999px;
+    box-shadow: var(--after-shawdow);
+    transition-duration: 0.3s;
+    transition-property: box-shadow;
+    color: inherit;
+    font-weight: bold;
+    font-size: 1rem;
+}

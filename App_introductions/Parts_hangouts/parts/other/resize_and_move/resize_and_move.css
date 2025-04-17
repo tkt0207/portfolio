@@ -1,0 +1,191 @@
+/* エリア */
+.resize_and_move_area{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* リサイズブロック */
+.resize_and_move_area > .resize_and_move{
+    width: 100px;
+    height: 100px;
+    top: calc(50% - 50px);
+    left: calc(50% - 50px);
+    position: absolute;
+    cursor: all-scroll;
+    transform-origin: top left;
+    --resize-opacity : 0;
+
+    &:hover{
+        --resize-opacity : 1;
+    }
+
+    &::before{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(56, 140, 196);
+        border-radius: 50%;
+        z-index: 1;
+    }
+}
+
+/* リサイズライン */
+.resize_and_move_area > .resize_and_move > .resize_line{
+    position: absolute;
+    opacity: var(--resize-opacity);
+    z-index: 2;
+
+    &::before{
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        width: 8px;
+        height: 8px;
+        border-radius: 999px;
+        background-color: white;
+        box-shadow: 0px 0px 4px rgb(127, 127, 127, 0.5);
+        z-index: 3;
+    }
+
+    &::after{
+        content: "";
+        position: absolute;
+        background-color: white;
+        box-shadow: 0px 0px 4px rgb(127, 127, 127, 0.5);
+    }
+    
+}
+
+/* リサイズ上ライン */
+.resize_and_move_area > .resize_and_move > .resize_top{
+    top: 0px;
+    left: 0px;
+    translate: 0% -50%;
+    width: 100%;
+    height: 20px;
+    cursor: ns-resize;
+
+    &::after{
+        top: 50%;
+        left: 0px;
+        translate: 0% -50%;
+        width: 100%;
+        height: 2px;
+    }
+
+}
+
+/* リサイズ下ライン */
+.resize_and_move_area > .resize_and_move > .resize_bottom{
+    top: 100%;
+    left: 0px;
+    translate: 0% -50%;
+    width: 100%;
+    height: 20px;
+    cursor: ns-resize;
+
+    &::after{
+        top: 50%;
+        left: 0px;
+        translate: 0% -50%;
+        width: 100%;
+        height: 2px;
+    }
+}
+
+/* リサイズ左ライン */
+.resize_and_move_area > .resize_and_move > .resize_left{
+    top: 0px;
+    left: 0px;
+    translate: -50% 0%;
+    width: 20px;
+    height: 100%;
+    cursor: ew-resize;
+
+    &::after{
+        top: 0px;
+        left: 50%;
+        translate: -50% 0%;
+        width: 2px;
+        height: 100%;
+    }
+
+}
+
+/* リサイズ右ライン */
+.resize_and_move_area > .resize_and_move > .resize_right{
+    top: 0px;
+    left: 100%;
+    translate: -50% 0%;
+    width: 20px;
+    height: 100%;
+    cursor: ew-resize;
+
+    &::after{
+        top: 0px;
+        left: 50%;
+        translate: -50% 0%;
+        width: 2px;
+        height: 100%;
+    }
+
+    
+}
+
+/* リサイズポイント */
+.resize_and_move_area > .resize_and_move > .resize_point{
+    position: absolute;
+    translate: -50% -50%;
+    width: 20px;
+    height: 20px;
+    border-radius: 999px;
+    z-index: 2;
+    opacity: var(--resize-opacity);
+
+    &::after{
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        background-color: white;
+        box-shadow: 0px 0px 4px rgb(127, 127, 127, 0.5);
+        border-radius: 999px;
+        width: 8px;
+        height: 8px;
+    }
+}
+
+/* リサイズ左上ポイント */
+.resize_and_move_area > .resize_and_move > .resize_top_left{
+    top: 0px;
+    left: 0px;
+    cursor: nwse-resize;
+}
+
+/* リサイズ右上ポイント */
+.resize_and_move_area > .resize_and_move > .resize_top_right{
+    top: 0px;
+    left: 100%;
+    cursor: nesw-resize;
+}
+
+/* リサイズ左下ポイント */
+.resize_and_move_area > .resize_and_move > .resize_bottom_left{
+    top: 100%;
+    left: 0px;
+    cursor: nesw-resize;
+}
+
+/* リサイズ右下ポイント */
+.resize_and_move_area > .resize_and_move > .resize_bottom_right{
+    top: 100%;
+    left: 100%;
+    cursor: nwse-resize;
+}

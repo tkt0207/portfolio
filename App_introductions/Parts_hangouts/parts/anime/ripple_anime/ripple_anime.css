@@ -1,0 +1,62 @@
+/* アニメーションブロック */
+.ripple_anime{
+    position: relative;
+    width: 50%;
+    aspect-ratio: 1/1;
+    border-radius: 999px;
+    transform: rotateX(0deg);
+}
+
+/* 消える円 */
+.ripple_anime::after,
+.ripple_anime::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 999px;
+    background: radial-gradient(transparent 50%, rgb(100, 200, 100, 0.5) 60%, transparent 70% 100%);
+    animation: ripple_wave 1s ease-out infinite;
+}
+
+/* 消える円(中) */
+.ripple_anime::before{
+    animation: ripple_in_wave 1s ease-out infinite;
+}
+
+/* 拡大&透明度変更アニメーション */
+@keyframes ripple_wave{
+    0%{
+        scale: 0;
+        opacity: 0;
+    }
+
+    20%{
+        opacity: 1;
+    }
+
+    100%{
+        scale: 1;
+        opacity: 0;
+    }
+
+}
+
+/* 拡大&透明度変更アニメーション(中) */
+@keyframes ripple_in_wave{
+    0%{
+        scale: 0;
+        opacity: 0;
+    }
+
+    30%{
+        scale: 0;
+        opacity: 1;
+    }
+
+    100%{
+        scale: 1;
+        opacity: 0;
+    }
+
+}

@@ -1,0 +1,103 @@
+/* インプット */
+.calc_input_block{
+    width: fit-content;
+    height: fit-content;
+    background-color: inherit;
+    position: relative;
+}
+
+/* 計算式表示ブロック */
+.calc_input_block > .view_formula{
+    display: block;
+    width: calc(100% - 10px);
+    max-height: calc(250%);
+    position: absolute;
+    left: 50%;
+    translate: -50% 0%;
+    bottom: calc(100% - 2px);
+    background-color: rgb(127, 200, 200, 0.2);
+    clip-path: polygon(6px 0px, calc(100% - 6px) 0px, 100% 6px, 100% 100%, 0px 100%, 0px 6px);
+    text-align: right;
+    color: rgb(127, 127, 127);
+    font-size: 0.8rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overflow-wrap: break-word;
+    padding: 6px 10px;
+    animation: view_formula_apper 10s ease-in-out forwards;
+    display: none;
+    
+    &:hover{
+        animation-play-state: paused;
+    }
+}
+
+/* 計算式表示ブロック出現&消すアニメーション */
+@keyframes view_formula_apper{
+    0%{
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    5%{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+
+    95%{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(100%);
+        opacity: 0;
+    }
+}
+
+/* インプットのアウトライン */
+.calc_input_block > .calc_input_outline{
+    display: block;
+    width: 186px;
+    height: 36px;
+    clip-path: polygon(6px 0px, calc(100% - 6px) 0px, 100% 6px, 100% calc(100% - 6px), calc(100% - 6px) 100%, 6px 100%, 0px calc(100% - 6px), 0px 6px);
+    background-color: inherit;
+    box-sizing: border-box;
+    border: 10px solid rgb(127, 127, 127);
+    position: relative;
+    transition-duration: 0.5s, 0.5s;
+    transition-property: border, clip-path;
+
+    &:hover,
+    &:has(.calc_input:focus-visible){
+        border: 10px solid rgb(127, 200, 200);
+        clip-path: polygon(0px 0px, 100% 0px, 100% 0px, 100% 100%, 100% 100%, 6px 100%, 0px 100%, 0px 0px);
+    }
+}
+
+/* インプット */
+.calc_input_block > .calc_input_outline > .calc_input{
+    width: calc(100% + 20px - 6px);
+    height: calc(100% + 20px - 6px);
+    border: none;
+    clip-path: polygon(5px 0px, calc(100% - 5px) 0px, 100% 5px, 100% calc(100% - 5px), calc(100% - 5px) 100%, 5px 100%, 0px calc(100% - 5px), 0px 5px);
+    font-size: 1rem;
+    padding: 0px 10px;
+    color: rgb(127, 127, 127);
+    text-align: right;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    background-color: inherit;
+
+    &:focus-visible{
+        outline: none;
+    }
+}
+
+
+/* 右のボタンを削除 */
+.calc_input_block > .calc_input_outline > .calc_input::-webkit-outer-spin-button, 
+.calc_input_block > .calc_input_outline > .calc_input::-webkit-inner-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}

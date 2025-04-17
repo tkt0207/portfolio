@@ -1,0 +1,131 @@
+/* インプットブロック */
+.button_number_input_block{
+    width: 120px;
+    height: 36px;
+    border: none;
+    border-radius: 999px;
+    background-color: inherit;
+    display: flex;
+    outline: 2px solid rgb(127, 127, 127);
+}
+
+/* マイナスボタン */
+.button_number_input_block > .minus_button_for_input{
+    height: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 100% 0px 0px 100%;
+    border: none;
+    outline: 2px solid rgb(127, 127, 127);
+    z-index: 2;
+    position: relative;
+    cursor: pointer;
+    background-color: inherit;
+    transition-duration: 0.3s;
+    transition-property: border-radius, scale;
+    touch-action: none;
+    user-select: none;
+    --icon-color: rgb(127, 127, 127);
+
+    &:hover,
+    &:focus-visible{
+        border-radius: 50%;
+        outline: 2px solid rgb(127, 127, 255);
+        --icon-color: rgb(127, 127, 255);
+    }
+
+    &:focus-visible:active{
+        scale: 1.2;
+    }
+
+    &::after{
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        background-color: var(--icon-color);
+        width: 50%;
+        aspect-ratio: 4/1;
+        border-radius: 999px;
+    }
+}
+
+/* プラスボタン */
+.button_number_input_block > .plus_button_for_input{
+    height: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 0px 100% 100% 0px;
+    border: none;
+    outline: 2px solid rgb(127, 127, 127);
+    z-index: 2;
+    position: relative;
+    cursor: pointer;
+    background-color: inherit;
+    transition-duration: 0.3s;
+    transition-property: border-radius, scale;
+    touch-action: none;
+    user-select: none;
+    --icon-color: rgb(127, 127, 127);
+
+    &:hover,
+    &:focus-visible{
+        border-radius: 50%;
+        outline: 2px solid rgb(127, 127, 255);
+        --icon-color: rgb(127, 127, 255);
+    }
+
+    &:focus-visible:active{
+        scale: 1.2;
+    }
+
+    &::after,
+    &::before{
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        background-color: var(--icon-color);
+        width: 50%;
+        aspect-ratio: 4/1;
+        border-radius: 999px;
+    }
+
+    &::before{
+        rotate: 90deg;
+    }
+}
+
+/* ボタン押し込み時のスタイル */
+.button_number_input_block > .button_for_input_pressing{
+    scale: 1.2;
+}
+
+/* インプット */
+.button_number_input_block > .button_number_input{
+    width: calc(100% - 60px);
+    height: 100%;
+    font-size: 1rem;
+    padding: 0px 10px;
+    color: rgb(127, 127, 127);
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    background-color: inherit;
+    border-radius: 20px;
+    transition-duration: 0.3s;
+    transition-property: border-radius;
+
+    &:focus-visible{
+        z-index: 3;
+        border-radius: 0px;
+        outline: 2px solid rgb(127, 127, 255);
+    }
+}
+
+/* 右のボタンを削除 */
+.button_number_input_block > .button_number_input::-webkit-outer-spin-button, 
+.button_number_input_block > .button_number_input::-webkit-inner-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}

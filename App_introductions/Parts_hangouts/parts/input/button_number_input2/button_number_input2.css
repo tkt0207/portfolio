@@ -1,0 +1,175 @@
+/* インプットブロック */
+.button_number_input2_block{
+    --height: 40px;
+    --br-lt: 5px;
+    --br-rt: 20px;
+    --br-rb: 20px;
+    --br-lb: 5px;
+    --bg-color: white;
+    --ft-color: rgb(100, 100, 100);
+
+    background-color: inherit;
+    color: rgb(127, 127, 127);
+    font-size: 1.2rem;
+    text-align: center;
+    border: #dddddd 2px solid;
+    display: flex;
+    height: var(--height);
+    width: 100px;
+    border-radius: var(--br-lt) var(--br-rt) var(--br-rb) var(--br-lb);
+    user-select: none;
+    position: relative;
+
+    &::before{
+        content: "";
+        position: absolute;
+        background-color: #dddddd;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        offset-path: inset(1px 40px 1px 1px round 5px);
+        offset-distance: 50%;
+    }
+
+    &::after{
+        content: "";
+        position: absolute;
+        background-color: #dddddd;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        offset-path: inset(1px 40px 1px 1px round 5px);
+        offset-distance: 27%;
+    }
+}
+
+/* インプット */
+.button_number_input2_block > .button_number_input2{
+    height: 100%;
+    width: calc(100% - var(--height) + 6px);
+    border: none;
+    border-radius: var(--br-lt) 0px 0px var(--br-lb);
+    background-color: inherit;
+    color: inherit;
+    font-size: inherit;
+    font-weight: bold;
+    text-align: inherit;
+    padding: 0px 4px;
+    user-select: none;
+
+    &:focus-visible{
+        outline: none;
+    }
+}
+
+
+/* 右のボタンを削除 */
+.button_number_input2::-webkit-outer-spin-button, 
+.button_number_input2::-webkit-inner-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+
+
+/* ボタン */
+.button_number_input2_block > .circle_button{
+    height: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: inherit;
+    position: relative;
+    scale: 1.1;
+    transition-duration: 0.5s;
+    transition-property: scale, filter, rotate;
+    cursor: pointer;
+    border: none;
+    rotate: calc(var(--rotate-angle) * 1deg);
+
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        border-radius: 999px;
+        background: conic-gradient(from 0deg, rgb(100, 100, 200), rgb(240, 140, 240), rgb(100, 100, 200));
+        mask: radial-gradient(transparent 50%, white 50%);
+    }
+
+    &::after{
+        content: attr(data-descr);
+        font-size: 0.6rem;
+        width: 70%;
+        aspect-ratio: 1/1;
+        border-radius: 999px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        color: rgb(127, 127, 127);
+        font-weight: bold;
+        background-color: transparent;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+    }
+
+    &:hover,
+    &:focus-visible {
+        outline: none;
+        scale: 1.3;
+    }
+
+    &:has(.circle_detection_top:hover){
+        filter: hue-rotate(100deg);
+    }
+
+    &:has(.circle_detection_bottom:hover){
+        filter: hue-rotate(-60deg);
+    }
+}
+
+/* アップ中のスタイル */
+.circle_button_up_now{
+    filter: hue-rotate(100deg) !important;
+    scale: 1.3;
+}
+
+/* ダウン中のスタイル */
+.circle_button_down_now{
+    filter: hue-rotate(-60deg) !important;
+    scale: 1.3;
+}
+
+/* アップボタン */
+.button_number_input2_block > .circle_button > .circle_detection_top{
+    height: 50%;
+    width: 100%;
+    border-radius: 999px 999px 0px 0px;
+    position: relative;
+    z-index: 2;
+}
+
+/* ダウンボタン */
+.button_number_input2_block > .circle_button > .circle_detection_bottom{
+    height: 50%;
+    width: 100%;
+    border-radius: 0px 0px 999px 999px;
+    position: relative;
+    z-index: 2;
+}
+
+/* 動く丸 */
+.button_number_input2_block > .circle_offset{
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: inherit;
+    border: 2px solid #dddddd;
+    border-radius: 50%;
+    position: absolute;
+    offset-path: inset(1px 40px 1px 1px round 5px);
+    offset-distance: 50%;
+    z-index: 1;
+}

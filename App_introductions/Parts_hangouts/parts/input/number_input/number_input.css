@@ -1,0 +1,26 @@
+/* インプット */
+.number_input{
+    width: 80px;
+    height: 30px;
+    border: none;
+    outline: 2px solid rgb(127, 127, 127);
+    border-radius: 10px;
+    font-size: 1rem;
+    padding: 0px 10px;
+    color: rgb(127, 127, 127);
+    text-align: center;
+    background-color: transparent;
+
+    &:hover,
+    &:focus-visible{
+        outline: 4px solid rgb(127, 127, 255);
+    }
+}
+
+
+/* 右のボタンを削除 */
+.number_input::-webkit-outer-spin-button, 
+.number_input::-webkit-inner-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}

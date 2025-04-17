@@ -1,0 +1,121 @@
+/* アニメーションブロック */
+.focus_anime{
+    position: relative;
+    width: 50%;
+    aspect-ratio: 1/1;
+    border-radius: 999px;
+    transform: rotateX(0deg);
+    animation: rotate_orb 10.3s linear infinite;
+}
+
+/* 線 */
+.focus_anime > div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 999px;
+    border-top: 4px solid rgb(250, 200, 120);
+    animation: focus_orb 1.2s linear infinite;
+
+    /* 線の光彩 */
+    &::after{
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        width: 100%;
+        aspect-ratio: 1/1;
+        border-radius: 999px;
+        border-top: 4px solid rgb(250, 200, 120);
+        filter: blur(5px);
+        -webkit-filter: blur(5px);
+    }
+
+    &:nth-child(2n){
+        rotate: 180deg;
+    }
+    &:nth-child(2){
+        animation-delay: -0.2s;   
+    }
+    &:nth-child(3){
+        animation-delay: -0.4s;   
+    }
+    &:nth-child(4){
+        animation-delay: -0.6s;   
+    }
+    &:nth-child(5){
+        animation-delay: -0.8s;   
+    }
+    &:nth-child(6){
+        animation-delay: -1s;  
+    }
+}
+
+/* 丸 */
+.focus_anime > span{
+    position: absolute;
+    translate: -50% -50%;
+    width: 10%;
+    aspect-ratio: 1/1;
+    border-radius: 999px;
+    background-color: transparent;
+    box-shadow: 0px 0px 10px rgb(250, 200, 120);
+    animation: focus_circle 1.8s ease-out infinite;
+
+    &:nth-of-type(1){
+        top: calc(sin(120deg) * 50% + 50%);
+        left: calc(cos(120deg) * 50% + 50%);
+        animation-delay: -0.6s;
+    }
+
+    &:nth-of-type(2){
+        top: calc(sin(240deg) * 50% + 50%);
+        left: calc(cos(240deg) * 50% + 50%);
+        animation-delay: -1.2s;
+    }
+
+    &:nth-of-type(3){
+        top: calc(sin(0deg) * 50% + 50%);
+        left: calc(cos(0deg) * 50% + 50%);
+    }
+}
+
+/* 線のアニメーション */
+@keyframes focus_orb{
+    0%{
+        scale: 1;
+        opacity: 0;
+        transform: rotate(0deg);
+    }
+    10%{
+        opacity: 1;
+    }
+    100%{
+        scale: 0.2;
+        opacity: 0;
+        transform: rotate(-360deg);
+    }
+}
+
+/* 丸のアニメーション */
+@keyframes focus_circle{
+    50%, 100%{
+        opacity: 0;
+        top: 50%;
+        left: 50%;
+    }
+}
+
+/* 全体のアニメーション */
+@keyframes rotate_orb{
+    from{
+        rotate: 0deg;
+    }
+    to{
+        rotate: -360deg;
+    }
+}

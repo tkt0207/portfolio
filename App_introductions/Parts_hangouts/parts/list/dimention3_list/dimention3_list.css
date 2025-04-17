@@ -1,0 +1,205 @@
+/* リスト */
+.dimention3_list_block{
+    width: 100px;
+    height: 40px;
+    position: relative;
+    background-color: inherit;
+    border-radius: 999px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 標準のリスト */
+.dimention3_list_block > .dimention3_list{
+    appearance: none;
+    display: none;
+}
+
+/* ボタン */
+.dimention3_list_block > .dimention3_list_button{
+    width: 100px;
+    height: 40px;
+    border-radius: 999px;
+    border: none;
+    color: rgb(127, 127, 127);
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: inherit;
+    cursor: pointer;
+    z-index: 2;
+    border: 2px solid rgb(127, 127, 127);
+    box-shadow: 0px 4px 0px rgb(127, 127, 127);
+    transition: box-shadow 0.3s, transform 0.3s;
+
+    /* フォーカス時 */
+    &:focus-visible{
+        outline: none;
+        color: rgb(127, 127, 230);
+    }
+
+    &:active{
+        transform: translateY(4px);
+        box-shadow: 0px 0px 0px rgb(127, 127, 127);
+    }
+}
+
+
+/* リスト */
+.dimention3_list_block > .dimention3_list_picker{
+    width: 200px;
+    height: fit-content;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgb(127, 127, 127, 0.4);
+    background-color: inherit;
+    position: absolute;
+    top: calc(50% - 15px);
+    left: 50%;
+    translate: -50% -50%;
+    z-index: 3;
+    overflow-y: auto;
+    overflow-x: hidden;
+    animation: dimention3_list_appear 0.5s ease-in-out;
+}
+
+/* リストのセレクタ */
+.dimention3_list_block > .dimention3_list_picker > .dimentin3_list_selecter{
+    height: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* リストのセレクタ内のボタン */
+.dimention3_list_block > .dimention3_list_picker > .dimentin3_list_selecter > button{
+    color: rgb(127, 127, 230);
+    font-weight: bold;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    width: 60px;
+
+    &:hover,
+    &:focus-visible{
+        outline: none;
+        color: rgb(127, 127, 180);
+    }
+}
+
+/* リストエリア */
+.dimention3_list_block > .dimention3_list_picker > .list_select_area{
+    width: 100%;
+    height: fit-content;
+    background-color: inherit;
+    border-radius: 0px 0px 5px 5px;
+    position: relative;
+}
+
+/* 選択中のカバー */
+.dimention3_list_block > .dimention3_list_picker > .list_select_area > .list_selecting_cover{
+    width: calc(100% - 10px);
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    border-radius: 5px;
+    translate: 0% -50%;
+    background-color: rgb(127, 127, 127, 0.15);
+    pointer-events: none;
+    z-index: 3;
+}
+
+/* リストブロック */
+.dimention3_list_block > .dimention3_list_picker > .list_select_area > .list_select_block{
+    width: 100%;
+    height: var(--list-height);
+    background-color: inherit;
+    border-radius: inherit;
+    position: relative;
+    perspective: 1000px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scroll-snap-type: Y mandatory;
+
+    &:focus-visible{
+        outline: 2px solid rgb(127, 127, 230);
+    }
+}
+
+/* リストブロックのスクロールバー */
+.dimention3_list_block > .dimention3_list_picker > .list_select_area > .list_select_block::-webkit-scrollbar{
+    display: none;
+}
+
+/* リスト共 */
+.dimention3_list_block > .dimention3_list_picker > .list_select_area > .list_select_block > .lists{
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    background-color: inherit;
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+}
+
+/* オプション */
+.dimention3_list_block > .dimention3_list_picker > .list_select_area > .list_select_block > .lists > button{
+    width: 100%;
+    height: 30px;
+    background-color: inherit;
+    color: rgb(127, 127, 127);
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    backface-visibility: hidden;
+    translate: -50% -50%;
+    transform:
+        rotateX(calc(var(--num) * (360 / 20) * -1deg))
+        translateZ(90px);
+
+    &:focus-visible{
+        outline: none;
+    }
+}
+
+/* スクロール用ダミー */
+.dimention3_list_block > .dimention3_list_picker > .list_select_area > .list_select_block > p{
+    height: var(--dummy-height);
+    width: 100%;
+    scroll-snap-align: center;
+    user-select: none;
+    opacity: 0;
+    z-index: 1;
+    
+    &:first-of-type{
+        margin-top: calc((var(--list-height) + var(--dummy-height))/2);
+    }
+
+    &:last-of-type{
+        margin-bottom: calc((var(--list-height) + var(--dummy-height))/2);
+    }
+}
+
+/* リスト表示アニメーション */
+@keyframes dimention3_list_appear{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+/* 選択リスト隠しスタイル */
+.dimention3_list_block > .dimention3_list_picker_hidden{
+    display: none;
+}
+
+
+

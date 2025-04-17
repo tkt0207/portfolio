@@ -1,0 +1,18 @@
+/* ボタン */
+.simple_button{
+    padding: 8px 16px;
+    background-color: transparent;
+    border: none;
+    outline: 2px solid rgb(127, 127, 127);
+    color: rgb(127, 127, 127);
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    user-select: none;
+
+    &:hover,
+    &:focus-visible{
+        outline: 4px solid rgb(127, 127, 255);
+        color: rgb(127, 127, 255);
+    }
+}

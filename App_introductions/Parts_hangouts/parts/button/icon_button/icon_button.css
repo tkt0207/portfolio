@@ -1,0 +1,82 @@
+/* ボタン */
+.icon_button {
+    width: fit-content;
+    height: fit-content;
+    border: none;
+    border-radius: 999px;
+    background-color: transparent;
+    color: rgb(127, 127, 127);
+    cursor: pointer;
+    transition-duration: 0.2s;
+    transition-property: background-color;
+    position: relative;
+    user-select: none;
+
+    &:hover,
+    &:focus-visible{
+        outline: none;
+        background-color: rgb(127, 127, 127, 0.2);
+    }
+}
+
+/* 押されている状態時のスタイル */
+.icon_button:focus-visible:active::after,
+.icon_button_pressing::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;   
+    width: 100%;
+    height: 100%;
+    border-radius: 999px;
+    background-color: rgb(200, 200, 200, 0.2);
+    animation: icon_button_scale_up 0.3s ease-out forwards;
+    z-index: 1;
+}
+
+/* アイコンボタンスケールアップアニメーション */
+@keyframes icon_button_scale_up{
+    from{
+        scale: 0;
+    }
+    to{
+        scale: 1;
+    }
+}
+
+/* ボタンのアイコン */
+.icon_button .button_icon{
+    border-radius: 50%;
+    width: 80px;
+    aspect-ratio: 1/1;
+    position: relative;
+    z-index: 2;
+
+    --icon-color: rgb(127, 127, 127);
+}
+
+/* ボタンのアイコンパーツ共通設定 */
+.icon_button .button_icon *{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    background-color: var(--icon-color);
+}
+
+/* ボタンのアイコンパーツ1 */
+.icon_button .button_icon .button_icon_parts1{
+    width: 8%;
+    height: 60%;
+    border-radius: 999px;
+    rotate: 45deg;
+}
+
+/* ボタンのアイコンパーツ2 */
+.icon_button .button_icon .button_icon_parts2{
+    width: 8%;
+    height: 60%;
+    border-radius: 999px;
+    rotate: -45deg;
+}

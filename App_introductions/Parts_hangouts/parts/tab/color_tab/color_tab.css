@@ -1,0 +1,126 @@
+/* タブブロック */
+.color_tab_block{
+    max-width: calc(100% - 40px);
+    height: fit-content;
+    background-color: inherit;
+    border-radius: 10px;
+
+    &:has(.color_tab > input[type='radio']:focus-visible){
+        box-shadow: 2px 2px 10px rgb(127, 127, 127, 0.5);
+    }
+}
+
+/* タブバー */
+.color_tab_block > .color_tab_bar{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    overflow-y: visible;
+    overflow-x: auto;
+    height: 38px;
+    background-color: inherit;
+    position: relative;
+    border-radius: 10px 10px 0px 0px;
+}
+
+/* タブバーのスクロールバー */
+.color_tab_block > .color_tab_bar::-webkit-scrollbar{
+    appearance: none;
+    display: none;
+}
+
+/* タブバーの足元 */
+.color_tab_block > .color_tab_bar > .color_bottom_foot{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    background-color: var(--foot-color);
+    height: 50%;
+    z-index: 0;
+}
+
+/* タブ */
+.color_tab_block > .color_tab_bar > .color_tab{
+    appearance: none;
+    -webkit-appearance: none;
+    text-decoration: none;
+    color: rgb(127, 127, 127);
+    flex-shrink: 0;
+    height: calc(100% - 6px);
+    padding: 0px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px 10px 0px 0px;
+    user-select: none;
+    border-top: 2px solid transparent;
+    background-color: inherit;
+    transition-duration: 0.5s;
+    transition-property: height;
+    z-index: 1;
+
+    &:hover,
+    &:focus-visible{
+        outline: none;
+        background-color: var(--main-color);
+        color: white;
+        border-radius: 10px 10px 0px 0px !important;
+        z-index: 2;
+    }
+}
+
+/* タブのインプット */
+.color_tab_block > .color_tab_bar > .color_tab > input[type='radio']{
+    appearance: none;
+    -webkit-appearance: none;
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+}
+
+
+/* 選択中のタブ */
+.color_tab_block > .color_tab_bar > .color_tab_selected{
+    background-color: var(--main-color);
+    color: white;
+    height: 100%;
+    border-radius: 10px 10px 0px 0px;
+}
+
+/* 選択中のタブの直前 */
+.color_tab_block > .color_tab_bar > .color_tab:has(+ .color_tab_selected){
+    border-radius: 10px 10px 10px 0px;
+}
+
+/* 選択中のタブの直後 */
+.color_tab_block > .color_tab_bar > .color_tab_selected + .color_tab{
+    border-radius: 10px 10px 0px 10px;
+}
+
+
+/* タブメインブロック */
+.color_tab_block > .color_tab_main_block{
+    width: 100%;
+    height: fit-content;
+    border: 3px solid var(--border-color);
+    border-radius: 0px 0px 10px 10px;
+    color: var(--border-color);
+    transition-duration: 0.5s;
+    transition-property: border, color;
+}
+
+/* タブメイン */
+.color_tab_block > .color_tab_main_block > .color_tab_main{
+    width: 100%;
+    height: fit-content;
+}
+
+/* タブメインの中身 */
+.color_tab_block > .color_tab_main_block > .color_tab_main > .normal_tab_main{
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+}

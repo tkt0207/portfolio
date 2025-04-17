@@ -1,0 +1,33 @@
+/* アニメーションブロック */
+.loading_anime3{
+    position: relative;
+}
+
+/* 内部の文字 */
+.loading_anime3 > span{
+    display: inline-block;
+    white-space: pre;
+    font-weight: bold;
+    font-size: 1rem;
+    color: rgb(127, 127, 127);
+    animation: loading_pop 3s linear infinite calc((14 - var(--val)) * -0.1s);
+}
+
+
+/* ポップ&透明度変更アニメーション */
+@keyframes loading_pop{
+    0%, 100%{
+        transform: translateY(0px);
+        opacity: 0.5;
+    }
+
+    40%, 55%{
+        transform: translateY(0px);
+    }
+
+    50%{
+        transform: translateY(-20%);
+        opacity: 1;
+    }
+
+}

@@ -1,0 +1,72 @@
+/* チェックボックス */
+.round_check_label{
+    height: unset;
+    width: unset;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    user-select: none;
+    padding: 6px 10px;
+    padding-left: 8px;
+    gap: 6px;
+    color: rgb(127, 127, 127);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 10px;
+
+    &:has(.round_check_icon:checked){
+        background-color: rgb(127, 127, 127, 0.1);
+    }
+
+    &:has(.round_check_icon:focus-visible){
+        outline: 2px solid rgb(127, 127, 255);
+    }
+
+    &:hover{
+        outline: 2px solid rgb(127, 127, 255);
+    }
+}
+
+/* チェックボックスのアイコン */
+.round_check_label > .round_check_icon{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    height: 24px;
+    width: 24px;
+    outline: 2px solid rgb(127, 127, 127);
+    cursor: pointer;
+    position: relative;
+    border-radius: 999px;
+    outline-offset: -1px;
+    --check-display: none;
+    
+    &:checked{
+        outline: 2px solid rgb(127, 127, 255);
+        background-color: rgb(127, 127, 255);
+        --check-display: block;
+    }
+}
+
+/* チェックボックスのチェックマーク */
+.round_check_label > .round_check_icon::after{
+    content: "";
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    translate: -50% 0%;
+    width: 5px;
+    height: 10px;
+    border-bottom: white 3px solid;
+    border-right: white 3px solid;
+    rotate: 45deg;
+    display: var(--check-display);
+}
+
+
+
+
+
+
+

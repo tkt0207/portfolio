@@ -1,0 +1,65 @@
+/* チェックボックス */
+.simple_check_block {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+}
+
+/* チェックボックスのアイコン */
+.simple_check_block > .simple_check_icon{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    height: 24px;
+    width: 24px;
+    /* aspect-ratio: 1/1; */
+    outline: 2px solid rgb(127, 127, 127);
+    cursor: pointer;
+    position: relative;
+    --check-display: none;
+    
+    &:hover{
+        outline: 4px solid rgb(127, 127, 255) !important;
+    }
+
+    &:focus-visible{
+        border: none;
+        outline: 4px solid rgb(127, 127, 255) !important;
+        outline-offset: unset;
+    }
+
+    &:checked{
+        outline: 2px solid rgb(127, 127, 255);
+        background-color: rgb(127, 127, 255);
+        --check-display: block;
+    }
+}
+
+/* チェックボックスのチェックマーク */
+.simple_check_block > .simple_check_icon::after{
+    content: "";
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    translate: -50% 0%;
+    width: 7px;
+    height: 14px;
+    border-bottom: white 4px solid;
+    border-right: white 4px solid;
+    rotate: 45deg;
+    display: var(--check-display);
+}
+
+/* チェックボックスのラベル */
+.simple_check_block > .simple_check_label{
+    user-select: none;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    color: rgb(127, 127, 127);
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0px 10px;
+    cursor: pointer;
+}

@@ -1,0 +1,96 @@
+.only_crome_list{
+    appearance: base-select;
+    width: 80px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    outline: 2px solid rgb(127, 127, 127);
+    color: rgb(127, 127, 127);
+    font-weight: bold;
+    padding-left: 10px;
+    padding-top: 1.5px;
+    cursor: pointer;
+    position: relative;
+    background-color: transparent;
+    --picker-polygon: polygon(0% 35%, 80% 35%, 40% 65%);
+
+    /* ホバー、フォーカス時 */
+    &:hover,
+    &:focus-visible{
+        outline: 4px solid rgb(127, 127, 255);
+    }
+
+    /* 既存のピッカーマークを非表示 */
+    &::picker-icon{
+        display: none;
+    }
+
+    /* ピッカーマーク */
+    &::after{
+        content: "";
+        position: absolute;
+        height: 100%;
+        aspect-ratio: 1/2;
+        top: 0px;
+        right: 0px;
+        background-color: rgb(127, 127, 127);
+        clip-path: var(--picker-polygon);
+        transition-duration: 0.5s;
+        transition-property: clip-path;
+    }
+
+    /* リストオープン時 */
+    &:open{
+        border-radius: 0px;
+        outline: 4px solid rgb(127, 127, 255);
+        --picker-polygon: polygon(0% 62%, 80% 62%, 40% 32%);
+    }
+}
+
+
+
+/* 選択リスト */
+.only_crome_list::picker(select) {
+    appearance: base-select;
+    border-radius: 0px;
+    border: none;
+    margin: 2px 0px;
+    outline: 4px solid rgb(127, 127, 255);
+    max-height: 100px;
+}
+
+/* 選択リストのスクロールバー */
+.only_crome_list::picker(select)::-webkit-scrollbar{
+    width: 6px;
+    height: 6px;
+    background-color: transparent
+}
+
+/* 選択リストのスクロールバーのつまみ */
+.only_crome_list::picker(select)::-webkit-scrollbar-thumb{
+    width: 6px;
+    height: 6px;
+    border-radius: 4px;
+    background-color: rgb(200, 200, 255);
+}
+
+
+/* 選択リストのオプション */
+.only_crome_list > option{
+    height: 30px;
+    padding-left: 10px;
+    color: rgb(127, 127, 127);
+
+    &:hover,
+    &:focus-visible{
+        outline: none;
+        background-color: rgb(240, 240, 255);
+    }
+
+    /* 左のチェックマーク */
+    &::checkmark{
+        display: none;
+    }
+}
+
+

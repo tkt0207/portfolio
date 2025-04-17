@@ -1,0 +1,51 @@
+/* スライダー */
+.circle_slider{
+    appearance: none;
+    width: 120px;
+    aspect-ratio: 1/1;
+    border-radius: 999px;
+    cursor: pointer;
+    position: relative;
+    background-color: inherit;
+    background-color: rgb(127, 127, 127, 0.2);
+    /* mask: radial-gradient(transparent 55%, black 45%), conic-gradient(from 207deg, black 85%, transparent 85%); */
+    clip-path: path("M94.559,109.05C92.792,110.282 90.578,110.689 88.488,110.167C86.399,109.644 84.638,108.242 83.66,106.322C83.598,106.315 83.583,106.284 83.567,106.253C81.87,102.921 82.886,98.849 85.948,96.705C97.798,88.393 105,74.739 105,60C105,35.164 84.836,15 60,15C35.164,15 15,35.164 15,60C15,74.739 22.202,88.393 34.023,96.746C37.065,98.876 38.073,102.921 36.387,106.229C36.417,106.284 36.402,106.315 36.386,106.346C35.401,108.278 33.628,109.69 31.524,110.217C29.42,110.743 27.191,110.333 25.412,109.092C9.634,97.917 0,79.684 0,60C0,26.885 26.885,-0 60,-0C93.115,-0 120,26.885 120,60C120,79.684 110.366,97.917 94.559,109.05Z");
+    mask-composite: intersect;
+    --value-percent: 50%;
+    --bar-color: rgb(127, 127, 255);
+
+    &:focus-visible{
+        outline: none;
+        --bar-color: linear-gradient(to right, rgb(150, 150, 255), rgb(200, 200, 255), rgb(150, 150, 255));
+    }
+}
+
+/* スライダーのバー */
+.circle_slider::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 999px;
+    background: var(--bar-color);
+    mask: conic-gradient(from 207deg, black calc(var(--value-percent) * 0.85), transparent calc(var(--value-percent) * 0.85));
+    background-size: 300%;
+    animation: circle_slider_back_move 5s linear infinite;
+}
+
+/* 背景移動アニメーション */
+@keyframes circle_slider_back_move{
+    from{
+        background-position: 0%;
+    }
+    to{
+        background-position: -300%;
+    }
+}
+
+/* スライダーのつまみ */
+.circle_slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    display: none;
+}

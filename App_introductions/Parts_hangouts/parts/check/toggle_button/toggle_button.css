@@ -1,0 +1,44 @@
+/* チェックボックス */
+.toggle_button{
+    appearance: none;
+    width: 60px;
+    height: 36px;
+    background-color: rgb(127, 127, 127, 0.2);
+    border-radius: 999px;
+    position: relative;
+    cursor: pointer;
+    transition-duration: 0.2s;
+    transition-property: background-color;
+    --after-left: 30%;
+
+    &:focus-visible{
+        outline: 2px solid rgb(127, 127, 255);
+        outline-offset: 2px;
+    }
+
+    &:checked{
+        --after-left: 70%;
+        background-color: rgb(127, 127, 255);
+    }
+}
+
+/* 内部の丸 */
+.toggle_button::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: var(--after-left);
+    translate: -50% -50%;
+    background-color: white;
+    height: 85%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    box-shadow: 0px 0px 1px rgb(127, 127, 127, 0.5);
+    transition-duration: 0.2s;
+    transition-property: left;
+}
+
+
+
+
+

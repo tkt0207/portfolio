@@ -1,0 +1,35 @@
+/* ボタン */
+.color_invert_button{
+    padding: 8px 16px;
+    background-color: var(--back-color);
+    border: none;
+    border-radius: 10px 0px;
+    outline: 2px solid var(--font-color);
+    color: var(--font-color);
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition-duration: 0.5s;
+    transition-property: color, outline, background-color;
+    user-select: none;
+
+    &:hover,
+    &:focus-visible{
+        outline: 2px solid var(--back-color);
+        color: var(--back-color);
+        background-color: var(--font-color);
+    }
+
+    &:focus-visible:active{
+        transition-duration: 0.2s !important;
+        outline: 2px solid color-mix(in srgb, var(--back-color) 60%, transparent) !important;
+        background-color: color-mix(in srgb, var(--font-color) 60%, transparent) !important;
+    }
+}
+
+/* 押されている状態時のスタイル */
+.color_invert_button_pressing{
+    transition-duration: 0.2s !important;
+    outline: 2px solid color-mix(in srgb, var(--back-color) 60%, transparent) !important;
+    background-color: color-mix(in srgb, var(--font-color) 60%, transparent) !important;
+}

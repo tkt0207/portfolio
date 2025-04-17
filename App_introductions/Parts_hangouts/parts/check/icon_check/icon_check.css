@@ -1,0 +1,63 @@
+/* チェックボックス */
+.icon_check_label{
+    width: 80px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: 0px 0px 10px rgb(127, 127, 127, 0.5);
+    --icon-back-color: var(--back-color);
+    --icon-font-color: var(--font-color);
+
+    &:hover{
+        outline: 4px solid var(--icon-font-color);
+    }
+
+    &:has(.icon_checkbox:focus-visible){
+        outline: 4px solid var(--icon-font-color);
+    }
+
+    &:has(.icon_checkbox:checked){
+        --icon-back-color: var(--font-color);
+        --icon-font-color: var(--back-color);
+    }
+}
+
+/* チェックボックス本体 */
+.icon_check_label > .icon_checkbox{
+    appearance: none;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    opacity: 0;
+}
+
+/* チェックボックスのアイコン */
+.icon_check_label > .icon_check_icon{
+    background-color: var(--icon-back-color);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: absolute;
+    transition-duration: 0.4s;
+    transition-property: background-color;
+}
+
+/* チェックボックスのアイコンのアイコン */
+.icon_check_label > .icon_check_icon::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    background-color: var(--icon-font-color);
+    width: 60%;
+    aspect-ratio: 1/1;
+    transition-duration: 0.4s;
+    transition-property: background-color;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}

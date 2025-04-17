@@ -1,0 +1,22 @@
+/* インプット */
+.variable_textarea{
+    width: 200px;
+    min-height: calc(3rem + 20px);
+    max-height: 148px;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 2px 2px 5px rgb(127, 127, 127, 0.5);
+    background-color: inherit;
+    font-size: 1rem;
+    color: rgb(127, 127, 127);
+    resize: none;
+
+    &:hover,
+    &:focus-visible{
+        outline: none;
+        box-shadow: 2px 2px 5px rgb(127, 127, 127, 0.5) inset;
+    }
+}
+
+

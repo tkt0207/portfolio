@@ -1,0 +1,36 @@
+/* スライダー */
+.simple_slider{
+    appearance: none;
+    width: 120px;
+    height: 10px;
+    border-radius: 999px;
+    cursor: pointer;
+
+    --bar-color: rgb(127, 127, 255);
+    --thumb-color: white;
+    --value-percent: 50%;
+    background: linear-gradient(to right, var(--bar-color) var(--value-percent), rgb(127, 127, 127, 0.2) var(--value-percent));
+
+    &:focus-visible{
+        outline: none;
+    }
+
+    &:hover::-webkit-slider-thumb,
+    &:focus-visible::-webkit-slider-thumb {
+        scale: 1.1;
+        --thumb-color: var(--bar-color);
+        /* outline: 2px solid rgb(127, 127, 255); */
+    }
+}
+
+/* スライダーのつまみ */
+.simple_slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    aspect-ratio: 1/1;
+    background-color: var(--thumb-color);
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px rgb(127, 127, 127, 0.5), 0px 0px 0px 3px white inset;
+    position: relative;
+}

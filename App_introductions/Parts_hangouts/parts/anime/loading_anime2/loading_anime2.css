@@ -1,0 +1,47 @@
+/* アニメーションブロック */
+.loading_anime2{
+    height: 30%;
+    aspect-ratio: 1/1;
+    position: relative;
+}
+
+/* 内部の丸共 */
+.loading_anime2 > div{
+    position: absolute;
+    height: 18%;
+    aspect-ratio: 1/1;
+    border-radius: 999px;
+    background-color: rgb(100, 200, 100);
+    translate: -50% -50%;
+    top: calc( sin(45deg * var(--val)) * 40% + 50%);
+    left: calc( cos(45deg * var(--val)) * 40% + 50%);
+    animation: rotate_color 10s linear infinite, loading_scale_up 2s linear infinite calc((8 - var(--val)) * -0.25s);
+}
+
+
+/* 色回転アニメーション */
+@keyframes rotate_color{
+    from{
+        filter: hue-rotate(0deg);
+    }
+    to{
+        filter: hue-rotate(360deg);
+    }
+}
+
+/* 拡大&透明度変更アニメーション */
+@keyframes loading_scale_up{
+    0%, 100%{
+        scale: 1;
+        opacity: 0;
+    }
+
+    30%, 70%{
+        scale: 1;
+    }
+
+    50%{
+        scale: 1.2;
+        opacity: 1;
+    }
+}

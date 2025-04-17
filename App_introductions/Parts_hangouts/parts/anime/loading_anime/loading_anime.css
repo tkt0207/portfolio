@@ -1,0 +1,121 @@
+/* %値 */
+@property --load_percent{
+    syntax: "<percentage>";
+    initial-value: 0%;
+    inherits: true;
+}
+
+/* 開始角度 */
+@property --load_start_angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: true;
+}
+
+/* 開始丸のオフセット */
+@property --offset_distance1{
+    syntax: "<percentage>";
+    initial-value: 0%;
+    inherits: true;
+}
+
+/* 終了丸のオフセット */
+@property --offset_distance2{
+    syntax: "<percentage>";
+    initial-value: 0%;
+    inherits: true;
+}
+
+
+/* ローディングアニメーション */
+@keyframes load_size_change{
+    0%{
+        --load_percent: 0%;
+        --load_start_angle: 0deg;
+        --offset_distance1: -25%;
+        --offset_distance2: -25%;
+    }
+    20%{
+        --load_percent: 50%;
+        --load_start_angle: 0deg;
+        --offset_distance1: -25%;
+        --offset_distance2: 25%;
+    }
+    50%{
+        --load_percent: 0%;
+        --load_start_angle: 180deg;
+        --offset_distance1: 25%;
+        --offset_distance2: 25%;
+    }
+    70%{
+        --load_percent: 50%;
+        --load_start_angle: 180deg;
+        --offset_distance1: 25%;
+        --offset_distance2: 75%;
+    }
+    100%{
+        --load_percent: 0%;
+        --load_start_angle: 360deg;
+        --offset_distance1: 75%;
+        --offset_distance2: 75%;
+    }
+}
+
+/* 回転アニメーション */
+@keyframes rotate_main{
+    0%{
+        rotate: 0deg;
+    }
+    100%{
+        rotate: 360deg;
+    }
+}
+
+/* 色回転アニメーション */
+@keyframes rotate_color{
+    from{
+        filter: hue-rotate(0deg);
+    }
+    to{
+        filter: hue-rotate(360deg);
+    }
+}
+
+/* ローディング */
+.loading_anime{
+    height: 30%;
+    max-height: calc(100vw - 20px);
+    aspect-ratio: 1/1;
+    background: conic-gradient(from var(--load_start_angle), rgb(100, 200, 100) var(--load_percent), transparent var(--load_percent));
+    border-radius: 50%;
+    mask-image: radial-gradient(transparent 59%, rgb(0, 0, 0) 59%);
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    animation: load_size_change 5s ease-in-out infinite, rotate_main 2.5s ease-in-out infinite, rotate_color 20s ease-in-out infinite;
+    position: relative;
+}
+
+
+/* 始まりの丸 */
+.loading_anime::after{
+    content: "";
+    height: 8%;
+    aspect-ratio: 1/1;
+    background-color: rgb(100, 200, 100);
+    border-radius: 50%;
+    position: absolute;
+    offset-path: circle(calc(46%));
+    offset-distance: var(--offset_distance1);
+}
+
+/* 終わりの丸 */
+.loading_anime::before{
+    content: "";
+    width: 8%;
+    aspect-ratio: 1/1;
+    background-color: rgb(100, 200, 100);
+    border-radius: 50%;
+    position: absolute;
+    offset-path: circle(calc(46%));
+    offset-distance: var(--offset_distance2);
+}

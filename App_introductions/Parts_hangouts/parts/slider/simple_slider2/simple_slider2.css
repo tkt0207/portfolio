@@ -1,0 +1,54 @@
+/* スライダー */
+.simple_slider2{
+    appearance: none;
+    width: 120px;
+    height: 20px;
+    border-radius: 999px;
+    cursor: pointer;
+    position: relative;
+    background-color: transparent;
+    clip-path: inset(0px 0px 0px 0px round 999px);
+    box-shadow: 0px 0px 10px rgb(127, 127, 127, 0.3) inset;
+
+    --value-percent: 50%;
+    --bar-color: rgb(127, 127, 255);
+
+    &:hover,
+    &:focus-visible{
+        outline: none;
+        --bar-color: linear-gradient(to right, rgb(150, 150, 255), rgb(200, 200, 255), rgb(150, 150, 255));
+    }
+}
+
+/* スライダーのバー */
+.simple_slider2::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    left: -15%;
+    width: calc(var(--value-percent) + 15%);
+    border-radius: 999px;
+    background: var(--bar-color);
+    background-size: 300%;
+    animation: simple_slider2_back_move 5s linear infinite;
+}
+
+/* 背景移動アニメーション */
+@keyframes simple_slider2_back_move{
+    from{
+        background-position: 0%;
+    }
+
+    to{
+        background-position: -300%;
+    }
+}
+
+/* スライダーのつまみ */
+.simple_slider2::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 20px;
+    aspect-ratio: 1/1;
+    opacity: 0;
+}
