@@ -1,1 +1,0 @@
-import{j as s}from"./index-C1CkTsyn.js";function x(){return s.jsxs("div",{className:"focus_anime",children:[s.jsx("div",{}),s.jsx("div",{}),s.jsx("div",{}),s.jsx("div",{}),s.jsx("div",{}),s.jsx("div",{}),s.jsx("span",{}),s.jsx("span",{}),s.jsx("span",{})]})}export{x as default};
