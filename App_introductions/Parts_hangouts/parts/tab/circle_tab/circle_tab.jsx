@@ -80,11 +80,8 @@ function Circle_tab(props) {
     // タブバーへの参照
     const tab_bar = useRef();
 
-    // 変形時間
-    const [transDuration, setTransDuration] = useState(0);
-
     // 回転角度
-    const [angle, setAngle] = useState(0);
+    const angle = useRef(0);
 
     // タブバーのクラスリスト
     const [bar_class_list, setBar_class_list] = useState([]);
@@ -93,10 +90,10 @@ function Circle_tab(props) {
     const timeout = useRef(null);
 
     // スクロール量(X軸)の前回値
-    const [scroll_oldX, setScroll_oldX] = useState(SCROLL_LOC_BASE);
+    const scroll_oldX = useRef(SCROLL_LOC_BASE);
 
     // スクロール量(Y軸)の前回値
-    const [scroll_oldY, setScroll_oldY] = useState(SCROLL_LOC_BASE);
+    const scroll_oldY = useRef(SCROLL_LOC_BASE);
 
     // スクロール終了フラグ
     const scroll_end_flg_read = useRef(false);
@@ -174,7 +171,7 @@ function Circle_tab(props) {
     //------------------------------------------------
     function tab_bar_rotate(i){
         // 現在の角度を取得
-        let angle_tmp = angle;
+        let angle_tmp = angle.current;
 
         // 角度オフセットを取得
         let angle_offset = (360/tab_num) * -i;
@@ -203,8 +200,9 @@ function Circle_tab(props) {
         }
 
         // 変形時間と角度を更新
-        setTransDuration(0.5);
-        setAngle(angle_tmp);
+        tab_bar.current.style.setProperty('--td', 0.5);
+        angle.current = angle_tmp;
+        tab_bar.current.style.setProperty('--rotate-angle', angle_tmp + 'deg');
     }
 
 
@@ -223,8 +221,8 @@ function Circle_tab(props) {
 
         // スクロール終了イベント
         timeout.current = setTimeout(() => {
-            setScroll_oldX(SCROLL_LOC_BASE);
-            setScroll_oldY(SCROLL_LOC_BASE);
+            scroll_oldX.current = SCROLL_LOC_BASE;
+            scroll_oldY.current = SCROLL_LOC_BASE;
             scroll_end_flg_read.current = true;
             tab_bar.current.scrollTop = SCROLL_LOC_BASE;
             tab_bar.current.scrollLeft = SCROLL_LOC_BASE;
@@ -235,24 +233,17 @@ function Circle_tab(props) {
         const scrollLeft = e.currentTarget.scrollLeft;
 
         // スクロール量から角度を計算
-        let angle_tmp = angle - (scrollTop - scroll_oldY)/2 - (scrollLeft - scroll_oldX)/2;
+        let angle_tmp = angle.current - (scrollTop - scroll_oldY.current)/2 - (scrollLeft - scroll_oldX.current)/2;
 
         // スクロールの前回値を更新
-        setScroll_oldX(scrollLeft);
-        setScroll_oldY(scrollTop);
+        scroll_oldX.current = scrollLeft;
+        scroll_oldY.current = scrollTop;
 
         // 変形時間と角度を更新
-        setTransDuration(0);
-        setAngle(angle_tmp);
+        tab_bar.current.style.setProperty('--td', 0);
+        angle.current = angle_tmp;
+        tab_bar.current.style.setProperty('--rotate-angle', angle_tmp + 'deg');
     }
-
-
-
-    // 角度が更新されたときに実施
-    useEffect(() => {
-        // タブバーを回転させる
-        tab_bar.current.style.setProperty('--rotate-angle', angle + 'deg');
-    }, [angle])
 
 
     // 初回処理
@@ -271,8 +262,7 @@ function Circle_tab(props) {
                 style={{'--tab-num': tab_num}}
                 onClick={tab_bar_click_event}
                 onScroll={no_scroll_rotate}>
-                    <div className='circle_scroll'
-                        style={{'--td':transDuration}}>
+                    <div className='circle_scroll'>
                         {tab_list}
                     </div>
                 

@@ -57,7 +57,7 @@ function Contextmenu_list(props) {
     const options = useRef([]);
 
     // フォーカス中のリスト番号
-    const [list_no, setList_no] = useState(-1);
+    const list_no = useRef(-1);
     
     // リストのクラスリスト
     const [list_class, setList_class] = useState([]);
@@ -121,7 +121,7 @@ function Contextmenu_list(props) {
     function list_appear(){
         // リストから隠しスタイルを削除
         if(select_list.current.classList.contains(STYLE_NAME_LIST_HIDDEN)){
-            setList_no(0);
+            list_no.current = 0;
             setList_class(pre => pre.filter((cl) => cl != STYLE_NAME_LIST_HIDDEN));
         }
     }
@@ -134,24 +134,29 @@ function Contextmenu_list(props) {
         // ターゲットを取得
         let target = e.currentTarget;
 
+        // 選択番号の変数を定義
+        let next_no = list_no.current;
+
         // ターゲットにキー押し込みイベントを追加
         target.onkeydown = (e) => {
             switch (e.key){
                 // ↓が押されたときは、フォーカスを下に移動させる
                 case 'ArrowDown':
                     e.preventDefault();
-                    if(list_no + 1 <= options.current.length - 1){
-                        options.current[list_no + 1].focus();
-                        setList_no(pre => pre + 1);
+                    next_no = list_no.current + 1;
+                    if(next_no <= options.current.length - 1){
+                        options.current[next_no].focus();
+                        list_no.current = next_no;
                     }
                     break;
                     
                 // ↑が押されたときは、フォーカスを上に移動させる
                 case 'ArrowUp':
                     e.preventDefault();
-                    if(list_no - 1 >= 0){
-                        options.current[list_no - 1].focus();
-                        setList_no(pre => pre - 1);
+                    next_no = list_no.current - 1;
+                    if(next_no >= 0){
+                        options.current[next_no].focus();
+                        list_no.current = next_no;
                     }
                     break;
 
@@ -182,22 +187,9 @@ function Contextmenu_list(props) {
     }
 
 
-    // フォーカスされるリスト番号の変更時
-    useEffect(() => {
-        if(list_no == -1) return;
-
-        // ピッカーが表示されている場合、指定されたリスト番号のオプションにフォーカス
-        if(list_class.includes(STYLE_NAME_LIST_HIDDEN)){
-            // 何もしない
-        } else {
-            options.current[list_no].focus();
-        }
-    }, [list_no]);
-
-
     // リストの表示状態(開閉状態)変更時
     useEffect(() => {
-        if(list_no == -1) return;
+        if(list_no.current == -1) return;
         
         // ピッカーが表示されている場合、初めのリスト番号のオプションにフォーカス
         if(list_class.includes(STYLE_NAME_LIST_HIDDEN)){
@@ -250,6 +242,11 @@ function Contextmenu_list(props) {
                 return;
             }
             list_disappear();
+        }
+
+        return () => {
+            target.oncontextmenu = null;
+            target.onclick = null;
         }
 
     }, [])

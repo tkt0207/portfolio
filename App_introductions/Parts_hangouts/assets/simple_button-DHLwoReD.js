@@ -1,0 +1,1 @@
+import{j as n}from"./index-Bs5-MaYa.js";function o(t){function e(){alert("ボタンが押されました。")}return n.jsx("button",{className:"simple_button",onClick:e,children:t.label?t.label:"Button"})}export{o as default};

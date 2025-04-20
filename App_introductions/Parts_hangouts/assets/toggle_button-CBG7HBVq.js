@@ -1,0 +1,1 @@
+import{n as c,j as a}from"./index-Bs5-MaYa.js";function i(e){const t=e.id?e.id:c();function n(o){}return a.jsx("input",{type:"checkbox",id:t,className:"toggle_button",defaultChecked:e.checked?e.checked:!1,onChange:n})}export{i as default};

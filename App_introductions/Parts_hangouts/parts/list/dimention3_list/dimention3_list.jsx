@@ -92,10 +92,10 @@ function Dimention3_list(props) {
     const list_button = useRef();
 
     // フォーカス中のリスト番号
-    const [list_no, setList_no] = useState(-1);
+    const list_no = useRef(-1);
 
     // 選択中のリスト番号
-    const [selected_list_no, setSelected_list_no] = useState(default_no);
+    const selected_list_no = useRef(default_no);
 
     // リストのクラスリスト
     const [list_class, setList_class] = useState([STYLE_NAME_LIST_HIDDEN]);
@@ -181,7 +181,7 @@ function Dimention3_list(props) {
     function list_appear(){
         // リストから隠しスタイルを削除
         if(list_class.includes(STYLE_NAME_LIST_HIDDEN)){
-            setList_no(selected_list_no);
+            list_no.current = selected_list_no.current;
             setList_class(pre => pre.filter((cl) => cl != STYLE_NAME_LIST_HIDDEN));
         }
     }
@@ -216,16 +216,16 @@ function Dimention3_list(props) {
     //------------------------------------------------
     function decide_list_no(){
         // 選択中のリスト番号を更新
-        setSelected_list_no(list_no);
+        selected_list_no.current = list_no.current;
 
         // ラベルを取得
-        let label = options.current[list_no].textContent;
+        let label = options.current[list_no.current].textContent;
 
         // ラベルを適用
         list_button.current.textContent = label;
 
         // リストに反映
-        select_list.current.selectedIndex = list_no;
+        select_list.current.selectedIndex = list_no.current;
 
         // リストを非表示
         list_disappear();
@@ -263,7 +263,7 @@ function Dimention3_list(props) {
 
         let no = Math.round((scrollY - LIST_HEIGHT) / ONE_SCROLL_AMOUNT - 1);
         
-        setList_no(no);
+        list_no.current = no;
     }
 
 
@@ -281,7 +281,7 @@ function Dimention3_list(props) {
                 case 'ArrowDown':
                     e.preventDefault();
                     target.scrollBy({
-                        top: 70,
+                        top: ONE_SCROLL_AMOUNT,
                         behavior: 'smooth'
                     })
                     break;
@@ -290,7 +290,7 @@ function Dimention3_list(props) {
                 case 'ArrowUp':
                     e.preventDefault();
                     target.scrollBy({
-                        top: -70,
+                        top: -ONE_SCROLL_AMOUNT,
                         behavior: 'smooth'
                     })
                     break;
@@ -328,7 +328,7 @@ function Dimention3_list(props) {
 
     // リストの表示状態(開閉状態)変更時
     useEffect(() => {
-        if(list_no == -1) return;
+        if(list_no.current == -1) return;
 
         // ピッカーが非表示の場合、リスト開閉ボタンにフォーカス
         if(list_class.includes(STYLE_NAME_LIST_HIDDEN)){
@@ -338,7 +338,7 @@ function Dimention3_list(props) {
         // ピッカーが表示されている場合、選択中のリスト番号のオプションにフォーカス
         else {
             list_block.current.focus();
-            scroll_options(selected_list_no, 'instant');
+            scroll_options(selected_list_no.current, 'instant');
 
         }
     }, [list_class]);

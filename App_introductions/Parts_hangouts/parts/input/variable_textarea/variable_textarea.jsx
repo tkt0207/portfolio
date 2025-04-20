@@ -18,7 +18,7 @@ function Variable_textarea(props) {
     const input_id = props.id ? props.id : nanoid();
 
     // 高さの最大値
-    let max_height = 100;
+    let max_height = useRef(100);
 
 
     //------------------------------------------------
@@ -39,7 +39,7 @@ function Variable_textarea(props) {
         // インプットの高さと角丸サイズを変更
         target.style.height = 'auto';
         target.style.height = target.scrollHeight + 'px';
-        target.style.borderRadius = Math.min(20 * (1 - (target.getBoundingClientRect().height / max_height)) + 5, 20) + 'px';
+        target.style.borderRadius = Math.min(20 * (1 - (target.getBoundingClientRect().height / max_height.current)) + 5, 20) + 'px';
     }
 
 
@@ -47,8 +47,8 @@ function Variable_textarea(props) {
     useEffect(() => {
         // インプットのmax-heightを高さの最大値に設定
         let style = window.getComputedStyle(input.current);
-        max_height = style.getPropertyValue('max-height');
-        max_height = parseFloat(max_height.replace('px', ''));
+        let max_height_tmp = style.getPropertyValue('max-height');
+        max_height.current = parseFloat(max_height_tmp.replace('px', ''));
     }, []);
 
     //------------------------------------------------

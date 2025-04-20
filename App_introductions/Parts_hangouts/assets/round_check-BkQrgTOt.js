@@ -1,0 +1,1 @@
+import{n as d,j as c}from"./index-Bs5-MaYa.js";function h(e){const n=e.id?e.id:d();function a(l){}return c.jsxs("label",{className:"round_check_label",children:[c.jsx("input",{type:"checkbox",id:n,className:"round_check_icon",defaultChecked:e.checked?e.checked:!1,onChange:a}),e.label?e.label:"Check Box"]})}export{h as default};

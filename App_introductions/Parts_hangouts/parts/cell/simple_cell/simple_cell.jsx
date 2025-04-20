@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect } from 'react'
+import { useRef, useEffect } from 'react'
 import './simple_cell.css'
 
 // ボタン隠しスタイル名
@@ -51,7 +51,7 @@ function Simple_cell(props) {
     const cells = useRef([]);
 
     // 表示中のセル番号
-    const [cell_no, setCell_no] = useState(0);
+    const cell_no = useRef(0);
 
 
     // セルのリスト
@@ -74,8 +74,8 @@ function Simple_cell(props) {
     //------------------------------------------------
     function to_next_cell(){
         // 次のセルがある場合、セルを1つ進める
-        if(cell_no + 1 <= cells.current.length - 1){
-            scroll_cell_block(cell_no + 1);
+        if(cell_no.current + 1 <= cells.current.length - 1){
+            scroll_cell_block(cell_no.current + 1);
         }
     }
 
@@ -85,8 +85,8 @@ function Simple_cell(props) {
     //------------------------------------------------
     function to_back_cell(){
         // 前のセルがある場合、セルを1つ戻す
-        if(cell_no - 1 >= 0){
-            scroll_cell_block(cell_no - 1);
+        if(cell_no.current - 1 >= 0){
+            scroll_cell_block(cell_no.current - 1);
         }
     }
 
@@ -113,6 +113,36 @@ function Simple_cell(props) {
 
 
     //------------------------------------------------
+    // セル番号更新時のイベント関数
+    //------------------------------------------------
+    function cell_no_update_event(){
+        // 表示されているセルが最後の場合
+        if(cell_no.current == cells.current.length - 1){
+            // 進むボタンを非表示
+            next_button.current.classList.add(STYLE_NAME_HIDDEN);
+        } 
+        
+        // 表示されているセルが最後でない場合
+        else {
+            // 進むボタンを表示
+            next_button.current.classList.remove(STYLE_NAME_HIDDEN);
+        }
+
+        // 表示されているセルが初めの場合
+        if(cell_no.current == 0){
+            // 戻るボタンを非表示
+            back_button.current.classList.add(STYLE_NAME_HIDDEN);
+        } 
+        
+        // 表示されているセルが初めでない場合
+        else {
+            // 戻るボタンを表示
+            back_button.current.classList.remove(STYLE_NAME_HIDDEN);
+        }
+    }
+
+
+    //------------------------------------------------
     // スクロールイベント
     //------------------------------------------------
     function scroll_event(){
@@ -125,41 +155,19 @@ function Simple_cell(props) {
             let right_loc = left_loc + cells.current[i].getBoundingClientRect().width;
             
             if((left_loc <= center_point) && (right_loc >= center_point)){
-                if(cell_no != i){
-                    setCell_no(i);
+                if(cell_no.current != i){
+                    cell_no.current = i;
+                    cell_no_update_event();
                 }
                 break;
             }
         }
     }
 
-
-    // セル番号が更新された時のみ実行
+    // 初回処理
     useEffect(() => {
-        // 表示されているセルが最後の場合
-        if(cell_no == cells.current.length - 1){
-            // 進むボタンを非表示
-            next_button.current.classList.add(STYLE_NAME_HIDDEN);
-        } 
-        
-        // 表示されているセルが最後でない場合
-        else {
-            // 進むボタンを表示
-            next_button.current.classList.remove(STYLE_NAME_HIDDEN);
-        }
-
-        // 表示されているセルが初めの場合
-        if(cell_no == 0){
-            // 戻るボタンを非表示
-            back_button.current.classList.add(STYLE_NAME_HIDDEN);
-        } 
-        
-        // 表示されているセルが初めでない場合
-        else {
-            // 戻るボタンを表示
-            back_button.current.classList.remove(STYLE_NAME_HIDDEN);
-        }
-    }, [cell_no])
+        cell_no_update_event();
+    }, [])
 
 
     //------------------------------------------------

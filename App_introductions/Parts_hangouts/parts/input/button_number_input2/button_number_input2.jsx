@@ -118,7 +118,7 @@ function Button_number_input2(props) {
     const [button_class_list, setButton_class_list] = useState([]);
 
     // ボタンの角度
-    const [button_angle, setButton_angle] = useState(0);
+    const button_angle = useRef(0);
     
     // インプットへの参照
     const input = useRef();
@@ -183,7 +183,10 @@ function Button_number_input2(props) {
         let target = button.current;
 
         // 角度を取得
-        let angle_tmp = button_angle;
+        let angle_tmp = button_angle.current;
+
+        // 方向の前回値を定義
+        let direction_old = 'none';
 
         // ターゲットにキー押し込みイベントを設定
         target.onkeydown = (e) => {
@@ -196,7 +199,12 @@ function Button_number_input2(props) {
                 number_input_value_up(input.current);
 
                 // ボタンに上昇中のスタイルを適用
-                setButton_class_list([...button_class_list.filter((cl) => cl != STYLE_NAME_DOWN_NOW), STYLE_NAME_UP_NOW]);
+                if(direction_old != 'up'){
+                    setButton_class_list([...button_class_list.filter((cl) => cl != STYLE_NAME_DOWN_NOW), STYLE_NAME_UP_NOW]);
+                }
+                
+                // 方向の前回値を更新
+                direction_old = 'up';
                 
                 // 値が最大になるまで角度を上げる
                 if(parseFloat(input.current.value) < parseFloat(input.current.max)){
@@ -204,7 +212,8 @@ function Button_number_input2(props) {
                 }
 
                 // 角度を設定
-                setButton_angle(angle_tmp);
+                button_angle.current = angle_tmp;
+                button.current.style.setProperty('--rotate-angle', button_angle.current);
                 
                 // 変更イベントを実施
                 change_event();
@@ -219,7 +228,12 @@ function Button_number_input2(props) {
                 number_input_value_down(input.current);
 
                 // ボタンに下降中のスタイルを適用
-                setButton_class_list([...button_class_list.filter((cl) => cl != STYLE_NAME_UP_NOW), STYLE_NAME_DOWN_NOW]);
+                if(direction_old != 'down'){
+                    setButton_class_list([...button_class_list.filter((cl) => cl != STYLE_NAME_UP_NOW), STYLE_NAME_DOWN_NOW]);
+                }
+
+                // 方向の前回値を更新
+                direction_old = 'down';
 
                 // 値が最小になるまで角度を下げる
                 if(parseFloat(input.current.value) > parseFloat(input.current.min)){
@@ -227,7 +241,8 @@ function Button_number_input2(props) {
                 }
 
                 // 角度を設定
-                setButton_angle(angle_tmp);
+                button_angle.current = angle_tmp;
+                button.current.style.setProperty('--rotate-angle', button_angle.current);
 
                 // 変更イベントを実施
                 change_event();
@@ -240,13 +255,19 @@ function Button_number_input2(props) {
             e.preventDefault();
 
             // ボタンのクラスリストから上昇中と下降中のスタイルを削除
-            setButton_class_list(button_class_list.filter((cl) => {
-                ((cl != STYLE_NAME_UP_NOW) && (cl != STYLE_NAME_DOWN_NOW))
-            }));
+            if(direction_old != 'none'){
+                setButton_class_list(button_class_list.filter((cl) => {
+                    ((cl != STYLE_NAME_UP_NOW) && (cl != STYLE_NAME_DOWN_NOW))
+                }));
+            }
+
+            // 方向の前回値を更新
+            direction_old = 'none';
 
             // 角度を初期化
             angle_tmp = 0;
-            setButton_angle(angle_tmp);
+            button_angle.current = angle_tmp;
+            button.current.style.setProperty('--rotate-angle', button_angle.current);
         }
 
         // ターゲットにフォーカス解除時のイベントを設定
@@ -258,7 +279,8 @@ function Button_number_input2(props) {
 
             // 角度を初期化
             angle_tmp = 0;
-            setButton_angle(angle_tmp);
+            button_angle.current = angle_tmp;
+            button.current.style.setProperty('--rotate-angle', button_angle.current);
 
             // ターゲットに設定しているイベントを削除
             target.onkeydown = null;
@@ -287,6 +309,9 @@ function Button_number_input2(props) {
         // 角度変数を定義
         let now_angle = 0;
 
+        // 方向の前回値を保持する変数を定義
+        let direction_old = 'none';
+
 
         //------------------------------------------
         // 回転関数
@@ -304,14 +329,22 @@ function Button_number_input2(props) {
                 // 値を下降
                 number_input_value_down(input.current);
                 // ボタンから上昇中のスタイルを削除し、下降中のスタイルを適用
-                setButton_class_list([...button_class_list.filter((cl) => cl != STYLE_NAME_UP_NOW), STYLE_NAME_DOWN_NOW]);
+                if(direction_old != 'up'){
+                    setButton_class_list([...button_class_list.filter((cl) => cl != STYLE_NAME_UP_NOW), STYLE_NAME_DOWN_NOW]);
+                }
+                // 方向の前回値を更新
+                direction_old = 'up';
                 // 変更イベントを実施
                 change_event();
             } else if(tmp > 0){
                 // 値を上昇
                 number_input_value_up(input.current);
                 // ボタンから下降中のスタイルを削除し、上昇中のスタイルを適用
-                setButton_class_list([...button_class_list.filter((cl) => cl != STYLE_NAME_DOWN_NOW), STYLE_NAME_UP_NOW]);
+                if(direction_old != 'down'){
+                    setButton_class_list([...button_class_list.filter((cl) => cl != STYLE_NAME_DOWN_NOW), STYLE_NAME_UP_NOW]);
+                }
+                // 方向の前回値を更新
+                direction_old = 'down';
                 // 変更イベントを実施
                 change_event();
             }
@@ -326,7 +359,8 @@ function Button_number_input2(props) {
             }
 
             // 角度を設定
-            setButton_angle(now_angle);
+            button_angle.current = now_angle;
+            button.current.style.setProperty('--rotate-angle', button_angle.current);
         }
 
 
@@ -346,7 +380,8 @@ function Button_number_input2(props) {
             }));
 
             // 角度を初期化
-            setButton_angle(0);
+            button_angle.current = 0;
+            button.current.style.setProperty('--rotate-angle', button_angle.current);
 
             // ドキュメントのイベントを削除
             document.removeEventListener("pointermove", rotate_number_change);
@@ -374,7 +409,6 @@ function Button_number_input2(props) {
                 onBlur={blur_event}
                 />
                 <button className={`circle_button ${button_class_list.join(' ')}`} data-descr={props.unit ? props.unit : '%'} ref={button}
-                    style={{'--rotate-angle': button_angle}}
                     onFocus={button_focus}
                     onPointerDown={button_pointerdown_event}>
                     <div className="circle_detection_top"

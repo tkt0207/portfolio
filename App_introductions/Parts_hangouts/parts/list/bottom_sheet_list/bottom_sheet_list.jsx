@@ -70,10 +70,10 @@ function Bottom_sheet_list(props) {
     const list_picker = useRef();
 
     // フォーカス中のリスト番号
-    const [list_no, setList_no] = useState(-1);
+    const list_no = useRef(-1);
 
     // 選択中のリスト番号
-    const [selected_list_no, setSelected_list_no] = useState(default_no);
+    const selected_list_no = useRef(default_no);
 
     // リストのクラスリスト
     const [list_class, setList_class] = useState([STYLE_NAME_LIST_HIDDEN]);
@@ -162,7 +162,7 @@ function Bottom_sheet_list(props) {
 
         // リストの開閉状況を切り替え
         if(list_class.includes(STYLE_NAME_LIST_HIDDEN)){
-            setList_no(selected_list_no);
+            list_no.current = selected_list_no.current;
             setList_class(pre => pre.filter((cl) => cl != STYLE_NAME_LIST_HIDDEN));
             document.addEventListener('click', list_disappear_judge);
         } else {
@@ -176,7 +176,7 @@ function Bottom_sheet_list(props) {
     //------------------------------------------------
     function select_option(i){
         // 選択中のリスト番号と異なる場合のみ処理を実施
-        if(i != selected_list_no){
+        if(i != selected_list_no.current){
             // ラベルを取得
             let label = options.current[i].textContent;
 
@@ -187,10 +187,10 @@ function Bottom_sheet_list(props) {
             select_list.current.selectedIndex = i;
 
             // 選択中のリスト番号を更新
-            setSelected_list_no(i);
+            selected_list_no.current = i;
 
             // フォーカス中のリスト番号を更新
-            setList_no(i);
+            list_no.current = i;
         }
 
         // リストを非表示
@@ -207,24 +207,29 @@ function Bottom_sheet_list(props) {
         // ターゲットを取得
         let target = e.currentTarget;
 
+        // 選択番号の変数を定義
+        let next_no = list_no.current;
+
         // ターゲットにキー押し込みイベントを追加
         target.onkeydown = (e) => {
             switch (e.key){
                 // ↓が押されたときは、フォーカスを下に移動させる
                 case 'ArrowDown':
                     e.preventDefault();
-                    if(list_no + 1 <= options.current.length - 1){
-                        options.current[list_no + 1].focus();
-                        setList_no(pre => pre + 1);
+                    next_no = list_no.current + 1;
+                    if(next_no <= options.current.length - 1){
+                        options.current[next_no].focus();
+                        list_no.current = next_no;
                     }
                     break;
                 
                 // ↑が押されたときは、フォーカスを上に移動させる
                 case 'ArrowUp':
                     e.preventDefault();
-                    if(list_no - 1 >= 0){
-                        options.current[list_no - 1].focus();
-                        setList_no(pre => pre - 1);
+                    next_no = list_no.current - 1;
+                    if(next_no >= 0){
+                        options.current[next_no].focus();
+                        list_no.current = next_no;
                     }
                     break;
 
@@ -338,26 +343,9 @@ function Bottom_sheet_list(props) {
     }
 
 
-
-    // フォーカスされるリスト番号の変更時
-    useEffect(() => {
-        if(list_no == -1) return;
-
-        // ピッカーが非表示の場合、リスト開閉ボタンにフォーカス
-        if(list_class.includes(STYLE_NAME_LIST_HIDDEN)){
-            list_button.current.focus();
-        } 
-        
-        // ピッカーが表示されている場合、指定されたリスト番号のオプションにフォーカス
-        else {
-            options.current[list_no].focus();
-        }
-    }, [list_no]);
-
-
     // リストの表示状態(開閉状態)変更時
     useEffect(() => {
-        if(list_no == -1) return;
+        if(list_no.current == -1) return;
         
         // ピッカーが非表示の場合、リスト開閉ボタンにフォーカス
         if(list_class.includes(STYLE_NAME_LIST_HIDDEN)){
@@ -367,7 +355,7 @@ function Bottom_sheet_list(props) {
         // ピッカーが表示されている場合、選択中のリスト番号のオプションにフォーカス
         else {
             list_picker.current.style.transform = 'translateY(0px)';
-            options.current[selected_list_no].focus();
+            options.current[selected_list_no.current].focus();
         }
     }, [list_class]);
 

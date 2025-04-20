@@ -215,13 +215,17 @@ function Button_number_input(props) {
         // マイナスボタンの場合
         if(target === minus_button.current){
             // マイナスボタンから押し込み時のスタイルを削除
-            setClass_list_minus(class_list_minus.filter((cl) => cl != STYLE_NAME_PRESS_MINUS));
+            if(class_list_minus.includes(STYLE_NAME_PRESS_MINUS)){
+                setClass_list_minus(class_list_minus.filter((cl) => cl != STYLE_NAME_PRESS_MINUS));
+            }
         }
         
         // プラスボタンの場合
         else if(target === plus_button.current){
             // プラスボタンから押し込み時のスタイルを削除
-            setClass_list_plus(class_list_plus.filter((cl) => cl != STYLE_NAME_PRESS_PLUS));
+            if(class_list_plus.includes(STYLE_NAME_PRESS_PLUS)){
+                setClass_list_plus(class_list_plus.filter((cl) => cl != STYLE_NAME_PRESS_PLUS));
+            }
         }
 
         // 長押し関連変数を初期化

@@ -54,13 +54,13 @@ function Dimention3_cell(props) {
     const cell_area = useRef();
 
     // 選択中のセル番号
-    const [cell_no, setCell_no] = useState(0);
+    const cell_no = useRef(0);
 
     // 回転角度
-    const [angle, setAngle] = useState(0);
+    const angle = useRef(0);
 
     // スクロール量の前回値
-    const [scroll_old, setScroll_old] = useState(SCROLL_LOC_BASE);
+    const scroll_old = useRef(SCROLL_LOC_BASE);
 
     // セルの数
     const cell_num = props.cell_list ? props.cell_list.length : NORMAL_LIST.length;
@@ -88,15 +88,23 @@ function Dimention3_cell(props) {
         ));
 
     
+    //------------------------------------------------
+    // セル番号更新関数
+    //------------------------------------------------
+    function update_cell_no(){
+        let cell_no_tmp = Math.round((angle.current%360) / (360/cell_num));
+        cell_no.current = Math.abs(cell_no_tmp);
+    }
 
     //------------------------------------------------
     // 次のセルへ進む関数
     //------------------------------------------------
     function to_next_cell(){
         // 角度を一つのセル分下げる
-        let angle_tmp = angle - 360/cell_num;
+        let angle_tmp = angle.current - 360/cell_num;
         cell_block.current.style.transform = "rotateY("+angle_tmp+"deg)";
-        setAngle(angle_tmp);
+        angle.current = angle_tmp;
+        update_cell_no();
     }
 
 
@@ -105,9 +113,10 @@ function Dimention3_cell(props) {
     //------------------------------------------------
     function to_back_cell(){
         // 角度を一つのセル分上げる
-        let angle_tmp = angle + 360/cell_num;
+        let angle_tmp = angle.current + 360/cell_num;
         cell_block.current.style.transform = "rotateY("+angle_tmp+"deg)";
-        setAngle(angle_tmp);
+        angle.current = angle_tmp;
+        update_cell_no();
     }
 
 
@@ -126,7 +135,7 @@ function Dimention3_cell(props) {
 
         // スクロール終了イベント(PCのみでの動作の場合は不要)
         timeout.current = setTimeout(() => {
-            setScroll_old(SCROLL_LOC_BASE);
+            scroll_old.current = SCROLL_LOC_BASE;
             scroll_end_flg.current = true;
             scroll_end_event();
         }, 200);
@@ -135,15 +144,16 @@ function Dimention3_cell(props) {
         const scrollLeft = cell_area.current.scrollLeft;
 
         // スクロール量から角度を計算
-        let angle_tmp = angle - (scrollLeft - scroll_old)/2;
+        let angle_tmp = angle.current - (scrollLeft - scroll_old.current)/2;
 
         // スクロール量の前回値を更新
-        setScroll_old(scrollLeft);
+        scroll_old.current = scrollLeft;
  
         // 角度を更新
         cell_block.current.style.transitionDuration = "0s";
         cell_block.current.style.transform = "rotateY("+angle_tmp+"deg)";
-        setAngle(angle_tmp);
+        angle.current = angle_tmp;
+        update_cell_no();
     }
 
 
@@ -152,7 +162,7 @@ function Dimention3_cell(props) {
     //------------------------------------------------
     function scroll_end_event(){
         // 止まる角度を計算
-        let angle_tmp = angle;
+        let angle_tmp = angle.current;
         let tmp = (360/cell_num);
         let k = parseInt(angle_tmp / tmp);
         let d = angle_tmp % tmp;
@@ -168,18 +178,12 @@ function Dimention3_cell(props) {
         // 角度を更新
         cell_block.current.style.transitionDuration = "1s";
         cell_block.current.style.transform = "rotateY("+angle_tmp+"deg)";
-        setAngle(angle_tmp);
+        angle.current = angle_tmp;
+        update_cell_no();
 
         // スクロール位置を基準に戻す
         cell_area.current.scrollLeft = SCROLL_LOC_BASE;
     }
-
-
-    // 回転角度が更新された時のみ実行
-    useEffect(() => {
-        let cell_no_tmp = Math.round((angle%360) / (360/cell_num));
-        setCell_no(Math.abs(cell_no_tmp));
-    }, [angle])
 
 
     // 初回実行

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useRef } from 'react'
 import { nanoid } from 'nanoid';
 import './select_move_tab.css'
 
@@ -38,13 +38,7 @@ const NORMAL_TAB_LIST = [
 function Select_move_tab(props) {
     // ベースID
     const id_base = useRef(nanoid());
-
-    // 初めのID
-    const first_id = props.tab_list ? props.tab_list[0].id ? props.tab_list[0].id : id_base.current + '0' : NORMAL_TAB_LIST[0].id;
     
-    // 選択中のタブID
-    const [display_tab_id, SetDisplay_tab_id] = useState(first_id);
-
     // 選択中のタブのアウトラインへの参照
     const selected_outlie = useRef();
 
@@ -63,8 +57,17 @@ function Select_move_tab(props) {
         let target = e.currentTarget;
         let target_id = target.href.slice(target.href.indexOf('#')+1, target.href.length);
 
-        // 選択中のタブIDを更新
-        SetDisplay_tab_id(target_id);
+        // ターゲットを取得
+        let view_target = document.getElementById(target_id);
+
+        if(view_target){
+            // ターゲットまでスクロール
+            tab_main_block.current.scrollTo({
+                top: 0,
+                left: view_target.offsetLeft,
+                behavior : 'smooth'
+            })
+        }
 
         // 選択中のタブのアウトラインを移動
         selected_outlie.current.style.top = target.offsetTop + 'px';
@@ -108,22 +111,7 @@ function Select_move_tab(props) {
             </div>
         ));
 
-    
-    // 選択中のidが変更された際に実施
-    useEffect(() => {
-        // ターゲットを取得
-        let target = document.getElementById(display_tab_id);
-        if(target){
-            // ターゲットまでスクロール
-            tab_main_block.current.scrollTo({
-                top: 0,
-                left: target.offsetLeft,
-                behavior : 'smooth'
-            })
-        }
-    }, [display_tab_id])
-    
-    
+        
     //------------------------------------------------
     // レンダリング
     //------------------------------------------------

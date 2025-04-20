@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect } from 'react'
+import { useRef, useEffect } from 'react'
 import './infinity_cell.css'
 
 // 標準リスト
@@ -51,7 +51,7 @@ function Infinity_cell(props) {
     const cell_num = props.cell_list ? props.cell_list.length : NORMAL_LIST.length;
 
     // 選択中のセル番号
-    const [cell_no, setCell_no] = useState(cell_num);
+    const cell_no = useRef(cell_num);
 
     // タイムアウト処理への参照
     const timeout = useRef(null);
@@ -100,7 +100,7 @@ function Infinity_cell(props) {
     //------------------------------------------------
     // スクロール関数
     //------------------------------------------------
-    function scroll_to(no=cell_no, behavior='smooth'){
+    function scroll_to(no=cell_no.current, behavior='smooth'){
         cell_block.current.scrollTo({
             left: cells.current[no].offsetLeft + cells.current[no].getBoundingClientRect().width/2 - cell_block.current.getBoundingClientRect().width/2,
             behavior: behavior
@@ -113,7 +113,7 @@ function Infinity_cell(props) {
     //------------------------------------------------
     function to_next_cell(){
         // セル番号を一つ進める
-        let next_no = cell_no + 1;
+        let next_no = cell_no.current + 1;
 
         // 上限処理
         if(next_no > cells.current.length - 1){
@@ -130,7 +130,7 @@ function Infinity_cell(props) {
     //------------------------------------------------
     function to_back_cell(){
         // セル番号を一つ戻す
-        let back_no = cell_no - 1;
+        let back_no = cell_no.current - 1;
 
         // 下限処理
         if(back_no < 0){
@@ -164,8 +164,8 @@ function Infinity_cell(props) {
             let cell_center = cells.current[i].getBoundingClientRect().left - cell_block.current.getBoundingClientRect().left + cell_width/2;
             
             if(Math.abs(cell_center - center_point) <= cell_width/2){
-                if(cell_no != i){
-                    setCell_no(i);
+                if(cell_no.current != i){
+                    cell_no.current = i;
                 }
                 break;
             }
@@ -178,8 +178,8 @@ function Infinity_cell(props) {
     //------------------------------------------------
     function scrollend_event(){
         // スクロール位置を基準に戻す
-        let fix_no = cell_no % cell_num + cell_num;
-        setCell_no(fix_no);
+        let fix_no =cell_no.current % cell_num + cell_num;
+        cell_no.current = fix_no;
         scroll_to(fix_no, 'instant');
     }
 

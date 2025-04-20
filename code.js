@@ -832,9 +832,38 @@ function cat_atack(e){
 
     // 猫を攻撃のgifに変更する
     const gifUrl = "./img/cat_atack.gif";
+/*
     const timestamp = new Date().getTime();
     target.style.maskImage = `url('${gifUrl}?t=${timestamp}')`;
+*/
 
+    const mask_image = new Image();
+    mask_image.src = gifUrl;
+
+    mask_image.onload = () => {
+        const timestamp = new Date().getTime();
+        target.style.maskImage = `url('${gifUrl}?t=${timestamp}')`;
+
+        // ドキュメントのスクロールと全てのイベントを無効にする
+        document.body.style.pointerEvents = "none";
+        document.body.style.overflowY = "hidden";
+
+        // 爪の位置をクリックしたところにする
+        $crow.style.top = locY + "px";
+        $crow.style.left = locX + "px";
+
+        // 爪をアニメーションの進行状況に合わせて回転させる
+        if(animation_loc > 50){
+            $crow.style.rotate = "0deg";
+        } else {
+            $crow.style.rotate = "90deg";
+        }
+
+        // 爪を表示
+        $crow.style.display = "flex";
+    }
+    
+/*
     // ドキュメントのスクロールと全てのイベントを無効にする
     document.body.style.pointerEvents = "none";
     document.body.style.overflowY = "hidden";
@@ -852,6 +881,7 @@ function cat_atack(e){
 
     // 爪を表示
     $crow.style.display = "flex";
+*/
 
     // リセット関数
     function reset(){

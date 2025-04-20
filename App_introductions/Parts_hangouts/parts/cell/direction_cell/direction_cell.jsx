@@ -66,7 +66,7 @@ function Direction_cell(props) {
     const cells = useRef([]);
 
     // 選択中のセル番号
-    const [cell_no, setCell_no] = useState(0);
+    const cell_no = useRef(0);
 
     // 列数
     const col_num = props.col_num ? props.col_num : 3;
@@ -92,10 +92,10 @@ function Direction_cell(props) {
     //------------------------------------------------
     function to_next_cell(){
         // 選択中のセルが一番右でない場合
-        if(Math.floor(cell_no / col_num) == Math.floor((cell_no + 1) / col_num)){
-            if(cell_no + 1 <= cells.current.length - 1){
+        if(Math.floor(cell_no.current / col_num) == Math.floor((cell_no.current + 1) / col_num)){
+            if(cell_no.current + 1 <= cells.current.length - 1){
                 // セルを右へ移動
-                scroll_cell_block(cell_no + 1);
+                scroll_cell_block(cell_no.current + 1);
             }
         }
     }
@@ -106,10 +106,10 @@ function Direction_cell(props) {
     //------------------------------------------------
     function to_back_cell(){
         // 選択中のセルが一番左でない場合
-        if(Math.floor(cell_no / col_num) == Math.floor((cell_no - 1) / col_num)){
-            if(cell_no - 1 >= 0){
+        if(Math.floor(cell_no.current / col_num) == Math.floor((cell_no.current - 1) / col_num)){
+            if(cell_no.current - 1 >= 0){
                 // セルを左へ移動
-                scroll_cell_block(cell_no - 1);
+                scroll_cell_block(cell_no.current - 1);
             }
         }
     }
@@ -120,9 +120,9 @@ function Direction_cell(props) {
     //------------------------------------------------
     function to_bottom_cell(){
         // 選択中のセルが一番下でない場合
-        if(cell_no + col_num <= cells.current.length - 1){
+        if(cell_no.current + col_num <= cells.current.length - 1){
             // セルを下へ移動
-            scroll_cell_block(cell_no + col_num);
+            scroll_cell_block(cell_no.current + col_num);
         }
     }
 
@@ -132,9 +132,9 @@ function Direction_cell(props) {
     //------------------------------------------------
     function to_top_cell(){
         // 選択中のセルが一番上でない場合
-        if(cell_no - col_num >= 0){
+        if(cell_no.current - col_num >= 0){
             // セルを上へ移動
-            scroll_cell_block(cell_no - col_num);
+            scroll_cell_block(cell_no.current - col_num);
         }
     }
 
@@ -160,6 +160,48 @@ function Direction_cell(props) {
         })
     }
 
+    //------------------------------------------------
+    // セル番号更新時のイベント関数
+    //------------------------------------------------
+    function cell_no_update_event(){
+        // セルが一番右の場合、右ボタンを非表示
+        if((cell_no.current == cells.current.length - 1) || (cell_no.current % col_num == col_num-1)){
+            next_button.current.classList.add(STYLE_NAME_HIDDEN);
+        } else {
+            next_button.current.classList.remove(STYLE_NAME_HIDDEN);
+        }
+
+        // セルが一番左の場合、左ボタンを非表示
+        if((cell_no.current == 0) || (cell_no.current % col_num == 0)){
+            back_button.current.classList.add(STYLE_NAME_HIDDEN);
+        } else {
+            back_button.current.classList.remove(STYLE_NAME_HIDDEN);
+        }
+
+        // セルが一番下の場合、下ボタンを非表示
+        if(cell_no.current + col_num > cells.current.length - 1){
+            to_bottom_button.current.classList.add(STYLE_NAME_HIDDEN);
+        } else {
+            to_bottom_button.current.classList.remove(STYLE_NAME_HIDDEN);
+        }
+
+        // セルが一番上の場合、上ボタンを非表示
+        if(cell_no.current - col_num < 0){
+            to_top_button.current.classList.add(STYLE_NAME_HIDDEN);
+        } else {
+            to_top_button.current.classList.remove(STYLE_NAME_HIDDEN);
+        }
+
+        // 選択中のセルにスタイルを適用
+        for(let i = 0; i < cells.current.length; i++){
+            if(i == cell_no.current){
+                cells.current[i].classList.add(STYLE_NAME_SELECTED);
+            } else {
+                cells.current[i].classList.remove(STYLE_NAME_SELECTED);
+            }
+        }
+    }
+
 
     //------------------------------------------------
     // スクロールイベント
@@ -178,8 +220,9 @@ function Direction_cell(props) {
             
             if((left_loc <= center_pointX) && (right_loc >= center_pointX)){
                 if((top_loc <= center_pointY) && (bottom_loc >= center_pointY)){
-                    if(cell_no != i){
-                        setCell_no(i);
+                    if(cell_no.current != i){
+                        cell_no.current = i;
+                        cell_no_update_event();
                     }
                     break;
                 }
@@ -188,46 +231,10 @@ function Direction_cell(props) {
     }
 
 
-    // セル番号が更新された時のみ実行
+    // 初回処理
     useEffect(() => {
-        // セルが一番右の場合、右ボタンを非表示
-        if((cell_no == cells.current.length - 1) || (cell_no % col_num == col_num-1)){
-            next_button.current.classList.add(STYLE_NAME_HIDDEN);
-        } else {
-            next_button.current.classList.remove(STYLE_NAME_HIDDEN);
-        }
-
-        // セルが一番左の場合、左ボタンを非表示
-        if((cell_no == 0) || (cell_no % col_num == 0)){
-            back_button.current.classList.add(STYLE_NAME_HIDDEN);
-        } else {
-            back_button.current.classList.remove(STYLE_NAME_HIDDEN);
-        }
-
-        // セルが一番下の場合、下ボタンを非表示
-        if(cell_no + col_num > cells.current.length - 1){
-            to_bottom_button.current.classList.add(STYLE_NAME_HIDDEN);
-        } else {
-            to_bottom_button.current.classList.remove(STYLE_NAME_HIDDEN);
-        }
-
-        // セルが一番上の場合、上ボタンを非表示
-        if(cell_no - col_num < 0){
-            to_top_button.current.classList.add(STYLE_NAME_HIDDEN);
-        } else {
-            to_top_button.current.classList.remove(STYLE_NAME_HIDDEN);
-        }
-
-        // 選択中のセルにスタイルを適用
-        for(let i = 0; i < cells.current.length; i++){
-            if(i == cell_no){
-                cells.current[i].classList.add(STYLE_NAME_SELECTED);
-            } else {
-                cells.current[i].classList.remove(STYLE_NAME_SELECTED);
-            }
-        }
-
-    }, [cell_no])
+        cell_no_update_event();
+    }, [])
 
 
     //------------------------------------------------
