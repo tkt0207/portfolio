@@ -1,0 +1,66 @@
+<!DOCTYPE html> <!-- 一番上に絶対書く -->
+<html lang="ja"> <!-- 全てを<html>でで囲うこと -->
+    <head> <!-- Webページを存在させえるうえで重要な情報を記す -->
+        <meta charset="utf-8"> <!-- 文字コード -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"> <!-- それぞれのデバイスの大きさに応じて表示させる -->
+        <title>STC Associate</title> <!-- タブのとこに出る -->
+        <meta name="description" content="sample text text"> <!-- 検索時の下の説明見たいなところ -->
+        <link rel="stylesheet" href="style.css" /> <!-- cssの適応 -->
+    </head>
+
+    <body> <!-- 見える部分 -->
+        <div id="home_view">
+            <h2 id="title">STC Associate 過去問集</h2>
+            <div id="cc">
+                <button id="all_on">全てON</button>
+                <button id="all_off">全てOFF</button>
+            </div>
+        
+            <div id="select_area">
+                <div id="year_selecter">
+            </div>
+
+            </div>
+
+            <div id="area">
+                <div id="d"></div>
+                <button id="start_button">START</button>
+
+                <label for="random" id="random_l">
+                    R
+                    <input type="checkbox" id="random">
+                </label>
+            </div>
+            
+        </div>
+
+        <div id="question_view">
+            <div id="header">
+                <div id="dummy"></div>
+                <div id="status"></div>
+                <button id="return_home">HOME</button>
+            </div>
+
+            <div id="question">
+
+            </div>
+
+            <div id="answer">
+                <button id="ng">×</button>
+                <button id="ok">○</button>
+            </div>
+
+            <div id="result">
+                <div id="rere">
+                    <h1 id="h1"></h1>
+                    <h2 id="h2"></h2>
+                    <div id="bb">
+                        <button id="back">HOMEに戻る</button>
+                        <button id="fs">間違えた問題共</buttton>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="code.js"></script>
+</html>
