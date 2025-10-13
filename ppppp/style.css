@@ -215,16 +215,20 @@ body {
     font-weight: bold;
 }
 
-
-#question{
+#question_area{
     height: 70%;
     width: 100%;
-    display: flex;
+    display: flex; */
     justify-content: center;
     align-items: center;
     text-align: center;
     font-size: clamp(16px, 2vw, 2vw);
     padding: 5%;
+}
+
+
+#question{
+    width: 100%;
 }
 
 
@@ -339,4 +343,9 @@ body {
         outline: none;
         background-color: rgba(60, 229, 229, 0.276);
     }
+}
+
+
+span{
+    text-decoration: underline;
 }
