@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ja">
+<!-- HEAD -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"> <!-- それぞれのデバイスの大きさに応じて表示させる -->
+    <title>Format</title>
+    <meta name="description" content="sample text">
+<!-- CSS -->
+<style>
+:root {
+    /* 色 */
+    --color-shadow: #00000020;
+    --color-html: #ce558a;
+    --color-css: #68bbba;
+    --color-js: #8381c6;
+}
+
+*, *::before, *::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;   
+    color: inherit;
+}
+
+body{
+    width: 100vw;
+    height: calc(100vh - 16px);
+    position: relative;
+    background-color: inherit;
+}
+
+#main{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    background-color: inherit;
+}
+
+.test_code{
+    display: flex;
+    width: 100%;
+    height: 100%;
+
+    & .viewer{
+        width: 50%;
+        height: 100%;
+        position: relative;
+        box-shadow: inset 2px 2px 6px var(--color-shadow);
+    }
+
+    & .viewer > iframe{
+        /* margin-top: 24px; */
+        width: 100%;
+        height: 100%;
+    }
+
+    & .editer{
+        width: 50%;
+        height: 100%;
+        position: relative;
+    }
+
+    & .editer > .code_viewer{
+        position: absolute;
+        top: 24px;
+        height: calc(100% - 24px);
+    }
+
+    & .tags{
+        height: 24px;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    & label{
+        background-color: red;
+        padding: 0px 10px;
+        /* border-radius: 4px 4px 0px 0px; */
+        width: 100px;
+        text-align: center;
+        position: relative;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        user-select: none;
+        transition: width 0.2s ease;
+    }
+
+    & label:hover, label:has(input[type="radio"]:focus-visible){
+        filter: brightness(0.8);
+    }
+
+    & label > input[type="radio"]{
+        position: absolute;
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+
+    & label:has(#html_code){
+        background-color: var(--color-html);
+    }
+
+    & label:has(input[type="radio"]:checked){
+        width: 100%;
+    }
+
+    & label:has(#css_code){
+        background-color: var(--color-css);
+    }
+
+    &:has(#html_code:checked) .html_editer{
+        display: block;
+    }
+
+    &:has(#css_code:checked) .css_editer{
+        display: block;
+    }
+
+}
+
+.code_viewer{
+  background: linear-gradient(rgb(40, 40, 40), rgb(20, 20, 20));
+  filter: drop-shadow(4px 4px 2px var(--color-shadow));
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: auto;
+  scrollbar-color: white transparent;
+  display: none;
+
+  & pre, textarea{
+    width: 100%;
+    min-height: 100%;
+    padding: 10px;
+    color: white;
+    font-size: 0.8rem;
+    line-height: 16px;
+    overflow: hidden;
+    text-wrap: nowrap;
+  }
+
+  & textarea{
+    resize: none;
+    background-color: transparent;
+    color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    caret-color: white;
+  }
+
+  & textarea:focus-visible{
+    outline: none;
+  }
+}
+
+pre > span{
+    color: inherit;
+}
+
+pre > .identifier{
+    color: rgb(231, 192, 106);
+}
+
+pre > .function{
+    color: rgb(236, 138, 207);
+}
+
+pre > .variable{
+    color: rgb(130, 201, 243);
+}
+
+pre > .comment{
+    color: rgb(44, 172, 44);
+}
+
+pre > .string{
+    color: rgb(233, 147, 112);
+}
+
+pre > .number{
+    color: rgb(224, 213, 108);
+}
+
+pre > .decided{
+    color: rgb(130, 141, 243);
+}
+
+pre > .system{
+    color: rgb(202, 51, 157);
+}
+
+</style>
+</head>
+
+<!-- View -->
+<body>
+    <div id="main">
+        <div class="test_code">
+            <div class="viewer">
+                <iframe src="" frameborder="0"></iframe>
+            </div>
+            <div class="editer">
+                <div class="tags">
+                    <label for="html_code">
+                        HTML
+                        <input type="radio" name="code_type" id="html_code" checked>
+                    </label>
+                    <label for="css_code">
+                        CSS
+                        <input type="radio" name="code_type" id="css_code">
+                    </label>
+                </div>
+
+                <div class="code_viewer html_editer">
+                    <pre></pre>
+                    <textarea name="" id=""></textarea>
+                </div>
+
+                <div class="code_viewer css_editer">
+                    <pre></pre>
+                    <textarea name="" id=""></textarea>
+                </div>
+
+            </div>
+        </div> 
+
+    </div>
+
+<!-- JS -->
+<script type="module">
+import * as html_code from '../js/html_code.js';
+import * as css_code from '../js/css_code.js';
+
+const iframe = document.querySelector("iframe");
+const doc = iframe.contentDocument;
+
+const html_editer = document.querySelector(".html_editer");
+const css_editer = document.querySelector(".css_editer");
+
+const html_pre = html_editer.querySelector("pre");
+const css_pre = css_editer.querySelector("pre");
+const html_ta = html_editer.querySelector("textarea");
+const css_ta = css_editer.querySelector("textarea");
+
+
+function set(){
+    const hc = html_ta.value;
+    const cc = `<style>${css_ta.value}</style>`;
+    doc.open();
+    doc.write(`${cc}\n${hc}`);
+    doc.close();
+}
+
+
+html_ta.addEventListener("input", () => {
+  const list = html_code.classification(html_ta.value);
+
+  html_pre.innerHTML = "";
+  list.map(item => {
+    const span = document.createElement("span");
+    span.className = item.class;
+    span.innerHTML = item.word.replaceAll("<", "&lt;").replaceAll(">", "&gt;");;
+    html_pre.appendChild(span);
+  })
+
+  html_ta.style.height = `${html_pre.getBoundingClientRect().height}px`;
+})
+
+css_ta.addEventListener("input", () => {
+  const list = css_code.classification(css_ta.value);
+
+  css_pre.innerHTML = "";
+  list.map(item => {
+    const span = document.createElement("span");
+    span.className = item.class;
+    span.innerHTML = item.word;
+    css_pre.appendChild(span);
+  })
+
+  css_ta.style.height = `${css_pre.getBoundingClientRect().height}px`;
+})
+
+html_ta.addEventListener("change", set);
+css_ta.addEventListener("change", set);
+
+</script>
+</body>
+</html>
