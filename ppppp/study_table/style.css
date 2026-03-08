@@ -1,0 +1,601 @@
+/*==========================================================*/
+/* 共通変数設定 */
+/*==========================================================*/
+:root {
+    /* 色 */
+    --color-back: #dedede;
+    --color-font: #aaaaaa;
+}
+
+/*==========================================================*/
+/* 共通設定 */
+/*==========================================================*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    font-weight: normal;
+    background-color: transparent;
+    color: var(--color-font);
+}
+
+*:focus-visible{
+    outline: none;
+}
+
+body {
+    width: 100vw;
+    height: 100dvh;
+    position: relative;
+    overflow: hidden;
+    background-color: var(--color-back);
+}
+
+.glass-cornner{
+    position: relative;
+    --in-color: #ffffff40;
+
+    &::before{
+        content: "";
+        pointer-events: none;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+        border: 1.5px solid var(--in-color);
+        transition: border-color 0.1s linear;
+        border-radius: inherit;
+        mask-image: linear-gradient(to bottom left, #00000000, white, #00000000);
+        mask-position: center;
+        z-index: 10;
+    }
+}
+
+/*==========================================================*/
+/* メイン */
+/*==========================================================*/
+#main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: 
+        radial-gradient(#000000e0),
+        radial-gradient(#ffffff30, #00000080),
+        linear-gradient(to bottom right, #e4cce0, #612e79);
+
+    &:has(#set_tgl:checked) #setting_view{
+        display: block;
+    }
+}
+
+
+#head{
+    width: 100%;
+    height: 40px;
+    position: relative;
+    /* padding-inline: 10px; */
+    overflow-y: hidden;
+    overflow-x: auto;
+    background-color: transparent;
+    backdrop-filter: blur(10px) brightness(1.2);
+    box-shadow: 0px -4px 20px #88888888;
+    scrollbar-color: #88888888 transparent;
+    scrollbar-width: none;
+}
+
+#tag_area{
+    height: 40px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 0px;
+    position: absolute;
+    background-color: #88888828;
+}
+
+.tag{
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #555555;
+    position: relative;
+    display: grid;
+    place-items: center;
+    white-space: nowrap;
+    
+    cursor: pointer;
+    user-select: none;
+    border-left: 1px solid #110f12;
+
+    input[type="radio"]{
+        width: 0;
+        height: 0;
+        opacity: 0;
+        position: absolute;
+    }
+
+    &:has(input[type="radio"]:checked){
+        background-color: #110f12;
+        color: var(--color-font);
+        border-radius: 10px 10px 0px 0px;
+    }
+
+    &:has(input[type="radio"]:checked)+.tag{
+        border: none;
+    }
+
+    &:first-of-type{
+        border-top-left-radius: 0px !important;
+    }
+    &:last-of-type{
+        border-top-right-radius: 0px !important;
+    }
+}
+
+
+#body{
+    width: 100%;
+    height: calc(100% - 40px);
+}
+
+.area{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow-y: auto;
+    scrollbar-color: white transparent;
+}
+
+.d_table{
+    max-width: 100%;
+    min-width: 350px;
+    border-collapse: collapse;
+    border-spacing: 0;
+
+
+    thead > tr{
+        position: sticky;
+        top: 0;
+        z-index: 2;
+        background:
+            radial-gradient(#000000e0),
+            radial-gradient(#ffffff30, #00000080),
+            linear-gradient(to bottom right, #e4cce0, #612e79);
+        box-shadow: 0px 2px 20px #88888840;
+    }
+
+    th, td{
+        padding: 8px;
+    }
+
+    th{
+        text-align: left;
+        font-weight: bold;
+        white-space: nowrap;
+    }
+
+    td{
+        vertical-align: top;
+    }
+
+    tbody > tr:nth-of-type(2n+1){
+        background-color: #520c7216;
+    }
+
+    .set{
+        height: 24px;
+        aspect-ratio: 1/1;
+        border-radius: 5px;
+        cursor: pointer;
+
+        &:focus-visible{
+            outline: none;
+        }
+
+        &:hover > div, &:focus-visible > div{
+            outline: none;
+            box-shadow: inset 0px 0px 6px #932badb7;
+            background-color: #932bad6f;
+        }
+        &:hover:active > div, &:focus-visible:active > div{
+            scale: 0.9;
+        }
+
+        div{
+            width: 100%;
+            height: 100%;
+            border-radius: inherit;
+            position: relative;
+            box-shadow: inset 0px 0px 6px #88888880;
+            transition: scale 0.2s ease;
+        }
+
+        div::after{
+            content: "";
+            position: absolute;
+            width: 40%;
+            aspect-ratio: 3/2;
+            margin: auto;
+            inset: 0;
+            background: linear-gradient(0deg, transparent 70%, white),
+                        linear-gradient(120deg, transparent 50%, white),
+                        linear-gradient(240deg, transparent 50%, white);
+            clip-path: polygon(0% 10%, 100% 10%, 50% 100%);
+        }
+    }
+
+    .th{
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+    }
+}
+
+#setting_tgl{
+    position: fixed;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    bottom: 12px;
+    right: 12px;
+    border-radius: 10px;
+    background-color: #88888820;
+    backdrop-filter: blur(6px);
+    display: grid;
+    place-items: center;
+    user-select: none;
+
+    input[type="checkbox"]{
+        position: absolute;
+        width: 0;
+        height: 0;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .icon{
+        position: relative;
+        width: 20px;
+        height: 20px;
+        border-radius: 999px;
+        --in-color: #88888840;
+        outline: 5px solid var(--in-color);
+        outline-offset: -5px;
+        
+        transition: scale 0.2s ease;
+        animation: rotate-color 10s linear infinite;
+
+        &::after{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: inherit;
+            outline: 5px solid var(--in-color);
+            outline-offset: -5px;
+            filter: blur(4px);
+        }
+    }
+
+    &:has(#set_tgl:checked){
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #00000080;
+        backdrop-filter: blur(1px);
+        z-index: 3;
+    }
+
+    &:hover .icon, &:has(#set_tgl:focus-visible) .icon{
+        --in-color:#612e79a0;
+    }
+
+    &:hover:active .icon, &:has(#set_tgl:focus-visible:active) .icon{
+        scale: 0.85;
+    }
+}
+
+@keyframes rotate-color{
+    from{
+        filter: hue-rotate(0deg);
+    }
+    to{
+        filter: hue-rotate(360deg);
+    }
+}
+
+#setting_view{
+    z-index: 10;
+    position: absolute;
+    background-color: #88888820;
+    backdrop-filter: blur(10px);
+    padding-block: 10px;
+    border-radius: 10px;
+    width: 300px;
+    height: fit-content;
+    max-height: calc(100% - 20px);
+    margin: auto;
+    inset: 0;
+    display: none;
+
+    section{
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-rows: 36px 0fr;
+        transition: grid-template-rows 0.2s ease;
+    }
+
+    section:has(.set_oc:checked){
+        grid-template-rows: 36px 1fr;
+    }
+
+    section > header > label{
+        padding: 6px;
+        font-weight: bold;
+        position: relative;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        border-radius: 6px;
+        height: 100%;
+
+        input[type="checkbox"]{
+            opacity: 0;
+            width: 0;
+            height: 0;
+            position: absolute;
+        }
+    }
+
+    section > header > label:hover, section > header > label:has(.set_oc:focus-visible){
+        background-color: #88888820;
+    }
+
+    .set_body{
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .set_body > .list{
+        background-color: #000000a0;
+        width: calc(100% - 16px);
+        border-radius: 10px;
+        padding-block: 10px;
+        /* height: 200px; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .add_btn{
+        height: 30px;
+        width: 30px;
+        border-radius: 999px;
+        cursor: pointer;
+        margin-top: 10px;
+
+        &:hover .icon, &:focus-visible .icon{
+            filter: brightness(1.5);
+        }
+
+        &:hover:active .icon, &:focus-visible:active .icon{
+            scale: 0.85;
+        }
+
+        .icon{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            border-radius: inherit;
+            background-color: #13598480;
+            transition: scale 0.2s ease;
+
+            &::before, &::after{
+                content: "";
+                position: absolute;
+                margin: auto;
+                inset: 0;
+                inset: 0;
+                width: 40%;
+                height: 2px;
+                border-radius: 10px;
+                background-color: var(--color-font);
+            }
+
+            &::after{
+                rotate: 90deg;
+            }
+        }
+    }
+
+    .vs_col_label{
+        width: 100%;
+        height: 30px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding-inline: 10px;
+        gap: 10px;
+        cursor: pointer;
+
+        &:hover, &:has(input[type="checkbox"]:focus-visible){
+            background-color: #88888820;
+        }
+
+        &:has(input[type="checkbox"]:checked) .check_mark{
+            opacity: 1;
+        }
+
+        .check_mark{
+            width: 14px;
+            height: 14px;
+            position: relative;
+            border: 2px solid var(--color-font);
+            border-radius: 10px 4px 10px 4px;
+            rotate: 45deg;
+            opacity: 0;
+
+            &::before{
+                content: "";
+                position: absolute;
+                margin: auto;
+                inset: 0;
+                width: 7px;
+                height: 7px;
+                border-radius: 99px;
+                border: 2px solid var(--color-font);
+            }
+        }
+
+        input[type="checkbox"]{
+            width: 0;
+            height: 0;
+            opacity: 0;
+            pointer-events: none;
+            position: absolute;
+        }
+
+        .col_name{
+            font-size: 0.8rem;
+            font-weight: bold;
+            user-select: none;
+        }
+    }
+
+
+    design-list{
+        width: 30px;
+        height: 30px;
+    }
+
+    design-list::part(selecter){
+        background-color: #88888840;
+        box-shadow: unset;
+        color: var(--color-font);
+        font-weight: bold;
+    }
+
+    design-list::part(list-block){
+        background-color: #88888840;
+        backdrop-filter: blur(10px);
+        box-shadow: unset;
+    }
+
+    design-list::part(list){
+        background-color: transparent;
+        color: var(--color-font);
+        font-weight: bold;
+    }
+
+    design-list::part(picker){
+        display: none;
+    }
+
+    .sort_item{
+        width: 100%;
+        height: 36px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-inline: 10px;
+        gap: 4px;
+
+        .sort_col_name{
+            font-size: 0.8rem;
+            font-weight: bold;
+            user-select: none;
+            margin-right: auto;
+        }
+    }
+
+    .filter_item{
+        width: 100%;
+        height: 36px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-inline: 6px;
+        gap: 4px;
+
+        .filter_col{
+            width: 100px;
+        }
+
+        .filter_type{
+            width: 30px;
+        }
+
+        .filter_content{
+            height: 30px;
+            width: 100px;
+
+            border-radius: 6px;
+            background-color: #88888840;
+            padding-inline: 6px;
+            text-align: center;
+        }
+
+        .del_filter{
+            height: 24px;
+            aspect-ratio: 1/1;
+            border-radius: 999px;
+            cursor: pointer;
+
+            &:hover .icon, &:focus-visible .icon{
+                filter: brightness(1.5);
+            }
+
+            &:hover:active .icon, &:focus-visible:active .icon{
+                scale: 0.85;
+            }
+
+            .icon{
+                width: 100%;
+                height: 100%;
+                border-radius: inherit;
+                position: relative;
+                background-color: #861c1c80;
+                transition: scale 0.2s ease;
+
+                &::before, &::after{
+                    content: "";
+                    position: absolute;
+                    margin: auto;
+                    inset: 0;
+                    width: 40%;
+                    height: 2px;
+                    border-radius: 99px;
+                    background-color: var(--color-font);
+                    rotate: 45deg;
+                }
+
+                &::after{
+                    rotate: -45deg;
+                }
+            }
+        }
+    }
+
+}
+
+
+
+
+.hidden{
+    display: none !important;
+}

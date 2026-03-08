@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <!-- HEAD -->
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+        <title>Study Tables</title>
+        <meta name="description" content="sample text">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+
+
+    <!-- View -->
+    <body>
+        <div id="main">
+            <div id="head">
+                <div id="tag_area">
+                    <!-- <label for="t1" class="tag">
+                        簿記-科目
+                        <input type="radio" id="t1" data-target="boki1" name="tags" checked>
+                    </label>
+                    <label for="t2" class="tag">
+                        簿記-部
+                        <input type="radio" id="t2" data-target="boki2" name="tags">
+                    </label>
+                    <label for="t3" class="tag">
+                        CSS-プロパティ
+                        <input type="radio" id="t3" data-target="css" name="tags">
+                    </label> -->
+                    
+                </div>
+            </div>
+            <div id="body">
+                <!-- <div class="area" id="boki1">
+                    <table class="d_table">
+                        <thead>
+<tr>
+<th data-type="string"><div class="th">部　　</div></th>
+<th data-type="string"><div class="th">勘定科目</div></th>
+<th data-type="string"><div class="th">内容</div></th>
+</tr>
+                        </thead>
+                        <tbody>
+<tr><td>資産</td><td>現金</td><td>現金や紙幣などの現金、もしくは他人振り出しの小切手や国債などの銀行ですぐに換金できるもの</td></tr>
+<tr><td>資産</td><td>当座預金</td><td>企業や個人事業主向けの、小切手や手形などを用いる決算専用の銀行口座</td></tr>
+<tr><td>資産</td><td>普通預金</td><td>ATMで出金、入金などができる、一般の銀行口座</td></tr>
+<tr><td>資産</td><td>受取手形</td><td>代金として約束手形を受け取り、期日に手形をお金と引き換える権利</td></tr>
+<tr><td>資産</td><td>売掛金</td><td>商品を掛けで売ったときに、後で代金がもらえる権利</td></tr>
+<tr><td>資産</td><td>繰越商品</td><td>商品の在庫で、期をまたぐもの</td></tr>
+<tr><td>資産</td><td>前払金</td><td>手付金、内金など、商品購入時に、先に支払うお金。後に商品を受け取る権利</td></tr>
+<tr><td>資産</td><td>未収入金</td><td>商品以外の物を後払いで売却した時に、後でお金を受け取る権利</td></tr>
+<tr><td>資産</td><td>貯蔵品</td><td>切手や文房具など、商品以外の物で、未使用のまま期をまたぐ物</td></tr>
+<tr><td>資産</td><td>仮払消費税</td><td>商品の購入時に支払った消費税。消費税を納める際に、受け取った消費税から仮払消費税分を相殺できるので、資産である。税抜方式で記帳するときに用いる</td></tr>
+<tr><td>資産</td><td>仮払法人税等</td><td>期の途中で概算額として支払う法人税等。法人税等を納める際に、仮払法人税等の分を相殺できるので、資産である</td></tr>
+<tr><td>資産</td><td>備品</td><td>固定資産の一つ。パソコンや机など、販売目的でなく、社内で1年以上利用するために購入したもの</td></tr>
+<tr><td>資産</td><td>小口現金</td><td>社内で発生する経費をすぐに精算するために手元に持っておく現金</td></tr>
+<tr><td>資産</td><td>クレジット売掛金</td><td>商品をクレジットカード払いで売った時に、後でクレジットカード会社から代金がもらえる権利</td></tr>
+<tr><td>資産</td><td>電子記録債権</td><td>商品を掛けで売ったときに、その取引の内容を電子化したもの。後に代金を受け取ることのできる権利</td></tr>
+<tr><td>資産</td><td>貸付金</td><td>期限や利子を決めて貸すお金。後にお金を受け取る権利</td></tr>
+<tr><td>資産</td><td>立替金</td><td>取引先や従業員が支払うべき代金を一時的に立て替えたお金。後に代金を受け取ることのできる権利</td></tr>
+<tr><td>資産</td><td>仮払金</td><td>支出はしたがその内容が確定できていないお金。後に費用に振り替えるための一時的な資産</td></tr>
+<tr><td>資産</td><td>受取商品券</td><td>商品の販売時に、代金として受け取った商品券。後に換金できる権利</td></tr>
+<tr><td>資産</td><td>差入保証金</td><td>敷金など、取引や賃貸借の契約の履行が保証されるよう支払うお金。後に契約通り受け取れる権利</td></tr>
+<tr><td>資産</td><td>前払利息</td><td>来期の利息のうち、当期に支払済の利息。前払がついている科目は、「後で支払う必要がない」ことを意味するので、資産。</td></tr>
+<tr><td>資産</td><td>前払保険料</td><td>来期の保険料のうち、当期に支払済の保険料。前払がついている科目は、「後で支払う必要がない」ことを意味するので、資産。</td></tr>
+<tr><td>資産</td><td>前払家賃</td><td>来期の家賃のうち、当期に支払済の家賃。前払がついている科目は、「後で支払う必要がない」ことを意味するので、資産。</td></tr>
+<tr><td>資産</td><td>前払地代</td><td>来期の地代のうち、当期に支払済の地代。前払がついている科目は、「後で支払う必要がない」ことを意味するので、資産。</td></tr>
+<tr><td>資産</td><td>前払費用</td><td>来期の費用のうち、当期に支払済の費用。前払がついている科目は、「後で支払う必要がない」ことを意味するので、資産。</td></tr>
+<tr><td>資産</td><td>前払手数料</td><td>来期の手数料のうち、当期に支払済の手数料。前払がついている科目は、「後で支払う必要がない」ことを意味するので、資産。</td></tr>
+<tr><td>資産</td><td>未収利息</td><td>当期の利息のうち、来期に受取予定の利息。未収がついている科目は「後で受け取ることができる」ことを意味するので、資産。</td></tr>
+<tr><td>資産</td><td>未収手数料</td><td>当期の手数料のうち、来期に受取予定の手数料。未収がついている科目は「後で受け取ることができる」ことを意味するので、資産。</td></tr>
+<tr><td>資産</td><td>未収家賃</td><td>当期の家賃のうち、来期に受取予定の家賃。未収がついている科目は「後で受け取ることができる」ことを意味するので、資産。</td></tr>
+<tr><td>資産</td><td>未収地代</td><td>当期の地代のうち、来期に受取予定の地代。未収がついている科目は「後で受け取ることができる」ことを意味するので、資産。</td></tr>
+<tr><td>資産</td><td>未収収益</td><td>当期の収益のうち、来期に受取予定の収益。未収がついている科目は「後で受け取ることができる」ことを意味するので、資産。</td></tr>
+<tr><td>資産</td><td>建物</td><td>固定資産の一つ。社屋や店舗などの、企業が業務上利用する物</td></tr>
+<tr><td>資産</td><td>土地</td><td>固定資産の一つ。建物や駐車場などのために、企業が業務上利用する土地</td></tr>
+<tr><td>資産</td><td>車両運搬具</td><td>固定資産の一つ。トラックや営業車などの、企業が業務上利用する車両</td></tr>
+<tr><td>資産</td><td>定期予算</td><td>引き下ろせるまでの期間が長いが、金利が高い一般の銀行口座</td></tr>
+<tr><td>資産</td><td>商品</td><td>販売業を営む企業や個人事業主が、営利目的で販売する物</td></tr>
+<tr><td>資産</td><td>手形貸付金</td><td>借用証書の代わりに、約束手形を受け取り貸し付けしたお金。後にお金を受け取ることのできる権利</td></tr>
+<tr><td>資産</td><td>従業員貸付金</td><td>自社の従業員に貸し付けたお金。後にお金を受け取ることのできる権利</td></tr>
+<tr><td>資産</td><td>役員貸付金</td><td>自社の役員に貸し付けたお金。後にお金を受け取ることのできる権利</td></tr>
+<tr><td>資産</td><td>減価償却累計額</td><td>固定資産の、これまで計上した減価償却費の累計額。簿記3級以上は、資産の部の勘定科目として扱われるが、負債の部と同様、増加すると貸方に、減少すると借方に仕訳する</td></tr>
+<tr><td>資産</td><td>建物減価償却累計額</td><td>建物にかかる減価償却費の累積額。簿記3級以上は、資産の部の勘定科目として扱われるが、負債の部と同様、増加すると貸方に、減少すると借方に仕訳する</td></tr>
+<tr><td>資産</td><td>備品減価償却累計額</td><td>備品にかかる減価償却費の累積額。簿記3級以上は、資産の部の勘定科目として扱われるが、負債の部と同様、増加すると貸方に、減少すると借方に仕訳する</td></tr>
+<tr><td>資産</td><td>車両運搬具減価償却累計額</td><td>車両運搬具にかかる減価償却費の累積額。簿記3級以上は、資産の部の勘定科目として扱われるが、負債の部と同様、増加すると貸方に、減少すると借方に仕訳する</td></tr>
+<tr><td>資産</td><td>貸倒引当金</td><td>取引相手の倒産などで売掛金が回収できなくなった場合に備えてためておくお金。簿記3級以上は、資産の部の勘定科目として扱われるが、負債の部と同様、増加すると貸方に、減少すると借方に仕訳する</td></tr>
+<tr><td>負債</td><td>支払手形</td><td>代金として約束手形を渡し、期日に手形分のお金を支払う義務</td></tr>
+<tr><td>負債</td><td>買掛金</td><td>商品を掛けで買ったときに、後で代金を支払う義務</td></tr>
+<tr><td>負債</td><td>前受金</td><td>手付金、内金など、商品販売時に、先に受け取るお金。後に商品を引き渡す義務</td></tr>
+<tr><td>負債</td><td>借入金</td><td>企業や銀行などから期限や利子を決めて借りたお金。後にお金を支払う義務</td></tr>
+<tr><td>負債</td><td>未払金</td><td>商品以外の物や、サービスを後払いで取得した時に、後で代金を支払う義務</td></tr>
+<tr><td>負債</td><td>仮受消費税</td><td>商品の売却時に受け取った消費税。後に消費税を納付する義務</td></tr>
+<tr><td>負債</td><td>未払消費税</td><td>仮受消費税と仮払消費税の差額で、後に消費税を納付する義務</td></tr>
+<tr><td>負債</td><td>未払法人税等</td><td>法人税と仮払法人税等の差額で、後に法人税等を納付する義務</td></tr>
+<tr><td>負債</td><td>未払い配当金</td><td>株主総会などで、支払う決議がなされたが、まだ支払われていない配当金。後にお金を支払う義務</td></tr>
+<tr><td>負債</td><td>電子記録債務</td><td>商品を掛けで買った時に、その取引の内容を電子化したもの。後に代金を支払う義務</td></tr>
+<tr><td>負債</td><td>役員借入金</td><td>自社の役員から借り入れているお金。後にお金を支払う義務</td></tr>
+<tr><td>負債</td><td>当座借越</td><td>当座預金の残高が足りない時、銀行が一時的に立て替えてくれるお金。後にお金を支払う義務</td></tr>
+<tr><td>負債</td><td>仮受金</td><td>金銭等の受け入れがあったが、取引内容が分からないお金。後に本来の勘定科目に振り替える為の一時的な負債</td></tr>
+<tr><td>負債</td><td>未払利息</td><td>当期の利息のうち、来期に支払い予定の利息。未払がついている科目は「後で支払う必要がある」ことを意味するので、負債</td></tr>
+<tr><td>負債</td><td>未払給料</td><td>当期の給料のうち、来期に支払い予定の給料。未払がついている科目は「後で支払う必要がある」ことを意味するので、負債</td></tr>
+<tr><td>負債</td><td>未払家賃</td><td>当期の家賃のうち、来期に支払い予定の家賃。未払がついている科目は「後で支払う必要がある」ことを意味するので、負債</td></tr>
+<tr><td>負債</td><td>未払地代</td><td>当期の地代のうち、来期に支払い地代の利息。未払がついている科目は「後で支払う必要がある」ことを意味するので、負債</td></tr>
+<tr><td>負債</td><td>未払費用</td><td>当期の費用のうち、来期に支払い費用の利息。未払がついている科目は「後で支払う必要がある」ことを意味するので、負債</td></tr>
+<tr><td>負債</td><td>未払水道光熱費</td><td>当期の水道光熱費のうち、来期に支払い予定の水道光熱費。未払いがついている科目は、「後で支払う必要がある」ことを意味するので、負債</td></tr>
+<tr><td>負債</td><td>前受利息</td><td>来期の利息のうち、当期に受取済みの利息。前受がついている科目は、「後でサービスを提供する必要がある」ことを意味するので、負債</td></tr>
+<tr><td>負債</td><td>前受手数料</td><td>来期の手数料のうち、当期に受取済みの手数料。前受がついている科目は、「後でサービスを提供する必要がある」ことを意味するので、負債</td></tr>
+<tr><td>負債</td><td>前受家賃</td><td>来期の家賃のうち、当期に受取済みの家賃。前受がついている科目は、「後でサービスを提供する必要がある」ことを意味するので、負債</td></tr>
+<tr><td>負債</td><td>前受地代</td><td>来期の地代のうち、当期に受取済みの地代。前受がついている科目は、「後でサービスを提供する必要がある」ことを意味するので、負債</td></tr>
+<tr><td>負債</td><td>前受収益</td><td>来期の収益のうち、当期に受取済みの収益。前受がついている科目は、「後でサービスを提供する必要がある」ことを意味するので、負債</td></tr>
+<tr><td>負債</td><td>預り金</td><td>取引先や従業員などから、一時的に預かっているお金。後に返金ないし他者へ支払う義務</td></tr>
+<tr><td>負債</td><td>手形借入金</td><td>借用証書の代わりに、約束手形を渡し借り入れたお金。後にお金を支払う義務</td></tr>
+<tr><td>負債</td><td>社会保険料預り金</td><td>従業員の給料から源泉徴収として差し引かれた社会保険料。後に納付する義務</td></tr>
+<tr><td>負債</td><td>所属税預り金</td><td>従業員の給料から源泉徴収として差し引かれた所属税。後に納付する義務</td></tr>
+<tr><td>純資産</td><td>資本金</td><td>株主が会社へ提供した資金。会社が設立時に所有しているお金</td></tr>
+<tr><td>純資産</td><td>利益準備金</td><td>企業が稼いだ利益のうち、法律で積み立てることが義務付けられている利益</td></tr>
+<tr><td>純資産</td><td>繰越利益剰余金</td><td>企業が稼いだ利益のおうち、来期に持ち越す収益</td></tr>
+<tr><td>費用</td><td>仕入</td><td>自社で販売する用の商品を購入するための費用</td></tr>
+<tr><td>費用</td><td>給料</td><td>従業員に労働の対価として支払う費用</td></tr>
+<tr><td>費用</td><td>旅費交通費</td><td>出張や外回りなどで、業務上発生した移動に対する費用</td></tr>
+<tr><td>費用</td><td>貸倒引当金繰入</td><td>貸倒引当金を設定する際に、回収不能品として見積もってあらかじめ計上する費用</td></tr>
+<tr><td>費用</td><td>減価償却費</td><td>建物や備品などの固定資産の劣化に対応して、価値減少分を固定資産の取得原価から差し引く費用</td></tr>
+<tr><td>費用</td><td>消耗品費</td><td>文房具や事務用品などの、業務上使用する消耗品に対する費用</td></tr>
+<tr><td>費用</td><td>法人税、住民税及び事業税</td><td>確定した法人税、住民税、及び事業税の金額を合算した費用。「法人税等」と表記されることもある</td></tr>
+<tr><td>費用</td><td>発送費</td><td>商品を販売した際に発生する、運送などにかかる費用</td></tr>
+<tr><td>費用</td><td>法定福利費</td><td>社会保険料のうち、企業が負担する費用</td></tr>
+<tr><td>費用</td><td>広告宣伝費</td><td>企業や商品の広告、宣伝にかかる費用</td></tr>
+<tr><td>費用</td><td>支払手数料</td><td>銀行での振り込みなどで、手数料が発生する場合に支払う費用</td></tr>
+<tr><td>費用</td><td>支払利息</td><td>お金を借り入れた際に、利息として支払う費用</td></tr>
+<tr><td>費用</td><td>貸倒損失</td><td>貸し倒れた際に、損失として発生する費用</td></tr>
+<tr><td>費用</td><td>通信費</td><td>電話や切手など、通信にかかる費用</td></tr>
+<tr><td>費用</td><td>水道光熱費</td><td>主に水道、電気、ガスにかかる費用</td></tr>
+<tr><td>費用</td><td>支払家賃</td><td>物件など借りる際に、家賃としてかかる費用</td></tr>
+<tr><td>費用</td><td>支払地代</td><td>土地を借りる際に、地代としてかかる費用</td></tr>
+<tr><td>費用</td><td>保険料</td><td>生命保険や損害保険などの、保険の契約に対して支払う費用</td></tr>
+<tr><td>費用</td><td>租税公課</td><td>印紙税や固定資産税などの、租税や公的な負担金としてかかる費用</td></tr>
+<tr><td>費用</td><td>修繕費</td><td>建物などの修繕にかかる費用</td></tr>
+<tr><td>費用</td><td>雑費</td><td>クリーニング代など、金額が少なく、他の勘定科目に当てはまらない諸費用</td></tr>
+<tr><td>費用</td><td>雑損</td><td>他のどの勘定科目にも分類されず、さほど重要ではない費用</td></tr>
+<tr><td>費用</td><td>固定資産売却損</td><td>土地や建物など、固定資産を売却した際に、その固定資産の価値よりも売却代金が少ないことで発生する損失としての費用</td></tr>
+<tr><td>費用</td><td>保管費</td><td>商品や製品の保管ひかかる費用</td></tr>
+<tr><td>費用</td><td>諸会費</td><td>所属する団体などに、会費として支払う費用</td></tr>
+<tr><td>費用</td><td>売上原価</td><td>売却した商品の、元々の仕入れにかかる費用</td></tr>
+<tr><td>収益</td><td>売上</td><td>自社の商品を販売することで得る収益</td></tr>
+<tr><td>収益</td><td>受取家賃</td><td>物件などを賃貸として貸し出すことで得る収益</td></tr>
+<tr><td>収益</td><td>受取地代</td><td>土地を貸し出すことで得る収益</td></tr>
+<tr><td>収益</td><td>受取手数料</td><td>斡旋や仲介などで、手数料として得た収益</td></tr>
+<tr><td>収益</td><td>受取利息</td><td>お金の貸し付けや、銀行に預けることで利息として発生する収益</td></tr>
+<tr><td>収益</td><td>雑益</td><td>他のどの勘定科目にも分類されず、さほど重要ではない収益</td></tr>
+<tr><td>収益</td><td>固定資産売却費</td><td>土地や建物など、固定資産を売却した際に、その固定資産の価値よりも売却代金が多いことで得る利益</td></tr>
+<tr><td>収益</td><td>商品販売益</td><td>商品を販売した際、売価と取得原価の差額として得る収益。分記法で用いる</td></tr>
+<tr><td>収益</td><td>貸倒引当金戻入</td><td>前期で使用しなかった貸倒引当金を取り崩すことで得る収益</td></tr>
+<tr><td>収益</td><td>償却債権取立益</td><td>前期以前に貸倒処理を行ったお金が返ってくることで得る収益</td></tr>
+<tr><td>その他</td><td>現金過不足</td><td>帳簿上の現金残高と実際の金額に生じている差額</td></tr>
+<tr><td>その他</td><td>損益</td><td>利益を計算するために、収益と費用を計上する一時的な勘定科目</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+                <div class="area" id="boki2">
+                    <table class="d_table">
+                        <thead>
+                            <tr>
+                                <th>部</th>
+                                <th>借方</th>
+                                <th>貸方</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>資産</td>
+                                <td>▲</td>
+                                <td>▼</td>
+                            </tr>
+                            <tr>
+                                <td>費用</td>
+                                <td>▲</td>
+                                <td>▼</td>
+                            </tr>
+                            <tr>
+                                <td>負債</td>
+                                <td>▼</td>
+                                <td>▲</td>
+                            </tr>
+                            <tr>
+                                <td>純資産</td>
+                                <td>▼</td>
+                                <td>▲</td>
+                            </tr>
+                            <tr>
+                                <td>収益</td>
+                                <td>▼</td>
+                                <td>▲</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div> -->
+
+
+            </div>
+
+            <label for="set_tgl" id="setting_tgl" class="glass-cornner">
+                <div class="icon"></div>
+                <input type="checkbox" id="set_tgl">
+            </label>
+
+            <div id="setting_view" class="glass-cornner">
+                <section>
+                    <header>
+                        <label for="set_col">
+                            列表示
+                            <input type="checkbox" id="set_col" class="set_oc">
+                        </label>
+                    </header>
+                    <div class="set_body">
+                        <div class="list">
+                            <label for="vs_col1" class="vs_col_label">
+                                <div class="check_mark"></div>
+                                <span class="col_name">部</span>
+                                <input type="checkbox" id="vs_col1">
+                            </label>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <header>
+                        <label for="set_sort">
+                            並び順
+                            <input type="checkbox" id="set_sort" class="set_oc">
+                        </label>
+                    </header>
+                    <div class="set_body">
+                        <div class="list">
+                            <div class="sort_item">
+                                <span class="sort_col_name">部</span>
+                                <design-list class="sort_prim">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </design-list>
+                                <design-list class="sort_type">
+                                    <option value="0">－</option>
+                                    <option value="1">▲</option>
+                                    <option value="2">▼</option>
+                                </design-list>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <header>
+                        <label for="set_fil">
+                            フィルタ
+                            <input type="checkbox" id="set_fil" class="set_oc">
+                        </label>
+                    </header>
+                    <div class="set_body">
+                        <div class="list">
+                            <div class="filter_item">
+                                <design-list class="filter_col">
+                                    <option value="0">部　　</option>
+                                    <option value="1">科目</option>
+                                    <option value="2">内容</option>
+                                </design-list>
+                                <design-list class="filter_type">
+                                    <option value="0">=</option>
+                                    <option value="1">&gt;=</option>
+                                    <option value="2">&lt;=</option>
+                                    <option value="3">&gt;</option>
+                                    <option value="4">&lt;</option>
+                                    <option value="5">!=</option>
+                                    <option value="6">in</option>
+                                </design-list>
+                                <input type="text" class="filter_content">
+                                <button class="del_filter">
+                                    <div class="icon"></div>
+                                </button>
+
+                            </div>
+                            
+                        </div>
+                        <button class="add_btn" id="filter_add_btn">
+                                <div class="icon"></div>
+                        </button>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </body>
+
+
+    <!-- JS -->
+    <script src="designList.js"></script>
+    <script src="code.js" type="module"></script>
+
+</html>
