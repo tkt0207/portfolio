@@ -1,0 +1,72 @@
+<!DOCTYPE html> <!-- 一番上に絶対書く -->
+<html lang="ja"> <!-- 全てを<html>でで囲うこと -->
+    <head> <!-- Webページを存在させえるうえで重要な情報を記す -->
+        <meta charset="utf-8"> <!-- 文字コード -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"> <!-- それぞれのデバイスの大きさに応じて表示させる -->
+        <title>parse type</title> <!-- タブのとこに出る -->
+        <meta name="description" content="sample text text"> <!-- 検索時の下の説明見たいなところ -->
+        <link rel="stylesheet" href="style.css" /> <!-- cssの適応 -->
+    </head>
+
+    <body> <!-- 見える部分 -->
+        <div id="main">
+            <div id="config">
+                <label for="chk1">
+                    <input type="checkbox" id="chk1" checked>
+                    先頭行をヘッダにする
+                    <span class="tgl"></span>
+                </label>
+
+                <div id="select_indent">
+                    インデント数
+                    <design-list name="indent" id="indent" class="select">
+                        <option value="2">2</option>
+                        <option value="4" selected>4</option>
+                        <option value="8">8</option>
+                    </design-list>
+                </div>
+            </div>
+            <div id="input_area">
+                <div id="before">
+                    <div class="pp">
+                        入力:
+                        <design-list id="input_type">
+                            <option value="0">JSON</option>
+                            <option value="1">JSオブジェクト</option>
+                            <option value="2" selected>CSV(タブ区切り)</option>
+                            <option value="3">CSV(コンマ区切り)</option>
+                            <option value="4">HTML</option>
+                        </design-list>
+                    </div>
+                    <textarea name="input" id="input"></textarea>
+                </div>
+                <div id="after">
+                    <div class="pp">
+                        出力:
+                        <design-list id="output_type">
+                            <option value="0" selected>JSON</option>
+                            <option value="1">JSオブジェクト</option>
+                            <option value="2">CSV(タブ区切り)</option>
+                            <option value="3">CSV(コンマ区切り)</option>
+                            <option value="4">HTML</option>
+                        </design-list>
+                    </div>
+                    <div id="output"></div>
+                </div>
+            </div>
+
+            <div id="ext">
+                <button id="b_clear">クリア</button>
+                <button id="b_ext">実行</button>
+                <button id="b_copy">コピー</button>
+            </div>
+            
+            <div id="view">
+                
+            </div>
+
+        </div>
+    </body>
+    <script src="assets/designList.js"></script>
+    <script src="code.js"></script>
+</html>
