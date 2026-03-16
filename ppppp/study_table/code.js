@@ -29,11 +29,7 @@ const AREA_ID = "a";
 //=============================================================================
 // グローバル変数
 //=============================================================================
-// TODO: テーブルごとの条件保管の処理を実装すること
-// ソート、フィルタ、表示切替の際にkeyを保持しsettings[key]に保管
-// change_table_layout時に保管した情報を元に生成すること
-// TODO: タグエリアの両端に左右の矢印を付け、横スクロールできるようにすること
-let settings = [];
+let settings = {};
 let now_id = "";
 let tables = [];
 
@@ -135,7 +131,7 @@ function create_tags(tdatas){
 // 説明：
 //   フィルターの枠を作成する
 //=============================================
-function create_filter(table){
+function create_filter(table, set={col:-1, type:-1, content:""}){
     const col_heads = table.querySelector("thead").querySelector("tr").querySelectorAll("th");
     const ths = [];
     col_heads.forEach(ch => {
@@ -155,6 +151,9 @@ function create_filter(table){
         const c_op = document.createElement("option");
         c_op.value = i;
         c_op.innerHTML = th;
+        if(set["col"] == i){
+            c_op.selected = true;
+        }
         f_d_list_c.appendChild(c_op);
     })
 
@@ -163,11 +162,15 @@ function create_filter(table){
         const t_op = document.createElement("option");
         t_op.value = i;
         t_op.innerHTML = t;
+        if(set["type"] == i){
+            t_op.selected = true;
+        }
         f_d_list_t.appendChild(t_op);
     })
 
     f_input.type = "text";
     f_input.classList.add("filter_content");
+    f_input.value = set["content"];
 
     f_button_div.classList.add("icon");
     f_button.classList.add("del_filter");
@@ -376,7 +379,11 @@ function change_table_layout(table){
         v_span.innerHTML = th;
         v_input.type = "checkbox";
         v_input.id = `vs_col${i}`;
-        v_input.checked = true;
+        if(Object.hasOwn(settings, now_id)){
+            v_input.checked = settings[now_id]["view"][i];
+        } else {
+            v_input.checked = true;
+        }
         v_label.appendChild(v_div);
         v_label.appendChild(v_span);
         v_label.appendChild(v_input);
@@ -411,11 +418,19 @@ function change_table_layout(table){
         s_span.classList.add("sort_col_name");
         s_span.innerHTML = th;
         s_d_list_p.classList.add("sort_prim");
+
+        let p_sel_index = 1;
+        let t_sel_index = 0;
+        if(Object.hasOwn(settings, now_id)){
+            p_sel_index = settings[now_id]["sort"][i]["prim"];
+            t_sel_index = settings[now_id]["sort"][i]["type"];
+        }
+
         for(let k = 0; k < th_num; k++){
             const p_op = document.createElement("option");
             p_op.value = k+1;
             p_op.innerHTML = k+1;
-            if(k==0){
+            if((k+1)==p_sel_index){
                 p_op.selected = true;
             }
             s_d_list_p.appendChild(p_op);
@@ -426,7 +441,7 @@ function change_table_layout(table){
             const t_op = document.createElement("option");
             t_op.value = ti;
             t_op.innerHTML = t;
-            if(ti==0){
+            if(ti==t_sel_index){
                 t_op.selected = true;
             }
             s_d_list_t.appendChild(t_op);
@@ -448,13 +463,57 @@ function change_table_layout(table){
 
     // フィルタ
     lists[2].innerHTML = "";
-    create_filter(table);
+    if(Object.hasOwn(settings, now_id)){
+        settings[now_id]["filter"].forEach(fi => {
+            create_filter(table, fi);
+        });
+    } else {
+        create_filter(table);
+    }
 
     filter_add_btn.onclick = () => {
         create_filter(table);
     }
 }
 
+//=============================================
+// 設定保存関数
+//---------------------------------------------
+// 引数: -
+// 戻り値: -
+//---------------------------------------------
+// 説明：
+//   テーブル毎の設定を保存する
+//=============================================
+function save_setting(id){
+    if(!Object.hasOwn(settings, id)){
+        settings[id] = {view:[], sort:[], filter:[]};
+    }
+
+    // 列表示
+    const vs = lists[0].querySelectorAll(`input[type="checkbox"]`);
+    vs.forEach((v, i) => {
+        settings[id]["view"][i] = v.checked;
+    })
+
+    // ソート
+    const sis = lists[1].querySelectorAll('.sort_item');
+    sis.forEach((si, i) => {
+        const pri = si.querySelector(".sort_prim");
+        const typ = si.querySelector(".sort_type");
+        settings[id]["sort"][i] = {prim: pri.value, type: typ.value};
+    })
+
+    // フィルタ
+    settings[id]["filter"] = [];
+    const fis = lists[2].querySelectorAll('.filter_item');
+    fis.forEach((fi, i) => {
+        const co = fi.querySelector(".filter_col");
+        const typ = fi.querySelector(".filter_type");
+        const con = fi.querySelector('.filter_content');
+        settings[id]["filter"][i] = {col: co.value, type: typ.value, content:con.value};
+    })    
+}
 
 //=============================================
 // タグ切り替え関数
@@ -479,7 +538,9 @@ function tags_set(){
                     area.classList.add("hidden");
                 })
                 target.classList.remove("hidden");
+                save_setting(now_id);
                 now_id = target_id;
+
                 const table = target.querySelector(".d_table");
                 change_table_layout(table);
             }
@@ -497,6 +558,26 @@ function tags_set(){
     }
 }
 
+//=============================================
+// ヘッダスクロール関数
+//---------------------------------------------
+// 引数: -
+// 戻り値: -
+//---------------------------------------------
+// 説明：
+//   ヘッダのスクロールを横に変える
+//=============================================
+function scroll_head(){
+    const head = document.querySelector("#head");
+    head.addEventListener("wheel", (e) => {
+        e.preventDefault();
+        head.scrollBy({
+            left: e.deltaY/2,
+            behavior: 'auto'
+        });
+    })
+}
+
 
 //=============================================
 // 初期設定
@@ -510,6 +591,7 @@ function tags_set(){
 function init(){
     create_tags(tables);
     tags_set();
+    scroll_head();
 }
 
 
