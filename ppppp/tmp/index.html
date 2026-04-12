@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <!-- HEAD -->
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+        <title>ZAIKO</title>
+        <meta name="description" content="sample text">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+
+
+    <!-- View -->
+    <body>
+        <div id="main">
+            <div id="head">
+                <div class="title">在庫検索画面</div>
+                <div class="favorite_name">テンプレート2</div>
+                <div class="favorite_btn_area">
+                    <button class="d_btn_icon" id="btn_show_favotrite_list">
+                        <div class="icon"></div>
+                    </button>
+                    <button class="d_btn_icon" id="btn_show_favotrite_register">
+                        <div class="icon"></div>
+                    </button>
+                </div>
+            </div>
+            <div id="body">
+                <!-- 業界 -->
+                <div class="item" id="industry_item">
+                    <div class="title_area">
+                        <div class="d_title">業界</div>
+                    </div>
+
+                    <div class="radio_area">
+                        <label for="radio_industry1" class="d_radio">
+                            <div class="icon">業界1</div>
+                            <input type="radio" name="radio_industry" id="radio_industry1" checked>
+                        </label>
+                        <label for="radio_industry2" class="d_radio">
+                            <div class="icon">業界2</div>
+                            <input type="radio" name="radio_industry" id="radio_industry2">
+                        </label>
+                        <label for="radio_industry3" class="d_radio">
+                            <div class="icon">業界3</div>
+                            <input type="radio" name="radio_industry" id="radio_industry3">
+                        </label>
+                        <label for="radio_industry4" class="d_radio">
+                            <div class="icon">業界4</div>
+                            <input type="radio" name="radio_industry" id="radio_industry4">
+                        </label>
+                        <label for="radio_industry5" class="d_radio">
+                            <div class="icon">業界5</div>
+                            <input type="radio" name="radio_industry" id="radio_industry5">
+                        </label>
+                        <label for="radio_industry6" class="d_radio">
+                            <div class="icon">業界6</div>
+                            <input type="radio" name="radio_industry" id="radio_industry6">
+                        </label>
+                        <div class="d_radio_cursor" id="radio_industry_cursor"></div>
+                    </div>
+                </div>
+
+                <!-- 大品種 -->
+                <div class="item" id="category_item">
+                    <div class="title_area">
+                        <div class="d_title">大品種</div>
+                        <div class="btn_area">
+                            <button class="d_btn btn_select">全選択</button>
+                            <button class="d_btn btn_cancel">クリア</button>
+                        </div>
+                    </div>
+                    <div class="check_area">
+                        <label for="check_category1" class="d_check">
+                            <div class="icon">チェックボックス1</div>
+                            <input type="checkbox" name="check_category" id="check_category1" checked>
+                        </label>
+                        <label for="check_category2" class="d_check">
+                            <div class="icon">チェック2</div>
+                            <input type="checkbox" name="check_category" id="check_category2">
+                        </label>
+                        <label for="check_category3" class="d_check">
+                            <div class="icon">チェックボックス3</div>
+                            <input type="checkbox" name="check_category" id="check_category3">
+                        </label>
+                        <label for="check_category4" class="d_check">
+                            <div class="icon">チェック4</div>
+                            <input type="checkbox" name="check_category" id="check_category4">
+                        </label>
+                        <label for="check_category5" class="d_check">
+                            <div class="icon">チェックボックス5</div>
+                            <input type="checkbox" name="check_category" id="check_category5">
+                        </label>
+                        <label for="check_category6" class="d_check">
+                            <div class="icon">チェック6</div>
+                            <input type="checkbox" name="check_category" id="check_category6">
+                        </label>
+                        <label for="check_category7" class="d_check">
+                            <div class="icon">チェックボックス7</div>
+                            <input type="checkbox" name="check_category" id="check_category7">
+                        </label>
+                        <label for="check_category8" class="d_check">
+                            <div class="icon">チェック8</div>
+                            <input type="checkbox" name="check_category" id="check_category8">
+                        </label>
+                    </div>
+                </div>
+
+                <!-- 工場 -->
+                <div class="item" id="factory_item">
+                    <div class="title_area">
+                        <div class="d_title">工場</div>
+                        <div class="btn_area">
+                            <button class="d_btn btn_select">全選択</button>
+                            <button class="d_btn btn_cancel">クリア</button>
+                        </div>
+                    </div>
+                    <div class="check_area">
+                        <label for="check_factory1" class="d_check">
+                            <div class="icon">工場1</div>
+                            <input type="checkbox" name="check_factory" id="check_factory1" checked>
+                        </label>
+                        <label for="check_factory2" class="d_check">
+                            <div class="icon">工場2</div>
+                            <input type="checkbox" name="check_factory" id="check_factory2">
+                        </label>
+                        <label for="check_factory3" class="d_check">
+                            <div class="icon">工場3</div>
+                            <input type="checkbox" name="check_factory" id="check_factory3">
+                        </label>
+                        <label for="check_factory4" class="d_check">
+                            <div class="icon">工場4</div>
+                            <input type="checkbox" name="check_factory" id="check_factory4">
+                        </label>
+                        <label for="check_factory5" class="d_check">
+                            <div class="icon">工場5</div>
+                            <input type="checkbox" name="check_factory" id="check_factory5">
+                        </label>
+                    </div>
+                </div>
+
+                <!-- 営業倉庫 -->
+                <div class="item" id="warehouse_item">
+                    <div class="title_area">
+                        <div class="d_title">営業倉庫</div>
+                        <div class="btn_area">
+                            <button class="d_btn btn_select">全選択</button>
+                            <button class="d_btn btn_cancel">クリア</button>
+                        </div>
+                    </div>
+                    <div class="check_area">
+                        <label for="check_warehouse1" class="d_check">
+                            <div class="icon">倉庫1</div>
+                            <input type="checkbox" name="check_warehouse" id="check_warehouse1">
+                        </label>
+                        <label for="check_warehouse2" class="d_check">
+                            <div class="icon">倉庫2</div>
+                            <input type="checkbox" name="check_warehouse" id="check_warehouse2">
+                        </label>
+                        <label for="check_warehouse3" class="d_check">
+                            <div class="icon">倉庫3</div>
+                            <input type="checkbox" name="check_warehouse" id="check_warehouse3">
+                        </label>
+                        <label for="check_warehouse4" class="d_check">
+                            <div class="icon">倉庫4</div>
+                            <input type="checkbox" name="check_warehouse" id="check_warehouse4">
+                        </label>
+                        <label for="check_warehouse5" class="d_check">
+                            <div class="icon">倉庫5</div>
+                            <input type="checkbox" name="check_warehouse" id="check_warehouse5">
+                        </label>
+                        <label for="check_warehouse6" class="d_check">
+                            <div class="icon">倉庫6</div>
+                            <input type="checkbox" name="check_warehouse" id="check_warehouse6">
+                        </label>
+                    </div>
+                </div>
+
+                <!-- 在庫 -->
+                <div class="item" id="stock_item">
+                    <div class="title_area">
+                        <div class="d_title">在庫</div>
+                        <div class="btn_area">
+                            <button class="d_btn btn_select">全選択</button>
+                            <button class="d_btn btn_cancel">クリア</button>
+                        </div>
+                    </div>
+                    <div class="check_area">
+                        <label for="check_stock1" class="d_check">
+                            <div class="icon">在庫1</div>
+                            <input type="checkbox" name="check_stock" id="check_stock1">
+                        </label>
+                        <label for="check_stock2" class="d_check">
+                            <div class="icon">在庫2</div>
+                            <input type="checkbox" name="check_stock" id="check_stock2">
+                        </label>
+                        <label for="check_stock3" class="d_check">
+                            <div class="icon">在庫3</div>
+                            <input type="checkbox" name="check_stock" id="check_stock3">
+                        </label>
+                        <label for="check_stock4" class="d_check">
+                            <div class="icon">在庫4</div>
+                            <input type="checkbox" name="check_stock" id="check_stock4">
+                        </label>
+                        <label for="check_stock5" class="d_check">
+                            <div class="icon">在庫5</div>
+                            <input type="checkbox" name="check_stock" id="check_stock5">
+                        </label>
+                        <label for="check_stock6" class="d_check">
+                            <div class="icon">在庫5</div>
+                            <input type="checkbox" name="check_stock" id="check_stock6">
+                        </label>
+                        <label for="check_stock7" class="d_check">
+                            <div class="icon">在庫7</div>
+                            <input type="checkbox" name="check_stock" id="check_stock7">
+                        </label>
+                    </div>
+                </div>
+
+                <!-- 製品名 -->
+                <div class="item" id="product_name_item">
+                    <div class="title_area">
+                        <div class="d_title">製品名</div>
+                    </div>
+                    <div class="text_area">
+                        <input type="text" class="d_i_text" placeholder="製品名">
+                    </div>
+                    <div class="btn_area">
+                        <button class="d_btn btn_select">選択</button>
+                        <button class="d_btn btn_cancel">クリア</button>
+                    </div>
+                    <div class="view_area">
+                        <div>あいおうた</div>
+                        <div>あいおうた</div>
+                        <div>あいおうた</div>
+                        <div>あいおうた</div>
+                        <div>あいおうた</div>
+                        <div>あいおうた</div>
+                        <div>あいおうた</div>
+                        <div>あいおうた</div>
+                        <div>あいおうた</div>
+                        <div>あいおうた</div>
+                    </div>
+                </div>
+
+                <!-- 製品コード -->
+                <div class="item" id="product_code_item">
+                    <div class="title_area">
+                        <div class="d_title">製品コード</div>
+                    </div>
+                    <div class="text_area">
+                        <input type="number" class="d_i_number" placeholder="上5桁" min="10000" max="99999">
+                        <input type="number" class="d_i_number" placeholder="上5桁" min="10000" max="99999">
+                        <input type="number" class="d_i_number" placeholder="上5桁" min="10000" max="99999">
+                        <input type="number" class="d_i_number" placeholder="上5桁" min="10000" max="99999">
+                        <a href="" class="d_link">コード表</a>
+                    </div>
+                </div>
+
+                <!-- 号機 -->
+                <div class="item" id="machine_item">
+                    <div class="title_area">
+                        <div class="d_title flex_title">号機</div>
+                    </div>
+                    <div class="text_area">
+                        <input type="number" class="d_i_number_s" placeholder="号機" min="1">
+                    </div>
+                </div>
+
+                <!-- m表示 -->
+                <div class="item" id="view_type_item">
+                    <div class="title_area">
+                        <div class="d_title flex_title">表示種別</div>
+                    </div>
+                    <div class="radio_area">
+                        <label for="radio_view_type_m" class="d_radio">
+                            <div class="icon">表示1</div>
+                            <input type="radio" name="radio_view_type" id="radio_view_type_m" checked>
+                        </label>
+                        <label for="radio_view_type_kumi" class="d_radio">
+                            <div class="icon">表示2</div>
+                            <input type="radio" name="radio_view_type" id="radio_view_type_kumi">
+                        </label>
+                        <label for="radio_view_type_teijaku" class="d_radio">
+                            <div class="icon">表示3</div>
+                            <input type="radio" name="radio_view_type" id="radio_view_type_teijaku">
+                        </label>
+                        <div class="d_radio_cursor" id="radio_view_type_cursor"></div>
+                    </div>
+                </div>
+
+                <!-- 並び替え -->
+                <div class="item" id="sort_item">
+                    <div class="title_area">
+                        <div class="d_title flex_title">並び替え</div>
+                    </div>
+                    <div class="check_area">
+                        <label for="check_sort1" class="d_check">
+                            <div class="icon">大品種</div>
+                            <input type="checkbox" name="check_sort" id="check_sort1">
+                        </label>
+                        <label for="check_sort2" class="d_check">
+                            <div class="icon">中品種</div>
+                            <input type="checkbox" name="check_sort" id="check_sort2">
+                        </label>
+                    </div>
+                </div>
+                
+                <!-- 件数 -->
+                <div class="item" id="count_item">
+                    <div class="title_area">
+                        <div class="d_title flex_title">件数</div>
+                    </div>
+                    <div class="list_area">
+                        <select name="" id="" class="d_list">
+                            <option value="10">10</option>
+                            <option value="20">20</option>
+                            <option value="50">50</option>
+                            <option value="100">100</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="foot">
+
+        </div>
+    </body>
+
+    <!-- JS -->
+    <script src="code.js"></script>
+
+</html>
