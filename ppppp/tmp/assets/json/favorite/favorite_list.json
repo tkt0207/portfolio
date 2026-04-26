@@ -1,0 +1,74 @@
+[
+    {
+        "id": 0,
+        "name": "近畿",
+        "d_name":"CUST",
+        "t_name":"kinki",
+        "type":0, 
+        "count":50,
+        "filters":[
+            {
+                "col_no":2,
+                "type":3,
+                "content":"234"
+            }
+        ], 
+        "sorts":[
+            {
+                "col_no":4,
+                "prim":2,
+                "type":1
+            }
+        ],
+        "views":[false,true,false,false,true],
+        "order":[4,2,1,6,3,8,9,0,5,7]
+    },
+    {
+        "id": 1,
+        "name": "ごはん",
+        "d_name":"ITEM",
+        "t_name":"food",
+        "type":0, 
+        "count":20,
+        "filters":[
+            {
+                "col_no":2,
+                "type":3,
+                "content":"1000"
+            }
+        ], 
+        "sorts":[
+            {
+                "col_no":0,
+                "prim":1,
+                "type":1
+            }
+        ],
+        "views":[false,true,true],
+        "order":[1,2,0]
+    },
+    {
+        "id": 3,
+        "name": "在庫",
+        "d_name":"ITEM_STOCK",
+        "t_name":"stock",
+        "type":0, 
+        "count":100,
+        "filters":[
+            {
+                "col_no":1,
+                "type":2,
+                "content":"100"
+            }
+        ], 
+        "sorts":[
+            {
+                "col_no":1,
+                "prim":1,
+                "type":1
+            }
+        ],
+        "views":[],
+        "order":[]
+    }
+]

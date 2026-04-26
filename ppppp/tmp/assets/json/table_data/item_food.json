@@ -1,0 +1,2402 @@
+[
+    {
+        "item": "pz10010",
+        "itemcate": "食品",
+        "itemprice": "20400"
+    },
+    {
+        "item": "jb10020",
+        "itemcate": "食品",
+        "itemprice": "27400"
+    },
+    {
+        "item": "ed10026",
+        "itemcate": "食品",
+        "itemprice": "1700"
+    },
+    {
+        "item": "gr10029",
+        "itemcate": "食品",
+        "itemprice": "25800"
+    },
+    {
+        "item": "ob10036",
+        "itemcate": "食品",
+        "itemprice": "9000"
+    },
+    {
+        "item": "dr10038",
+        "itemcate": "食品",
+        "itemprice": "4100"
+    },
+    {
+        "item": "oo10041",
+        "itemcate": "食品",
+        "itemprice": "8300"
+    },
+    {
+        "item": "cz10043",
+        "itemcate": "食品",
+        "itemprice": "19100"
+    },
+    {
+        "item": "jy10047",
+        "itemcate": "食品",
+        "itemprice": "15700"
+    },
+    {
+        "item": "rp10058",
+        "itemcate": "食品",
+        "itemprice": "1200"
+    },
+    {
+        "item": "wc10063",
+        "itemcate": "食品",
+        "itemprice": "2400"
+    },
+    {
+        "item": "in10065",
+        "itemcate": "食品",
+        "itemprice": "29800"
+    },
+    {
+        "item": "fh10071",
+        "itemcate": "食品",
+        "itemprice": "8700"
+    },
+    {
+        "item": "kc10077",
+        "itemcate": "食品",
+        "itemprice": "9400"
+    },
+    {
+        "item": "jg10081",
+        "itemcate": "食品",
+        "itemprice": "12100"
+    },
+    {
+        "item": "tu10090",
+        "itemcate": "食品",
+        "itemprice": "23000"
+    },
+    {
+        "item": "hf10125",
+        "itemcate": "食品",
+        "itemprice": "14600"
+    },
+    {
+        "item": "fz10128",
+        "itemcate": "食品",
+        "itemprice": "9400"
+    },
+    {
+        "item": "kx10134",
+        "itemcate": "食品",
+        "itemprice": "4600"
+    },
+    {
+        "item": "ok10135",
+        "itemcate": "食品",
+        "itemprice": "4200"
+    },
+    {
+        "item": "tx10136",
+        "itemcate": "食品",
+        "itemprice": "21200"
+    },
+    {
+        "item": "uy10142",
+        "itemcate": "食品",
+        "itemprice": "21800"
+    },
+    {
+        "item": "ut10150",
+        "itemcate": "食品",
+        "itemprice": "6900"
+    },
+    {
+        "item": "yu10160",
+        "itemcate": "食品",
+        "itemprice": "16600"
+    },
+    {
+        "item": "am10167",
+        "itemcate": "食品",
+        "itemprice": "24200"
+    },
+    {
+        "item": "hd10172",
+        "itemcate": "食品",
+        "itemprice": "19600"
+    },
+    {
+        "item": "ap10186",
+        "itemcate": "食品",
+        "itemprice": "27700"
+    },
+    {
+        "item": "na10197",
+        "itemcate": "食品",
+        "itemprice": "28300"
+    },
+    {
+        "item": "wk10199",
+        "itemcate": "食品",
+        "itemprice": "14300"
+    },
+    {
+        "item": "bf10201",
+        "itemcate": "食品",
+        "itemprice": "3800"
+    },
+    {
+        "item": "do10227",
+        "itemcate": "食品",
+        "itemprice": "6900"
+    },
+    {
+        "item": "ks10229",
+        "itemcate": "食品",
+        "itemprice": "20900"
+    },
+    {
+        "item": "in10231",
+        "itemcate": "食品",
+        "itemprice": "13500"
+    },
+    {
+        "item": "gi10240",
+        "itemcate": "食品",
+        "itemprice": "18400"
+    },
+    {
+        "item": "pn10247",
+        "itemcate": "食品",
+        "itemprice": "1600"
+    },
+    {
+        "item": "yf10256",
+        "itemcate": "食品",
+        "itemprice": "2400"
+    },
+    {
+        "item": "qg10258",
+        "itemcate": "食品",
+        "itemprice": "1600"
+    },
+    {
+        "item": "xe10259",
+        "itemcate": "食品",
+        "itemprice": "13000"
+    },
+    {
+        "item": "na10260",
+        "itemcate": "食品",
+        "itemprice": "23200"
+    },
+    {
+        "item": "ou10262",
+        "itemcate": "食品",
+        "itemprice": "6300"
+    },
+    {
+        "item": "zp10265",
+        "itemcate": "食品",
+        "itemprice": "24800"
+    },
+    {
+        "item": "hy10277",
+        "itemcate": "食品",
+        "itemprice": "2400"
+    },
+    {
+        "item": "zi10282",
+        "itemcate": "食品",
+        "itemprice": "5400"
+    },
+    {
+        "item": "ev10294",
+        "itemcate": "食品",
+        "itemprice": "9900"
+    },
+    {
+        "item": "ac10306",
+        "itemcate": "食品",
+        "itemprice": "29700"
+    },
+    {
+        "item": "uf10309",
+        "itemcate": "食品",
+        "itemprice": "9800"
+    },
+    {
+        "item": "fh10347",
+        "itemcate": "食品",
+        "itemprice": "9600"
+    },
+    {
+        "item": "oy10357",
+        "itemcate": "食品",
+        "itemprice": "9400"
+    },
+    {
+        "item": "sx10362",
+        "itemcate": "食品",
+        "itemprice": "23200"
+    },
+    {
+        "item": "gu10373",
+        "itemcate": "食品",
+        "itemprice": "5000"
+    },
+    {
+        "item": "ev10401",
+        "itemcate": "食品",
+        "itemprice": "2900"
+    },
+    {
+        "item": "np10406",
+        "itemcate": "食品",
+        "itemprice": "15900"
+    },
+    {
+        "item": "dl10407",
+        "itemcate": "食品",
+        "itemprice": "12200"
+    },
+    {
+        "item": "uy10409",
+        "itemcate": "食品",
+        "itemprice": "29000"
+    },
+    {
+        "item": "kf10412",
+        "itemcate": "食品",
+        "itemprice": "11400"
+    },
+    {
+        "item": "bs10417",
+        "itemcate": "食品",
+        "itemprice": "20700"
+    },
+    {
+        "item": "fb10418",
+        "itemcate": "食品",
+        "itemprice": "26500"
+    },
+    {
+        "item": "ao10422",
+        "itemcate": "食品",
+        "itemprice": "12900"
+    },
+    {
+        "item": "kr10424",
+        "itemcate": "食品",
+        "itemprice": "10100"
+    },
+    {
+        "item": "pj10428",
+        "itemcate": "食品",
+        "itemprice": "24200"
+    },
+    {
+        "item": "sq10431",
+        "itemcate": "食品",
+        "itemprice": "24300"
+    },
+    {
+        "item": "tb10441",
+        "itemcate": "食品",
+        "itemprice": "9800"
+    },
+    {
+        "item": "hu10456",
+        "itemcate": "食品",
+        "itemprice": "23500"
+    },
+    {
+        "item": "nt10459",
+        "itemcate": "食品",
+        "itemprice": "24100"
+    },
+    {
+        "item": "hw10461",
+        "itemcate": "食品",
+        "itemprice": "6700"
+    },
+    {
+        "item": "dp10465",
+        "itemcate": "食品",
+        "itemprice": "13600"
+    },
+    {
+        "item": "lr10467",
+        "itemcate": "食品",
+        "itemprice": "12800"
+    },
+    {
+        "item": "gn10478",
+        "itemcate": "食品",
+        "itemprice": "11200"
+    },
+    {
+        "item": "hb10486",
+        "itemcate": "食品",
+        "itemprice": "18800"
+    },
+    {
+        "item": "bt10514",
+        "itemcate": "食品",
+        "itemprice": "16200"
+    },
+    {
+        "item": "xt10518",
+        "itemcate": "食品",
+        "itemprice": "21500"
+    },
+    {
+        "item": "ya10521",
+        "itemcate": "食品",
+        "itemprice": "7300"
+    },
+    {
+        "item": "fs10533",
+        "itemcate": "食品",
+        "itemprice": "23800"
+    },
+    {
+        "item": "bo10534",
+        "itemcate": "食品",
+        "itemprice": "22900"
+    },
+    {
+        "item": "ou10542",
+        "itemcate": "食品",
+        "itemprice": "16000"
+    },
+    {
+        "item": "zr10545",
+        "itemcate": "食品",
+        "itemprice": "20800"
+    },
+    {
+        "item": "qc10547",
+        "itemcate": "食品",
+        "itemprice": "15600"
+    },
+    {
+        "item": "lh10552",
+        "itemcate": "食品",
+        "itemprice": "10900"
+    },
+    {
+        "item": "vo10556",
+        "itemcate": "食品",
+        "itemprice": "15000"
+    },
+    {
+        "item": "vm10557",
+        "itemcate": "食品",
+        "itemprice": "9500"
+    },
+    {
+        "item": "dc10560",
+        "itemcate": "食品",
+        "itemprice": "10400"
+    },
+    {
+        "item": "wn10562",
+        "itemcate": "食品",
+        "itemprice": "13200"
+    },
+    {
+        "item": "qe10567",
+        "itemcate": "食品",
+        "itemprice": "3100"
+    },
+    {
+        "item": "jj10570",
+        "itemcate": "食品",
+        "itemprice": "11300"
+    },
+    {
+        "item": "bt10577",
+        "itemcate": "食品",
+        "itemprice": "10600"
+    },
+    {
+        "item": "yn10583",
+        "itemcate": "食品",
+        "itemprice": "15500"
+    },
+    {
+        "item": "cg10585",
+        "itemcate": "食品",
+        "itemprice": "8200"
+    },
+    {
+        "item": "ez10595",
+        "itemcate": "食品",
+        "itemprice": "5700"
+    },
+    {
+        "item": "id10598",
+        "itemcate": "食品",
+        "itemprice": "22400"
+    },
+    {
+        "item": "th10605",
+        "itemcate": "食品",
+        "itemprice": "17800"
+    },
+    {
+        "item": "rr10608",
+        "itemcate": "食品",
+        "itemprice": "21700"
+    },
+    {
+        "item": "dm10617",
+        "itemcate": "食品",
+        "itemprice": "26500"
+    },
+    {
+        "item": "ot10623",
+        "itemcate": "食品",
+        "itemprice": "20800"
+    },
+    {
+        "item": "wa10624",
+        "itemcate": "食品",
+        "itemprice": "11300"
+    },
+    {
+        "item": "ra10635",
+        "itemcate": "食品",
+        "itemprice": "29900"
+    },
+    {
+        "item": "ie10655",
+        "itemcate": "食品",
+        "itemprice": "10600"
+    },
+    {
+        "item": "tn10671",
+        "itemcate": "食品",
+        "itemprice": "16900"
+    },
+    {
+        "item": "sg10673",
+        "itemcate": "食品",
+        "itemprice": "7400"
+    },
+    {
+        "item": "vo10676",
+        "itemcate": "食品",
+        "itemprice": "14000"
+    },
+    {
+        "item": "iv10677",
+        "itemcate": "食品",
+        "itemprice": "27700"
+    },
+    {
+        "item": "cm10688",
+        "itemcate": "食品",
+        "itemprice": "5000"
+    },
+    {
+        "item": "hl10704",
+        "itemcate": "食品",
+        "itemprice": "10000"
+    },
+    {
+        "item": "lt10716",
+        "itemcate": "食品",
+        "itemprice": "2400"
+    },
+    {
+        "item": "iq10718",
+        "itemcate": "食品",
+        "itemprice": "13800"
+    },
+    {
+        "item": "st10719",
+        "itemcate": "食品",
+        "itemprice": "4700"
+    },
+    {
+        "item": "uo10726",
+        "itemcate": "食品",
+        "itemprice": "13700"
+    },
+    {
+        "item": "yy10727",
+        "itemcate": "食品",
+        "itemprice": "15100"
+    },
+    {
+        "item": "wt10729",
+        "itemcate": "食品",
+        "itemprice": "12800"
+    },
+    {
+        "item": "eh10746",
+        "itemcate": "食品",
+        "itemprice": "23600"
+    },
+    {
+        "item": "wo10759",
+        "itemcate": "食品",
+        "itemprice": "27400"
+    },
+    {
+        "item": "ei10770",
+        "itemcate": "食品",
+        "itemprice": "28900"
+    },
+    {
+        "item": "it10772",
+        "itemcate": "食品",
+        "itemprice": "10800"
+    },
+    {
+        "item": "rp10776",
+        "itemcate": "食品",
+        "itemprice": "13700"
+    },
+    {
+        "item": "xq10783",
+        "itemcate": "食品",
+        "itemprice": "29700"
+    },
+    {
+        "item": "ww10785",
+        "itemcate": "食品",
+        "itemprice": "1600"
+    },
+    {
+        "item": "uv10790",
+        "itemcate": "食品",
+        "itemprice": "14500"
+    },
+    {
+        "item": "gj10793",
+        "itemcate": "食品",
+        "itemprice": "5900"
+    },
+    {
+        "item": "cq10799",
+        "itemcate": "食品",
+        "itemprice": "17400"
+    },
+    {
+        "item": "lm10803",
+        "itemcate": "食品",
+        "itemprice": "23700"
+    },
+    {
+        "item": "nl10808",
+        "itemcate": "食品",
+        "itemprice": "20000"
+    },
+    {
+        "item": "pv10809",
+        "itemcate": "食品",
+        "itemprice": "25900"
+    },
+    {
+        "item": "hn10835",
+        "itemcate": "食品",
+        "itemprice": "18500"
+    },
+    {
+        "item": "qr10837",
+        "itemcate": "食品",
+        "itemprice": "18900"
+    },
+    {
+        "item": "el10860",
+        "itemcate": "食品",
+        "itemprice": "7300"
+    },
+    {
+        "item": "kh10863",
+        "itemcate": "食品",
+        "itemprice": "20900"
+    },
+    {
+        "item": "hf10867",
+        "itemcate": "食品",
+        "itemprice": "25200"
+    },
+    {
+        "item": "dz10873",
+        "itemcate": "食品",
+        "itemprice": "19400"
+    },
+    {
+        "item": "bb10880",
+        "itemcate": "食品",
+        "itemprice": "8200"
+    },
+    {
+        "item": "mq10886",
+        "itemcate": "食品",
+        "itemprice": "14700"
+    },
+    {
+        "item": "qw10889",
+        "itemcate": "食品",
+        "itemprice": "2600"
+    },
+    {
+        "item": "kr10890",
+        "itemcate": "食品",
+        "itemprice": "28300"
+    },
+    {
+        "item": "ho10905",
+        "itemcate": "食品",
+        "itemprice": "25800"
+    },
+    {
+        "item": "ua10918",
+        "itemcate": "食品",
+        "itemprice": "7200"
+    },
+    {
+        "item": "oy10926",
+        "itemcate": "食品",
+        "itemprice": "12400"
+    },
+    {
+        "item": "mp10928",
+        "itemcate": "食品",
+        "itemprice": "15700"
+    },
+    {
+        "item": "oz10934",
+        "itemcate": "食品",
+        "itemprice": "16700"
+    },
+    {
+        "item": "ba10938",
+        "itemcate": "食品",
+        "itemprice": "26000"
+    },
+    {
+        "item": "gd10944",
+        "itemcate": "食品",
+        "itemprice": "2500"
+    },
+    {
+        "item": "ot10945",
+        "itemcate": "食品",
+        "itemprice": "12900"
+    },
+    {
+        "item": "uy10951",
+        "itemcate": "食品",
+        "itemprice": "23600"
+    },
+    {
+        "item": "vk10956",
+        "itemcate": "食品",
+        "itemprice": "12600"
+    },
+    {
+        "item": "xg10962",
+        "itemcate": "食品",
+        "itemprice": "7700"
+    },
+    {
+        "item": "lp10967",
+        "itemcate": "食品",
+        "itemprice": "28600"
+    },
+    {
+        "item": "nt10971",
+        "itemcate": "食品",
+        "itemprice": "25300"
+    },
+    {
+        "item": "ci10975",
+        "itemcate": "食品",
+        "itemprice": "19600"
+    },
+    {
+        "item": "ms10976",
+        "itemcate": "食品",
+        "itemprice": "25800"
+    },
+    {
+        "item": "iq10983",
+        "itemcate": "食品",
+        "itemprice": "22000"
+    },
+    {
+        "item": "il11001",
+        "itemcate": "食品",
+        "itemprice": "2400"
+    },
+    {
+        "item": "po11002",
+        "itemcate": "食品",
+        "itemprice": "7700"
+    },
+    {
+        "item": "fk11008",
+        "itemcate": "食品",
+        "itemprice": "6500"
+    },
+    {
+        "item": "mq11015",
+        "itemcate": "食品",
+        "itemprice": "14700"
+    },
+    {
+        "item": "bj11023",
+        "itemcate": "食品",
+        "itemprice": "9500"
+    },
+    {
+        "item": "sw11040",
+        "itemcate": "食品",
+        "itemprice": "13500"
+    },
+    {
+        "item": "le11041",
+        "itemcate": "食品",
+        "itemprice": "23000"
+    },
+    {
+        "item": "oa11052",
+        "itemcate": "食品",
+        "itemprice": "28100"
+    },
+    {
+        "item": "qd11055",
+        "itemcate": "食品",
+        "itemprice": "2200"
+    },
+    {
+        "item": "rm11060",
+        "itemcate": "食品",
+        "itemprice": "19400"
+    },
+    {
+        "item": "ws11081",
+        "itemcate": "食品",
+        "itemprice": "12000"
+    },
+    {
+        "item": "zr11088",
+        "itemcate": "食品",
+        "itemprice": "14100"
+    },
+    {
+        "item": "xt11092",
+        "itemcate": "食品",
+        "itemprice": "20400"
+    },
+    {
+        "item": "nv11095",
+        "itemcate": "食品",
+        "itemprice": "17000"
+    },
+    {
+        "item": "wd11096",
+        "itemcate": "食品",
+        "itemprice": "28700"
+    },
+    {
+        "item": "vq11104",
+        "itemcate": "食品",
+        "itemprice": "13800"
+    },
+    {
+        "item": "ci11112",
+        "itemcate": "食品",
+        "itemprice": "4300"
+    },
+    {
+        "item": "wb11123",
+        "itemcate": "食品",
+        "itemprice": "12900"
+    },
+    {
+        "item": "ph11126",
+        "itemcate": "食品",
+        "itemprice": "9800"
+    },
+    {
+        "item": "xv11132",
+        "itemcate": "食品",
+        "itemprice": "2700"
+    },
+    {
+        "item": "ud11140",
+        "itemcate": "食品",
+        "itemprice": "23400"
+    },
+    {
+        "item": "yt11148",
+        "itemcate": "食品",
+        "itemprice": "1600"
+    },
+    {
+        "item": "zd11149",
+        "itemcate": "食品",
+        "itemprice": "19400"
+    },
+    {
+        "item": "xp11174",
+        "itemcate": "食品",
+        "itemprice": "28900"
+    },
+    {
+        "item": "fn11175",
+        "itemcate": "食品",
+        "itemprice": "10800"
+    },
+    {
+        "item": "jc11180",
+        "itemcate": "食品",
+        "itemprice": "16900"
+    },
+    {
+        "item": "rc11182",
+        "itemcate": "食品",
+        "itemprice": "13500"
+    },
+    {
+        "item": "vw11187",
+        "itemcate": "食品",
+        "itemprice": "27500"
+    },
+    {
+        "item": "qq11194",
+        "itemcate": "食品",
+        "itemprice": "18500"
+    },
+    {
+        "item": "pu11196",
+        "itemcate": "食品",
+        "itemprice": "4300"
+    },
+    {
+        "item": "as11200",
+        "itemcate": "食品",
+        "itemprice": "14000"
+    },
+    {
+        "item": "ru11213",
+        "itemcate": "食品",
+        "itemprice": "26900"
+    },
+    {
+        "item": "as11218",
+        "itemcate": "食品",
+        "itemprice": "4100"
+    },
+    {
+        "item": "ry11220",
+        "itemcate": "食品",
+        "itemprice": "13400"
+    },
+    {
+        "item": "xe11228",
+        "itemcate": "食品",
+        "itemprice": "10000"
+    },
+    {
+        "item": "qx11230",
+        "itemcate": "食品",
+        "itemprice": "11600"
+    },
+    {
+        "item": "vi11233",
+        "itemcate": "食品",
+        "itemprice": "25200"
+    },
+    {
+        "item": "nj11236",
+        "itemcate": "食品",
+        "itemprice": "1600"
+    },
+    {
+        "item": "ij11237",
+        "itemcate": "食品",
+        "itemprice": "6000"
+    },
+    {
+        "item": "ph11241",
+        "itemcate": "食品",
+        "itemprice": "21700"
+    },
+    {
+        "item": "xi11242",
+        "itemcate": "食品",
+        "itemprice": "14000"
+    },
+    {
+        "item": "hu11248",
+        "itemcate": "食品",
+        "itemprice": "15200"
+    },
+    {
+        "item": "je11253",
+        "itemcate": "食品",
+        "itemprice": "4700"
+    },
+    {
+        "item": "kk11263",
+        "itemcate": "食品",
+        "itemprice": "23900"
+    },
+    {
+        "item": "iy11267",
+        "itemcate": "食品",
+        "itemprice": "3500"
+    },
+    {
+        "item": "rv11269",
+        "itemcate": "食品",
+        "itemprice": "19200"
+    },
+    {
+        "item": "ak11287",
+        "itemcate": "食品",
+        "itemprice": "9700"
+    },
+    {
+        "item": "tt11288",
+        "itemcate": "食品",
+        "itemprice": "27000"
+    },
+    {
+        "item": "jw11294",
+        "itemcate": "食品",
+        "itemprice": "7200"
+    },
+    {
+        "item": "qr11296",
+        "itemcate": "食品",
+        "itemprice": "4900"
+    },
+    {
+        "item": "cv11300",
+        "itemcate": "食品",
+        "itemprice": "7200"
+    },
+    {
+        "item": "by11305",
+        "itemcate": "食品",
+        "itemprice": "15900"
+    },
+    {
+        "item": "gf11306",
+        "itemcate": "食品",
+        "itemprice": "20600"
+    },
+    {
+        "item": "rr11310",
+        "itemcate": "食品",
+        "itemprice": "10800"
+    },
+    {
+        "item": "pa11311",
+        "itemcate": "食品",
+        "itemprice": "13900"
+    },
+    {
+        "item": "gw11314",
+        "itemcate": "食品",
+        "itemprice": "23800"
+    },
+    {
+        "item": "mk11318",
+        "itemcate": "食品",
+        "itemprice": "9800"
+    },
+    {
+        "item": "dm11330",
+        "itemcate": "食品",
+        "itemprice": "17500"
+    },
+    {
+        "item": "vq11338",
+        "itemcate": "食品",
+        "itemprice": "27700"
+    },
+    {
+        "item": "zg11344",
+        "itemcate": "食品",
+        "itemprice": "6800"
+    },
+    {
+        "item": "uq11355",
+        "itemcate": "食品",
+        "itemprice": "9500"
+    },
+    {
+        "item": "dm11360",
+        "itemcate": "食品",
+        "itemprice": "16000"
+    },
+    {
+        "item": "ze11361",
+        "itemcate": "食品",
+        "itemprice": "24600"
+    },
+    {
+        "item": "pg11363",
+        "itemcate": "食品",
+        "itemprice": "23100"
+    },
+    {
+        "item": "mj11369",
+        "itemcate": "食品",
+        "itemprice": "15500"
+    },
+    {
+        "item": "hd11379",
+        "itemcate": "食品",
+        "itemprice": "5700"
+    },
+    {
+        "item": "fv11387",
+        "itemcate": "食品",
+        "itemprice": "13900"
+    },
+    {
+        "item": "ah11388",
+        "itemcate": "食品",
+        "itemprice": "17400"
+    },
+    {
+        "item": "im11389",
+        "itemcate": "食品",
+        "itemprice": "12400"
+    },
+    {
+        "item": "us11390",
+        "itemcate": "食品",
+        "itemprice": "17400"
+    },
+    {
+        "item": "vw11394",
+        "itemcate": "食品",
+        "itemprice": "10100"
+    },
+    {
+        "item": "bk11399",
+        "itemcate": "食品",
+        "itemprice": "7300"
+    },
+    {
+        "item": "km11409",
+        "itemcate": "食品",
+        "itemprice": "16200"
+    },
+    {
+        "item": "kz11414",
+        "itemcate": "食品",
+        "itemprice": "23100"
+    },
+    {
+        "item": "te11415",
+        "itemcate": "食品",
+        "itemprice": "20200"
+    },
+    {
+        "item": "ho11426",
+        "itemcate": "食品",
+        "itemprice": "15500"
+    },
+    {
+        "item": "br11434",
+        "itemcate": "食品",
+        "itemprice": "10900"
+    },
+    {
+        "item": "mb11437",
+        "itemcate": "食品",
+        "itemprice": "19300"
+    },
+    {
+        "item": "jp11439",
+        "itemcate": "食品",
+        "itemprice": "20000"
+    },
+    {
+        "item": "ez11441",
+        "itemcate": "食品",
+        "itemprice": "8700"
+    },
+    {
+        "item": "tf11444",
+        "itemcate": "食品",
+        "itemprice": "27000"
+    },
+    {
+        "item": "jc11448",
+        "itemcate": "食品",
+        "itemprice": "13400"
+    },
+    {
+        "item": "di11455",
+        "itemcate": "食品",
+        "itemprice": "9900"
+    },
+    {
+        "item": "vz11457",
+        "itemcate": "食品",
+        "itemprice": "24700"
+    },
+    {
+        "item": "yy11462",
+        "itemcate": "食品",
+        "itemprice": "10000"
+    },
+    {
+        "item": "wa11474",
+        "itemcate": "食品",
+        "itemprice": "17500"
+    },
+    {
+        "item": "gx11489",
+        "itemcate": "食品",
+        "itemprice": "23200"
+    },
+    {
+        "item": "so11492",
+        "itemcate": "食品",
+        "itemprice": "4200"
+    },
+    {
+        "item": "mz11493",
+        "itemcate": "食品",
+        "itemprice": "21400"
+    },
+    {
+        "item": "yu11494",
+        "itemcate": "食品",
+        "itemprice": "26800"
+    },
+    {
+        "item": "aw11499",
+        "itemcate": "食品",
+        "itemprice": "23300"
+    },
+    {
+        "item": "ec11501",
+        "itemcate": "食品",
+        "itemprice": "14000"
+    },
+    {
+        "item": "sg11508",
+        "itemcate": "食品",
+        "itemprice": "20000"
+    },
+    {
+        "item": "wt11516",
+        "itemcate": "食品",
+        "itemprice": "10900"
+    },
+    {
+        "item": "aj11543",
+        "itemcate": "食品",
+        "itemprice": "1300"
+    },
+    {
+        "item": "sp11545",
+        "itemcate": "食品",
+        "itemprice": "27000"
+    },
+    {
+        "item": "bs11551",
+        "itemcate": "食品",
+        "itemprice": "11500"
+    },
+    {
+        "item": "rc11555",
+        "itemcate": "食品",
+        "itemprice": "9300"
+    },
+    {
+        "item": "rn11561",
+        "itemcate": "食品",
+        "itemprice": "13600"
+    },
+    {
+        "item": "be11566",
+        "itemcate": "食品",
+        "itemprice": "5200"
+    },
+    {
+        "item": "ib11567",
+        "itemcate": "食品",
+        "itemprice": "10200"
+    },
+    {
+        "item": "tt11584",
+        "itemcate": "食品",
+        "itemprice": "22000"
+    },
+    {
+        "item": "dq11593",
+        "itemcate": "食品",
+        "itemprice": "11400"
+    },
+    {
+        "item": "zp11603",
+        "itemcate": "食品",
+        "itemprice": "17400"
+    },
+    {
+        "item": "mq11611",
+        "itemcate": "食品",
+        "itemprice": "3100"
+    },
+    {
+        "item": "ob11620",
+        "itemcate": "食品",
+        "itemprice": "27700"
+    },
+    {
+        "item": "ew11624",
+        "itemcate": "食品",
+        "itemprice": "12600"
+    },
+    {
+        "item": "jt11628",
+        "itemcate": "食品",
+        "itemprice": "26500"
+    },
+    {
+        "item": "cf11641",
+        "itemcate": "食品",
+        "itemprice": "2500"
+    },
+    {
+        "item": "nd11644",
+        "itemcate": "食品",
+        "itemprice": "9300"
+    },
+    {
+        "item": "nj11647",
+        "itemcate": "食品",
+        "itemprice": "4200"
+    },
+    {
+        "item": "uo11648",
+        "itemcate": "食品",
+        "itemprice": "9500"
+    },
+    {
+        "item": "gu11660",
+        "itemcate": "食品",
+        "itemprice": "29100"
+    },
+    {
+        "item": "ix11662",
+        "itemcate": "食品",
+        "itemprice": "29800"
+    },
+    {
+        "item": "yx11667",
+        "itemcate": "食品",
+        "itemprice": "16300"
+    },
+    {
+        "item": "hz11671",
+        "itemcate": "食品",
+        "itemprice": "12000"
+    },
+    {
+        "item": "hn11676",
+        "itemcate": "食品",
+        "itemprice": "11500"
+    },
+    {
+        "item": "gi11679",
+        "itemcate": "食品",
+        "itemprice": "23100"
+    },
+    {
+        "item": "jf11693",
+        "itemcate": "食品",
+        "itemprice": "5400"
+    },
+    {
+        "item": "ds11704",
+        "itemcate": "食品",
+        "itemprice": "13200"
+    },
+    {
+        "item": "wq11708",
+        "itemcate": "食品",
+        "itemprice": "16400"
+    },
+    {
+        "item": "dl11712",
+        "itemcate": "食品",
+        "itemprice": "10000"
+    },
+    {
+        "item": "ue11715",
+        "itemcate": "食品",
+        "itemprice": "8300"
+    },
+    {
+        "item": "pv11719",
+        "itemcate": "食品",
+        "itemprice": "10200"
+    },
+    {
+        "item": "gz11722",
+        "itemcate": "食品",
+        "itemprice": "9000"
+    },
+    {
+        "item": "hy11730",
+        "itemcate": "食品",
+        "itemprice": "26300"
+    },
+    {
+        "item": "wj11731",
+        "itemcate": "食品",
+        "itemprice": "24100"
+    },
+    {
+        "item": "ye11733",
+        "itemcate": "食品",
+        "itemprice": "4300"
+    },
+    {
+        "item": "aq11736",
+        "itemcate": "食品",
+        "itemprice": "9100"
+    },
+    {
+        "item": "jo11738",
+        "itemcate": "食品",
+        "itemprice": "23700"
+    },
+    {
+        "item": "jo11740",
+        "itemcate": "食品",
+        "itemprice": "16900"
+    },
+    {
+        "item": "mt11744",
+        "itemcate": "食品",
+        "itemprice": "7000"
+    },
+    {
+        "item": "oc11747",
+        "itemcate": "食品",
+        "itemprice": "6700"
+    },
+    {
+        "item": "pg11758",
+        "itemcate": "食品",
+        "itemprice": "26500"
+    },
+    {
+        "item": "gq11769",
+        "itemcate": "食品",
+        "itemprice": "23200"
+    },
+    {
+        "item": "zf11770",
+        "itemcate": "食品",
+        "itemprice": "7500"
+    },
+    {
+        "item": "sd11777",
+        "itemcate": "食品",
+        "itemprice": "24600"
+    },
+    {
+        "item": "kq11783",
+        "itemcate": "食品",
+        "itemprice": "25400"
+    },
+    {
+        "item": "zw11789",
+        "itemcate": "食品",
+        "itemprice": "13200"
+    },
+    {
+        "item": "bm11792",
+        "itemcate": "食品",
+        "itemprice": "14600"
+    },
+    {
+        "item": "ex11800",
+        "itemcate": "食品",
+        "itemprice": "24400"
+    },
+    {
+        "item": "nj11825",
+        "itemcate": "食品",
+        "itemprice": "6900"
+    },
+    {
+        "item": "tc11844",
+        "itemcate": "食品",
+        "itemprice": "17400"
+    },
+    {
+        "item": "pi11847",
+        "itemcate": "食品",
+        "itemprice": "9700"
+    },
+    {
+        "item": "vv11850",
+        "itemcate": "食品",
+        "itemprice": "11400"
+    },
+    {
+        "item": "bb11862",
+        "itemcate": "食品",
+        "itemprice": "20900"
+    },
+    {
+        "item": "fy11872",
+        "itemcate": "食品",
+        "itemprice": "11700"
+    },
+    {
+        "item": "gs11876",
+        "itemcate": "食品",
+        "itemprice": "10700"
+    },
+    {
+        "item": "qc11892",
+        "itemcate": "食品",
+        "itemprice": "7600"
+    },
+    {
+        "item": "oj11893",
+        "itemcate": "食品",
+        "itemprice": "6600"
+    },
+    {
+        "item": "fh11896",
+        "itemcate": "食品",
+        "itemprice": "9600"
+    },
+    {
+        "item": "im11897",
+        "itemcate": "食品",
+        "itemprice": "18300"
+    },
+    {
+        "item": "ey11898",
+        "itemcate": "食品",
+        "itemprice": "28800"
+    },
+    {
+        "item": "ao11906",
+        "itemcate": "食品",
+        "itemprice": "15900"
+    },
+    {
+        "item": "hs11908",
+        "itemcate": "食品",
+        "itemprice": "14700"
+    },
+    {
+        "item": "ug11910",
+        "itemcate": "食品",
+        "itemprice": "3800"
+    },
+    {
+        "item": "mt11913",
+        "itemcate": "食品",
+        "itemprice": "24600"
+    },
+    {
+        "item": "il11916",
+        "itemcate": "食品",
+        "itemprice": "25000"
+    },
+    {
+        "item": "gj11929",
+        "itemcate": "食品",
+        "itemprice": "12800"
+    },
+    {
+        "item": "gh11940",
+        "itemcate": "食品",
+        "itemprice": "14900"
+    },
+    {
+        "item": "zi11942",
+        "itemcate": "食品",
+        "itemprice": "2700"
+    },
+    {
+        "item": "pu11952",
+        "itemcate": "食品",
+        "itemprice": "17100"
+    },
+    {
+        "item": "yr11958",
+        "itemcate": "食品",
+        "itemprice": "17200"
+    },
+    {
+        "item": "go11968",
+        "itemcate": "食品",
+        "itemprice": "12300"
+    },
+    {
+        "item": "xx11977",
+        "itemcate": "食品",
+        "itemprice": "4400"
+    },
+    {
+        "item": "bs11991",
+        "itemcate": "食品",
+        "itemprice": "23300"
+    },
+    {
+        "item": "dw11994",
+        "itemcate": "食品",
+        "itemprice": "28800"
+    },
+    {
+        "item": "vz12001",
+        "itemcate": "食品",
+        "itemprice": "29200"
+    },
+    {
+        "item": "az12006",
+        "itemcate": "食品",
+        "itemprice": "10300"
+    },
+    {
+        "item": "af12008",
+        "itemcate": "食品",
+        "itemprice": "28200"
+    },
+    {
+        "item": "kc12009",
+        "itemcate": "食品",
+        "itemprice": "5100"
+    },
+    {
+        "item": "gy12017",
+        "itemcate": "食品",
+        "itemprice": "18500"
+    },
+    {
+        "item": "cp12019",
+        "itemcate": "食品",
+        "itemprice": "19500"
+    },
+    {
+        "item": "nu12020",
+        "itemcate": "食品",
+        "itemprice": "10100"
+    },
+    {
+        "item": "kj12024",
+        "itemcate": "食品",
+        "itemprice": "29900"
+    },
+    {
+        "item": "mq12031",
+        "itemcate": "食品",
+        "itemprice": "2400"
+    },
+    {
+        "item": "jl12033",
+        "itemcate": "食品",
+        "itemprice": "10800"
+    },
+    {
+        "item": "zb12038",
+        "itemcate": "食品",
+        "itemprice": "25700"
+    },
+    {
+        "item": "do12047",
+        "itemcate": "食品",
+        "itemprice": "9500"
+    },
+    {
+        "item": "ra12065",
+        "itemcate": "食品",
+        "itemprice": "8700"
+    },
+    {
+        "item": "mx12066",
+        "itemcate": "食品",
+        "itemprice": "25400"
+    },
+    {
+        "item": "mo12073",
+        "itemcate": "食品",
+        "itemprice": "15400"
+    },
+    {
+        "item": "mh12078",
+        "itemcate": "食品",
+        "itemprice": "18300"
+    },
+    {
+        "item": "vj12080",
+        "itemcate": "食品",
+        "itemprice": "29900"
+    },
+    {
+        "item": "js12082",
+        "itemcate": "食品",
+        "itemprice": "28300"
+    },
+    {
+        "item": "eu12083",
+        "itemcate": "食品",
+        "itemprice": "13100"
+    },
+    {
+        "item": "gs12090",
+        "itemcate": "食品",
+        "itemprice": "22300"
+    },
+    {
+        "item": "we12094",
+        "itemcate": "食品",
+        "itemprice": "19000"
+    },
+    {
+        "item": "bz12104",
+        "itemcate": "食品",
+        "itemprice": "10400"
+    },
+    {
+        "item": "qs12105",
+        "itemcate": "食品",
+        "itemprice": "18900"
+    },
+    {
+        "item": "aa12107",
+        "itemcate": "食品",
+        "itemprice": "19500"
+    },
+    {
+        "item": "ov12118",
+        "itemcate": "食品",
+        "itemprice": "1500"
+    },
+    {
+        "item": "oy12122",
+        "itemcate": "食品",
+        "itemprice": "3300"
+    },
+    {
+        "item": "fu12129",
+        "itemcate": "食品",
+        "itemprice": "13300"
+    },
+    {
+        "item": "db12132",
+        "itemcate": "食品",
+        "itemprice": "26700"
+    },
+    {
+        "item": "oy12134",
+        "itemcate": "食品",
+        "itemprice": "8300"
+    },
+    {
+        "item": "vy12135",
+        "itemcate": "食品",
+        "itemprice": "7900"
+    },
+    {
+        "item": "sj12144",
+        "itemcate": "食品",
+        "itemprice": "29900"
+    },
+    {
+        "item": "ip12161",
+        "itemcate": "食品",
+        "itemprice": "14200"
+    },
+    {
+        "item": "xl12168",
+        "itemcate": "食品",
+        "itemprice": "3100"
+    },
+    {
+        "item": "mp12169",
+        "itemcate": "食品",
+        "itemprice": "5700"
+    },
+    {
+        "item": "ns12174",
+        "itemcate": "食品",
+        "itemprice": "21300"
+    },
+    {
+        "item": "ns12181",
+        "itemcate": "食品",
+        "itemprice": "20300"
+    },
+    {
+        "item": "um12190",
+        "itemcate": "食品",
+        "itemprice": "15800"
+    },
+    {
+        "item": "bf12203",
+        "itemcate": "食品",
+        "itemprice": "13600"
+    },
+    {
+        "item": "cq12210",
+        "itemcate": "食品",
+        "itemprice": "1400"
+    },
+    {
+        "item": "dc12211",
+        "itemcate": "食品",
+        "itemprice": "9800"
+    },
+    {
+        "item": "hu12227",
+        "itemcate": "食品",
+        "itemprice": "9800"
+    },
+    {
+        "item": "xz12255",
+        "itemcate": "食品",
+        "itemprice": "9000"
+    },
+    {
+        "item": "jm12260",
+        "itemcate": "食品",
+        "itemprice": "29600"
+    },
+    {
+        "item": "nt12264",
+        "itemcate": "食品",
+        "itemprice": "17300"
+    },
+    {
+        "item": "zt12273",
+        "itemcate": "食品",
+        "itemprice": "7700"
+    },
+    {
+        "item": "ew12274",
+        "itemcate": "食品",
+        "itemprice": "23400"
+    },
+    {
+        "item": "gq12287",
+        "itemcate": "食品",
+        "itemprice": "25800"
+    },
+    {
+        "item": "vj12295",
+        "itemcate": "食品",
+        "itemprice": "3500"
+    },
+    {
+        "item": "nm12298",
+        "itemcate": "食品",
+        "itemprice": "11600"
+    },
+    {
+        "item": "dk12306",
+        "itemcate": "食品",
+        "itemprice": "2500"
+    },
+    {
+        "item": "mo12325",
+        "itemcate": "食品",
+        "itemprice": "8800"
+    },
+    {
+        "item": "ug12328",
+        "itemcate": "食品",
+        "itemprice": "5700"
+    },
+    {
+        "item": "aa12330",
+        "itemcate": "食品",
+        "itemprice": "13600"
+    },
+    {
+        "item": "gc12332",
+        "itemcate": "食品",
+        "itemprice": "9600"
+    },
+    {
+        "item": "js12333",
+        "itemcate": "食品",
+        "itemprice": "25600"
+    },
+    {
+        "item": "vc12335",
+        "itemcate": "食品",
+        "itemprice": "9700"
+    },
+    {
+        "item": "yo12341",
+        "itemcate": "食品",
+        "itemprice": "20500"
+    },
+    {
+        "item": "nh12342",
+        "itemcate": "食品",
+        "itemprice": "8100"
+    },
+    {
+        "item": "fl12345",
+        "itemcate": "食品",
+        "itemprice": "10500"
+    },
+    {
+        "item": "hc12348",
+        "itemcate": "食品",
+        "itemprice": "9300"
+    },
+    {
+        "item": "ga12349",
+        "itemcate": "食品",
+        "itemprice": "22600"
+    },
+    {
+        "item": "rm12352",
+        "itemcate": "食品",
+        "itemprice": "12300"
+    },
+    {
+        "item": "hw12356",
+        "itemcate": "食品",
+        "itemprice": "1200"
+    },
+    {
+        "item": "hv12367",
+        "itemcate": "食品",
+        "itemprice": "18800"
+    },
+    {
+        "item": "bs12380",
+        "itemcate": "食品",
+        "itemprice": "23000"
+    },
+    {
+        "item": "vh12381",
+        "itemcate": "食品",
+        "itemprice": "20400"
+    },
+    {
+        "item": "ct12388",
+        "itemcate": "食品",
+        "itemprice": "18100"
+    },
+    {
+        "item": "mq12390",
+        "itemcate": "食品",
+        "itemprice": "15400"
+    },
+    {
+        "item": "xp12394",
+        "itemcate": "食品",
+        "itemprice": "26300"
+    },
+    {
+        "item": "ba12395",
+        "itemcate": "食品",
+        "itemprice": "5000"
+    },
+    {
+        "item": "fu12396",
+        "itemcate": "食品",
+        "itemprice": "7100"
+    },
+    {
+        "item": "zf12398",
+        "itemcate": "食品",
+        "itemprice": "4800"
+    },
+    {
+        "item": "qk12405",
+        "itemcate": "食品",
+        "itemprice": "6900"
+    },
+    {
+        "item": "ua12429",
+        "itemcate": "食品",
+        "itemprice": "19500"
+    },
+    {
+        "item": "fu12430",
+        "itemcate": "食品",
+        "itemprice": "14100"
+    },
+    {
+        "item": "qc12437",
+        "itemcate": "食品",
+        "itemprice": "16700"
+    },
+    {
+        "item": "oj12439",
+        "itemcate": "食品",
+        "itemprice": "2000"
+    },
+    {
+        "item": "jz12440",
+        "itemcate": "食品",
+        "itemprice": "26300"
+    },
+    {
+        "item": "pi12447",
+        "itemcate": "食品",
+        "itemprice": "12400"
+    },
+    {
+        "item": "vz12453",
+        "itemcate": "食品",
+        "itemprice": "1600"
+    },
+    {
+        "item": "gv12456",
+        "itemcate": "食品",
+        "itemprice": "11200"
+    },
+    {
+        "item": "da12464",
+        "itemcate": "食品",
+        "itemprice": "20300"
+    },
+    {
+        "item": "da12474",
+        "itemcate": "食品",
+        "itemprice": "28800"
+    },
+    {
+        "item": "cr12491",
+        "itemcate": "食品",
+        "itemprice": "19800"
+    },
+    {
+        "item": "qj12505",
+        "itemcate": "食品",
+        "itemprice": "11900"
+    },
+    {
+        "item": "jd12516",
+        "itemcate": "食品",
+        "itemprice": "10100"
+    },
+    {
+        "item": "yr12520",
+        "itemcate": "食品",
+        "itemprice": "9100"
+    },
+    {
+        "item": "ai12521",
+        "itemcate": "食品",
+        "itemprice": "3200"
+    },
+    {
+        "item": "my12527",
+        "itemcate": "食品",
+        "itemprice": "23500"
+    },
+    {
+        "item": "yn12529",
+        "itemcate": "食品",
+        "itemprice": "23700"
+    },
+    {
+        "item": "om12531",
+        "itemcate": "食品",
+        "itemprice": "25000"
+    },
+    {
+        "item": "bt12535",
+        "itemcate": "食品",
+        "itemprice": "14000"
+    },
+    {
+        "item": "xk12540",
+        "itemcate": "食品",
+        "itemprice": "5600"
+    },
+    {
+        "item": "gd12544",
+        "itemcate": "食品",
+        "itemprice": "22100"
+    },
+    {
+        "item": "cy12549",
+        "itemcate": "食品",
+        "itemprice": "22700"
+    },
+    {
+        "item": "el12565",
+        "itemcate": "食品",
+        "itemprice": "9000"
+    },
+    {
+        "item": "xa12572",
+        "itemcate": "食品",
+        "itemprice": "7600"
+    },
+    {
+        "item": "xk12573",
+        "itemcate": "食品",
+        "itemprice": "26400"
+    },
+    {
+        "item": "ek12576",
+        "itemcate": "食品",
+        "itemprice": "18700"
+    },
+    {
+        "item": "jz12579",
+        "itemcate": "食品",
+        "itemprice": "13800"
+    },
+    {
+        "item": "ej12580",
+        "itemcate": "食品",
+        "itemprice": "27300"
+    },
+    {
+        "item": "id12597",
+        "itemcate": "食品",
+        "itemprice": "8700"
+    },
+    {
+        "item": "kw12599",
+        "itemcate": "食品",
+        "itemprice": "25400"
+    },
+    {
+        "item": "uq12602",
+        "itemcate": "食品",
+        "itemprice": "27000"
+    },
+    {
+        "item": "gl12611",
+        "itemcate": "食品",
+        "itemprice": "5400"
+    },
+    {
+        "item": "ch12616",
+        "itemcate": "食品",
+        "itemprice": "5500"
+    },
+    {
+        "item": "cp12626",
+        "itemcate": "食品",
+        "itemprice": "23800"
+    },
+    {
+        "item": "sb12643",
+        "itemcate": "食品",
+        "itemprice": "10900"
+    },
+    {
+        "item": "sv12645",
+        "itemcate": "食品",
+        "itemprice": "11200"
+    },
+    {
+        "item": "jb12647",
+        "itemcate": "食品",
+        "itemprice": "17400"
+    },
+    {
+        "item": "ru12648",
+        "itemcate": "食品",
+        "itemprice": "13300"
+    },
+    {
+        "item": "ir12651",
+        "itemcate": "食品",
+        "itemprice": "7900"
+    },
+    {
+        "item": "wb12655",
+        "itemcate": "食品",
+        "itemprice": "24500"
+    },
+    {
+        "item": "qr12665",
+        "itemcate": "食品",
+        "itemprice": "29900"
+    },
+    {
+        "item": "ye12677",
+        "itemcate": "食品",
+        "itemprice": "3100"
+    },
+    {
+        "item": "fg12678",
+        "itemcate": "食品",
+        "itemprice": "28700"
+    },
+    {
+        "item": "qd12679",
+        "itemcate": "食品",
+        "itemprice": "5800"
+    },
+    {
+        "item": "cg12685",
+        "itemcate": "食品",
+        "itemprice": "2700"
+    },
+    {
+        "item": "fk12703",
+        "itemcate": "食品",
+        "itemprice": "13800"
+    },
+    {
+        "item": "sg12706",
+        "itemcate": "食品",
+        "itemprice": "21700"
+    },
+    {
+        "item": "zz12708",
+        "itemcate": "食品",
+        "itemprice": "18600"
+    },
+    {
+        "item": "yo12709",
+        "itemcate": "食品",
+        "itemprice": "9700"
+    },
+    {
+        "item": "xw12717",
+        "itemcate": "食品",
+        "itemprice": "6900"
+    },
+    {
+        "item": "ov12721",
+        "itemcate": "食品",
+        "itemprice": "15400"
+    },
+    {
+        "item": "zz12723",
+        "itemcate": "食品",
+        "itemprice": "8800"
+    },
+    {
+        "item": "cs12725",
+        "itemcate": "食品",
+        "itemprice": "16000"
+    },
+    {
+        "item": "ks12728",
+        "itemcate": "食品",
+        "itemprice": "7800"
+    },
+    {
+        "item": "tb12735",
+        "itemcate": "食品",
+        "itemprice": "26600"
+    },
+    {
+        "item": "yc12750",
+        "itemcate": "食品",
+        "itemprice": "2100"
+    },
+    {
+        "item": "fl12755",
+        "itemcate": "食品",
+        "itemprice": "28700"
+    },
+    {
+        "item": "ty12767",
+        "itemcate": "食品",
+        "itemprice": "7900"
+    },
+    {
+        "item": "pt12768",
+        "itemcate": "食品",
+        "itemprice": "27900"
+    },
+    {
+        "item": "wm12772",
+        "itemcate": "食品",
+        "itemprice": "12400"
+    },
+    {
+        "item": "vw12775",
+        "itemcate": "食品",
+        "itemprice": "24100"
+    },
+    {
+        "item": "mi12783",
+        "itemcate": "食品",
+        "itemprice": "13700"
+    },
+    {
+        "item": "at12786",
+        "itemcate": "食品",
+        "itemprice": "6800"
+    },
+    {
+        "item": "lp12790",
+        "itemcate": "食品",
+        "itemprice": "29700"
+    },
+    {
+        "item": "pb12791",
+        "itemcate": "食品",
+        "itemprice": "28500"
+    },
+    {
+        "item": "ug12804",
+        "itemcate": "食品",
+        "itemprice": "27100"
+    },
+    {
+        "item": "th12813",
+        "itemcate": "食品",
+        "itemprice": "29000"
+    },
+    {
+        "item": "eh12816",
+        "itemcate": "食品",
+        "itemprice": "12800"
+    },
+    {
+        "item": "cg12827",
+        "itemcate": "食品",
+        "itemprice": "8300"
+    },
+    {
+        "item": "qw12828",
+        "itemcate": "食品",
+        "itemprice": "19700"
+    },
+    {
+        "item": "dh12834",
+        "itemcate": "食品",
+        "itemprice": "27300"
+    },
+    {
+        "item": "tl12835",
+        "itemcate": "食品",
+        "itemprice": "23500"
+    },
+    {
+        "item": "ec12838",
+        "itemcate": "食品",
+        "itemprice": "18600"
+    },
+    {
+        "item": "td12841",
+        "itemcate": "食品",
+        "itemprice": "11400"
+    },
+    {
+        "item": "qe12851",
+        "itemcate": "食品",
+        "itemprice": "2400"
+    },
+    {
+        "item": "jr12856",
+        "itemcate": "食品",
+        "itemprice": "10500"
+    },
+    {
+        "item": "hc12857",
+        "itemcate": "食品",
+        "itemprice": "9000"
+    },
+    {
+        "item": "jy12868",
+        "itemcate": "食品",
+        "itemprice": "18300"
+    },
+    {
+        "item": "hz12869",
+        "itemcate": "食品",
+        "itemprice": "27100"
+    },
+    {
+        "item": "dv12886",
+        "itemcate": "食品",
+        "itemprice": "25600"
+    },
+    {
+        "item": "zg12900",
+        "itemcate": "食品",
+        "itemprice": "23400"
+    },
+    {
+        "item": "bu12907",
+        "itemcate": "食品",
+        "itemprice": "29900"
+    },
+    {
+        "item": "cz12931",
+        "itemcate": "食品",
+        "itemprice": "12900"
+    },
+    {
+        "item": "py12939",
+        "itemcate": "食品",
+        "itemprice": "12900"
+    },
+    {
+        "item": "gw12942",
+        "itemcate": "食品",
+        "itemprice": "14100"
+    },
+    {
+        "item": "zz12947",
+        "itemcate": "食品",
+        "itemprice": "29400"
+    },
+    {
+        "item": "xb12949",
+        "itemcate": "食品",
+        "itemprice": "21500"
+    },
+    {
+        "item": "wj12960",
+        "itemcate": "食品",
+        "itemprice": "21700"
+    },
+    {
+        "item": "vs12963",
+        "itemcate": "食品",
+        "itemprice": "6800"
+    },
+    {
+        "item": "ob12972",
+        "itemcate": "食品",
+        "itemprice": "6100"
+    },
+    {
+        "item": "fa12974",
+        "itemcate": "食品",
+        "itemprice": "3400"
+    },
+    {
+        "item": "vn12979",
+        "itemcate": "食品",
+        "itemprice": "24300"
+    },
+    {
+        "item": "rl12996",
+        "itemcate": "食品",
+        "itemprice": "28100"
+    }
+]

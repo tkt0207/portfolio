@@ -1,0 +1,2432 @@
+[
+    {
+        "item": "pd10013",
+        "itemcate": "衣料",
+        "itemprice": "21400"
+    },
+    {
+        "item": "np10039",
+        "itemcate": "衣料",
+        "itemprice": "22100"
+    },
+    {
+        "item": "eq10044",
+        "itemcate": "衣料",
+        "itemprice": "20700"
+    },
+    {
+        "item": "gh10050",
+        "itemcate": "衣料",
+        "itemprice": "17900"
+    },
+    {
+        "item": "oh10052",
+        "itemcate": "衣料",
+        "itemprice": "16900"
+    },
+    {
+        "item": "cc10053",
+        "itemcate": "衣料",
+        "itemprice": "22100"
+    },
+    {
+        "item": "vi10054",
+        "itemcate": "衣料",
+        "itemprice": "29600"
+    },
+    {
+        "item": "za10055",
+        "itemcate": "衣料",
+        "itemprice": "5900"
+    },
+    {
+        "item": "zl10064",
+        "itemcate": "衣料",
+        "itemprice": "2000"
+    },
+    {
+        "item": "cy10073",
+        "itemcate": "衣料",
+        "itemprice": "12100"
+    },
+    {
+        "item": "yz10078",
+        "itemcate": "衣料",
+        "itemprice": "19900"
+    },
+    {
+        "item": "om10086",
+        "itemcate": "衣料",
+        "itemprice": "27500"
+    },
+    {
+        "item": "de10087",
+        "itemcate": "衣料",
+        "itemprice": "10000"
+    },
+    {
+        "item": "xo10088",
+        "itemcate": "衣料",
+        "itemprice": "17700"
+    },
+    {
+        "item": "yj10089",
+        "itemcate": "衣料",
+        "itemprice": "20800"
+    },
+    {
+        "item": "fl10096",
+        "itemcate": "衣料",
+        "itemprice": "16200"
+    },
+    {
+        "item": "pc10098",
+        "itemcate": "衣料",
+        "itemprice": "10200"
+    },
+    {
+        "item": "bu10103",
+        "itemcate": "衣料",
+        "itemprice": "3100"
+    },
+    {
+        "item": "jl10110",
+        "itemcate": "衣料",
+        "itemprice": "20500"
+    },
+    {
+        "item": "ru10113",
+        "itemcate": "衣料",
+        "itemprice": "13800"
+    },
+    {
+        "item": "pj10116",
+        "itemcate": "衣料",
+        "itemprice": "29300"
+    },
+    {
+        "item": "is10133",
+        "itemcate": "衣料",
+        "itemprice": "29100"
+    },
+    {
+        "item": "vy10145",
+        "itemcate": "衣料",
+        "itemprice": "19800"
+    },
+    {
+        "item": "qz10173",
+        "itemcate": "衣料",
+        "itemprice": "3900"
+    },
+    {
+        "item": "lx10180",
+        "itemcate": "衣料",
+        "itemprice": "26700"
+    },
+    {
+        "item": "af10181",
+        "itemcate": "衣料",
+        "itemprice": "23700"
+    },
+    {
+        "item": "yi10182",
+        "itemcate": "衣料",
+        "itemprice": "18400"
+    },
+    {
+        "item": "td10184",
+        "itemcate": "衣料",
+        "itemprice": "17600"
+    },
+    {
+        "item": "il10188",
+        "itemcate": "衣料",
+        "itemprice": "16800"
+    },
+    {
+        "item": "zh10192",
+        "itemcate": "衣料",
+        "itemprice": "4200"
+    },
+    {
+        "item": "dx10195",
+        "itemcate": "衣料",
+        "itemprice": "25700"
+    },
+    {
+        "item": "wx10198",
+        "itemcate": "衣料",
+        "itemprice": "26400"
+    },
+    {
+        "item": "it10203",
+        "itemcate": "衣料",
+        "itemprice": "3100"
+    },
+    {
+        "item": "kl10205",
+        "itemcate": "衣料",
+        "itemprice": "17900"
+    },
+    {
+        "item": "dc10220",
+        "itemcate": "衣料",
+        "itemprice": "6600"
+    },
+    {
+        "item": "pt10242",
+        "itemcate": "衣料",
+        "itemprice": "17200"
+    },
+    {
+        "item": "pq10243",
+        "itemcate": "衣料",
+        "itemprice": "23200"
+    },
+    {
+        "item": "ap10266",
+        "itemcate": "衣料",
+        "itemprice": "26900"
+    },
+    {
+        "item": "wf10271",
+        "itemcate": "衣料",
+        "itemprice": "21900"
+    },
+    {
+        "item": "mq10274",
+        "itemcate": "衣料",
+        "itemprice": "13700"
+    },
+    {
+        "item": "bu10285",
+        "itemcate": "衣料",
+        "itemprice": "12300"
+    },
+    {
+        "item": "zw10287",
+        "itemcate": "衣料",
+        "itemprice": "19200"
+    },
+    {
+        "item": "nt10300",
+        "itemcate": "衣料",
+        "itemprice": "9300"
+    },
+    {
+        "item": "ov10305",
+        "itemcate": "衣料",
+        "itemprice": "28400"
+    },
+    {
+        "item": "rh10307",
+        "itemcate": "衣料",
+        "itemprice": "29200"
+    },
+    {
+        "item": "cp10320",
+        "itemcate": "衣料",
+        "itemprice": "29000"
+    },
+    {
+        "item": "hx10328",
+        "itemcate": "衣料",
+        "itemprice": "4500"
+    },
+    {
+        "item": "xo10349",
+        "itemcate": "衣料",
+        "itemprice": "25000"
+    },
+    {
+        "item": "mo10351",
+        "itemcate": "衣料",
+        "itemprice": "21400"
+    },
+    {
+        "item": "ip10356",
+        "itemcate": "衣料",
+        "itemprice": "16800"
+    },
+    {
+        "item": "uu10364",
+        "itemcate": "衣料",
+        "itemprice": "20300"
+    },
+    {
+        "item": "sl10366",
+        "itemcate": "衣料",
+        "itemprice": "19000"
+    },
+    {
+        "item": "ul10370",
+        "itemcate": "衣料",
+        "itemprice": "15100"
+    },
+    {
+        "item": "np10372",
+        "itemcate": "衣料",
+        "itemprice": "5300"
+    },
+    {
+        "item": "dd10374",
+        "itemcate": "衣料",
+        "itemprice": "12000"
+    },
+    {
+        "item": "ao10381",
+        "itemcate": "衣料",
+        "itemprice": "23700"
+    },
+    {
+        "item": "gm10386",
+        "itemcate": "衣料",
+        "itemprice": "1300"
+    },
+    {
+        "item": "xn10390",
+        "itemcate": "衣料",
+        "itemprice": "22000"
+    },
+    {
+        "item": "gg10410",
+        "itemcate": "衣料",
+        "itemprice": "24000"
+    },
+    {
+        "item": "bv10415",
+        "itemcate": "衣料",
+        "itemprice": "10200"
+    },
+    {
+        "item": "kx10439",
+        "itemcate": "衣料",
+        "itemprice": "28000"
+    },
+    {
+        "item": "tr10440",
+        "itemcate": "衣料",
+        "itemprice": "22200"
+    },
+    {
+        "item": "wn10442",
+        "itemcate": "衣料",
+        "itemprice": "26900"
+    },
+    {
+        "item": "hw10443",
+        "itemcate": "衣料",
+        "itemprice": "11400"
+    },
+    {
+        "item": "ah10450",
+        "itemcate": "衣料",
+        "itemprice": "14800"
+    },
+    {
+        "item": "jb10451",
+        "itemcate": "衣料",
+        "itemprice": "6400"
+    },
+    {
+        "item": "eu10453",
+        "itemcate": "衣料",
+        "itemprice": "23100"
+    },
+    {
+        "item": "eb10455",
+        "itemcate": "衣料",
+        "itemprice": "3800"
+    },
+    {
+        "item": "nx10463",
+        "itemcate": "衣料",
+        "itemprice": "18500"
+    },
+    {
+        "item": "ao10468",
+        "itemcate": "衣料",
+        "itemprice": "24800"
+    },
+    {
+        "item": "lc10469",
+        "itemcate": "衣料",
+        "itemprice": "22600"
+    },
+    {
+        "item": "zb10473",
+        "itemcate": "衣料",
+        "itemprice": "17200"
+    },
+    {
+        "item": "it10479",
+        "itemcate": "衣料",
+        "itemprice": "14400"
+    },
+    {
+        "item": "hc10482",
+        "itemcate": "衣料",
+        "itemprice": "1400"
+    },
+    {
+        "item": "xn10487",
+        "itemcate": "衣料",
+        "itemprice": "26400"
+    },
+    {
+        "item": "mi10492",
+        "itemcate": "衣料",
+        "itemprice": "4500"
+    },
+    {
+        "item": "ma10497",
+        "itemcate": "衣料",
+        "itemprice": "27200"
+    },
+    {
+        "item": "up10499",
+        "itemcate": "衣料",
+        "itemprice": "21700"
+    },
+    {
+        "item": "ig10512",
+        "itemcate": "衣料",
+        "itemprice": "12400"
+    },
+    {
+        "item": "bt10520",
+        "itemcate": "衣料",
+        "itemprice": "21400"
+    },
+    {
+        "item": "rd10523",
+        "itemcate": "衣料",
+        "itemprice": "17900"
+    },
+    {
+        "item": "mf10526",
+        "itemcate": "衣料",
+        "itemprice": "12000"
+    },
+    {
+        "item": "kt10531",
+        "itemcate": "衣料",
+        "itemprice": "21700"
+    },
+    {
+        "item": "cn10535",
+        "itemcate": "衣料",
+        "itemprice": "8100"
+    },
+    {
+        "item": "ob10536",
+        "itemcate": "衣料",
+        "itemprice": "11500"
+    },
+    {
+        "item": "mi10543",
+        "itemcate": "衣料",
+        "itemprice": "7300"
+    },
+    {
+        "item": "ox10544",
+        "itemcate": "衣料",
+        "itemprice": "24100"
+    },
+    {
+        "item": "nn10546",
+        "itemcate": "衣料",
+        "itemprice": "11300"
+    },
+    {
+        "item": "aj10548",
+        "itemcate": "衣料",
+        "itemprice": "7900"
+    },
+    {
+        "item": "hi10549",
+        "itemcate": "衣料",
+        "itemprice": "18600"
+    },
+    {
+        "item": "ia10550",
+        "itemcate": "衣料",
+        "itemprice": "22200"
+    },
+    {
+        "item": "en10551",
+        "itemcate": "衣料",
+        "itemprice": "19800"
+    },
+    {
+        "item": "av10574",
+        "itemcate": "衣料",
+        "itemprice": "4500"
+    },
+    {
+        "item": "cv10587",
+        "itemcate": "衣料",
+        "itemprice": "1300"
+    },
+    {
+        "item": "uo10599",
+        "itemcate": "衣料",
+        "itemprice": "16200"
+    },
+    {
+        "item": "nl10600",
+        "itemcate": "衣料",
+        "itemprice": "11700"
+    },
+    {
+        "item": "wv10601",
+        "itemcate": "衣料",
+        "itemprice": "1700"
+    },
+    {
+        "item": "cr10609",
+        "itemcate": "衣料",
+        "itemprice": "10100"
+    },
+    {
+        "item": "bi10612",
+        "itemcate": "衣料",
+        "itemprice": "24700"
+    },
+    {
+        "item": "aj10618",
+        "itemcate": "衣料",
+        "itemprice": "11100"
+    },
+    {
+        "item": "ri10622",
+        "itemcate": "衣料",
+        "itemprice": "18100"
+    },
+    {
+        "item": "mv10630",
+        "itemcate": "衣料",
+        "itemprice": "17000"
+    },
+    {
+        "item": "wt10634",
+        "itemcate": "衣料",
+        "itemprice": "14200"
+    },
+    {
+        "item": "qh10638",
+        "itemcate": "衣料",
+        "itemprice": "14300"
+    },
+    {
+        "item": "lg10643",
+        "itemcate": "衣料",
+        "itemprice": "20200"
+    },
+    {
+        "item": "yv10645",
+        "itemcate": "衣料",
+        "itemprice": "28100"
+    },
+    {
+        "item": "bu10647",
+        "itemcate": "衣料",
+        "itemprice": "25100"
+    },
+    {
+        "item": "tp10648",
+        "itemcate": "衣料",
+        "itemprice": "14300"
+    },
+    {
+        "item": "mr10656",
+        "itemcate": "衣料",
+        "itemprice": "27000"
+    },
+    {
+        "item": "jh10661",
+        "itemcate": "衣料",
+        "itemprice": "20100"
+    },
+    {
+        "item": "wa10674",
+        "itemcate": "衣料",
+        "itemprice": "29500"
+    },
+    {
+        "item": "iv10680",
+        "itemcate": "衣料",
+        "itemprice": "13900"
+    },
+    {
+        "item": "kr10686",
+        "itemcate": "衣料",
+        "itemprice": "12500"
+    },
+    {
+        "item": "iq10690",
+        "itemcate": "衣料",
+        "itemprice": "29000"
+    },
+    {
+        "item": "xf10693",
+        "itemcate": "衣料",
+        "itemprice": "28000"
+    },
+    {
+        "item": "it10698",
+        "itemcate": "衣料",
+        "itemprice": "24200"
+    },
+    {
+        "item": "fd10701",
+        "itemcate": "衣料",
+        "itemprice": "11600"
+    },
+    {
+        "item": "ux10706",
+        "itemcate": "衣料",
+        "itemprice": "19300"
+    },
+    {
+        "item": "wt10723",
+        "itemcate": "衣料",
+        "itemprice": "25600"
+    },
+    {
+        "item": "ip10724",
+        "itemcate": "衣料",
+        "itemprice": "14100"
+    },
+    {
+        "item": "sd10725",
+        "itemcate": "衣料",
+        "itemprice": "7400"
+    },
+    {
+        "item": "jr10731",
+        "itemcate": "衣料",
+        "itemprice": "24100"
+    },
+    {
+        "item": "vz10745",
+        "itemcate": "衣料",
+        "itemprice": "6400"
+    },
+    {
+        "item": "pt10761",
+        "itemcate": "衣料",
+        "itemprice": "21000"
+    },
+    {
+        "item": "qt10762",
+        "itemcate": "衣料",
+        "itemprice": "7400"
+    },
+    {
+        "item": "sw10763",
+        "itemcate": "衣料",
+        "itemprice": "20000"
+    },
+    {
+        "item": "rv10764",
+        "itemcate": "衣料",
+        "itemprice": "25500"
+    },
+    {
+        "item": "iv10767",
+        "itemcate": "衣料",
+        "itemprice": "8300"
+    },
+    {
+        "item": "mm10781",
+        "itemcate": "衣料",
+        "itemprice": "26500"
+    },
+    {
+        "item": "mk10788",
+        "itemcate": "衣料",
+        "itemprice": "25700"
+    },
+    {
+        "item": "mf10795",
+        "itemcate": "衣料",
+        "itemprice": "10000"
+    },
+    {
+        "item": "nb10796",
+        "itemcate": "衣料",
+        "itemprice": "18100"
+    },
+    {
+        "item": "uu10801",
+        "itemcate": "衣料",
+        "itemprice": "8800"
+    },
+    {
+        "item": "qk10813",
+        "itemcate": "衣料",
+        "itemprice": "22000"
+    },
+    {
+        "item": "rr10830",
+        "itemcate": "衣料",
+        "itemprice": "22000"
+    },
+    {
+        "item": "ku10836",
+        "itemcate": "衣料",
+        "itemprice": "6500"
+    },
+    {
+        "item": "wj10842",
+        "itemcate": "衣料",
+        "itemprice": "1500"
+    },
+    {
+        "item": "ov10845",
+        "itemcate": "衣料",
+        "itemprice": "4300"
+    },
+    {
+        "item": "bb10850",
+        "itemcate": "衣料",
+        "itemprice": "17900"
+    },
+    {
+        "item": "rt10852",
+        "itemcate": "衣料",
+        "itemprice": "4600"
+    },
+    {
+        "item": "yg10866",
+        "itemcate": "衣料",
+        "itemprice": "25000"
+    },
+    {
+        "item": "wf10874",
+        "itemcate": "衣料",
+        "itemprice": "13700"
+    },
+    {
+        "item": "fc10878",
+        "itemcate": "衣料",
+        "itemprice": "3000"
+    },
+    {
+        "item": "sm10896",
+        "itemcate": "衣料",
+        "itemprice": "9000"
+    },
+    {
+        "item": "pn10898",
+        "itemcate": "衣料",
+        "itemprice": "12100"
+    },
+    {
+        "item": "we10903",
+        "itemcate": "衣料",
+        "itemprice": "19200"
+    },
+    {
+        "item": "zt10912",
+        "itemcate": "衣料",
+        "itemprice": "23800"
+    },
+    {
+        "item": "gc10917",
+        "itemcate": "衣料",
+        "itemprice": "6900"
+    },
+    {
+        "item": "nf10920",
+        "itemcate": "衣料",
+        "itemprice": "7700"
+    },
+    {
+        "item": "qr10921",
+        "itemcate": "衣料",
+        "itemprice": "15000"
+    },
+    {
+        "item": "uk10929",
+        "itemcate": "衣料",
+        "itemprice": "28100"
+    },
+    {
+        "item": "kx10943",
+        "itemcate": "衣料",
+        "itemprice": "26400"
+    },
+    {
+        "item": "yl10958",
+        "itemcate": "衣料",
+        "itemprice": "2100"
+    },
+    {
+        "item": "dn10969",
+        "itemcate": "衣料",
+        "itemprice": "21200"
+    },
+    {
+        "item": "dq10974",
+        "itemcate": "衣料",
+        "itemprice": "23700"
+    },
+    {
+        "item": "cm10978",
+        "itemcate": "衣料",
+        "itemprice": "24600"
+    },
+    {
+        "item": "wy10981",
+        "itemcate": "衣料",
+        "itemprice": "12400"
+    },
+    {
+        "item": "vf10987",
+        "itemcate": "衣料",
+        "itemprice": "3500"
+    },
+    {
+        "item": "vm10996",
+        "itemcate": "衣料",
+        "itemprice": "29800"
+    },
+    {
+        "item": "mn11006",
+        "itemcate": "衣料",
+        "itemprice": "6500"
+    },
+    {
+        "item": "pk11019",
+        "itemcate": "衣料",
+        "itemprice": "14800"
+    },
+    {
+        "item": "yh11033",
+        "itemcate": "衣料",
+        "itemprice": "7200"
+    },
+    {
+        "item": "za11035",
+        "itemcate": "衣料",
+        "itemprice": "21800"
+    },
+    {
+        "item": "hv11043",
+        "itemcate": "衣料",
+        "itemprice": "4300"
+    },
+    {
+        "item": "fw11046",
+        "itemcate": "衣料",
+        "itemprice": "4800"
+    },
+    {
+        "item": "js11049",
+        "itemcate": "衣料",
+        "itemprice": "24700"
+    },
+    {
+        "item": "vm11053",
+        "itemcate": "衣料",
+        "itemprice": "24400"
+    },
+    {
+        "item": "ao11056",
+        "itemcate": "衣料",
+        "itemprice": "14600"
+    },
+    {
+        "item": "mh11061",
+        "itemcate": "衣料",
+        "itemprice": "17500"
+    },
+    {
+        "item": "qj11073",
+        "itemcate": "衣料",
+        "itemprice": "25600"
+    },
+    {
+        "item": "gp11074",
+        "itemcate": "衣料",
+        "itemprice": "11600"
+    },
+    {
+        "item": "hf11103",
+        "itemcate": "衣料",
+        "itemprice": "11200"
+    },
+    {
+        "item": "ro11109",
+        "itemcate": "衣料",
+        "itemprice": "14600"
+    },
+    {
+        "item": "eg11113",
+        "itemcate": "衣料",
+        "itemprice": "10400"
+    },
+    {
+        "item": "yw11115",
+        "itemcate": "衣料",
+        "itemprice": "19200"
+    },
+    {
+        "item": "fi11116",
+        "itemcate": "衣料",
+        "itemprice": "17500"
+    },
+    {
+        "item": "iq11128",
+        "itemcate": "衣料",
+        "itemprice": "21400"
+    },
+    {
+        "item": "pv11129",
+        "itemcate": "衣料",
+        "itemprice": "20100"
+    },
+    {
+        "item": "co11136",
+        "itemcate": "衣料",
+        "itemprice": "22900"
+    },
+    {
+        "item": "nn11141",
+        "itemcate": "衣料",
+        "itemprice": "3300"
+    },
+    {
+        "item": "ch11142",
+        "itemcate": "衣料",
+        "itemprice": "8800"
+    },
+    {
+        "item": "hh11158",
+        "itemcate": "衣料",
+        "itemprice": "25400"
+    },
+    {
+        "item": "ta11160",
+        "itemcate": "衣料",
+        "itemprice": "27000"
+    },
+    {
+        "item": "fp11161",
+        "itemcate": "衣料",
+        "itemprice": "11600"
+    },
+    {
+        "item": "cl11167",
+        "itemcate": "衣料",
+        "itemprice": "14900"
+    },
+    {
+        "item": "de11171",
+        "itemcate": "衣料",
+        "itemprice": "17500"
+    },
+    {
+        "item": "dj11172",
+        "itemcate": "衣料",
+        "itemprice": "9300"
+    },
+    {
+        "item": "ko11185",
+        "itemcate": "衣料",
+        "itemprice": "13700"
+    },
+    {
+        "item": "ko11197",
+        "itemcate": "衣料",
+        "itemprice": "12500"
+    },
+    {
+        "item": "lu11210",
+        "itemcate": "衣料",
+        "itemprice": "22500"
+    },
+    {
+        "item": "qu11214",
+        "itemcate": "衣料",
+        "itemprice": "2600"
+    },
+    {
+        "item": "zp11227",
+        "itemcate": "衣料",
+        "itemprice": "2500"
+    },
+    {
+        "item": "ut11229",
+        "itemcate": "衣料",
+        "itemprice": "20900"
+    },
+    {
+        "item": "sb11231",
+        "itemcate": "衣料",
+        "itemprice": "15500"
+    },
+    {
+        "item": "jj11234",
+        "itemcate": "衣料",
+        "itemprice": "11300"
+    },
+    {
+        "item": "ez11238",
+        "itemcate": "衣料",
+        "itemprice": "11000"
+    },
+    {
+        "item": "sf11255",
+        "itemcate": "衣料",
+        "itemprice": "29000"
+    },
+    {
+        "item": "ke11272",
+        "itemcate": "衣料",
+        "itemprice": "27100"
+    },
+    {
+        "item": "vt11275",
+        "itemcate": "衣料",
+        "itemprice": "9500"
+    },
+    {
+        "item": "ul11281",
+        "itemcate": "衣料",
+        "itemprice": "19400"
+    },
+    {
+        "item": "hy11282",
+        "itemcate": "衣料",
+        "itemprice": "15000"
+    },
+    {
+        "item": "oc11284",
+        "itemcate": "衣料",
+        "itemprice": "8500"
+    },
+    {
+        "item": "kr11298",
+        "itemcate": "衣料",
+        "itemprice": "22700"
+    },
+    {
+        "item": "zb11303",
+        "itemcate": "衣料",
+        "itemprice": "21300"
+    },
+    {
+        "item": "nd11307",
+        "itemcate": "衣料",
+        "itemprice": "25600"
+    },
+    {
+        "item": "du11323",
+        "itemcate": "衣料",
+        "itemprice": "25400"
+    },
+    {
+        "item": "kp11324",
+        "itemcate": "衣料",
+        "itemprice": "3400"
+    },
+    {
+        "item": "it11325",
+        "itemcate": "衣料",
+        "itemprice": "7100"
+    },
+    {
+        "item": "bh11328",
+        "itemcate": "衣料",
+        "itemprice": "12500"
+    },
+    {
+        "item": "tg11343",
+        "itemcate": "衣料",
+        "itemprice": "4300"
+    },
+    {
+        "item": "bv11346",
+        "itemcate": "衣料",
+        "itemprice": "22200"
+    },
+    {
+        "item": "re11347",
+        "itemcate": "衣料",
+        "itemprice": "20600"
+    },
+    {
+        "item": "kl11348",
+        "itemcate": "衣料",
+        "itemprice": "2000"
+    },
+    {
+        "item": "bb11364",
+        "itemcate": "衣料",
+        "itemprice": "19900"
+    },
+    {
+        "item": "yb11377",
+        "itemcate": "衣料",
+        "itemprice": "16300"
+    },
+    {
+        "item": "ue11383",
+        "itemcate": "衣料",
+        "itemprice": "17000"
+    },
+    {
+        "item": "gm11395",
+        "itemcate": "衣料",
+        "itemprice": "19100"
+    },
+    {
+        "item": "lx11406",
+        "itemcate": "衣料",
+        "itemprice": "18600"
+    },
+    {
+        "item": "wg11407",
+        "itemcate": "衣料",
+        "itemprice": "8800"
+    },
+    {
+        "item": "ip11412",
+        "itemcate": "衣料",
+        "itemprice": "26100"
+    },
+    {
+        "item": "dd11422",
+        "itemcate": "衣料",
+        "itemprice": "21700"
+    },
+    {
+        "item": "fe11430",
+        "itemcate": "衣料",
+        "itemprice": "26800"
+    },
+    {
+        "item": "sg11451",
+        "itemcate": "衣料",
+        "itemprice": "27700"
+    },
+    {
+        "item": "ki11464",
+        "itemcate": "衣料",
+        "itemprice": "12300"
+    },
+    {
+        "item": "gn11466",
+        "itemcate": "衣料",
+        "itemprice": "18700"
+    },
+    {
+        "item": "dg11467",
+        "itemcate": "衣料",
+        "itemprice": "28300"
+    },
+    {
+        "item": "iv11471",
+        "itemcate": "衣料",
+        "itemprice": "3400"
+    },
+    {
+        "item": "jl11475",
+        "itemcate": "衣料",
+        "itemprice": "10600"
+    },
+    {
+        "item": "vt11485",
+        "itemcate": "衣料",
+        "itemprice": "21300"
+    },
+    {
+        "item": "bt11500",
+        "itemcate": "衣料",
+        "itemprice": "16500"
+    },
+    {
+        "item": "vw11502",
+        "itemcate": "衣料",
+        "itemprice": "8700"
+    },
+    {
+        "item": "vb11506",
+        "itemcate": "衣料",
+        "itemprice": "26200"
+    },
+    {
+        "item": "uf11521",
+        "itemcate": "衣料",
+        "itemprice": "4500"
+    },
+    {
+        "item": "qw11522",
+        "itemcate": "衣料",
+        "itemprice": "3300"
+    },
+    {
+        "item": "fg11525",
+        "itemcate": "衣料",
+        "itemprice": "17800"
+    },
+    {
+        "item": "ef11534",
+        "itemcate": "衣料",
+        "itemprice": "19400"
+    },
+    {
+        "item": "bx11535",
+        "itemcate": "衣料",
+        "itemprice": "2500"
+    },
+    {
+        "item": "cd11552",
+        "itemcate": "衣料",
+        "itemprice": "10000"
+    },
+    {
+        "item": "aa11558",
+        "itemcate": "衣料",
+        "itemprice": "6000"
+    },
+    {
+        "item": "op11569",
+        "itemcate": "衣料",
+        "itemprice": "27400"
+    },
+    {
+        "item": "ty11571",
+        "itemcate": "衣料",
+        "itemprice": "28200"
+    },
+    {
+        "item": "ee11583",
+        "itemcate": "衣料",
+        "itemprice": "25900"
+    },
+    {
+        "item": "sz11586",
+        "itemcate": "衣料",
+        "itemprice": "26800"
+    },
+    {
+        "item": "ri11588",
+        "itemcate": "衣料",
+        "itemprice": "24700"
+    },
+    {
+        "item": "rr11589",
+        "itemcate": "衣料",
+        "itemprice": "14400"
+    },
+    {
+        "item": "zr11591",
+        "itemcate": "衣料",
+        "itemprice": "13800"
+    },
+    {
+        "item": "uw11592",
+        "itemcate": "衣料",
+        "itemprice": "3600"
+    },
+    {
+        "item": "oh11602",
+        "itemcate": "衣料",
+        "itemprice": "23200"
+    },
+    {
+        "item": "fd11613",
+        "itemcate": "衣料",
+        "itemprice": "26800"
+    },
+    {
+        "item": "vb11614",
+        "itemcate": "衣料",
+        "itemprice": "3100"
+    },
+    {
+        "item": "ev11616",
+        "itemcate": "衣料",
+        "itemprice": "11800"
+    },
+    {
+        "item": "pf11618",
+        "itemcate": "衣料",
+        "itemprice": "5900"
+    },
+    {
+        "item": "qj11626",
+        "itemcate": "衣料",
+        "itemprice": "25700"
+    },
+    {
+        "item": "kh11627",
+        "itemcate": "衣料",
+        "itemprice": "14600"
+    },
+    {
+        "item": "aa11629",
+        "itemcate": "衣料",
+        "itemprice": "20900"
+    },
+    {
+        "item": "xg11631",
+        "itemcate": "衣料",
+        "itemprice": "29300"
+    },
+    {
+        "item": "az11632",
+        "itemcate": "衣料",
+        "itemprice": "28100"
+    },
+    {
+        "item": "sy11637",
+        "itemcate": "衣料",
+        "itemprice": "23200"
+    },
+    {
+        "item": "mf11646",
+        "itemcate": "衣料",
+        "itemprice": "17500"
+    },
+    {
+        "item": "ed11649",
+        "itemcate": "衣料",
+        "itemprice": "27200"
+    },
+    {
+        "item": "jv11650",
+        "itemcate": "衣料",
+        "itemprice": "14700"
+    },
+    {
+        "item": "mj11652",
+        "itemcate": "衣料",
+        "itemprice": "19900"
+    },
+    {
+        "item": "cb11654",
+        "itemcate": "衣料",
+        "itemprice": "24800"
+    },
+    {
+        "item": "ad11661",
+        "itemcate": "衣料",
+        "itemprice": "24700"
+    },
+    {
+        "item": "cw11665",
+        "itemcate": "衣料",
+        "itemprice": "10900"
+    },
+    {
+        "item": "dc11672",
+        "itemcate": "衣料",
+        "itemprice": "20800"
+    },
+    {
+        "item": "os11673",
+        "itemcate": "衣料",
+        "itemprice": "26600"
+    },
+    {
+        "item": "jh11675",
+        "itemcate": "衣料",
+        "itemprice": "12900"
+    },
+    {
+        "item": "re11681",
+        "itemcate": "衣料",
+        "itemprice": "26800"
+    },
+    {
+        "item": "kp11686",
+        "itemcate": "衣料",
+        "itemprice": "7000"
+    },
+    {
+        "item": "za11689",
+        "itemcate": "衣料",
+        "itemprice": "29100"
+    },
+    {
+        "item": "hk11690",
+        "itemcate": "衣料",
+        "itemprice": "26900"
+    },
+    {
+        "item": "an11694",
+        "itemcate": "衣料",
+        "itemprice": "11600"
+    },
+    {
+        "item": "fw11703",
+        "itemcate": "衣料",
+        "itemprice": "4300"
+    },
+    {
+        "item": "tt11716",
+        "itemcate": "衣料",
+        "itemprice": "6400"
+    },
+    {
+        "item": "du11718",
+        "itemcate": "衣料",
+        "itemprice": "22500"
+    },
+    {
+        "item": "pl11726",
+        "itemcate": "衣料",
+        "itemprice": "16100"
+    },
+    {
+        "item": "qe11737",
+        "itemcate": "衣料",
+        "itemprice": "4300"
+    },
+    {
+        "item": "rg11741",
+        "itemcate": "衣料",
+        "itemprice": "25100"
+    },
+    {
+        "item": "zz11743",
+        "itemcate": "衣料",
+        "itemprice": "25600"
+    },
+    {
+        "item": "ge11752",
+        "itemcate": "衣料",
+        "itemprice": "15000"
+    },
+    {
+        "item": "fk11759",
+        "itemcate": "衣料",
+        "itemprice": "23000"
+    },
+    {
+        "item": "vr11778",
+        "itemcate": "衣料",
+        "itemprice": "22500"
+    },
+    {
+        "item": "en11787",
+        "itemcate": "衣料",
+        "itemprice": "24100"
+    },
+    {
+        "item": "tt11793",
+        "itemcate": "衣料",
+        "itemprice": "14600"
+    },
+    {
+        "item": "ra11801",
+        "itemcate": "衣料",
+        "itemprice": "24000"
+    },
+    {
+        "item": "kz11805",
+        "itemcate": "衣料",
+        "itemprice": "7700"
+    },
+    {
+        "item": "yf11812",
+        "itemcate": "衣料",
+        "itemprice": "2800"
+    },
+    {
+        "item": "ib11824",
+        "itemcate": "衣料",
+        "itemprice": "27700"
+    },
+    {
+        "item": "gc11829",
+        "itemcate": "衣料",
+        "itemprice": "9700"
+    },
+    {
+        "item": "ty11832",
+        "itemcate": "衣料",
+        "itemprice": "14700"
+    },
+    {
+        "item": "nj11842",
+        "itemcate": "衣料",
+        "itemprice": "12800"
+    },
+    {
+        "item": "gz11848",
+        "itemcate": "衣料",
+        "itemprice": "3000"
+    },
+    {
+        "item": "fx11853",
+        "itemcate": "衣料",
+        "itemprice": "29000"
+    },
+    {
+        "item": "lh11858",
+        "itemcate": "衣料",
+        "itemprice": "9700"
+    },
+    {
+        "item": "mb11859",
+        "itemcate": "衣料",
+        "itemprice": "15200"
+    },
+    {
+        "item": "zp11866",
+        "itemcate": "衣料",
+        "itemprice": "18300"
+    },
+    {
+        "item": "nw11867",
+        "itemcate": "衣料",
+        "itemprice": "29600"
+    },
+    {
+        "item": "ny11873",
+        "itemcate": "衣料",
+        "itemprice": "22200"
+    },
+    {
+        "item": "le11878",
+        "itemcate": "衣料",
+        "itemprice": "19500"
+    },
+    {
+        "item": "is11887",
+        "itemcate": "衣料",
+        "itemprice": "2900"
+    },
+    {
+        "item": "dh11889",
+        "itemcate": "衣料",
+        "itemprice": "14400"
+    },
+    {
+        "item": "px11894",
+        "itemcate": "衣料",
+        "itemprice": "1300"
+    },
+    {
+        "item": "hf11895",
+        "itemcate": "衣料",
+        "itemprice": "14400"
+    },
+    {
+        "item": "zk11900",
+        "itemcate": "衣料",
+        "itemprice": "3100"
+    },
+    {
+        "item": "if11911",
+        "itemcate": "衣料",
+        "itemprice": "12600"
+    },
+    {
+        "item": "bg11918",
+        "itemcate": "衣料",
+        "itemprice": "3600"
+    },
+    {
+        "item": "th11920",
+        "itemcate": "衣料",
+        "itemprice": "26100"
+    },
+    {
+        "item": "hw11927",
+        "itemcate": "衣料",
+        "itemprice": "21100"
+    },
+    {
+        "item": "vm11932",
+        "itemcate": "衣料",
+        "itemprice": "25000"
+    },
+    {
+        "item": "ku11948",
+        "itemcate": "衣料",
+        "itemprice": "8000"
+    },
+    {
+        "item": "tm11960",
+        "itemcate": "衣料",
+        "itemprice": "1600"
+    },
+    {
+        "item": "il11967",
+        "itemcate": "衣料",
+        "itemprice": "16500"
+    },
+    {
+        "item": "gs11970",
+        "itemcate": "衣料",
+        "itemprice": "11100"
+    },
+    {
+        "item": "iz11974",
+        "itemcate": "衣料",
+        "itemprice": "16900"
+    },
+    {
+        "item": "bc11976",
+        "itemcate": "衣料",
+        "itemprice": "8900"
+    },
+    {
+        "item": "nm11979",
+        "itemcate": "衣料",
+        "itemprice": "14400"
+    },
+    {
+        "item": "sl11982",
+        "itemcate": "衣料",
+        "itemprice": "29200"
+    },
+    {
+        "item": "as11986",
+        "itemcate": "衣料",
+        "itemprice": "1700"
+    },
+    {
+        "item": "tj11989",
+        "itemcate": "衣料",
+        "itemprice": "3900"
+    },
+    {
+        "item": "ls11998",
+        "itemcate": "衣料",
+        "itemprice": "22600"
+    },
+    {
+        "item": "ou12015",
+        "itemcate": "衣料",
+        "itemprice": "10800"
+    },
+    {
+        "item": "oh12021",
+        "itemcate": "衣料",
+        "itemprice": "20200"
+    },
+    {
+        "item": "gs12027",
+        "itemcate": "衣料",
+        "itemprice": "2700"
+    },
+    {
+        "item": "iq12048",
+        "itemcate": "衣料",
+        "itemprice": "4200"
+    },
+    {
+        "item": "aa12049",
+        "itemcate": "衣料",
+        "itemprice": "14700"
+    },
+    {
+        "item": "wb12050",
+        "itemcate": "衣料",
+        "itemprice": "17500"
+    },
+    {
+        "item": "yu12052",
+        "itemcate": "衣料",
+        "itemprice": "29900"
+    },
+    {
+        "item": "wq12055",
+        "itemcate": "衣料",
+        "itemprice": "19200"
+    },
+    {
+        "item": "yb12060",
+        "itemcate": "衣料",
+        "itemprice": "23600"
+    },
+    {
+        "item": "cy12061",
+        "itemcate": "衣料",
+        "itemprice": "17600"
+    },
+    {
+        "item": "hl12069",
+        "itemcate": "衣料",
+        "itemprice": "22800"
+    },
+    {
+        "item": "pp12075",
+        "itemcate": "衣料",
+        "itemprice": "4800"
+    },
+    {
+        "item": "kd12081",
+        "itemcate": "衣料",
+        "itemprice": "18300"
+    },
+    {
+        "item": "rr12093",
+        "itemcate": "衣料",
+        "itemprice": "23400"
+    },
+    {
+        "item": "wv12095",
+        "itemcate": "衣料",
+        "itemprice": "21900"
+    },
+    {
+        "item": "ss12096",
+        "itemcate": "衣料",
+        "itemprice": "2600"
+    },
+    {
+        "item": "fg12114",
+        "itemcate": "衣料",
+        "itemprice": "28700"
+    },
+    {
+        "item": "pi12115",
+        "itemcate": "衣料",
+        "itemprice": "24200"
+    },
+    {
+        "item": "lp12116",
+        "itemcate": "衣料",
+        "itemprice": "22400"
+    },
+    {
+        "item": "wa12119",
+        "itemcate": "衣料",
+        "itemprice": "5000"
+    },
+    {
+        "item": "ae12128",
+        "itemcate": "衣料",
+        "itemprice": "22900"
+    },
+    {
+        "item": "ff12133",
+        "itemcate": "衣料",
+        "itemprice": "22200"
+    },
+    {
+        "item": "ef12142",
+        "itemcate": "衣料",
+        "itemprice": "21600"
+    },
+    {
+        "item": "eg12143",
+        "itemcate": "衣料",
+        "itemprice": "2600"
+    },
+    {
+        "item": "yj12148",
+        "itemcate": "衣料",
+        "itemprice": "24500"
+    },
+    {
+        "item": "hc12163",
+        "itemcate": "衣料",
+        "itemprice": "29900"
+    },
+    {
+        "item": "eg12191",
+        "itemcate": "衣料",
+        "itemprice": "19100"
+    },
+    {
+        "item": "xt12192",
+        "itemcate": "衣料",
+        "itemprice": "18500"
+    },
+    {
+        "item": "ez12195",
+        "itemcate": "衣料",
+        "itemprice": "22100"
+    },
+    {
+        "item": "vb12200",
+        "itemcate": "衣料",
+        "itemprice": "19000"
+    },
+    {
+        "item": "uw12206",
+        "itemcate": "衣料",
+        "itemprice": "10500"
+    },
+    {
+        "item": "zi12212",
+        "itemcate": "衣料",
+        "itemprice": "19000"
+    },
+    {
+        "item": "kx12213",
+        "itemcate": "衣料",
+        "itemprice": "12300"
+    },
+    {
+        "item": "zf12215",
+        "itemcate": "衣料",
+        "itemprice": "25100"
+    },
+    {
+        "item": "rh12216",
+        "itemcate": "衣料",
+        "itemprice": "24600"
+    },
+    {
+        "item": "wz12218",
+        "itemcate": "衣料",
+        "itemprice": "5600"
+    },
+    {
+        "item": "js12230",
+        "itemcate": "衣料",
+        "itemprice": "21800"
+    },
+    {
+        "item": "en12231",
+        "itemcate": "衣料",
+        "itemprice": "12200"
+    },
+    {
+        "item": "ph12233",
+        "itemcate": "衣料",
+        "itemprice": "3100"
+    },
+    {
+        "item": "fy12239",
+        "itemcate": "衣料",
+        "itemprice": "11600"
+    },
+    {
+        "item": "mu12242",
+        "itemcate": "衣料",
+        "itemprice": "25100"
+    },
+    {
+        "item": "bx12246",
+        "itemcate": "衣料",
+        "itemprice": "5100"
+    },
+    {
+        "item": "xk12248",
+        "itemcate": "衣料",
+        "itemprice": "11700"
+    },
+    {
+        "item": "ai12251",
+        "itemcate": "衣料",
+        "itemprice": "6400"
+    },
+    {
+        "item": "ya12261",
+        "itemcate": "衣料",
+        "itemprice": "3300"
+    },
+    {
+        "item": "rj12262",
+        "itemcate": "衣料",
+        "itemprice": "26900"
+    },
+    {
+        "item": "mc12268",
+        "itemcate": "衣料",
+        "itemprice": "7200"
+    },
+    {
+        "item": "xi12271",
+        "itemcate": "衣料",
+        "itemprice": "6800"
+    },
+    {
+        "item": "qp12275",
+        "itemcate": "衣料",
+        "itemprice": "19500"
+    },
+    {
+        "item": "yi12279",
+        "itemcate": "衣料",
+        "itemprice": "4600"
+    },
+    {
+        "item": "kr12284",
+        "itemcate": "衣料",
+        "itemprice": "28600"
+    },
+    {
+        "item": "br12290",
+        "itemcate": "衣料",
+        "itemprice": "4400"
+    },
+    {
+        "item": "dm12292",
+        "itemcate": "衣料",
+        "itemprice": "22900"
+    },
+    {
+        "item": "uf12299",
+        "itemcate": "衣料",
+        "itemprice": "19900"
+    },
+    {
+        "item": "rk12304",
+        "itemcate": "衣料",
+        "itemprice": "9100"
+    },
+    {
+        "item": "ro12310",
+        "itemcate": "衣料",
+        "itemprice": "18500"
+    },
+    {
+        "item": "dv12312",
+        "itemcate": "衣料",
+        "itemprice": "23100"
+    },
+    {
+        "item": "ly12319",
+        "itemcate": "衣料",
+        "itemprice": "13700"
+    },
+    {
+        "item": "yl12321",
+        "itemcate": "衣料",
+        "itemprice": "14400"
+    },
+    {
+        "item": "kj12323",
+        "itemcate": "衣料",
+        "itemprice": "18300"
+    },
+    {
+        "item": "ac12326",
+        "itemcate": "衣料",
+        "itemprice": "20800"
+    },
+    {
+        "item": "nv12327",
+        "itemcate": "衣料",
+        "itemprice": "2500"
+    },
+    {
+        "item": "ud12331",
+        "itemcate": "衣料",
+        "itemprice": "15400"
+    },
+    {
+        "item": "sa12338",
+        "itemcate": "衣料",
+        "itemprice": "19800"
+    },
+    {
+        "item": "yj12350",
+        "itemcate": "衣料",
+        "itemprice": "6200"
+    },
+    {
+        "item": "mx12351",
+        "itemcate": "衣料",
+        "itemprice": "3500"
+    },
+    {
+        "item": "ho12355",
+        "itemcate": "衣料",
+        "itemprice": "26600"
+    },
+    {
+        "item": "zk12366",
+        "itemcate": "衣料",
+        "itemprice": "15800"
+    },
+    {
+        "item": "ql12375",
+        "itemcate": "衣料",
+        "itemprice": "17600"
+    },
+    {
+        "item": "au12382",
+        "itemcate": "衣料",
+        "itemprice": "12600"
+    },
+    {
+        "item": "yk12383",
+        "itemcate": "衣料",
+        "itemprice": "4200"
+    },
+    {
+        "item": "va12389",
+        "itemcate": "衣料",
+        "itemprice": "6900"
+    },
+    {
+        "item": "pt12392",
+        "itemcate": "衣料",
+        "itemprice": "26300"
+    },
+    {
+        "item": "gi12406",
+        "itemcate": "衣料",
+        "itemprice": "14700"
+    },
+    {
+        "item": "ok12412",
+        "itemcate": "衣料",
+        "itemprice": "2300"
+    },
+    {
+        "item": "ff12414",
+        "itemcate": "衣料",
+        "itemprice": "10500"
+    },
+    {
+        "item": "av12426",
+        "itemcate": "衣料",
+        "itemprice": "14600"
+    },
+    {
+        "item": "fs12427",
+        "itemcate": "衣料",
+        "itemprice": "12100"
+    },
+    {
+        "item": "vc12432",
+        "itemcate": "衣料",
+        "itemprice": "2600"
+    },
+    {
+        "item": "sk12434",
+        "itemcate": "衣料",
+        "itemprice": "25400"
+    },
+    {
+        "item": "rv12444",
+        "itemcate": "衣料",
+        "itemprice": "3800"
+    },
+    {
+        "item": "dh12451",
+        "itemcate": "衣料",
+        "itemprice": "21500"
+    },
+    {
+        "item": "ba12457",
+        "itemcate": "衣料",
+        "itemprice": "28100"
+    },
+    {
+        "item": "tb12461",
+        "itemcate": "衣料",
+        "itemprice": "4200"
+    },
+    {
+        "item": "gq12470",
+        "itemcate": "衣料",
+        "itemprice": "4300"
+    },
+    {
+        "item": "uc12489",
+        "itemcate": "衣料",
+        "itemprice": "29000"
+    },
+    {
+        "item": "sq12494",
+        "itemcate": "衣料",
+        "itemprice": "18600"
+    },
+    {
+        "item": "aa12496",
+        "itemcate": "衣料",
+        "itemprice": "9000"
+    },
+    {
+        "item": "dm12499",
+        "itemcate": "衣料",
+        "itemprice": "11200"
+    },
+    {
+        "item": "dh12504",
+        "itemcate": "衣料",
+        "itemprice": "21300"
+    },
+    {
+        "item": "lu12530",
+        "itemcate": "衣料",
+        "itemprice": "17200"
+    },
+    {
+        "item": "ae12532",
+        "itemcate": "衣料",
+        "itemprice": "12500"
+    },
+    {
+        "item": "gx12533",
+        "itemcate": "衣料",
+        "itemprice": "7700"
+    },
+    {
+        "item": "xt12536",
+        "itemcate": "衣料",
+        "itemprice": "6400"
+    },
+    {
+        "item": "dq12539",
+        "itemcate": "衣料",
+        "itemprice": "13700"
+    },
+    {
+        "item": "ai12541",
+        "itemcate": "衣料",
+        "itemprice": "1200"
+    },
+    {
+        "item": "jv12555",
+        "itemcate": "衣料",
+        "itemprice": "28500"
+    },
+    {
+        "item": "zz12563",
+        "itemcate": "衣料",
+        "itemprice": "22600"
+    },
+    {
+        "item": "sa12577",
+        "itemcate": "衣料",
+        "itemprice": "28900"
+    },
+    {
+        "item": "bd12578",
+        "itemcate": "衣料",
+        "itemprice": "1500"
+    },
+    {
+        "item": "ey12581",
+        "itemcate": "衣料",
+        "itemprice": "15500"
+    },
+    {
+        "item": "mj12582",
+        "itemcate": "衣料",
+        "itemprice": "6700"
+    },
+    {
+        "item": "yv12584",
+        "itemcate": "衣料",
+        "itemprice": "12000"
+    },
+    {
+        "item": "tn12587",
+        "itemcate": "衣料",
+        "itemprice": "18400"
+    },
+    {
+        "item": "ma12589",
+        "itemcate": "衣料",
+        "itemprice": "12400"
+    },
+    {
+        "item": "kq12591",
+        "itemcate": "衣料",
+        "itemprice": "18700"
+    },
+    {
+        "item": "mc12594",
+        "itemcate": "衣料",
+        "itemprice": "26400"
+    },
+    {
+        "item": "bb12596",
+        "itemcate": "衣料",
+        "itemprice": "13400"
+    },
+    {
+        "item": "mk12618",
+        "itemcate": "衣料",
+        "itemprice": "23400"
+    },
+    {
+        "item": "wq12628",
+        "itemcate": "衣料",
+        "itemprice": "25400"
+    },
+    {
+        "item": "wq12631",
+        "itemcate": "衣料",
+        "itemprice": "16800"
+    },
+    {
+        "item": "mh12633",
+        "itemcate": "衣料",
+        "itemprice": "3800"
+    },
+    {
+        "item": "gq12658",
+        "itemcate": "衣料",
+        "itemprice": "18900"
+    },
+    {
+        "item": "dt12664",
+        "itemcate": "衣料",
+        "itemprice": "12600"
+    },
+    {
+        "item": "yi12680",
+        "itemcate": "衣料",
+        "itemprice": "23800"
+    },
+    {
+        "item": "na12694",
+        "itemcate": "衣料",
+        "itemprice": "28800"
+    },
+    {
+        "item": "ti12701",
+        "itemcate": "衣料",
+        "itemprice": "23300"
+    },
+    {
+        "item": "pw12704",
+        "itemcate": "衣料",
+        "itemprice": "23300"
+    },
+    {
+        "item": "nj12722",
+        "itemcate": "衣料",
+        "itemprice": "9000"
+    },
+    {
+        "item": "yd12727",
+        "itemcate": "衣料",
+        "itemprice": "22000"
+    },
+    {
+        "item": "mm12729",
+        "itemcate": "衣料",
+        "itemprice": "16300"
+    },
+    {
+        "item": "bx12733",
+        "itemcate": "衣料",
+        "itemprice": "4700"
+    },
+    {
+        "item": "bq12738",
+        "itemcate": "衣料",
+        "itemprice": "14300"
+    },
+    {
+        "item": "en12752",
+        "itemcate": "衣料",
+        "itemprice": "19800"
+    },
+    {
+        "item": "cy12757",
+        "itemcate": "衣料",
+        "itemprice": "23200"
+    },
+    {
+        "item": "yw12764",
+        "itemcate": "衣料",
+        "itemprice": "12400"
+    },
+    {
+        "item": "tt12769",
+        "itemcate": "衣料",
+        "itemprice": "3900"
+    },
+    {
+        "item": "cx12771",
+        "itemcate": "衣料",
+        "itemprice": "5800"
+    },
+    {
+        "item": "cv12785",
+        "itemcate": "衣料",
+        "itemprice": "10600"
+    },
+    {
+        "item": "xb12787",
+        "itemcate": "衣料",
+        "itemprice": "20700"
+    },
+    {
+        "item": "sm12797",
+        "itemcate": "衣料",
+        "itemprice": "5200"
+    },
+    {
+        "item": "im12801",
+        "itemcate": "衣料",
+        "itemprice": "26000"
+    },
+    {
+        "item": "ld12805",
+        "itemcate": "衣料",
+        "itemprice": "7500"
+    },
+    {
+        "item": "qf12817",
+        "itemcate": "衣料",
+        "itemprice": "24700"
+    },
+    {
+        "item": "nt12830",
+        "itemcate": "衣料",
+        "itemprice": "4200"
+    },
+    {
+        "item": "jg12832",
+        "itemcate": "衣料",
+        "itemprice": "13400"
+    },
+    {
+        "item": "ro12836",
+        "itemcate": "衣料",
+        "itemprice": "23500"
+    },
+    {
+        "item": "rp12842",
+        "itemcate": "衣料",
+        "itemprice": "5700"
+    },
+    {
+        "item": "il12843",
+        "itemcate": "衣料",
+        "itemprice": "27300"
+    },
+    {
+        "item": "yw12845",
+        "itemcate": "衣料",
+        "itemprice": "12200"
+    },
+    {
+        "item": "cw12850",
+        "itemcate": "衣料",
+        "itemprice": "14400"
+    },
+    {
+        "item": "iv12852",
+        "itemcate": "衣料",
+        "itemprice": "18600"
+    },
+    {
+        "item": "nh12854",
+        "itemcate": "衣料",
+        "itemprice": "23200"
+    },
+    {
+        "item": "hk12861",
+        "itemcate": "衣料",
+        "itemprice": "27300"
+    },
+    {
+        "item": "eq12864",
+        "itemcate": "衣料",
+        "itemprice": "27500"
+    },
+    {
+        "item": "sc12866",
+        "itemcate": "衣料",
+        "itemprice": "5100"
+    },
+    {
+        "item": "lv12879",
+        "itemcate": "衣料",
+        "itemprice": "27700"
+    },
+    {
+        "item": "iz12882",
+        "itemcate": "衣料",
+        "itemprice": "25900"
+    },
+    {
+        "item": "vy12897",
+        "itemcate": "衣料",
+        "itemprice": "14200"
+    },
+    {
+        "item": "ai12904",
+        "itemcate": "衣料",
+        "itemprice": "6800"
+    },
+    {
+        "item": "nl12908",
+        "itemcate": "衣料",
+        "itemprice": "17400"
+    },
+    {
+        "item": "cb12922",
+        "itemcate": "衣料",
+        "itemprice": "6900"
+    },
+    {
+        "item": "if12923",
+        "itemcate": "衣料",
+        "itemprice": "2500"
+    },
+    {
+        "item": "ty12928",
+        "itemcate": "衣料",
+        "itemprice": "29700"
+    },
+    {
+        "item": "qp12929",
+        "itemcate": "衣料",
+        "itemprice": "3900"
+    },
+    {
+        "item": "kh12936",
+        "itemcate": "衣料",
+        "itemprice": "20000"
+    },
+    {
+        "item": "ik12938",
+        "itemcate": "衣料",
+        "itemprice": "7900"
+    },
+    {
+        "item": "yl12941",
+        "itemcate": "衣料",
+        "itemprice": "4500"
+    },
+    {
+        "item": "gr12946",
+        "itemcate": "衣料",
+        "itemprice": "28000"
+    },
+    {
+        "item": "hm12950",
+        "itemcate": "衣料",
+        "itemprice": "7900"
+    },
+    {
+        "item": "tp12953",
+        "itemcate": "衣料",
+        "itemprice": "10000"
+    },
+    {
+        "item": "mp12957",
+        "itemcate": "衣料",
+        "itemprice": "17400"
+    },
+    {
+        "item": "yg12977",
+        "itemcate": "衣料",
+        "itemprice": "25300"
+    },
+    {
+        "item": "ty12980",
+        "itemcate": "衣料",
+        "itemprice": "28300"
+    },
+    {
+        "item": "fi12987",
+        "itemcate": "衣料",
+        "itemprice": "28100"
+    }
+]
