@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <!-- HEAD -->
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+        <title>View Tables</title>
+        <meta name="description" content="sample text">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+
+
+    <!-- View -->
+    <body>
+        <div id="main">
+            <!-- ヘッダ -->
+            <div id="head">
+                <!-- DB/テーブル選択エリア -->
+                <div class="head_area">
+                    <!-- DB選択 -->
+                    <design-list class="d_select" id="select_db" name="select_db">
+                        <option value="CUST">CUST</option>
+                        <option value="ITEM">ITEM</option>
+                        <option value="ITEM_STOCK">ITEM_STOCK</option>
+                        <option value="ORDER">ORDER</option>
+                    </design-list>
+
+                    <!-- テーブル選択 -->
+                    <design-list class="d_select" id="select_table" name="select_table">
+                        <!-- 更新 -->
+                    </design-list>
+                    
+                    <!-- テーブル種別変更チェックボックス -->
+                    <label class="d_check" id="lbl_switch_type" for="chk_switch_type">
+                        <div class="icon"></div>
+                        <input type="checkbox" id="chk_switch_type" name="chk_switch_type">
+                    </label>
+
+                    <!-- テーブル情報表示エリア -->
+                    <div class="explain_area" id="view_table_explain">
+                        <!-- 更新 -->
+                    </div>
+                </div>
+                
+                <!-- ボタンエリア -->
+                <div class="head_area">
+                    <!-- 改行切替チェックボックス -->
+                    <label class="d_check" id="lbl_switch_enter" for="chk_switch_enter">
+                        <div class="icon"></div>
+                        <input type="checkbox" id="chk_switch_enter" name="chk_switch_enter">
+                    </label>
+
+                    <!-- 表表示切替チェックボックス -->
+                    <label class="d_check" id="lbl_switch_view" for="chk_switch_view">
+                        <div class="icon"></div>
+                        <input type="checkbox" id="chk_switch_view" name="chk_switch_view" checked>
+                    </label>
+
+                    <!-- コピーボタン -->
+                    <button class="d_btn" id="btn_copy_table">
+                        <div class="icon"></div>
+                    </button>
+
+                    <!-- お気に入り表示ボタン -->
+                    <button class="d_btn" id="btn_show_favorite" popovertarget="favorite_list">
+                        <div class="icon"></div>
+                    </button>
+
+                    <!-- お気に入り追加ボタン -->
+                    <button class="d_btn" id="btn_add_favorite" popovertarget="favorite_add_view">
+                        <div class="icon"></div>
+                    </button>
+                </div>
+            </div>
+
+            <!-- お気に入りリスト -->
+            <div id="favorite_list" class="glass-cornner" popover>
+                <div class="wrapper">
+                    <button class="item" data-fav_id="0"><div>お気に入り1</div></button>
+                    <button class="item" data-fav_id="1"><div>お気に入りw</div></button>
+                </div>
+            </div>
+
+            <!-- お気に入り追加画面 -->
+            <div id="favorite_add_view" class="glass-cornner" popover>
+                <input type="text" id="i_fav_name">
+                <button id="btn_fav_add">追加</button>
+                <button id="btn_fav_cancel">キャンセル</button>
+            </div>
+
+            <!-- ボディ -->
+            <div id="body">
+                <!-- エリア -->
+                <div class="body_area">
+                    <!-- テーブル -->
+                    <table class="d_table" id="view_table"></table>
+                </div>
+            </div>
+            
+            <!-- 設定表示チェックボックス -->
+            <label for="set_tgl" id="setting_tgl" class="glass-cornner">
+                <div class="icon"></div>
+                <input type="checkbox" id="set_tgl">
+            </label>
+
+            <!-- 設定表示画面 -->
+            <div id="setting_view" class="glass-cornner">
+                <!-- 設定表示エリア -->
+                <div class="setting_area">
+                    <!-- 列表示 -->
+                    <section>
+                        <header>
+                            <label for="set_col">
+                                列表示
+                                <input type="checkbox" id="set_col" class="set_oc">
+                            </label>
+                        </header>
+                        <div class="set_body">
+                            <div class="list">
+                                <!-- 更新 -->
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- 並び順 -->
+                    <section>
+                        <header>
+                            <label for="set_sort">
+                                並び順
+                                <input type="checkbox" id="set_sort" class="set_oc">
+                            </label>
+                        </header>
+                        <div class="set_body">
+                            <div class="list">
+                                <!-- 更新 -->
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- フィルタ -->
+                    <section>
+                        <header>
+                            <label for="set_fil">
+                                フィルタ
+                                <input type="checkbox" id="set_fil" class="set_oc">
+                            </label>
+                        </header>
+                        <div class="set_body">
+                            <div class="list">
+                                <!-- 更新 -->
+                            </div>
+                            <button class="add_btn" id="filter_add_btn">
+                                <div class="icon"></div>
+                            </button>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <!-- ページ選択画面 -->
+            <div id="page_select_view">
+                <!-- 件数選択エリア -->
+                <div class="page_select_area glass-cornner">
+                    <!-- 件数 -->
+                    <design-list class="d_select" id="select_count" name="select_count">
+                        <option value="10" selected>10</option>
+                        <option value="20">20</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                        <option value="999">All</option>
+                    </design-list>
+                </div>
+
+                <!-- ページ選択エリア -->
+                <div class="page_select_area glass-cornner">
+                    <!-- 最初に戻るボタン -->
+                    <button class="d_btn page_btn" id="btn_rtn_all">
+                        <div class="icon"></div>
+                    </button>
+                    
+                    <!-- 前へ戻るボタン -->
+                    <button class="d_btn page_btn" id="btn_rtn_one">
+                        <div class="icon"></div>
+                    </button>
+
+                    <!-- ページ選択ブロック -->
+                    <div id="page_select_block">
+                        <!--ページ選択 -->
+                        <div id="now_page_no">
+                            <design-list class="d_select" id="select_page" name="select_page">
+                                <option value="0"></option>
+                                <!-- 更新 -->
+                            </design-list>
+                        </div>
+                        /
+                        <!-- 総ページ数 -->
+                        <div id="total_page_no">
+                            <!-- 更新 -->
+                        </div>
+                    </div>
+                    
+                    <!-- 次へ進むボタン -->
+                    <button class="d_btn page_btn" id="btn_nxt_one">
+                        <div class="icon"></div>
+                    </button>
+
+                    <!-- 最後に進むボタン -->
+                    <button class="d_btn page_btn" id="btn_nxt_all">
+                        <div class="icon"></div>
+                    </button>
+                </div>
+
+                <!-- 総行数 -->
+                <div class="page_select_area glass-cornner">
+                    <div id="total_row_no">
+                        <!-- 更新 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 表示メッセージ -->
+        <div id="view_message">
+            <!-- 更新 -->
+        </div>
+    </body>
+
+    <!-- JS -->
+    <script src="designList.js"></script>
+    <script src="code.js" type="module"></script>
+
+</html>

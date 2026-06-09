@@ -32,7 +32,8 @@ class DesignList extends HTMLElement{
                 height: 30px;
                 border-radius: 6px;
                 position: relative;
-                --ac-color: rgb(37, 227, 231);
+                // --ac-color: #25e3e7;
+                --ac-color: #5fafe1;
             }
 
             #wrap{
@@ -158,7 +159,7 @@ class DesignList extends HTMLElement{
 
                     &:hover, &:focus-visible{
                         outline: none;
-                        background-color: color-mix(in srgb, #5fafe1 50%, transparent) !important;
+                        background-color: color-mix(in srgb, var(--ac-color) 50%, transparent) !important;
                     }
                 }
             }
@@ -219,7 +220,8 @@ class DesignList extends HTMLElement{
     #value_list = [];
     #option_list = [];
     #index = 0;
-    #init_flg = false;
+    // #lastValue = null;
+    #userAction = false;
 
     //---------------------------------------
     // DOM追加時の処理
@@ -246,7 +248,6 @@ class DesignList extends HTMLElement{
     //---------------------------------------
     // 要素移動時(Element.moveBefore())時の処理
     //---------------------------------------
-    // ※この処理を定義していない場合、移動時にconnectedCallback, disconnectedCallbackが発火してしまう
     connectedMoveCallback(){
     }
 
@@ -262,9 +263,15 @@ class DesignList extends HTMLElement{
         const shadow = this.shadowRoot;
         const slot = shadow.querySelector("slot");
         slot.addEventListener("slotchange", () => {
-            this.#init_flg = false;
             this.#value_list = [];
-            const options = slot.assignedElements(); 
+
+            const list_block = shadow.querySelector("#list-block");
+            const lists = list_block.querySelectorAll("button");
+            lists.forEach(l => {
+                list_block.removeChild(l);
+            })
+
+            const options = slot.assignedElements();
             options.forEach(op => {
                 const new_op = document.createElement("button");
                 new_op.textContent = op.textContent;
@@ -275,7 +282,16 @@ class DesignList extends HTMLElement{
                 }
 
                 new_op.addEventListener("click", () => {
-                    this.setAttribute("value", new_op.value ?? "");
+                    const newValue = new_op.value ?? "";
+
+                    // 同じ値なら何もしない（selectと同じ）
+                    if(newValue === this.value){
+                        this.close_list();
+                        return;
+                    }
+
+                    this.#userAction = true;
+                    this.setAttribute("value", newValue);
                     this.close_list();
                 })
 
@@ -284,8 +300,7 @@ class DesignList extends HTMLElement{
                 }
 
                 this.#option_list.push(new_op);
-                shadow.getElementById("list-block").appendChild(new_op);
-                this.#init_flg = true;
+                list_block.appendChild(new_op);
             });
         })
     }
@@ -314,7 +329,9 @@ class DesignList extends HTMLElement{
         selecter.addEventListener("click", (e) => {
             setTimeout(() => {
                 if(list_block.matches(':popover-open')){
-                    this.#option_list[this.#index].focus();
+                    if(this.#option_list[this.#index]){
+                        this.#option_list[this.#index].focus();
+                    }
                 }
             }, 1)
         })
@@ -324,13 +341,25 @@ class DesignList extends HTMLElement{
     // 表示更新
     update_view() {
         const shadow = this.shadowRoot;
-        shadow.getElementById("text").textContent = this.#value_list[this.getAttribute("value")] ?? "";
-        
-        if(this.#init_flg){
-            this.dispatchEvent(new CustomEvent("change", {
-                detail: { value: this.getAttribute("value") }
-            }));
-        }
+        const currentValue = this.getAttribute("value");
+
+        shadow.getElementById("text").textContent = this.#value_list[currentValue] ?? "";
+
+        if (!this.#userAction) return;
+
+        // if (this.#lastValue === currentValue) {
+        //     this.#userAction = false;
+        //     return;
+        // }
+
+        // this.#lastValue = currentValue;
+
+        this.dispatchEvent(new Event("change", {
+            bubbles: true,
+            composed: true
+        }));
+
+        this.#userAction = false;
     }
 
     // リストクローズ
@@ -339,7 +368,6 @@ class DesignList extends HTMLElement{
         shadow.getElementById("selecter").click();
         shadow.getElementById("selecter").focus();
     }
-
 }
 
 customElements.define("design-list", DesignList);

@@ -1,0 +1,1239 @@
+/*==========================================================*/
+/* 共通変数設定 */
+/*==========================================================*/
+:root {
+    /* 色 */
+    --color-back: #000000e0;
+    --color-font: #aaaaaa;
+    --color-head: #111111;
+    --color-icon: #aaaaaa;
+    --color-list: #88888820;
+    --color-btn-focus: #88888820;
+    --color-main: #6e1088;
+    --color-main2: #da4aa8;
+    --color-table-head: #0c0c0c;
+    --color-table-row1: transparent;
+    --color-table-row2: color-mix(in srgb, #2b1930 20%, transparent);
+    --color-focus: #5fafe1;
+
+    /* --color-back: #ffffffe0;
+    --color-font: #666666;
+    --color-head: white;
+    --color-icon: #666666;
+    --color-list: #eeeeee;
+    --color-table-head: #eeeeee;
+    --color-table-row1: transparent;
+    --color-table-row2: color-mix(in srgb, #97f1ff 20%, transparent); */
+}
+
+/*==========================================================*/
+/* 共通設定 */
+/*==========================================================*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    font-size: inherit;
+    font-weight: inherit;
+    background-color: transparent;
+    color: inherit;
+}
+
+*:focus-visible{
+    outline: none;
+}
+
+body {
+    width: 100vw;
+    height: 100dvh;
+    position: relative;
+    overflow: hidden;
+    background-color: var(--color-back);
+    color: var(--color-font);
+}
+
+.glass-cornner{
+    position: relative;
+    --in-color: #ffffff40;
+
+    &::before{
+        content: "";
+        pointer-events: none;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+        border: 1.5px solid var(--in-color);
+        transition: border-color 0.1s linear;
+        border-radius: inherit;
+        mask-image: linear-gradient(to bottom left, #00000000, white, #00000000);
+        mask-position: center;
+        z-index: 10;
+    }
+}
+
+/*==========================================================*/
+/* メイン */
+/*==========================================================*/
+#main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: 
+        radial-gradient(var(--color-back)),
+        radial-gradient(#ffffff30, #00000080),
+        linear-gradient(to bottom right, #e4cce0, #612e79);
+
+    &:has(#set_tgl:checked) #setting_view{
+        display: block;
+    }
+}
+
+/*==========================================================*/
+/* ヘッダ */
+/*==========================================================*/
+#head{
+    width: 100%;
+    padding: 6px;
+    position: relative;
+    overflow: hidden;
+    background-color: var(--color-head);
+    flex-shrink: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+
+    & > *{
+        flex-shrink: 0;
+    }
+}
+
+/* ヘッダエリア */
+.head_area{
+    display: flex;
+    max-width: 100%;
+    align-items: center;
+    gap: 8px;
+    
+    & > *{
+        flex-shrink: 0;
+    }
+    &:nth-of-type(1){
+        margin-right: auto;
+    }
+    /* &:nth-of-type(2){
+        gap: 2px;
+    } */
+    &:nth-of-type(2){
+        margin-left: auto;
+    }
+}
+
+/* 説明エリア */
+.explain_area{
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: bold;
+}
+
+
+/*==========================================================*/
+/* デザインボタン */
+/*==========================================================*/
+.d_btn{
+    height: 30px;
+    aspect-ratio: 1/1;
+    border-radius: 8px;
+    cursor: pointer;
+
+    &:hover,
+    &:focus-visible{
+        background-color: var(--color-btn-focus);
+    }
+
+    &:hover:active,
+    &:focus-visible:active{
+        .icon{
+            scale: 0.8;
+        }
+    }
+
+    .icon{
+        height: 100%;
+        width: 100%;
+        border-radius: 999px;
+        position: relative;
+        transition: scale 0.2s ease;
+    }
+
+    .icon::after{
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        margin: auto;
+        inset: 0;
+        mask-size: contain;
+        mask-position: center;
+        mask-repeat: no-repeat;
+        background-color: var(--color-icon);
+    }
+}
+
+/* --- 個別設定 --- */
+/* ページボタン */
+.page_btn{
+    .icon::after{
+        mask-image: url(./assets/img/return.png);
+    }
+    &:disabled{
+        opacity: 0.25;
+        pointer-events: none;
+    }
+}
+/* 最初に戻るボタン */
+#btn_rtn_all{
+    .icon::after{
+        mask-image: url(./assets/img/returns.png);
+    }
+}
+/* 前に戻るボタン */
+#btn_rtn_one{
+    .icon::after{
+        mask-image: url(./assets/img/return.png);
+    }
+}
+/* 次に進むボタン */
+#btn_nxt_one{
+    .icon::after{
+        mask-image: url(./assets/img/return.png);
+        rotate: 180deg;
+    }
+}
+/* 最後に進むボタン */
+#btn_nxt_all{
+    .icon::after{
+        mask-image: url(./assets/img/returns.png);
+        rotate: 180deg;
+    }
+}
+/* コピーボタン */
+#btn_copy_table{
+    .icon::after{
+        mask-image: url(./assets/img/Copy.png);
+    }
+}
+/* お気に入り表示ボタン */
+#btn_show_favorite{
+    .icon::after{
+        mask-image: url(./assets/img/List.png);
+    }
+}
+/* お気に入り追加ボタン */
+#btn_add_favorite{
+    .icon::after{
+        mask-image: url(./assets/img/Ster.png);
+    }
+}
+
+
+/*==========================================================*/
+/* デザインチェックボックス */
+/*==========================================================*/
+.d_check{
+    position: relative;
+    height: 30px;
+    aspect-ratio: 1/1;
+    border-radius: 8px;
+    cursor: pointer;
+
+    input{
+        width: 0;
+        height: 0;
+        position: absolute;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    &:hover,
+    &:focus-visible{
+        background-color: var(--color-btn-focus);
+    }
+
+    &:hover:active,
+    &:focus-visible:active{
+        .icon{
+            scale: 0.8;
+        }
+    }
+
+    .icon{
+        height: 100%;
+        width: 100%;
+        border-radius: 999px;
+        position: relative;
+        transition: scale 0.2s ease;
+    }
+
+    .icon::after{
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        margin: auto;
+        inset: 0;
+        mask-size: contain;
+        mask-position: center;
+        mask-repeat: no-repeat;
+        background-color: var(--color-icon);
+    }
+
+    &:has(input:checked){
+        .icon::after{
+            background-color: var(--color-focus);
+        }
+    }
+}
+
+/* --- 個別設定 --- */
+/* 種類切り替えボタン */
+#lbl_switch_type{
+    &:hover,
+    &:focus-visible{
+        background-color: transparent;
+        .icon{
+            box-shadow: 0px 0px 8px var(--color-main);
+        }
+    }
+
+    .icon{
+        border: 2px solid transparent;
+        background: linear-gradient(var(--color-head)) content-box,
+                    linear-gradient(to right bottom, var(--color-main), var(--color-main2)) border-box;
+    }
+
+    .icon::after{
+        width: 90%;
+        height: 90%;
+        mask-image: url(./assets/img/pp.png);
+        background: linear-gradient(to right bottom, var(--color-main), var(--color-main2));
+    }
+
+    &:has(input:checked){
+        filter: hue-rotate(240deg);
+    }
+}
+/* 改行切り替えボタン */
+#lbl_switch_enter{
+    .icon::after{
+        mask-image: url(./assets/img/Enter.png);
+    }
+    &:has(input:checked){
+        .icon::before{
+            content: "";
+            position: absolute;
+            margin: auto;
+            inset: 0;
+            aspect-ratio: 2/15;
+            height: 65%;
+            box-shadow: -2px -2px 4px #000000;
+            z-index: 1;
+            background-color: var(--color-icon);
+            border-radius: 99px;
+            rotate: -45deg;
+        }
+        .icon::after{
+            background-color: var(--color-icon);
+        }
+    }
+}
+/* 表幅切り替えボタン */
+#lbl_switch_view{
+    .icon::after{
+        mask-image: url(./assets/img/Max.png);
+    }
+    &:has(input:checked){
+        .icon::after{
+            mask-image: url(./assets/img/Min.png);
+            background-color: var(--color-icon);
+        }
+    }
+}
+
+
+/*==========================================================*/
+/* デザインリスト */
+/*==========================================================*/
+.d_select{
+    &::part(selecter){
+        background-color: var(--color-list);
+        box-shadow: none;
+        color: var(--color-font);
+    }
+
+    &::part(picker){
+        display: none;
+    }
+
+    &::part(list-block){
+        background-color: var(--color-list);
+        backdrop-filter: blur(10px);
+        box-shadow: unset;
+    }
+
+    &::part(list){
+        background-color: transparent;
+        color: var(--color-font);
+        font-weight: bold;
+    }
+}
+
+/* --- 個別設定 --- */
+/* 件数選択 */
+#select_count{
+    width: 34px;
+    height: 34px;
+
+    &::part(selecter){
+        border-radius: 99px;
+    }
+}
+
+
+/*==========================================================*/
+/* ボディ */
+/*==========================================================*/
+#body{
+    width: 100%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-height: 0;
+    padding: 10px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+}
+
+/* エリア */
+.body_area{
+    max-width: 100%;
+    width: fit-content;
+    max-height: 100%;
+    height: fit-content;
+    position: relative;
+    overflow-y: auto;
+    overflow-x: auto;
+    scrollbar-color: white transparent;
+}
+
+/*==========================================================*/
+/* テーブル */
+/*==========================================================*/
+.no_enter_table{
+    width: fit-content !important;
+    td, th{
+        min-width: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+.min_table{
+    width: initial !important;
+}
+
+.d_table{
+    /* max-width: 100%; */
+    /* min-width: 350px; */
+    border-collapse: collapse;
+    border-spacing: 0;
+    table-layout: fixed;
+    width: max-content;
+
+    thead > tr{
+        position: sticky;
+        top: 0;
+        z-index: 2;
+        background-color: var(--color-table-head);
+        outline: 1px solid var(--color-icon);
+    }
+
+    tbody{
+        tr{
+            background-color: var(--color-table-row1);
+        }
+        tr:nth-of-type(2n+1){
+            background-color: var(--color-table-row2);
+        }
+    }
+
+    th, td{
+        padding: 8px;
+        min-width: 30px;
+    }
+
+    th{
+        position: relative;
+        text-align: left;
+        font-weight: bold;
+        white-space: nowrap;
+
+        &:has(.pic:active){
+            background-color: color-mix(in srgb, var(--color-focus) 20%, transparent);
+        }
+
+        .pic{
+            position: absolute;
+            cursor: e-resize;
+            top: 0;
+            right: 0px;
+            width: 12px;
+            height: 100%;
+
+            &:hover::after{
+                content: "";
+            }
+            &:active::after{
+                content: "";
+            }
+            
+            &::after{
+                /* content: ""; */
+                position: absolute;
+                background-color: var(--color-focus);
+                height: 80%;
+                width: 4px;
+                margin: auto;
+                inset: 0;
+                border-radius: 99px;
+                opacity: 0.5;
+            }
+        }
+    }
+
+    td{
+        vertical-align: top;
+    }
+}
+
+/*==========================================================*/
+/* 設定パネル */
+/*==========================================================*/
+#setting_tgl{
+    position: fixed;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    bottom: 12px;
+    right: 12px;
+    border-radius: 10px;
+    background-color: #88888820;
+    backdrop-filter: blur(6px);
+    display: grid;
+    place-items: center;
+    user-select: none;
+    animation: rotate-color 10s linear infinite;
+    z-index: 5;
+
+    input[type="checkbox"]{
+        position: absolute;
+        width: 0;
+        height: 0;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .icon{
+        position: relative;
+        width: 20px;
+        height: 20px;
+        border-radius: 999px;
+        --in-color: #88888840;
+        outline: 5px solid var(--in-color);
+        outline-offset: -5px;
+        
+        transition: scale 0.2s ease;
+        /* animation: rotate-color 10s linear infinite; */
+
+        &::after{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: inherit;
+            outline: 5px solid var(--in-color);
+            outline-offset: -5px;
+            filter: blur(4px);
+        }
+    }
+
+    &:has(#set_tgl:checked){
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #00000080;
+        border-radius: 0px;
+        backdrop-filter: blur(1px);
+        z-index: 3;
+
+        &::before{
+            border-width: 2px;
+        }
+        .icon{
+            width: 100%;
+            height: 100%;
+            border-radius: 0px;
+            opacity: 0.25;
+            background: radial-gradient(var(--in-color), transparent);
+            outline: none;
+        }
+
+        .icon::after{
+            outline: none;
+        }
+    }
+
+    &:hover,
+    &:has(#set_tgl:focus-visible),
+    &:has(#set_tgl:checked){
+        --in-color:#612e79a0;
+        .icon{
+            --in-color:#612e79a0;
+        }
+    }
+
+    &:hover:active .icon, &:has(#set_tgl:focus-visible:active) .icon{
+        scale: 0.85;
+    }
+}
+
+@keyframes rotate-color{
+    from{
+        filter: hue-rotate(0deg);
+    }
+    to{
+        filter: hue-rotate(360deg);
+    }
+}
+
+/*==========================================================*/
+/* 設定画面 */
+/*==========================================================*/
+#setting_view{
+    z-index: 10;
+    position: absolute;
+    background-color: #88888820;
+    backdrop-filter: blur(10px);
+    padding-block: 10px;
+    border-radius: 10px;
+    width: 310px;
+    height: fit-content;
+    /* max-height: calc(100% - 40px); */
+    overflow: hidden;
+    margin: auto;
+    inset: 0;
+    display: none;
+
+    .setting_area{
+        position: relative;
+        width: 100%;
+        height: fit-content;
+        /* height: max-content; */
+        max-height: calc(100dvh - 60px);
+        overflow-x: hidden;
+        overflow-y: auto;
+        scrollbar-color: white transparent;
+    }
+
+    section{
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-rows: 36px 0fr;
+        transition: grid-template-rows 0.2s ease;
+    }
+
+    /* section > header{
+        position: sticky;
+        top: 0;
+        left: 0;
+        z-index: 2;
+    } */
+
+    section:has(.set_oc:checked){
+        grid-template-rows: 36px 1fr;
+    }
+
+    section > header > label{
+        padding: 6px;
+        font-weight: bold;
+        position: relative;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        border-radius: 6px;
+        height: 100%;
+
+        input[type="checkbox"]{
+            opacity: 0;
+            width: 0;
+            height: 0;
+            position: absolute;
+        }
+    }
+
+    section > header > label:hover, 
+    section > header > label:has(.set_oc:focus-visible){
+        background-color: #88888820;
+    }
+
+    .set_body{
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .set_body > .list{
+        background-color: #00000060;
+        width: calc(100% - 16px);
+        border-radius: 10px;
+        padding-block: 10px;
+        /* height: 200px; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .add_btn{
+        height: 30px;
+        width: 30px;
+        border-radius: 999px;
+        cursor: pointer;
+        margin-top: 10px;
+
+        &:hover .icon, &:focus-visible .icon{
+            filter: brightness(1.5);
+        }
+
+        &:hover:active .icon, &:focus-visible:active .icon{
+            scale: 0.85;
+        }
+
+        .icon{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            border-radius: inherit;
+            background-color: #13598480;
+            transition: scale 0.2s ease;
+
+            &::before, &::after{
+                content: "";
+                position: absolute;
+                margin: auto;
+                inset: 0;
+                inset: 0;
+                width: 40%;
+                height: 2px;
+                border-radius: 10px;
+                background-color: var(--color-font);
+            }
+
+            &::after{
+                rotate: 90deg;
+            }
+        }
+    }
+
+    .vs_col_label{
+        width: 100%;
+        height: 30px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding-inline: 10px;
+        border-radius: 8px;
+        gap: 10px;
+        cursor: pointer;
+
+        &:hover, &:has(input[type="checkbox"]:focus-visible){
+            /* background-color: #88888820; */
+            background-color: color-mix(in srgb, var(--color-focus) 20%, transparent);
+        }
+
+        &:has(input[type="checkbox"]:checked) .check_mark{
+            opacity: 1;
+        }
+
+        .check_mark{
+            width: 14px;
+            height: 14px;
+            position: relative;
+            border: 2px solid var(--color-font);
+            border-radius: 10px 4px 10px 4px;
+            rotate: 45deg;
+            opacity: 0;
+
+            &::before{
+                content: "";
+                position: absolute;
+                margin: auto;
+                inset: 0;
+                width: 7px;
+                height: 7px;
+                border-radius: 99px;
+                border: 2px solid var(--color-font);
+            }
+        }
+
+        input[type="checkbox"]{
+            width: 0;
+            height: 0;
+            opacity: 0;
+            pointer-events: none;
+            position: absolute;
+        }
+
+        .col_name{
+            font-size: 0.8rem;
+            font-weight: bold;
+            user-select: none;
+        }
+    }
+
+
+    design-list{
+        width: 30px;
+        height: 30px;
+    }
+
+    design-list::part(selecter){
+        background-color: var(--color-list);
+        box-shadow: unset;
+        color: var(--color-font);
+        font-weight: bold;
+    }
+
+    design-list::part(list-block){
+        background-color: var(--color-list);
+        backdrop-filter: blur(10px);
+        box-shadow: unset;
+    }
+
+    design-list::part(list){
+        background-color: transparent;
+        color: var(--color-font);
+        font-weight: bold;
+    }
+
+    design-list::part(picker){
+        display: none;
+    }
+
+    .sort_item{
+        width: 100%;
+        height: 36px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-inline: 10px;
+        border-radius: 8px;
+        gap: 4px;
+        cursor: grab;
+        transition: background-color 0.2s ease;
+
+        .sort_col_name{
+            font-size: 0.8rem;
+            font-weight: bold;
+            user-select: none;
+            margin-right: auto;
+        }
+
+        &:not(:has(design-list:hover)):hover{
+            background-color: color-mix(in srgb, var(--color-focus) 20%, transparent);
+        }
+    }
+
+    .filter_item{
+        width: 100%;
+        height: 36px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-inline: 6px;
+        gap: 4px;
+
+        .filter_col{
+            width: 100px;
+        }
+
+        .filter_type{
+            width: 30px;
+        }
+
+        .filter_content{
+            height: 30px;
+            width: 100px;
+
+            border-radius: 6px;
+            background-color: var(--color-list);
+            padding-inline: 6px;
+            text-align: center;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .del_filter{
+            height: 24px;
+            aspect-ratio: 1/1;
+            border-radius: 999px;
+            cursor: pointer;
+
+            &:hover .icon, &:focus-visible .icon{
+                filter: brightness(1.5);
+            }
+
+            &:hover:active .icon, &:focus-visible:active .icon{
+                scale: 0.85;
+            }
+
+            .icon{
+                width: 100%;
+                height: 100%;
+                border-radius: inherit;
+                position: relative;
+                background-color: #861c1c80;
+                transition: scale 0.2s ease;
+
+                &::before, &::after{
+                    content: "";
+                    position: absolute;
+                    margin: auto;
+                    inset: 0;
+                    width: 40%;
+                    height: 2px;
+                    border-radius: 99px;
+                    background-color: var(--color-font);
+                    rotate: 45deg;
+                }
+
+                &::after{
+                    rotate: -45deg;
+                }
+            }
+        }
+    }
+
+}
+
+/* 並び替えアイテム移動時用スタイル */
+.sort_item_moving{
+    width: 100%;
+    height: 36px;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 10px;
+    gap: 4px;
+    cursor: grabbing;
+    border-radius: 8px;
+    z-index: 100;
+    background-color: color-mix(in srgb, var(--color-focus) 20%, transparent);
+    backdrop-filter: blur(10px);
+
+    .sort_col_name{
+        font-size: 0.8rem;
+        font-weight: bold;
+        user-select: none;
+        margin-right: auto;
+    }
+}
+
+
+/*==========================================================*/
+/* ページ選択エリア */
+/*==========================================================*/
+#page_select_view{
+    position: fixed;
+    bottom: 10px;
+    margin-inline: auto;
+    left: 0;
+    right: 0;
+    width: fit-content;
+    display: flex;
+    gap: 10px;
+    z-index: 2;
+    opacity: 0.4;
+
+    .page_select_area{
+        padding: 8px;
+        gap: 2px;
+        width: fit-content;
+        background-color: #88888820;
+        backdrop-filter: blur(6px);
+        border-radius: 999px;
+        display: flex;
+        align-items: center;
+        --in-color: #88888840;
+    }
+
+    .page_select_area:nth-of-type(1){
+        padding: 6px;
+    }
+
+    &:hover,
+    &:focus-within{
+        transform: scaleZ(1);
+        opacity: 1;
+    }
+}
+
+/* ページ選択ブロック */
+#page_select_block{
+    height: 30px;
+    width: 110px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    background-color: var(--color-list);
+    font-size: 0.8rem;
+
+    & > div{
+        width: 50%;
+        height: 100%;
+        padding: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/* ページ選択 */
+#select_page{
+    width: 100%;
+    height: 100%;
+    &::part(selecter){
+        background-color: transparent;
+        height: 100%;
+        padding-inline: unset;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* 総行数 */
+#total_row_no{
+    position: relative;
+    height: 30px;
+    width: 80px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#favorite_list{
+    position: fixed;
+    top: 50px;
+    left: unset;
+    right: 10px;
+    border-radius: 10px;
+    background-color: var(--color-list);
+    backdrop-filter: blur(10px);
+    width: 200px;
+    height: fit-content;
+    overflow: hidden;
+    scrollbar-color: white transparent;
+
+    .wrapper{
+        width: 100%;
+        max-height: 400px;
+        /* height: 100%; */
+        padding-block: 10px;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    .item{
+        width: 100%;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        min-width: 0;
+        padding-inline: 8px;
+        font-size: 0.8rem;
+        cursor: pointer;
+        border-radius: 6px;
+
+        & > *{
+            width: 100%;
+            text-align: left;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        &:hover,
+        &:focus-visible{
+            background-color: color-mix(in srgb, var(--color-focus) 20%, transparent);
+        }
+    }
+}
+
+
+#favorite_add_view{
+    position: fixed;
+    top: 50px;
+    left: unset;
+    right: 10px;
+    border-radius: 10px;
+    background-color: var(--color-list);
+    backdrop-filter: blur(10px);
+    padding: 10px;
+    width: 260px;
+    height: 100px;
+    grid-template-columns: auto auto;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "a a" "b c";
+    justify-items: center;
+    align-items: center;
+    gap: 10px;
+    overflow: hidden;
+
+    &:popover-open{
+        display: grid;
+    }
+
+    input{
+        grid-area: a;
+        background-color: var(--color-list);
+        border-radius: 10px;
+        padding-inline: 10px;
+        height: 30px;
+        width: 100%;
+    }
+    button{
+        width: 100px;
+        height: 30px;
+        background-color: red;
+        border-radius: 10px;
+        font-weight: bold;
+        font-size: 0.8rem;
+        cursor: pointer;
+        transition: font-size 0.2s ease;
+
+        &:hover,
+        &:focus-visible{
+            filter: brightness(1.5);
+        }
+        &:hover:active,
+        &:focus-visible:active{
+            font-size: 0.7rem;
+        }
+    }
+    #btn_fav_add{
+        background-color: #13598480;
+    }
+    #btn_fav_cancel{
+        background-color: #861c1c80;
+    }
+}
+
+
+/*==========================================================*/
+/* その他 */
+/*==========================================================*/
+/* 表示メッセージ */
+#view_message{
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    translate: -50% 0%;
+    padding: 8px 30px;
+    border-radius: 18px;
+    background-color: #ffffff40;
+    backdrop-filter: blur(10px);
+    color: white;
+    font-size: 0.8rem;
+    /* font-weight: bold; */
+    display: none;
+}
+
+/* アニメーション */
+.anime{
+    animation: down-up 5s ease-in-out forwards;
+}
+
+/* 上下アニメーション */
+@keyframes down-up{
+    0%{
+        transform: translateY(-150%);
+        opacity: 0;
+    }
+    5%{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+
+    95%{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+
+    100%{
+        transform: translateY(-150%);
+        opacity: 0;
+    }
+}
+
+.hidden{
+    display: none !important;
+}
+
+
+@media screen and (max-width: 550px){
+    #page_select_view{
+        display: grid;
+        grid-template-rows: 46px 46px;
+        /* grid-template-columns: 46px 1fr 46px;
+        grid-template-areas: "a a a" "b c d";
+        width: 100%; */
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "b a" "c c";
+        width: fit-content;
+        gap: 4px;
+        padding-inline: 4px;
+
+        .page_select_area:nth-of-type(1){
+            justify-self: center;
+            grid-area: b;            
+        }
+        .page_select_area:nth-of-type(2){
+            justify-self: center;
+            grid-area: c;
+        }
+        .page_select_area:nth-of-type(3){
+            justify-self: start;
+            grid-area: a;
+        }
+    }
+}
